@@ -1,0 +1,6 @@
+framework module Pods_JZStar {
+  umbrella header "Pods-JZStar-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,36 @@
+use_frameworks!
+platform :ios, '12.0'
+source 'https://github.com/CocoaPods/Specs.git'
+inhibit_all_warnings!
+target 'JZStar'
+
+pod 'Alamofire', '~> 4.8'
+pod 'SwiftyJSON', '~> 4.0'
+
+#private_project_need
+pod 'SnapKit'
+pod 'SwiftRichString', '~> 3.5.1'
+pod 'RxSwift'
+pod 'RxCocoa'
+pod 'NSHash'
+pod 'MBProgressHUD'
+pod 'IQKeyboardManagerSwift'
+pod 'LTMorphingLabel'
+pod 'pop'
+pod 'CocoaMQTT'
+pod 'FDFullscreenPopGesture', '1.1'
+pod 'MJRefresh', '~> 3.2.3'
+pod 'RxDataSources', '~> 4.0'
+pod 'NVActivityIndicatorView'
+pod 'SwipeCellKit'
+pod 'TZImagePickerController'
+pod 'Kingfisher'
+pod 'CountryPickerView'
+pod 'libPhoneNumber-iOS'
+pod 'CryptoSwift', '~> 1.0'
+pod 'KakaJSON', '~> 1.1.2'
+pod 'Moya', '~> 13.0.1'
+pod 'FSPagerView'
+
+
+
