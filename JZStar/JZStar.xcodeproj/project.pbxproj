@@ -52,11 +52,11 @@
 		F68361BA2484F61000B4E4FA /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68361B92484F61000B4E4FA /* PersonalViewController.swift */; };
 		F68361BD2484F8DA00B4E4FA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68361BC2484F8DA00B4E4FA /* MainViewController.swift */; };
 		F68361C02484F98A00B4E4FA /* TabbarScaledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68361BF2484F98A00B4E4FA /* TabbarScaledButton.swift */; };
+		F6AF66982487949300CD347E /* SelectTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF66962487949300CD347E /* SelectTypeCell.swift */; };
+		F6AF66992487949300CD347E /* SelectTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6AF66972487949300CD347E /* SelectTypeCell.xib */; };
 		F6D10C102485F71300AF6401 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D10C0E2485F71300AF6401 /* HomePageViewController.swift */; };
 		F6D10C112485F71300AF6401 /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D10C0F2485F71300AF6401 /* HomePageViewController.xib */; };
 		F6D10C132485F99100AF6401 /* HomePageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D10C122485F99100AF6401 /* HomePageVM.swift */; };
-		F6D10C16248601E300AF6401 /* RoomNoDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D10C14248601E300AF6401 /* RoomNoDeviceCell.swift */; };
-		F6D10C17248601E300AF6401 /* RoomNoDeviceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D10C15248601E300AF6401 /* RoomNoDeviceCell.xib */; };
 		F6D10C262486257E00AF6401 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6D10C1F2486257E00AF6401 /* 7.jpg */; };
 		F6D10C272486257E00AF6401 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6D10C202486257E00AF6401 /* 4.jpg */; };
 		F6D10C282486257E00AF6401 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F6D10C212486257E00AF6401 /* 3.jpg */; };
@@ -139,11 +139,11 @@
 		F68361B92484F61000B4E4FA /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		F68361BC2484F8DA00B4E4FA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F68361BF2484F98A00B4E4FA /* TabbarScaledButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarScaledButton.swift; sourceTree = "<group>"; };
+		F6AF66962487949300CD347E /* SelectTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTypeCell.swift; sourceTree = "<group>"; };
+		F6AF66972487949300CD347E /* SelectTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectTypeCell.xib; sourceTree = "<group>"; };
 		F6D10C0E2485F71300AF6401 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		F6D10C0F2485F71300AF6401 /* HomePageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageViewController.xib; sourceTree = "<group>"; };
 		F6D10C122485F99100AF6401 /* HomePageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVM.swift; sourceTree = "<group>"; };
-		F6D10C14248601E300AF6401 /* RoomNoDeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomNoDeviceCell.swift; sourceTree = "<group>"; };
-		F6D10C15248601E300AF6401 /* RoomNoDeviceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomNoDeviceCell.xib; sourceTree = "<group>"; };
 		F6D10C1F2486257E00AF6401 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
 		F6D10C202486257E00AF6401 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		F6D10C212486257E00AF6401 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
@@ -496,8 +496,8 @@
 		F6D10C1B2486130700AF6401 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F6D10C14248601E300AF6401 /* RoomNoDeviceCell.swift */,
-				F6D10C15248601E300AF6401 /* RoomNoDeviceCell.xib */,
+				F6AF66962487949300CD347E /* SelectTypeCell.swift */,
+				F6AF66972487949300CD347E /* SelectTypeCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -639,8 +639,8 @@
 				F6D10C112485F71300AF6401 /* HomePageViewController.xib in Resources */,
 				F6D10C262486257E00AF6401 /* 7.jpg in Resources */,
 				F68360CC2484DC7400B4E4FA /* Assets.xcassets in Resources */,
+				F6AF66992487949300CD347E /* SelectTypeCell.xib in Resources */,
 				F6D10C282486257E00AF6401 /* 3.jpg in Resources */,
-				F6D10C17248601E300AF6401 /* RoomNoDeviceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,7 +725,6 @@
 				F683615D2484E15F00B4E4FA /* AppCookie.swift in Sources */,
 				F683615B2484E15F00B4E4FA /* SSTimeManager.swift in Sources */,
 				F68361A52484EEF800B4E4FA /* NSDictionary+Extension.swift in Sources */,
-				F6D10C16248601E300AF6401 /* RoomNoDeviceCell.swift in Sources */,
 				F68361492484E15F00B4E4FA /* AppManager.swift in Sources */,
 				F68361A02484EEF800B4E4FA /* UIImageView+Extension.swift in Sources */,
 				F68361022484E13000B4E4FA /* AuthPlugin.swift in Sources */,
@@ -748,6 +747,7 @@
 				F68361682484E9C300B4E4FA /* GlobalPackage.swift in Sources */,
 				F68361AA2484EEF800B4E4FA /* Image+Extension.swift in Sources */,
 				F68361712484EED300B4E4FA /* StellarHintHud.swift in Sources */,
+				F6AF66982487949300CD347E /* SelectTypeCell.swift in Sources */,
 				F68361A42484EEF800B4E4FA /* UIView+Extension.swift in Sources */,
 				F683616B2484EB3E00B4E4FA /* InfoModel.swift in Sources */,
 			);
