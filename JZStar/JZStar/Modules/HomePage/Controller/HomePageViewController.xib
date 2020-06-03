@@ -20,16 +20,40 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ftQ-Tp-9XF">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="74" width="414" height="788"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEf-Un-WEo">
+                    <rect key="frame" x="6" y="44" width="62" height="30"/>
+                    <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="用户中心"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="【未登录】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6b-aB-kee">
+                    <rect key="frame" x="68" y="48.5" width="87" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="今日收益10000001000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sf-7y-a8t">
+                    <rect key="frame" x="230.5" y="48.5" width="177.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ftQ-Tp-9XF" secondAttribute="bottom" id="73n-cn-uHo"/>
-                <constraint firstItem="ftQ-Tp-9XF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="m33-Kf-MA5"/>
+                <constraint firstItem="1sf-7y-a8t" firstAttribute="centerY" secondItem="CEf-Un-WEo" secondAttribute="centerY" id="9cm-fY-8n1"/>
+                <constraint firstItem="1sf-7y-a8t" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="X6b-aB-kee" secondAttribute="trailing" constant="10" id="DgP-mk-6vp"/>
+                <constraint firstItem="ftQ-Tp-9XF" firstAttribute="top" secondItem="CEf-Un-WEo" secondAttribute="bottom" id="K07-gt-bse"/>
+                <constraint firstItem="X6b-aB-kee" firstAttribute="centerY" secondItem="CEf-Un-WEo" secondAttribute="centerY" id="O2Z-xk-G4L"/>
+                <constraint firstItem="CEf-Un-WEo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="6" id="cdv-la-ggG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1sf-7y-a8t" secondAttribute="trailing" constant="6" id="geY-VI-ceP"/>
                 <constraint firstItem="ftQ-Tp-9XF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="njZ-Hb-nxu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ftQ-Tp-9XF" secondAttribute="trailing" id="oLw-ka-zQS"/>
+                <constraint firstItem="X6b-aB-kee" firstAttribute="leading" secondItem="CEf-Un-WEo" secondAttribute="trailing" id="oOf-bP-MOx"/>
+                <constraint firstItem="CEf-Un-WEo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="rIA-pS-39W"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="127"/>
