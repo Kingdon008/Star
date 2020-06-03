@@ -23,6 +23,7 @@ PODS:
   - NVActivityIndicatorView (4.8.0):
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
+  - Parchment (2.4.0)
   - pop (1.0.12)
   - Result (4.1.0)
   - RxCocoa (5.1.1):
@@ -57,6 +58,7 @@ DEPENDENCIES:
   - Moya (~> 13.0.1)
   - NSHash
   - NVActivityIndicatorView
+  - Parchment
   - pop
   - RxCocoa (= 5.1.1)
   - RxDataSources (~> 4.0)
@@ -85,6 +87,7 @@ SPEC REPOS:
     - Moya
     - NSHash
     - NVActivityIndicatorView
+    - Parchment
     - pop
     - Result
     - RxCocoa
@@ -114,6 +117,7 @@ SPEC CHECKSUMS:
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   NSHash: 036c03781d372c288d332b512b203e7bb832e46e
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  Parchment: 002785473861582385db5c6725165353c500198e
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -126,6 +130,6 @@ SPEC CHECKSUMS:
   SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
   TZImagePickerController: 36ca728ec681228918aa82e993aaab1962281b72
 
-PODFILE CHECKSUM: 63d457d811c5487d4c951aefc125a8c2ae5a3a5a
+PODFILE CHECKSUM: 010a27ff1a1a771bb9261fe6330e573d498a64c0
 
 COCOAPODS: 1.9.3
