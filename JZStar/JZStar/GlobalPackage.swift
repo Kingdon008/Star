@@ -25,7 +25,6 @@ import Foundation
 @_exported import TZImagePickerController
 @_exported import CountryPickerView
 @_exported import CryptoSwift
-@_exported import CocoaAsyncSocket
 @_exported import KakaJSON
 @_exported import libPhoneNumber_iOS
 @_exported import Moya
