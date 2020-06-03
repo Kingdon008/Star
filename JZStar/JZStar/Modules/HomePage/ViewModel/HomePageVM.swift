@@ -38,10 +38,10 @@ class HomePageVM: NSObject {
         let sectionModel = getSectionModel()
         let noDeviceCellmodel = CellModel()
         noDeviceCellmodel.cellHeight = {table,index in
-            return 120
+            return 1200
         }
         noDeviceCellmodel.cell = {table,index in
-            let cell = RoomNoDeviceCell.initWithXIb() as! RoomNoDeviceCell
+            let cell = SelectTypeCell.initWithXIb() as! SelectTypeCell
             cell.selectionStyle = .none
             return cell
         }

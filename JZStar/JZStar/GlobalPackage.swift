@@ -31,3 +31,4 @@ import Foundation
 @_exported import Moya
 @_exported import Result
 @_exported import FSPagerView
+@_exported import Parchment
