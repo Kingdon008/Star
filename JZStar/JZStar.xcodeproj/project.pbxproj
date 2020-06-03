@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		31842D7C1F71ACD5DAED93F8 /* Pods_JZStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55197AD4B1F3C2713D78B3FF /* Pods_JZStar.framework */; };
+		AB5EA1942487F39D009758B1 /* SelectDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5EA1922487F39D009758B1 /* SelectDetailCell.swift */; };
+		AB5EA1952487F39D009758B1 /* SelectDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5EA1932487F39D009758B1 /* SelectDetailCell.xib */; };
+		AB5EA1982487F5FA009758B1 /* SelectDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5EA1962487F5FA009758B1 /* SelectDetailViewCell.swift */; };
+		AB5EA1992487F5FA009758B1 /* SelectDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5EA1972487F5FA009758B1 /* SelectDetailViewCell.xib */; };
+		AB5EA19C2487FA26009758B1 /* DetailWorksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5EA19B2487FA26009758B1 /* DetailWorksModel.swift */; };
 		F67E68532485D319009FC081 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E68512485D319009FC081 /* BaseViewController.swift */; };
 		F67E68542485D319009FC081 /* MyRootNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E68522485D319009FC081 /* MyRootNavViewController.swift */; };
 		F68360C32484DC6C00B4E4FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68360C22484DC6C00B4E4FA /* AppDelegate.swift */; };
@@ -87,6 +92,11 @@
 		408496BDAF80093237DAAE1D /* Pods-JZStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JZStar.release.xcconfig"; path = "Target Support Files/Pods-JZStar/Pods-JZStar.release.xcconfig"; sourceTree = "<group>"; };
 		46FCAE921F5C6F35D28CB48F /* Pods-JZStar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JZStar.debug.xcconfig"; path = "Target Support Files/Pods-JZStar/Pods-JZStar.debug.xcconfig"; sourceTree = "<group>"; };
 		55197AD4B1F3C2713D78B3FF /* Pods_JZStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JZStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB5EA1922487F39D009758B1 /* SelectDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDetailCell.swift; sourceTree = "<group>"; };
+		AB5EA1932487F39D009758B1 /* SelectDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectDetailCell.xib; sourceTree = "<group>"; };
+		AB5EA1962487F5FA009758B1 /* SelectDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDetailViewCell.swift; sourceTree = "<group>"; };
+		AB5EA1972487F5FA009758B1 /* SelectDetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectDetailViewCell.xib; sourceTree = "<group>"; };
+		AB5EA19B2487FA26009758B1 /* DetailWorksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWorksModel.swift; sourceTree = "<group>"; };
 		F67E68512485D319009FC081 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F67E68522485D319009FC081 /* MyRootNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRootNavViewController.swift; sourceTree = "<group>"; };
 		F68360BF2484DC6C00B4E4FA /* JZStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JZStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +196,14 @@
 				408496BDAF80093237DAAE1D /* Pods-JZStar.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AB5EA19A2487F8FE009758B1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB5EA19B2487FA26009758B1 /* DetailWorksModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C4FD21A4EFE64BED4853EB9F /* Frameworks */ = {
@@ -437,9 +455,9 @@
 		F68361B22484F59600B4E4FA /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				AB5EA19A2487F8FE009758B1 /* Model */,
 				F6D10C1D2486224C00AF6401 /* ViewModel */,
 				F6D10C1B2486130700AF6401 /* View */,
-				F6D10C1A2486130000AF6401 /* Model */,
 				F6D10C18248612DD00AF6401 /* Controller */,
 			);
 			path = HomePage;
@@ -486,18 +504,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		F6D10C1A2486130000AF6401 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		F6D10C1B2486130700AF6401 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				F6AF66962487949300CD347E /* SelectTypeCell.swift */,
 				F6AF66972487949300CD347E /* SelectTypeCell.xib */,
+				AB5EA1922487F39D009758B1 /* SelectDetailCell.swift */,
+				AB5EA1932487F39D009758B1 /* SelectDetailCell.xib */,
+				AB5EA1962487F5FA009758B1 /* SelectDetailViewCell.swift */,
+				AB5EA1972487F5FA009758B1 /* SelectDetailViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -634,6 +649,8 @@
 				F6D10C272486257E00AF6401 /* 4.jpg in Resources */,
 				F68360CF2484DC7400B4E4FA /* LaunchScreen.storyboard in Resources */,
 				F6D10C2B2486257E00AF6401 /* 2.jpg in Resources */,
+				AB5EA1952487F39D009758B1 /* SelectDetailCell.xib in Resources */,
+				AB5EA1992487F5FA009758B1 /* SelectDetailViewCell.xib in Resources */,
 				F6D10C292486257E00AF6401 /* 6.jpg in Resources */,
 				F6D10C2A2486257E00AF6401 /* 5.jpg in Resources */,
 				F6D10C112485F71300AF6401 /* HomePageViewController.xib in Resources */,
@@ -707,6 +724,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB5EA1942487F39D009758B1 /* SelectDetailCell.swift in Sources */,
 				F683616D2484EB5C00B4E4FA /* TokenModel.swift in Sources */,
 				F68361A92484EEF800B4E4FA /* Color+Extension.swift in Sources */,
 				F6D10C132485F99100AF6401 /* HomePageVM.swift in Sources */,
@@ -724,6 +742,7 @@
 				F68361A72484EEF800B4E4FA /* String+Extension.swift in Sources */,
 				F683615D2484E15F00B4E4FA /* AppCookie.swift in Sources */,
 				F683615B2484E15F00B4E4FA /* SSTimeManager.swift in Sources */,
+				AB5EA1982487F5FA009758B1 /* SelectDetailViewCell.swift in Sources */,
 				F68361A52484EEF800B4E4FA /* NSDictionary+Extension.swift in Sources */,
 				F68361492484E15F00B4E4FA /* AppManager.swift in Sources */,
 				F68361A02484EEF800B4E4FA /* UIImageView+Extension.swift in Sources */,
@@ -736,6 +755,7 @@
 				F67E68542485D319009FC081 /* MyRootNavViewController.swift in Sources */,
 				F68361BA2484F61000B4E4FA /* PersonalViewController.swift in Sources */,
 				F68361442484E15F00B4E4FA /* AppAssistance.swift in Sources */,
+				AB5EA19C2487FA26009758B1 /* DetailWorksModel.swift in Sources */,
 				F683615C2484E15F00B4E4FA /* SSTimeTask.swift in Sources */,
 				F68361AB2484EEF800B4E4FA /* UIButton+indicator.swift in Sources */,
 				F683615E2484E15F00B4E4FA /* ValidateService.swift in Sources */,
