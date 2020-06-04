@@ -1,6 +1,6 @@
 //
 //  BaseViewController.swift
-//  StellarHomeIOS
+//  JZStar
 //
 //  Created by don on 2019/5/24.
 //  Copyright © 2019 don. All rights reserved.
@@ -19,7 +19,6 @@ class BaseViewController: UIViewController,UIGestureRecognizerDelegate {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         fd_prefersNavigationBarHidden = true
-        view.clipsToBounds = true
     }
     
     deinit {

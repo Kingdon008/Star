@@ -1,8 +1,8 @@
 //
 //  ColorExtension.swift
-//  Stellar Wi-Fi
+//  JZStar
 //
-//  Created by 周奇天 on 2018/11/23.
+//  Created by don on 2018/11/23.
 //  Copyright © 2018 zhouqitian. All rights reserved.
 //
 

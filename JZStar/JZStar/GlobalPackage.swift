@@ -1,8 +1,8 @@
 //
 //  File.swift
-//  Stellar Wi-Fi
+//  JZStar
 //
-//  Created by 周奇天 on 2018/8/30.
+//  Created by don on 2018/8/30.
 //  Copyright © 2018年 zhouqitian. All rights reserved.
 //
 

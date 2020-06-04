@@ -1,6 +1,6 @@
 //
 //  ScaledButton.swift
-//  StellarHomeIOS
+//  JZStar
 //
 //  Created by don on 2019/5/31.
 //  Copyright © 2019 don. All rights reserved.

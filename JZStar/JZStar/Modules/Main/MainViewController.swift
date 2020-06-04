@@ -1,6 +1,6 @@
 //
 //  MainViewController.swift
-//  StellarHomeIOS
+//  JZStar
 //
 //  Created by don on 2019/5/31.
 //  Copyright © 2019 don. All rights reserved.
@@ -43,7 +43,7 @@ class MainViewController: UIViewController {
         tabbarView.snp.makeConstraints {
             $0.left.right.equalTo(self.view)
             $0.bottom.equalTo(0)
-            $0.height.equalTo(49.fit + getAllVersionSafeAreaBottomHeight())
+            $0.height.equalTo(49 + getAllVersionSafeAreaBottomHeight())
         }
         
         let tabbarLineView = UIView()
@@ -178,14 +178,16 @@ class MainViewController: UIViewController {
         return vc
     }()
     
-    lazy var recommondVC:RecommendViewController = {
+    lazy var recommondVC:MyRootNavViewController = {
         let vc = RecommendViewController()
-        return vc
+        let nav = MyRootNavViewController(rootViewController: vc)
+        return nav
     }()
     
-    lazy var personVC:PersonalViewController = {
+    lazy var personVC:MyRootNavViewController = {
         let vc = PersonalViewController()
-        return vc
+        let nav = MyRootNavViewController(rootViewController: vc)
+        return nav
     }()
     
     lazy var tabbarView:UIView = {

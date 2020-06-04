@@ -1,8 +1,8 @@
 //
 //  UIButton+indicator.swift
-//  StellarHomeIOS
+//  JZStar
 //
-//  Created by 刘燃 on 2019/7/15.
+//  Created by don on 2019/7/15.
 //  Copyright © 2019 don. All rights reserved.
 //
 

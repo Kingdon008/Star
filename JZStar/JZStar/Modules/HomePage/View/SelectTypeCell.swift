@@ -12,7 +12,7 @@ class SelectTypeCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        let titles = ["全部","1","2"]
+        let titles = ["全部","全职","兼职"]
         let num = titles.count - 1
         let btnwidth = 60
         let scrollview = UIScrollView()

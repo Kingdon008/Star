@@ -1,6 +1,6 @@
 //
 //  StellarHintHud.swift
-//  StellarHomeIOS
+//  JZStar
 //
 //  Created by don on 2019/7/4.
 //  Copyright © 2019 don. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  UIView+Extension.swift
-//  StellarHomeIOS
+//  JZStar
 //
 //  Created by don on 2020/4/9.
 //  Copyright © 2020 don. All rights reserved.

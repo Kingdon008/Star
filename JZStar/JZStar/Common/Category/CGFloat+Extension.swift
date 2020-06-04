@@ -1,6 +1,6 @@
 //
 //  CGFloat+Extension.swift
-//  StellarHomeIOS
+//  JZStar
 //
 //  Created by don on 2020/3/12.
 //  Copyright © 2020 don. All rights reserved.

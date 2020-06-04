@@ -1,7 +1,7 @@
 
 //
 //  Common.swift
-//  Stellar Wi-Fi
+//  JZStar
 //
 //  Created by don on 2018/8/29.
 //  Copyright © 2018年 zhouqitian. All rights reserved.

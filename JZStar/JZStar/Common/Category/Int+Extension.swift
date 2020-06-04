@@ -1,6 +1,6 @@
 //
 //  Int+Extension.swift
-//  StellarHomeIOS
+//  JZStar
 //
 //  Created by don on 2019/11/26.
 //  Copyright © 2019 don. All rights reserved.

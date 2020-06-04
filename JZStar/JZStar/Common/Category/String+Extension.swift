@@ -1,6 +1,6 @@
 //
 //  NSString+Extension.swift
-//  StellarHomeIOS
+//  JZStar
 //
 //  Created by don on 2019/6/3.
 //  Copyright © 2019 don. All rights reserved.

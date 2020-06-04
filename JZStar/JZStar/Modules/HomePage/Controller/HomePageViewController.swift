@@ -15,6 +15,7 @@ class HomePageViewController: BaseViewController {
     fileprivate let imageNames = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"]
     var viewModel = HomePageVM()
     
+    @IBOutlet var personalHeadView: UIView!
     @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,20 +25,11 @@ class HomePageViewController: BaseViewController {
     }
     
     func setupView(){
-        let frame1 = CGRect.init(x: 0, y: 0, width: kScreenWidth, height: 220)
-        let pagerView = FSPagerView(frame: frame1)
-        pagerView.dataSource = self
-        pagerView.delegate = self
-        pagerView.transformer = FSPagerViewTransformer(type: .coverFlow)
-        pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
-        pagerView.itemSize = CGSize(width: 220, height: 170)
-        pagerView.decelerationDistance = FSPagerView.automaticDistance
-        pagerView.decelerationDistance = 1
-        pagerView.isInfinite = true
-        pagerView.alwaysBounceHorizontal = true
-        pagerView.removesInfiniteLoopForSingleItem = true
-        tableview.tableHeaderView = pagerView
-//        self.view.addSubview(pagerView)
+        let headView = UIView(frame: CGRect.init(x: 0, y: 0, width: kScreenWidth, height: 280))
+        headView.addSubview(pagerView)
+        personalHeadView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 60)
+        headView.addSubview(personalHeadView)
+        tableview.tableHeaderView = headView
     }
     
     func setupData(){
@@ -46,6 +38,24 @@ class HomePageViewController: BaseViewController {
             self.tableview.reloadData()
         }
     }
+    
+    ///lazy
+    lazy var pagerView:FSPagerView = {
+        let frame = CGRect.init(x: 0, y: 60, width: kScreenWidth, height: 220)
+        let view = FSPagerView(frame: frame)
+        view.dataSource = self
+        view.delegate = self
+        view.transformer = FSPagerViewTransformer(type: .coverFlow)
+        view.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
+        view.itemSize = CGSize(width: 220, height: 170)
+        view.decelerationDistance = FSPagerView.automaticDistance
+        view.decelerationDistance = 1
+        view.isInfinite = true
+        view.alwaysBounceHorizontal = true
+        view.removesInfiniteLoopForSingleItem = true
+        view.automaticSlidingInterval = 3
+        return view
+    }()
 
 }
 

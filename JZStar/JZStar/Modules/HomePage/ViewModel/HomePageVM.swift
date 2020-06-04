@@ -35,6 +35,7 @@ class HomePageVM: NSObject {
     func setData(callback:()->Void){
         let sectionModel = getSectionModel()
         sectionModel.cellModelsArr.removeAll()
+        completeResumeView()
         addTypeView()
         addDetailCells()
         callback()
@@ -54,17 +55,34 @@ class HomePageVM: NSObject {
         sectionModel.cellModelsArr.append(selectTypeCellmodel)
     }
     
-    private func addDetailCells(){
+    private func completeResumeView(){
         let sectionModel = getSectionModel()
-        let selectDetailCellmodel = CellModel()
-        selectDetailCellmodel.cellHeight = {table,index in
-            return kScreenHeight - 250 - 60 - (49.fit + getAllVersionSafeAreaBottomHeight()) - getAllVersionSafeAreaTopHeight()
+        let selectTypeCellmodel = CellModel()
+        selectTypeCellmodel.cellHeight = {table,index in
+            return 60
         }
-        selectDetailCellmodel.cell = {table,index in
-            let cell = SelectDetailCell.initWithXIb() as! SelectDetailCell
+        selectTypeCellmodel.cell = {table,index in
+            let cell = CompleteResumeCell.initWithXIb() as! CompleteResumeCell
             cell.selectionStyle = .none
             return cell
         }
-        sectionModel.cellModelsArr.append(selectDetailCellmodel)
+        sectionModel.cellModelsArr.append(selectTypeCellmodel)
+    }
+    
+    private func addDetailCells(){
+        for _ in 0...25{
+            let sectionModel = getSectionModel()
+            let selectDetailCellmodel = CellModel()
+            selectDetailCellmodel.cellHeight = {table,index in
+                return 88
+            }
+            selectDetailCellmodel.cell = {table,index in
+                let cell = SelectDetailViewCell.initWithXIb() as! SelectDetailViewCell
+                cell.selectionStyle = .none
+                return cell
+            }
+            sectionModel.cellModelsArr.append(selectDetailCellmodel)
+        }
+        
     }
 }

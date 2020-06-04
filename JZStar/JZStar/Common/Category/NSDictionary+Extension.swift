@@ -1,8 +1,8 @@
 //
 //  NSDictionary+Extension.swift
-//  StellarHomeIOS
+//  JZStar
 //
-//  Created by 周奇天 on 2019/11/25.
+//  Created by don on 2019/11/25.
 //  Copyright © 2019 don. All rights reserved.
 //
 
