@@ -10,6 +10,9 @@ import UIKit
 
 class SelectDetailViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var salaryDescribeLabel: UILabel!
+    @IBOutlet weak var companyNameLabel: UILabel!
+    @IBOutlet weak var tagLabel: UILabel!
     
     static func initWithXIb() -> UITableViewCell{
         let arrayOfViews = Bundle.main.loadNibNamed("SelectDetailViewCell", owner: nil, options: nil)
@@ -24,10 +27,13 @@ class SelectDetailViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func setData(data:Any){
+        if let model = data as? DetailMerchantModel{
+            titleLabel.text = model.title
+            salaryDescribeLabel.text = model.salary_describe
+            companyNameLabel.text = model.company_name
+            tagLabel.text = model.tag_name
+        }
     }
     
 }

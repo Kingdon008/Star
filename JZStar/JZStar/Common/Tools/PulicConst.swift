@@ -32,13 +32,9 @@ let userDefaults = UserDefaults.standard
 let kStatusBarH = UIApplication.shared.statusBarFrame.size.height //状态栏高度x:44
 let kNavigationBarH = UINavigationController.init().navigationBar.frame.height  //导航栏Bar高度
 let kNavigationH = (kStatusBarH + kNavigationBarH)
-
 let kScreenWidth = UIScreen.main.bounds.size.width                              //屏幕宽
 let kScreenHeight = UIScreen.main.bounds.size.height                             //屏幕高
-let BOTTOM_HEIGHT:CGFloat = 49.0                                                       //tabbar的高度
-let NAVVIEW_HEIGHT:CGFloat = 64.0                                                     //非刘海屏幕的nav的高度
-let NAVVIEW_HEIGHT_DISLODGE_SAFEAREA:CGFloat = 44.0                                  //刘海屏幕nav去除顶部安全距离剩下的高度
-let kBottomArcH = CGFloat(kStatusBarH > 20.1 ? 34 : 0)   //底部圆弧高度
+let BOTTOM_TABBAR_HEIGHT:CGFloat = 49.0                                                       //tabbar的高度
 /// 适配比例
 let ratio = (kScreenWidth < kScreenHeight ? kScreenWidth : kScreenHeight) / 375.0
 /// 判断是否刘海屏
@@ -130,7 +126,6 @@ let safeAreaBottomHeight = UIApplication.shared.keyWindow?.safeAreaInsets.bottom
 let safeAreaTopHeight = UIApplication.shared.keyWindow?.safeAreaInsets.top
 
 let keyAppUser = "__AppUser_"
-let keyDUIUser = "__DUIUser"
 let keyAppCookie = "__AppCookie_"
 
 struct Input {

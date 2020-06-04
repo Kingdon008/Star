@@ -16,7 +16,7 @@ func fitLength() -> CGFloat{
 }
 
 func getAllVersionSafeAreaTopHeight() -> CGFloat {
-    return kNavigationH - NAVVIEW_HEIGHT_DISLODGE_SAFEAREA
+    return kStatusBarH
 }
 
 func getAllVersionSafeAreaBottomHeight() -> CGFloat {
@@ -35,25 +35,6 @@ func StellarLocalizedString(_ str: String) -> String {
     return NSLocalizedString(str, comment: str)
 }
 
-/// 获取WiFi信息
-///
-/// - Returns: SSID及MAC的元组
-func getWifiInfo() -> (ssid: String?, mac: String?) {
-    if let cfas: NSArray = CNCopySupportedInterfaces() {
-        for cfa in cfas {
-            if let dict = CFBridgingRetain(
-                CNCopyCurrentNetworkInfo(cfa as! CFString)
-                ) {
-                if let ssid = dict["SSID"] as? String,
-                    let bssid = dict["BSSID"] as? String {
-                    return (ssid, bssid)
-                }
-            }
-        }
-    }
-    return (nil, nil)
-}
-
 /// 获取keywindow
 public func getKeyboardWindow() -> UIWindow {
     return UIApplication.shared.keyWindow!
@@ -69,7 +50,6 @@ func CURRENT_TOP_VC() -> UIViewController {
     return getTopVc(rootVc: CURRENT_ROOT_VC())
 }
 
-// 递归查找控制器
 private func getTopVc(rootVc: UIViewController) -> UIViewController {
     if rootVc.presentedViewController != nil {
         return getTopVc(rootVc: rootVc.presentedViewController!)
@@ -114,9 +94,9 @@ func jumpTo(url: String){
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }else{
-            if url.absoluteString.hasPrefix("sinaweibo") {
-                TOAST(message: "未安装新浪微博App")
-            }
+//            if url.absoluteString.hasPrefix("sinaweibo") {
+//                TOAST(message: "未安装新浪微博App")
+//            }
         }
     }
 }

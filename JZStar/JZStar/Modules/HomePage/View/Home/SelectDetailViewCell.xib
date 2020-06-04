@@ -22,30 +22,20 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="快递配送" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJW-1R-Qvv">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快递配送" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJW-1R-Qvv">
                         <rect key="frame" x="10" y="14" width="70" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="达达快递" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYb-0u-vee">
-                        <rect key="frame" x="39" y="43" width="58" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="学历不限" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A43-PO-qwt">
-                        <rect key="frame" x="10" y="68" width="50" height="15"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="学历不限" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A43-PO-qwt">
+                        <rect key="frame" x="10" y="141" width="50" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10/天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04w-R7-PTL">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/天" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04w-R7-PTL">
                         <rect key="frame" x="331" y="14" width="37" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -57,15 +47,32 @@
                             <constraint firstAttribute="height" constant="1" id="3Is-FB-fa3"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="达达快递" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYb-0u-vee">
+                        <rect key="frame" x="39" y="43" width="58" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="kJW-1R-Qvv" firstAttribute="top" secondItem="jwI-zT-dSg" secondAttribute="bottom" constant="13" id="4IW-II-tRq"/>
                     <constraint firstItem="jwI-zT-dSg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="DZO-Hc-UXV"/>
+                    <constraint firstAttribute="trailing" secondItem="04w-R7-PTL" secondAttribute="trailing" constant="49" id="VFu-5p-AEs"/>
+                    <constraint firstItem="mYb-0u-vee" firstAttribute="top" secondItem="kJW-1R-Qvv" secondAttribute="bottom" constant="8" id="WJZ-hI-O0T"/>
+                    <constraint firstItem="A43-PO-qwt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="WcK-2X-Z1W"/>
                     <constraint firstItem="jwI-zT-dSg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="X9z-DK-njE"/>
                     <constraint firstAttribute="trailing" secondItem="jwI-zT-dSg" secondAttribute="trailing" id="XGW-YD-jxQ"/>
+                    <constraint firstItem="04w-R7-PTL" firstAttribute="top" secondItem="jwI-zT-dSg" secondAttribute="bottom" constant="13" id="akd-aG-B39"/>
+                    <constraint firstItem="kJW-1R-Qvv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ivb-X2-w3x"/>
+                    <constraint firstAttribute="bottom" secondItem="A43-PO-qwt" secondAttribute="bottom" constant="10" id="sZk-tb-QzX"/>
+                    <constraint firstItem="mYb-0u-vee" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="39" id="vKB-Bu-7S8"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="companyNameLabel" destination="mYb-0u-vee" id="dpn-gQ-qeX"/>
+                <outlet property="salaryDescribeLabel" destination="04w-R7-PTL" id="56X-aF-tvo"/>
+                <outlet property="tagLabel" destination="A43-PO-qwt" id="fRw-80-MMP"/>
                 <outlet property="titleLabel" destination="kJW-1R-Qvv" id="JAg-ml-emV"/>
             </connections>
             <point key="canvasLocation" x="207.97101449275365" y="150.66964285714286"/>

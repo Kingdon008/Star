@@ -100,4 +100,5 @@ class CellModel: NSObject {
     var cellHeight:((UITableView,IndexPath)->CGFloat)? = nil
     var cell:((UITableView,IndexPath)->UITableViewCell)? = nil
     var selectRow:((UITableView,IndexPath)->Void)? = nil
+    var cellClassName:String?
 }

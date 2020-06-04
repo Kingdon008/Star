@@ -43,7 +43,7 @@ class MainViewController: UIViewController {
         tabbarView.snp.makeConstraints {
             $0.left.right.equalTo(self.view)
             $0.bottom.equalTo(0)
-            $0.height.equalTo(49 + getAllVersionSafeAreaBottomHeight())
+            $0.height.equalTo(BOTTOM_TABBAR_HEIGHT + getAllVersionSafeAreaBottomHeight())
         }
         
         let tabbarLineView = UIView()
