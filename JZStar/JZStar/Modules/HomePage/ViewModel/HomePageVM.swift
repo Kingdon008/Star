@@ -85,20 +85,7 @@ class HomePageVM: NSObject {
     
     private func addDetailCells(){
         let sectionModel = getSectionModel()
-//        for _ in 0...25{
-//            let selectDetailCellmodel = CellModel()
-//            selectDetailCellmodel.cellHeight = {table,index in
-//                return 95
-//            }
-//            selectDetailCellmodel.cell = {table,index in
-//                let cell = SelectDetailViewCell.initWithXIb() as! SelectDetailViewCell
-//                cell.selectionStyle = .none
-//                return cell
-//            }
-//            selectDetailCellmodel.cellClassName = NSStringFromClass(SelectDetailViewCell.self)
-//            sectionModel.cellModelsArr.append(selectDetailCellmodel)
-//        }
-        currentData?.forEach({ (model) in
+        for _ in 0...25{
             let selectDetailCellmodel = CellModel()
             selectDetailCellmodel.cellHeight = {table,index in
                 return 95
@@ -106,11 +93,24 @@ class HomePageVM: NSObject {
             selectDetailCellmodel.cell = {table,index in
                 let cell = SelectDetailViewCell.initWithXIb() as! SelectDetailViewCell
                 cell.selectionStyle = .none
-                cell.setData(data: model)
                 return cell
             }
+            selectDetailCellmodel.cellClassName = NSStringFromClass(SelectDetailViewCell.self)
             sectionModel.cellModelsArr.append(selectDetailCellmodel)
-        })
+        }
+//        currentData?.forEach({ (model) in
+//            let selectDetailCellmodel = CellModel()
+//            selectDetailCellmodel.cellHeight = {table,index in
+//                return 95
+//            }
+//            selectDetailCellmodel.cell = {table,index in
+//                let cell = SelectDetailViewCell.initWithXIb() as! SelectDetailViewCell
+//                cell.selectionStyle = .none
+//                cell.setData(data: model)
+//                return cell
+//            }
+//            sectionModel.cellModelsArr.append(selectDetailCellmodel)
+//        })
         
     }
     
