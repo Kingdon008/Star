@@ -103,21 +103,6 @@ let STELLAR_FONT_MEDIUM_T13: UIFont = UIFont.systemFont(ofSize: 13, weight: .med
 let STELLAR_FONT_MEDIUM_T12: UIFont = UIFont.systemFont(ofSize: 12, weight: .medium)
 let STELLAR_FONT_MEDIUM_T11: UIFont = UIFont.systemFont(ofSize: 11, weight: .medium)
 
-//数字字体
-let STELLAR_FONT_NUMBER_T32: UIFont = UIFont(name: "DINPro-Medium", size: 32)!
-let STELLAR_FONT_NUMBER_T30: UIFont = UIFont(name: "DINPro-Medium", size: 30)!
-let STELLAR_FONT_NUMBER_T26: UIFont = UIFont(name: "DINPro-Medium", size: 26)!
-let STELLAR_FONT_NUMBER_T22: UIFont = UIFont(name: "DINPro-Medium", size: 22)!
-let STELLAR_FONT_NUMBER_T20: UIFont = UIFont(name: "DINPro-Medium", size: 20)!
-let STELLAR_FONT_NUMBER_T19: UIFont = UIFont(name: "DINPro-Medium", size: 19)!
-let STELLAR_FONT_NUMBER_T18: UIFont = UIFont(name: "DINPro-Medium", size: 18)!
-let STELLAR_FONT_NUMBER_T17: UIFont = UIFont(name: "DINPro-Medium", size: 17)!
-let STELLAR_FONT_NUMBER_T16: UIFont = UIFont(name: "DINPro-Medium", size: 16)!
-let STELLAR_FONT_NUMBER_T15: UIFont = UIFont(name: "DINPro-Medium", size: 15)!
-let STELLAR_FONT_NUMBER_T14: UIFont = UIFont(name: "DINPro-Medium", size: 14)!
-let STELLAR_FONT_NUMBER_T13: UIFont = UIFont(name: "DINPro-Medium", size: 13)!
-let STELLAR_FONT_NUMBER_T12: UIFont = UIFont(name: "DINPro-Medium", size: 12)!
-
 // MARK: - Public safeArea
 @available(iOS 11.0, *)
 let safeAreaBottomHeight = UIApplication.shared.keyWindow?.safeAreaInsets.bottom

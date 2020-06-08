@@ -33,12 +33,12 @@ class ValidateService {
                     anyObserver.onCompleted()
                     return Disposables.create()
                 }else{
-                    anyObserver.onNext(.failed(.other(StellarLocalizedString("VALIDATEFAILED_PHONENUM"))))
+                    anyObserver.onNext(.failed(.other("请输入正确的手机号")))
                     return Disposables.create()
                 }
             }
             catch _ {
-                anyObserver.onNext(.failed(.other(StellarLocalizedString("VALIDATEFAILED_PHONENUM"))))
+                anyObserver.onNext(.failed(.other("请输入正确的手机号")))
                 return Disposables.create()
             }
         }

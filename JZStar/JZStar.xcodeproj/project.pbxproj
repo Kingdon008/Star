@@ -27,6 +27,17 @@
 		F65431DD2488B4BC0069A307 /* PersonalDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65431DB2488B4BC0069A307 /* PersonalDetailCell.swift */; };
 		F65431DE2488B4BC0069A307 /* PersonalDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F65431DC2488B4BC0069A307 /* PersonalDetailCell.xib */; };
 		F65431E12488B5CF0069A307 /* PersonVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65431E02488B5CF0069A307 /* PersonVM.swift */; };
+		F66CEEA8248DC0BF00DB68EC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEEA6248DC0BF00DB68EC /* LoginVC.swift */; };
+		F66CEEA9248DC0BF00DB68EC /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66CEEA7248DC0BF00DB68EC /* LoginVC.xib */; };
+		F66CEEAC248DC2AA00DB68EC /* StellarProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEEAB248DC2AA00DB68EC /* StellarProgressHUD.swift */; };
+		F66CEEAF248DC2EF00DB68EC /* AccountOrPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEEAE248DC2EF00DB68EC /* AccountOrPasswordView.swift */; };
+		F66CEEB4248DC31000DB68EC /* NavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEEB2248DC31000DB68EC /* NavView.swift */; };
+		F66CEEB5248DC31000DB68EC /* NavViewTitleImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEEB3248DC31000DB68EC /* NavViewTitleImageButton.swift */; };
+		F66CEEB8248DC32C00DB68EC /* StellarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEEB7248DC32C00DB68EC /* StellarButton.swift */; };
+		F66CEEBC248DC35100DB68EC /* StellarPhoneTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66CEEBA248DC35100DB68EC /* StellarPhoneTextFieldView.xib */; };
+		F66CEEBD248DC35100DB68EC /* StellarPhoneTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEEBB248DC35100DB68EC /* StellarPhoneTextFieldView.swift */; };
+		F66CEEC1248DC3C000DB68EC /* StellarCommonTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66CEEBF248DC3C000DB68EC /* StellarCommonTextFieldView.xib */; };
+		F66CEEC2248DC3C000DB68EC /* StellarCommonTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEEC0248DC3C000DB68EC /* StellarCommonTextFieldView.swift */; };
 		F67E68532485D319009FC081 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E68512485D319009FC081 /* BaseViewController.swift */; };
 		F67E68542485D319009FC081 /* MyRootNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E68522485D319009FC081 /* MyRootNavViewController.swift */; };
 		F68360C32484DC6C00B4E4FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68360C22484DC6C00B4E4FA /* AppDelegate.swift */; };
@@ -122,6 +133,17 @@
 		F65431DB2488B4BC0069A307 /* PersonalDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailCell.swift; sourceTree = "<group>"; };
 		F65431DC2488B4BC0069A307 /* PersonalDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalDetailCell.xib; sourceTree = "<group>"; };
 		F65431E02488B5CF0069A307 /* PersonVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonVM.swift; sourceTree = "<group>"; };
+		F66CEEA6248DC0BF00DB68EC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		F66CEEA7248DC0BF00DB68EC /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		F66CEEAB248DC2AA00DB68EC /* StellarProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StellarProgressHUD.swift; sourceTree = "<group>"; };
+		F66CEEAE248DC2EF00DB68EC /* AccountOrPasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountOrPasswordView.swift; sourceTree = "<group>"; };
+		F66CEEB2248DC31000DB68EC /* NavView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavView.swift; sourceTree = "<group>"; };
+		F66CEEB3248DC31000DB68EC /* NavViewTitleImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewTitleImageButton.swift; sourceTree = "<group>"; };
+		F66CEEB7248DC32C00DB68EC /* StellarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StellarButton.swift; sourceTree = "<group>"; };
+		F66CEEBA248DC35100DB68EC /* StellarPhoneTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StellarPhoneTextFieldView.xib; sourceTree = "<group>"; };
+		F66CEEBB248DC35100DB68EC /* StellarPhoneTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StellarPhoneTextFieldView.swift; sourceTree = "<group>"; };
+		F66CEEBF248DC3C000DB68EC /* StellarCommonTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StellarCommonTextFieldView.xib; sourceTree = "<group>"; };
+		F66CEEC0248DC3C000DB68EC /* StellarCommonTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StellarCommonTextFieldView.swift; sourceTree = "<group>"; };
 		F67E68512485D319009FC081 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F67E68522485D319009FC081 /* MyRootNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRootNavViewController.swift; sourceTree = "<group>"; };
 		F68360BF2484DC6C00B4E4FA /* JZStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JZStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -294,6 +316,76 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		F66CEEA4248DC09100DB68EC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F66CEEAD248DC2E700DB68EC /* View */,
+				F66CEEA5248DC09D00DB68EC /* ViewController */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F66CEEA5248DC09D00DB68EC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F66CEEA6248DC0BF00DB68EC /* LoginVC.swift */,
+				F66CEEA7248DC0BF00DB68EC /* LoginVC.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F66CEEAA248DC2AA00DB68EC /* StellarProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				F66CEEAB248DC2AA00DB68EC /* StellarProgressHUD.swift */,
+			);
+			path = StellarProgressHUD;
+			sourceTree = "<group>";
+		};
+		F66CEEAD248DC2E700DB68EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F66CEEAE248DC2EF00DB68EC /* AccountOrPasswordView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F66CEEB1248DC31000DB68EC /* NavView */ = {
+			isa = PBXGroup;
+			children = (
+				F66CEEB2248DC31000DB68EC /* NavView.swift */,
+				F66CEEB3248DC31000DB68EC /* NavViewTitleImageButton.swift */,
+			);
+			path = NavView;
+			sourceTree = "<group>";
+		};
+		F66CEEB6248DC32C00DB68EC /* StellarButton */ = {
+			isa = PBXGroup;
+			children = (
+				F66CEEB7248DC32C00DB68EC /* StellarButton.swift */,
+			);
+			path = StellarButton;
+			sourceTree = "<group>";
+		};
+		F66CEEB9248DC35100DB68EC /* StellarTextFieldView */ = {
+			isa = PBXGroup;
+			children = (
+				F66CEEBA248DC35100DB68EC /* StellarPhoneTextFieldView.xib */,
+				F66CEEBB248DC35100DB68EC /* StellarPhoneTextFieldView.swift */,
+			);
+			path = StellarTextFieldView;
+			sourceTree = "<group>";
+		};
+		F66CEEBE248DC3C000DB68EC /* StellarCommonTextFieldView */ = {
+			isa = PBXGroup;
+			children = (
+				F66CEEBF248DC3C000DB68EC /* StellarCommonTextFieldView.xib */,
+				F66CEEC0248DC3C000DB68EC /* StellarCommonTextFieldView.swift */,
+			);
+			name = StellarCommonTextFieldView;
+			path = "../../../../../stellar-home-ios/StellarHomeIOS/StellarHomeIOS/CommonClass/View/StellarCommonTextFieldView";
+			sourceTree = "<group>";
+		};
 		F67E68502485D319009FC081 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +466,7 @@
 		F68360F32484DC8200B4E4FA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F66CEEA4248DC09100DB68EC /* Login */,
 				F67E68502485D319009FC081 /* BaseViewController */,
 				F68361BB2484F8DA00B4E4FA /* Main */,
 				F68361B42484F5C400B4E4FA /* Personal */,
@@ -487,6 +580,11 @@
 		F683616E2484EEB900B4E4FA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F66CEEBE248DC3C000DB68EC /* StellarCommonTextFieldView */,
+				F66CEEB9248DC35100DB68EC /* StellarTextFieldView */,
+				F66CEEB6248DC32C00DB68EC /* StellarButton */,
+				F66CEEB1248DC31000DB68EC /* NavView */,
+				F66CEEAA248DC2AA00DB68EC /* StellarProgressHUD */,
 				F636BFA12489EAA4007AEB86 /* TitleScrollView */,
 				F68361BE2484F98A00B4E4FA /* TabbarScaledButton */,
 				F68361AF2484F07600B4E4FA /* MBProgressHUD+Stellar */,
@@ -728,7 +826,9 @@
 				F68360CF2484DC7400B4E4FA /* LaunchScreen.storyboard in Resources */,
 				AB9E51DC24892CED00BAF5AE /* DetailPositionVC.xib in Resources */,
 				F6D10C2B2486257E00AF6401 /* 2.jpg in Resources */,
+				F66CEEC1248DC3C000DB68EC /* StellarCommonTextFieldView.xib in Resources */,
 				AB5EA1952487F39D009758B1 /* SelectDetailCell.xib in Resources */,
+				F66CEEBC248DC35100DB68EC /* StellarPhoneTextFieldView.xib in Resources */,
 				AB5EA1992487F5FA009758B1 /* SelectDetailViewCell.xib in Resources */,
 				F6D10C292486257E00AF6401 /* 6.jpg in Resources */,
 				F6D10C2A2486257E00AF6401 /* 5.jpg in Resources */,
@@ -737,6 +837,7 @@
 				F65431DA2488B4980069A307 /* PersonalHeadCell.xib in Resources */,
 				F6D10C262486257E00AF6401 /* 7.jpg in Resources */,
 				F68360CC2484DC7400B4E4FA /* Assets.xcassets in Resources */,
+				F66CEEA9248DC0BF00DB68EC /* LoginVC.xib in Resources */,
 				F65431DE2488B4BC0069A307 /* PersonalDetailCell.xib in Resources */,
 				F6AF66992487949300CD347E /* SelectTypeCell.xib in Resources */,
 				F6D10C282486257E00AF6401 /* 3.jpg in Resources */,
@@ -818,6 +919,7 @@
 				F68361452484E15F00B4E4FA /* AppUser.swift in Sources */,
 				F68361BD2484F8DA00B4E4FA /* MainViewController.swift in Sources */,
 				F68360C32484DC6C00B4E4FA /* AppDelegate.swift in Sources */,
+				F66CEEB5248DC31000DB68EC /* NavViewTitleImageButton.swift in Sources */,
 				F68361462484E15F00B4E4FA /* ToolsFunction.swift in Sources */,
 				F65431E12488B5CF0069A307 /* PersonVM.swift in Sources */,
 				F68361A32484EEF800B4E4FA /* Date+Extension.swift in Sources */,
@@ -827,6 +929,7 @@
 				F683615D2484E15F00B4E4FA /* AppCookie.swift in Sources */,
 				AB9E51DB24892CED00BAF5AE /* DetailPositionVC.swift in Sources */,
 				F683615B2484E15F00B4E4FA /* SSTimeManager.swift in Sources */,
+				F66CEEC2248DC3C000DB68EC /* StellarCommonTextFieldView.swift in Sources */,
 				AB5EA1982487F5FA009758B1 /* SelectDetailViewCell.swift in Sources */,
 				F68361A52484EEF800B4E4FA /* NSDictionary+Extension.swift in Sources */,
 				F68361492484E15F00B4E4FA /* AppManager.swift in Sources */,
@@ -840,6 +943,7 @@
 				F68361B12484F07600B4E4FA /* MBProgressHUD+Stellar.swift in Sources */,
 				F67E68542485D319009FC081 /* MyRootNavViewController.swift in Sources */,
 				F68361BA2484F61000B4E4FA /* PersonalViewController.swift in Sources */,
+				F66CEEB8248DC32C00DB68EC /* StellarButton.swift in Sources */,
 				F68361442484E15F00B4E4FA /* AppAssistance.swift in Sources */,
 				AB5EA19C2487FA26009758B1 /* MerchantModel.swift in Sources */,
 				F683615C2484E15F00B4E4FA /* SSTimeTask.swift in Sources */,
@@ -850,11 +954,16 @@
 				F68360F62484E11E00B4E4FA /* TableViewDataModel.swift in Sources */,
 				F68361B82484F60300B4E4FA /* RecommendViewController.swift in Sources */,
 				F683615F2484E15F00B4E4FA /* Regex.swift in Sources */,
+				F66CEEAC248DC2AA00DB68EC /* StellarProgressHUD.swift in Sources */,
 				F636BFA32489EAB6007AEB86 /* TitleScrollView.swift in Sources */,
 				F68361682484E9C300B4E4FA /* GlobalPackage.swift in Sources */,
+				F66CEEA8248DC0BF00DB68EC /* LoginVC.swift in Sources */,
+				F66CEEB4248DC31000DB68EC /* NavView.swift in Sources */,
+				F66CEEAF248DC2EF00DB68EC /* AccountOrPasswordView.swift in Sources */,
 				F68361AA2484EEF800B4E4FA /* Image+Extension.swift in Sources */,
 				F65431CF2488820D0069A307 /* CompleteResumeCell.swift in Sources */,
 				F68361712484EED300B4E4FA /* StellarHintHud.swift in Sources */,
+				F66CEEBD248DC35100DB68EC /* StellarPhoneTextFieldView.swift in Sources */,
 				F6AF66982487949300CD347E /* SelectTypeCell.swift in Sources */,
 				F68361A42484EEF800B4E4FA /* UIView+Extension.swift in Sources */,
 				F683616B2484EB3E00B4E4FA /* InfoModel.swift in Sources */,

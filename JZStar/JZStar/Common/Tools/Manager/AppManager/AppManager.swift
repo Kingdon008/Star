@@ -87,14 +87,9 @@ class AppManager: NSObject {
     }
     
     private func configureLogin(){
-        nextStep()
-//        if user.hasLogined{
-//            self.nextStep()
-//        }else{
-//            let vc = WelcomeVC()
-//            let nav = MyRootNavViewController(rootViewController: vc)
-//            switchToVC(vc: nav)
-//        }
+        let vc = LoginVC()
+        let nav = MyRootNavViewController(rootViewController: vc)
+        switchToVC(vc: nav)
     }
            
     
