@@ -22,30 +22,37 @@ class HomePageViewController: BaseViewController {
     }
     
     func setupView(){
-        let headView = UIView(frame: CGRect.init(x: 0, y: 0, width: kScreenWidth, height: 280))
-        headView.addSubview(pagerView)
-        personalHeadView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 60)
+        let headView = UIView(frame: CGRect.init(x: 0, y: 0, width: kScreenWidth, height: 302))
+        personalHeadView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 82)
         headView.addSubview(personalHeadView)
+        headView.addSubview(pagerView)
         tableview.tableHeaderView = headView
+        
+        view.addSubview(typeView)
     }
     
     func setupData(){
         viewModel.tableViewDataModel.targetTableView(myTableview: tableview)
+        viewModel.reloadTypes = { titles in
+            self.typeView.setTitles(titles)
+        }
+        
         viewModel.setData {
             self.tableview.reloadData()
         }
-        tableview.mj_header = MJRefreshNormalHeader(refreshingBlock: {
-            self.tableview.mj_header?.endRefreshing()
-        })
+//        tableview.mj_header = MJRefreshNormalHeader(refreshingBlock: {
+//            self.tableview.mj_header?.endRefreshing()
+//        })
         tableview.mj_footer = MJRefreshBackNormalFooter(refreshingBlock: {
             self.viewModel.loadDetailCells()
             self.tableview.mj_footer?.endRefreshing()
         })
+        
     }
     
     ///lazy
     lazy var pagerView:FSPagerView = {
-        let frame = CGRect.init(x: 0, y: 60, width: kScreenWidth, height: 220)
+        let frame = CGRect.init(x: 0, y: 82, width: kScreenWidth, height: 220)
         let view = FSPagerView(frame: frame)
         view.dataSource = self
         view.delegate = self
@@ -58,6 +65,14 @@ class HomePageViewController: BaseViewController {
         view.alwaysBounceHorizontal = true
         view.removesInfiniteLoopForSingleItem = true
         view.automaticSlidingInterval = 3
+        return view
+    }()
+    
+    
+    lazy var typeView:SelectTypeView = {
+        let frame = CGRect.init(x: 0, y: kNavigationH + 302 + 104, width: kScreenWidth, height: 60)
+        let view = SelectTypeView(frame: frame)
+        view.backgroundColor = UIColor.red
         return view
     }()
 

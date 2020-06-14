@@ -21,51 +21,52 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ftQ-Tp-9XF">
-                    <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                    <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2F9-Tg-pcr">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZz-8H-xwC">
+                            <rect key="frame" x="17" y="6" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="未登录"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="jl1-Jw-lp7"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ftQ-Tp-9XF" secondAttribute="bottom" constant="49" id="73n-cn-uHo"/>
-                <constraint firstItem="ftQ-Tp-9XF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="nTr-C5-XLK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2F9-Tg-pcr" secondAttribute="trailing" id="GlS-jI-yID"/>
+                <constraint firstItem="2F9-Tg-pcr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LXa-A6-oG9"/>
+                <constraint firstItem="ftQ-Tp-9XF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="nTr-C5-XLK"/>
                 <constraint firstItem="ftQ-Tp-9XF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="njZ-Hb-nxu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ftQ-Tp-9XF" secondAttribute="trailing" id="oLw-ka-zQS"/>
+                <constraint firstItem="2F9-Tg-pcr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="yQE-7m-XUL"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="127"/>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </view>
         <view contentMode="scaleToFill" id="vI1-1c-Yfj">
             <rect key="frame" x="0.0" y="0.0" width="568" height="154"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEf-Un-WEo">
-                    <rect key="frame" x="6" y="67" width="62" height="30"/>
-                    <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="用户中心"/>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="今日收益10000001000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sf-7y-a8t">
-                    <rect key="frame" x="384.5" y="71.5" width="177.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="【未登录】" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6b-aB-kee">
-                    <rect key="frame" x="68" y="71.5" width="87" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每日推荐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6b-aB-kee">
+                    <rect key="frame" x="21" y="80.5" width="65.5" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" red="0.9523469806" green="0.95248359439999997" blue="0.95231717819999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="1sf-7y-a8t" firstAttribute="centerY" secondItem="CEf-Un-WEo" secondAttribute="centerY" id="8pe-oM-xFf"/>
-                <constraint firstItem="CEf-Un-WEo" firstAttribute="centerY" secondItem="xb4-c2-YJN" secondAttribute="centerY" id="Hh2-Bp-Db4"/>
-                <constraint firstItem="X6b-aB-kee" firstAttribute="centerY" secondItem="CEf-Un-WEo" secondAttribute="centerY" id="VTL-9M-9hW"/>
-                <constraint firstItem="xb4-c2-YJN" firstAttribute="trailing" secondItem="1sf-7y-a8t" secondAttribute="trailing" constant="6" id="WTz-p5-85o"/>
-                <constraint firstItem="CEf-Un-WEo" firstAttribute="leading" secondItem="xb4-c2-YJN" secondAttribute="leading" constant="6" id="dPt-Ob-fPB"/>
-                <constraint firstItem="1sf-7y-a8t" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="X6b-aB-kee" secondAttribute="trailing" constant="10" id="tAi-ge-ftU"/>
-                <constraint firstItem="X6b-aB-kee" firstAttribute="leading" secondItem="CEf-Un-WEo" secondAttribute="trailing" id="uwb-LT-ygk"/>
+                <constraint firstItem="xb4-c2-YJN" firstAttribute="bottom" secondItem="X6b-aB-kee" secondAttribute="bottom" constant="20" id="YEh-fY-4WN"/>
+                <constraint firstItem="X6b-aB-kee" firstAttribute="leading" secondItem="xb4-c2-YJN" secondAttribute="leading" constant="21" id="o4P-bF-ndF"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

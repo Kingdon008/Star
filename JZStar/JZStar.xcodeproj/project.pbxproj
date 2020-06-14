@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		31842D7C1F71ACD5DAED93F8 /* Pods_JZStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55197AD4B1F3C2713D78B3FF /* Pods_JZStar.framework */; };
+		AB0C2D4E2496323800D9E378 /* SpaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C2D4C2496323800D9E378 /* SpaceCell.swift */; };
+		AB0C2D4F2496323800D9E378 /* SpaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0C2D4D2496323800D9E378 /* SpaceCell.xib */; };
 		AB5EA1942487F39D009758B1 /* SelectDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5EA1922487F39D009758B1 /* SelectDetailCell.swift */; };
 		AB5EA1952487F39D009758B1 /* SelectDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5EA1932487F39D009758B1 /* SelectDetailCell.xib */; };
 		AB5EA1982487F5FA009758B1 /* SelectDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5EA1962487F5FA009758B1 /* SelectDetailViewCell.swift */; };
@@ -36,8 +38,6 @@
 		F66CEEB8248DC32C00DB68EC /* StellarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEEB7248DC32C00DB68EC /* StellarButton.swift */; };
 		F66CEEBC248DC35100DB68EC /* StellarPhoneTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66CEEBA248DC35100DB68EC /* StellarPhoneTextFieldView.xib */; };
 		F66CEEBD248DC35100DB68EC /* StellarPhoneTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEEBB248DC35100DB68EC /* StellarPhoneTextFieldView.swift */; };
-		F66CEEC1248DC3C000DB68EC /* StellarCommonTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66CEEBF248DC3C000DB68EC /* StellarCommonTextFieldView.xib */; };
-		F66CEEC2248DC3C000DB68EC /* StellarCommonTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEEC0248DC3C000DB68EC /* StellarCommonTextFieldView.swift */; };
 		F67E68532485D319009FC081 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E68512485D319009FC081 /* BaseViewController.swift */; };
 		F67E68542485D319009FC081 /* MyRootNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E68522485D319009FC081 /* MyRootNavViewController.swift */; };
 		F68360C32484DC6C00B4E4FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68360C22484DC6C00B4E4FA /* AppDelegate.swift */; };
@@ -79,8 +79,7 @@
 		F68361BA2484F61000B4E4FA /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68361B92484F61000B4E4FA /* PersonalViewController.swift */; };
 		F68361BD2484F8DA00B4E4FA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68361BC2484F8DA00B4E4FA /* MainViewController.swift */; };
 		F68361C02484F98A00B4E4FA /* TabbarScaledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68361BF2484F98A00B4E4FA /* TabbarScaledButton.swift */; };
-		F6AF66982487949300CD347E /* SelectTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF66962487949300CD347E /* SelectTypeCell.swift */; };
-		F6AF66992487949300CD347E /* SelectTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6AF66972487949300CD347E /* SelectTypeCell.xib */; };
+		F6AF66982487949300CD347E /* SelectTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF66962487949300CD347E /* SelectTypeView.swift */; };
 		F6D10C102485F71300AF6401 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D10C0E2485F71300AF6401 /* HomePageViewController.swift */; };
 		F6D10C112485F71300AF6401 /* HomePageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D10C0F2485F71300AF6401 /* HomePageViewController.xib */; };
 		F6D10C132485F99100AF6401 /* HomePageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D10C122485F99100AF6401 /* HomePageVM.swift */; };
@@ -114,6 +113,8 @@
 		408496BDAF80093237DAAE1D /* Pods-JZStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JZStar.release.xcconfig"; path = "Target Support Files/Pods-JZStar/Pods-JZStar.release.xcconfig"; sourceTree = "<group>"; };
 		46FCAE921F5C6F35D28CB48F /* Pods-JZStar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JZStar.debug.xcconfig"; path = "Target Support Files/Pods-JZStar/Pods-JZStar.debug.xcconfig"; sourceTree = "<group>"; };
 		55197AD4B1F3C2713D78B3FF /* Pods_JZStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JZStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0C2D4C2496323800D9E378 /* SpaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceCell.swift; sourceTree = "<group>"; };
+		AB0C2D4D2496323800D9E378 /* SpaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpaceCell.xib; sourceTree = "<group>"; };
 		AB5EA1922487F39D009758B1 /* SelectDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDetailCell.swift; sourceTree = "<group>"; };
 		AB5EA1932487F39D009758B1 /* SelectDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectDetailCell.xib; sourceTree = "<group>"; };
 		AB5EA1962487F5FA009758B1 /* SelectDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDetailViewCell.swift; sourceTree = "<group>"; };
@@ -142,8 +143,6 @@
 		F66CEEB7248DC32C00DB68EC /* StellarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StellarButton.swift; sourceTree = "<group>"; };
 		F66CEEBA248DC35100DB68EC /* StellarPhoneTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StellarPhoneTextFieldView.xib; sourceTree = "<group>"; };
 		F66CEEBB248DC35100DB68EC /* StellarPhoneTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StellarPhoneTextFieldView.swift; sourceTree = "<group>"; };
-		F66CEEBF248DC3C000DB68EC /* StellarCommonTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StellarCommonTextFieldView.xib; sourceTree = "<group>"; };
-		F66CEEC0248DC3C000DB68EC /* StellarCommonTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StellarCommonTextFieldView.swift; sourceTree = "<group>"; };
 		F67E68512485D319009FC081 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F67E68522485D319009FC081 /* MyRootNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRootNavViewController.swift; sourceTree = "<group>"; };
 		F68360BF2484DC6C00B4E4FA /* JZStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JZStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,8 +190,7 @@
 		F68361B92484F61000B4E4FA /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		F68361BC2484F8DA00B4E4FA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F68361BF2484F98A00B4E4FA /* TabbarScaledButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarScaledButton.swift; sourceTree = "<group>"; };
-		F6AF66962487949300CD347E /* SelectTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTypeCell.swift; sourceTree = "<group>"; };
-		F6AF66972487949300CD347E /* SelectTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectTypeCell.xib; sourceTree = "<group>"; };
+		F6AF66962487949300CD347E /* SelectTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTypeView.swift; sourceTree = "<group>"; };
 		F6D10C0E2485F71300AF6401 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		F6D10C0F2485F71300AF6401 /* HomePageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageViewController.xib; sourceTree = "<group>"; };
 		F6D10C122485F99100AF6401 /* HomePageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVM.swift; sourceTree = "<group>"; };
@@ -240,6 +238,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AB0C2D4B2496320500D9E378 /* SpaceCell */ = {
+			isa = PBXGroup;
+			children = (
+				AB0C2D4C2496323800D9E378 /* SpaceCell.swift */,
+				AB0C2D4D2496323800D9E378 /* SpaceCell.xib */,
+			);
+			path = SpaceCell;
+			sourceTree = "<group>";
+		};
 		AB5EA19A2487F8FE009758B1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,8 +260,7 @@
 		AB9E51D724892C9F00BAF5AE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F6AF66962487949300CD347E /* SelectTypeCell.swift */,
-				F6AF66972487949300CD347E /* SelectTypeCell.xib */,
+				F6AF66962487949300CD347E /* SelectTypeView.swift */,
 				AB5EA1922487F39D009758B1 /* SelectDetailCell.swift */,
 				AB5EA1932487F39D009758B1 /* SelectDetailCell.xib */,
 				AB5EA1962487F5FA009758B1 /* SelectDetailViewCell.swift */,
@@ -379,8 +385,6 @@
 		F66CEEBE248DC3C000DB68EC /* StellarCommonTextFieldView */ = {
 			isa = PBXGroup;
 			children = (
-				F66CEEBF248DC3C000DB68EC /* StellarCommonTextFieldView.xib */,
-				F66CEEC0248DC3C000DB68EC /* StellarCommonTextFieldView.swift */,
 			);
 			name = StellarCommonTextFieldView;
 			path = "../../../../../stellar-home-ios/StellarHomeIOS/StellarHomeIOS/CommonClass/View/StellarCommonTextFieldView";
@@ -580,6 +584,7 @@
 		F683616E2484EEB900B4E4FA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AB0C2D4B2496320500D9E378 /* SpaceCell */,
 				F66CEEBE248DC3C000DB68EC /* StellarCommonTextFieldView */,
 				F66CEEB9248DC35100DB68EC /* StellarTextFieldView */,
 				F66CEEB6248DC32C00DB68EC /* StellarButton */,
@@ -826,7 +831,6 @@
 				F68360CF2484DC7400B4E4FA /* LaunchScreen.storyboard in Resources */,
 				AB9E51DC24892CED00BAF5AE /* DetailPositionVC.xib in Resources */,
 				F6D10C2B2486257E00AF6401 /* 2.jpg in Resources */,
-				F66CEEC1248DC3C000DB68EC /* StellarCommonTextFieldView.xib in Resources */,
 				AB5EA1952487F39D009758B1 /* SelectDetailCell.xib in Resources */,
 				F66CEEBC248DC35100DB68EC /* StellarPhoneTextFieldView.xib in Resources */,
 				AB5EA1992487F5FA009758B1 /* SelectDetailViewCell.xib in Resources */,
@@ -839,8 +843,8 @@
 				F68360CC2484DC7400B4E4FA /* Assets.xcassets in Resources */,
 				F66CEEA9248DC0BF00DB68EC /* LoginVC.xib in Resources */,
 				F65431DE2488B4BC0069A307 /* PersonalDetailCell.xib in Resources */,
-				F6AF66992487949300CD347E /* SelectTypeCell.xib in Resources */,
 				F6D10C282486257E00AF6401 /* 3.jpg in Resources */,
+				AB0C2D4F2496323800D9E378 /* SpaceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -917,6 +921,7 @@
 				F65431DD2488B4BC0069A307 /* PersonalDetailCell.swift in Sources */,
 				F67E68532485D319009FC081 /* BaseViewController.swift in Sources */,
 				F68361452484E15F00B4E4FA /* AppUser.swift in Sources */,
+				AB0C2D4E2496323800D9E378 /* SpaceCell.swift in Sources */,
 				F68361BD2484F8DA00B4E4FA /* MainViewController.swift in Sources */,
 				F68360C32484DC6C00B4E4FA /* AppDelegate.swift in Sources */,
 				F66CEEB5248DC31000DB68EC /* NavViewTitleImageButton.swift in Sources */,
@@ -929,7 +934,6 @@
 				F683615D2484E15F00B4E4FA /* AppCookie.swift in Sources */,
 				AB9E51DB24892CED00BAF5AE /* DetailPositionVC.swift in Sources */,
 				F683615B2484E15F00B4E4FA /* SSTimeManager.swift in Sources */,
-				F66CEEC2248DC3C000DB68EC /* StellarCommonTextFieldView.swift in Sources */,
 				AB5EA1982487F5FA009758B1 /* SelectDetailViewCell.swift in Sources */,
 				F68361A52484EEF800B4E4FA /* NSDictionary+Extension.swift in Sources */,
 				F68361492484E15F00B4E4FA /* AppManager.swift in Sources */,
@@ -964,7 +968,7 @@
 				F65431CF2488820D0069A307 /* CompleteResumeCell.swift in Sources */,
 				F68361712484EED300B4E4FA /* StellarHintHud.swift in Sources */,
 				F66CEEBD248DC35100DB68EC /* StellarPhoneTextFieldView.swift in Sources */,
-				F6AF66982487949300CD347E /* SelectTypeCell.swift in Sources */,
+				F6AF66982487949300CD347E /* SelectTypeView.swift in Sources */,
 				F68361A42484EEF800B4E4FA /* UIView+Extension.swift in Sources */,
 				F683616B2484EB3E00B4E4FA /* InfoModel.swift in Sources */,
 			);

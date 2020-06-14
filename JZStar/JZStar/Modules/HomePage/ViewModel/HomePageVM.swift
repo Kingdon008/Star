@@ -10,6 +10,7 @@ import UIKit
 
 class HomePageVM: NSObject {
     var tableViewDataModel = TableViewDataModel()
+    var reloadTypes:(([String])->Void)?
     private var merchantModel:MerchantModel?
     private var currentData:[DetailMerchantModel]?
     private var currentType:Int?{
@@ -51,6 +52,17 @@ class HomePageVM: NSObject {
         completeResumeView()
         addTypeView()
         addDetailCells()
+        
+        var titles = [String]()
+        if let arr = merchantModel?.data{
+            for merchantClassifyModel in arr {
+                if let name =  merchantClassifyModel.name{
+                    titles.append(name)
+                }
+            }
+        }
+        reloadTypes?(titles)
+        
         callback()
     }
     
@@ -61,9 +73,9 @@ class HomePageVM: NSObject {
             return 60
         }
         selectTypeCellmodel.cell = {table,index in
-            let cell = SelectTypeCell.initWithXIb() as! SelectTypeCell
+            let cell = SpaceCell.initWithXIb() as! SpaceCell
             cell.selectionStyle = .none
-            cell.setData(data: self.merchantModel as Any)
+//            cell.setData(data: self.merchantModel as Any)
             return cell
         }
         sectionModel.cellModelsArr.append(selectTypeCellmodel)
@@ -73,7 +85,7 @@ class HomePageVM: NSObject {
         let sectionModel = getSectionModel()
         let selectTypeCellmodel = CellModel()
         selectTypeCellmodel.cellHeight = {table,index in
-            return 60
+            return 104
         }
         selectTypeCellmodel.cell = {table,index in
             let cell = CompleteResumeCell.initWithXIb() as! CompleteResumeCell
