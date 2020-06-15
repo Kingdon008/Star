@@ -22,13 +22,16 @@ class HomePageViewController: BaseViewController {
     }
     
     func setupView(){
-        let headView = UIView(frame: CGRect.init(x: 0, y: 0, width: kScreenWidth, height: 302))
-        personalHeadView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 82)
-        headView.addSubview(personalHeadView)
+        let headView = UIView(frame: CGRect.init(x: 0, y: 0, width: kScreenWidth, height: 220))
+//        personalHeadView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 82)
+//        headView.addSubview(personalHeadView)
         headView.addSubview(pagerView)
         tableview.tableHeaderView = headView
-        
+        tableview.separatorColor = UIColor.init(hexString: "#C3CBD3")
         view.addSubview(typeView)
+        typeView.selectBlock = { title in
+            self.viewModel.currentName = title
+        }
     }
     
     func setupData(){
@@ -40,20 +43,22 @@ class HomePageViewController: BaseViewController {
         viewModel.setData {
             self.tableview.reloadData()
         }
-//        tableview.mj_header = MJRefreshNormalHeader(refreshingBlock: {
-//            self.tableview.mj_header?.endRefreshing()
-//        })
         tableview.mj_footer = MJRefreshBackNormalFooter(refreshingBlock: {
-            self.viewModel.loadDetailCells()
+//            self.viewModel.loadDetailCells()
             self.tableview.mj_footer?.endRefreshing()
         })
-        
+        tableview.rx.contentOffset.subscribe { [weak self] (contentOffset) in
+            if let contentOffsetY:CGFloat = contentOffset.element?.y {
+                self?.setupTableviewScroll(contentOffsetY: contentOffsetY)
+            }
+        }.disposed(by: disposeBag)
     }
     
     ///lazy
     lazy var pagerView:FSPagerView = {
-        let frame = CGRect.init(x: 0, y: 82, width: kScreenWidth, height: 220)
+        let frame = CGRect.init(x: 0, y: 0, width: kScreenWidth, height: 220)
         let view = FSPagerView(frame: frame)
+        view.backgroundColor = UIColor.init(hexString: "#F3F3F3")
         view.dataSource = self
         view.delegate = self
         view.transformer = FSPagerViewTransformer(type: .coverFlow)
@@ -70,9 +75,9 @@ class HomePageViewController: BaseViewController {
     
     
     lazy var typeView:SelectTypeView = {
-        let frame = CGRect.init(x: 0, y: kNavigationH + 302 + 104, width: kScreenWidth, height: 60)
+        let frame = CGRect.init(x: 0, y: kNavigationH + 220 + 104, width: kScreenWidth, height: 50)
         let view = SelectTypeView(frame: frame)
-        view.backgroundColor = UIColor.red
+//        view.backgroundColor = UIColor.red
         return view
     }()
 
@@ -93,6 +98,17 @@ extension HomePageViewController:FSPagerViewDataSource,FSPagerViewDelegate{
     
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
         pagerView.deselectItem(at: index, animated: true)
-        self.viewModel.loadDetailCells()
+//        self.viewModel.loadDetailCells()
+    }
+}
+
+extension HomePageViewController{
+    func setupTableviewScroll(contentOffsetY:CGFloat){
+        if Int(contentOffsetY) < Int(220 + 104){
+            typeView.frame.origin.y = kNavigationH + 220 + 104 - contentOffsetY
+        }
+        else{
+            typeView.frame.origin.y = kNavigationH
+        }
     }
 }

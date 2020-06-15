@@ -24,7 +24,7 @@ class SelectDetailViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        separatorInset = UIEdgeInsets.init(top: 0, left: 20, bottom: 0, right: 20)
     }
 
     func setData(data:Any){
@@ -32,7 +32,7 @@ class SelectDetailViewCell: UITableViewCell {
             titleLabel.text = model.title
             salaryDescribeLabel.text = model.salary_describe
             companyNameLabel.text = model.company_name
-            tagLabel.text = model.tag_name
+//            tagLabel.text = model.tag_name
         }
     }
     

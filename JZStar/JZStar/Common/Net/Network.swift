@@ -19,27 +19,19 @@ class Network: NSObject{
     var targets = [(NetRequestAPI,Success,Failure)]()
     var plugins:[PluginType] = [
 //        NetworkLoggerPlugin(verbose: false),
-        NetworkActivityPlugin(networkActivityClosure: { (changeType, targetType) in
-            switch changeType{
-            case .began:
-                //                StellarProgressHUD.showHUD()
-                break
-            case.ended:
-                //                StellarProgressHUD.dissmissHUD()
-                break
-            }
-        }),
-        AuthPlugin(),
-        CachePolicyPlugin()
+//        NetworkActivityPlugin(networkActivityClosure: { (changeType, targetType) in
+//            switch changeType{
+//            case .began:
+//                //                StellarProgressHUD.showHUD()
+//                break
+//            case.ended:
+//                //                StellarProgressHUD.dissmissHUD()
+//                break
+//            }
+//        }),
+//        AuthPlugin(),
+//        CachePolicyPlugin()
     ]
-    
-    //    let failureEndpointClosure = { (target: NetRequestAPI) -> Endpoint in
-    //        let sampleResponseClosure = { () -> (EndpointSampleResponse) in
-    //            return .networkResponse(200, target.sampleData)
-    //        }
-    //        let url = URL(target: target).absoluteString
-    //        return Endpoint(url: url, sampleResponseClosure: sampleResponseClosure, method: target.method, task: target.task, httpHeaderFields: target.headers)
-    //    }
     
     let stubClosure: (_ type: NetRequestAPI) -> Moya.StubBehavior  = { type1 in
         return StubBehavior.never
@@ -60,28 +52,8 @@ class Network: NSObject{
             }
         }
         let provider = MoyaProvider<NetRequestAPI>(requestClosure: requestClosure,stubClosure: Network.sharedManager.stubClosure, plugins:plugins)
-//        switch target {
-//        case .queryAllRooms:
-//            break
-//        case .queryDevicesVersionDescription(_,_,_):
-//            break
-//        case .devicesUpgradeInfo(_,_):
-//            break
-//        case .queryDevicesAddList:
-//            break
-//        default:
-//            provider.manager.delegate.sessionDidReceiveChallenge = { session, challenge in
-//                return Self.formateHTTPSAuthentication(challenge: challenge)
-//            }
-//            break
-//        }
         sharedManager.request(provider: provider, target: target, success: { json in
-            let code = json["code"].intValue
-            if code == 10006 {
-                
-            }else {
-                success(json)
-            }
+            success(json)
         }, failure: { (error,_) in
             failure(error, "")
         })

@@ -17,21 +17,26 @@
                 <rect key="frame" x="0.0" y="0.0" width="1346" height="153"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="完善信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2b-46-bgw">
-                        <rect key="frame" x="638" y="66" width="70" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addResume" translatesAutoresizingMaskIntoConstraints="NO" id="Dgy-7x-ImQ">
+                        <rect key="frame" x="10" y="-65.5" width="1326" height="284"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Dgy-7x-ImQ" secondAttribute="height" multiplier="355:76" id="WUF-ie-4fK"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" red="0.95286816360000004" green="0.9529822469" blue="0.95282942059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="p2b-46-bgw" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ecI-9F-Q3X"/>
-                    <constraint firstItem="p2b-46-bgw" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mer-wy-bW6"/>
+                    <constraint firstAttribute="trailing" secondItem="Dgy-7x-ImQ" secondAttribute="trailing" constant="10" id="Hba-CU-ed0"/>
+                    <constraint firstItem="Dgy-7x-ImQ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="WkH-Yr-Nbk"/>
+                    <constraint firstItem="Dgy-7x-ImQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XB5-Bv-7VG"/>
+                    <constraint firstItem="Dgy-7x-ImQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="tye-v0-1aq"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="881.15942028985512" y="163.05803571428569"/>
+            <point key="canvasLocation" x="368" y="130"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="addResume" width="355" height="76"/>
+    </resources>
 </document>

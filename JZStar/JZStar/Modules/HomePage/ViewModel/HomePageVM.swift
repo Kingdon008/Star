@@ -13,11 +13,11 @@ class HomePageVM: NSObject {
     var reloadTypes:(([String])->Void)?
     private var merchantModel:MerchantModel?
     private var currentData:[DetailMerchantModel]?
-    private var currentType:Int?{
+    var currentName:String?{
         didSet{
             if let dataArr = merchantModel?.data{
                 for model in dataArr {
-                    if currentType == model.id {
+                    if currentName == model.name {
                         currentData = model.data
                     }
                 }
@@ -25,15 +25,33 @@ class HomePageVM: NSObject {
             }
         }
     }
+    
     override init() {
         super.init()
-        loadNet()
     }
     
     private func loadNet(){
-        let dataStr = "{\"status\":1,     \"data\":[         {             \"id\":\"1\",             \"name\":\"推荐\",             \"data\":[                 {                     \"id\":\"4\",                     \"title\":\"美容美发\",                     \"company_name\":\"阿索贸易有限公司\",                     \"salary_describe\":\"底薪+提成\",                     \"is_fulltime\":\"1\",                     \"is_parttime\":\"1\",                     \"tag_name\":\"月结,按单\"                 },                 {                     \"id\":\"3\",                     \"title\":\"上海老佛爷百货地摊兼职招募\",                     \"company_name\":\"金店有限公司\",                     \"salary_describe\":\"8元\\/单\",                     \"is_fulltime\":\"1\",                     \"is_parttime\":\"1\",                     \"tag_name\":\"按单\"                 },                 {                     \"id\":\"2\",                     \"title\":\"在家兼职[免费，正规，简单]\",                     \"company_name\":\"德米移动科技\",                     \"salary_describe\":\"300\\/天\",                     \"is_fulltime\":\"1\",                     \"is_parttime\":\"1\",                     \"tag_name\":\"月结,推荐\"                 }]         },         {             \"id\":\"2\",             \"name\":\"全职\",             \"data\":[                 {                     \"id\":\"3\",                     \"title\":\"上海老佛爷百货地摊兼职招募\",                     \"company_name\":\"金店有限公司\",                     \"salary_describe\":\"8元\\/单\",                     \"is_fulltime\":\"1\",                     \"is_parttime\":\"1\",                     \"tag_name\":\"按单\"                 },                 {                     \"id\":\"2\",                     \"title\":\"在家兼职[免费，正规，简单]\",                     \"company_name\":\"德米移动科技\",                     \"salary_describe\":\"300\\/天\",                     \"is_fulltime\":\"1\",                     \"is_parttime\":\"1\",                     \"tag_name\":\"月结,推荐\"                 }]         },         {             \"id\":\"3\",             \"name\":\"兼职\",             \"data\":[                 {                     \"id\":\"4\",                     \"title\":\"美容美发\",                     \"company_name\":\"阿索贸易有限公司\",                     \"salary_describe\":\"底薪+提成\",                     \"is_fulltime\":\"1\",                     \"is_parttime\":\"1\",                     \"tag_name\":\"月结,按单\"                 },                 {                     \"id\":\"2\",                     \"title\":\"在家兼职[免费，正规，简单]\",                     \"company_name\":\"德米移动科技\",                     \"salary_describe\":\"300\\/天\",                     \"is_fulltime\":\"1\",                     \"is_parttime\":\"1\",                     \"tag_name\":\"月结,推荐\"                 }]         },         {             \"id\":\"4\",             \"name\":\"热门推荐\",             \"data\":[                 {                     \"id\":\"4\",                     \"title\":\"美容美发\",                     \"company_name\":\"阿索贸易有限公司\",                     \"salary_describe\":\"底薪+提成\",                     \"is_fulltime\":\"1\",                     \"is_parttime\":\"1\",                     \"tag_name\":\"月结,按单\"                 },                 {                     \"id\":\"3\",                     \"title\":\"上海老佛爷百货地摊兼职招募\",                     \"company_name\":\"金店有限公司\",                     \"salary_describe\":\"8元\\/单\",                     \"is_fulltime\":\"1\",                     \"is_parttime\":\"1\",                     \"tag_name\":\"按单\"                 }]         }] } "
-        merchantModel = dataStr.kj.model(MerchantModel.self)
-        currentType = merchantModel?.data?.first?.id
+        Network.request(.homeContent, success: { (json) in
+            self.merchantModel = json.debugDescription.kj.model(MerchantModel.self)
+            self.currentName = self.merchantModel?.data?.first?.name
+            var titles = [String]()
+            if let arr = self.merchantModel?.data{
+                for merchantClassifyModel in arr {
+                    if let name =  merchantClassifyModel.name{
+                        titles.append(name)
+                    }
+                }
+            }
+            self.reloadTypes?(titles)
+            let sectionModel = self.getSectionModel()
+            sectionModel.cellModelsArr.removeAll()
+            self.completeResumeView()
+            self.addTypeView()
+            self.addDetailCells()
+        }) { (error, message) in
+            
+        }
+        
     }
     
     private func getSectionModel() -> TableViewSectionModel{
@@ -47,22 +65,7 @@ class HomePageVM: NSObject {
     }
     
     func setData(callback:@escaping ()->Void){
-        let sectionModel = getSectionModel()
-        sectionModel.cellModelsArr.removeAll()
-        completeResumeView()
-        addTypeView()
-        addDetailCells()
-        
-        var titles = [String]()
-        if let arr = merchantModel?.data{
-            for merchantClassifyModel in arr {
-                if let name =  merchantClassifyModel.name{
-                    titles.append(name)
-                }
-            }
-        }
-        reloadTypes?(titles)
-        
+        loadNet()
         callback()
     }
     
@@ -70,12 +73,11 @@ class HomePageVM: NSObject {
         let sectionModel = getSectionModel()
         let selectTypeCellmodel = CellModel()
         selectTypeCellmodel.cellHeight = {table,index in
-            return 60
+            return 50
         }
         selectTypeCellmodel.cell = {table,index in
             let cell = SpaceCell.initWithXIb() as! SpaceCell
             cell.selectionStyle = .none
-//            cell.setData(data: self.merchantModel as Any)
             return cell
         }
         sectionModel.cellModelsArr.append(selectTypeCellmodel)
@@ -97,75 +99,25 @@ class HomePageVM: NSObject {
     
     private func addDetailCells(){
         let sectionModel = getSectionModel()
-        for _ in 0...25{
-            let selectDetailCellmodel = CellModel()
-            selectDetailCellmodel.cellHeight = {table,index in
-                return 95
+        for cellModel in sectionModel.cellModelsArr {
+            if let cellClassName = cellModel.cellClassName{
+                if cellClassName == NSStringFromClass(SelectDetailViewCell.self) {
+                    if let index = sectionModel.cellModelsArr.firstIndex(of: cellModel){
+                        sectionModel.cellModelsArr.remove(at: index)
+                    }
+                }
             }
-            selectDetailCellmodel.cell = {table,index in
-                let cell = SelectDetailViewCell.initWithXIb() as! SelectDetailViewCell
-                cell.selectionStyle = .none
-                return cell
-            }
-            selectDetailCellmodel.cellClassName = NSStringFromClass(SelectDetailViewCell.self)
-            sectionModel.cellModelsArr.append(selectDetailCellmodel)
         }
-//        currentData?.forEach({ (model) in
-//            let selectDetailCellmodel = CellModel()
-//            selectDetailCellmodel.cellHeight = {table,index in
-//                return 95
-//            }
-//            selectDetailCellmodel.cell = {table,index in
-//                let cell = SelectDetailViewCell.initWithXIb() as! SelectDetailViewCell
-//                cell.selectionStyle = .none
-//                cell.setData(data: model)
-//                return cell
-//            }
-//            sectionModel.cellModelsArr.append(selectDetailCellmodel)
-//        })
-        
-    }
-    
-    func loadDetailCells(){
-        let sectionModel = getSectionModel()
-//        for cellModel in sectionModel.cellModelsArr {
-//            if let cellClassName = cellModel.cellClassName{
-//                if cellClassName == NSStringFromClass(SelectDetailViewCell.self) {
-//                    if let index = sectionModel.cellModelsArr.firstIndex(of: cellModel){
-//                        sectionModel.cellModelsArr.remove(at: index)
-//                    }
-//                }
-//            }
-//        }
-        
-        
-        
-//        if let arr = currentData {
-//            for model in arr {
-//                let selectDetailCellmodel = CellModel()
-//                selectDetailCellmodel.cellHeight = {table,index in
-//                    return 95
-//                }
-//                selectDetailCellmodel.cell = {table,index in
-//                    let cell = SelectDetailViewCell.initWithXIb() as! SelectDetailViewCell
-//                    cell.selectionStyle = .none
-//                    cell.setData(data: model)
-//                    return cell
-//                }
-//                sectionModel.cellModelsArr.append(selectDetailCellmodel)
-//            }
-//        }
         var addArr = [DetailMerchantModel]()
         merchantModel?.data?.forEach({ (merchantClassifyModel) in
-            if currentType == merchantClassifyModel.id, let needAddArr = merchantClassifyModel.data{
+            if currentName == merchantClassifyModel.name, let needAddArr = merchantClassifyModel.data{
                 addArr += needAddArr
             }
         })
-        
         addArr.forEach({ (model) in
             let selectDetailCellmodel = CellModel()
             selectDetailCellmodel.cellHeight = {table,index in
-                return 95
+                return 124
             }
             selectDetailCellmodel.cell = {table,index in
                 let cell = SelectDetailViewCell.initWithXIb() as! SelectDetailViewCell
@@ -173,9 +125,9 @@ class HomePageVM: NSObject {
                 cell.setData(data: model)
                 return cell
             }
+            selectDetailCellmodel.cellClassName = NSStringFromClass(SelectDetailViewCell.self)
             sectionModel.cellModelsArr.append(selectDetailCellmodel)
         })
-        
         tableViewDataModel.tableView?.reloadData()
     }
 }

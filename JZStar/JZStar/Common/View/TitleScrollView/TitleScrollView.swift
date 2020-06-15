@@ -60,27 +60,26 @@ class TitleScrollView: UIView {
             let button = UIButton.init(type: .custom)
             var buttonFont = STELLAR_FONT_BOLD_T16
             if i == 0 {
-                buttonFont = STELLAR_FONT_BOLD_T18
+                buttonFont = STELLAR_FONT_MEDIUM_T16
             }
             let buttonRect = String.ss.getTextRectSize(text: text,font: buttonFont,size: CGSize.init(width: CGFloat.greatestFiniteMagnitude, height: 22.fit))
             let width = buttonRect.size.width + buttonSpaceWidth
             button.setTitle(text, for: .normal)
-            button.tag = i+100
-            button.titleLabel?.font = STELLAR_FONT_BOLD_T16
-            button.setTitleColor(STELLAR_COLOR_C4.withAlphaComponent(0.3), for: .normal)
-            button.setTitleColor(UIColor.black, for: .selected)
+            button.tag = i + 100
+            button.titleLabel?.font = buttonFont
+            button.setTitleColor(UIColor.init(hexString: "#666666"), for: .normal)
+            button.setTitleColor(UIColor.init(hexString: "#333333"), for: .selected)
             button.addTarget(self, action: #selector(selectAction(btn:)), for: .touchUpInside)
             scrollview.addSubview(button)
-            button.snp.makeConstraints {
-                $0.left.equalTo(contentWidth + 14)
-                $0.width.equalTo(width)
-                $0.height.equalTo(22)
-                $0.centerY.equalTo(self)
-            }
+            button.frame = CGRect.init(x: contentWidth + 14, y: 14, width: width, height: 22)
             if i==0{
-                button.titleLabel?.font = STELLAR_FONT_BOLD_T18
+                let line = UIView.init(frame: CGRect.init(x: button.frame.origin.x + buttonSpaceWidth/2.0, y: button.frame.maxY + 7, width: buttonRect.size.width, height: 3))
+                line.backgroundColor = UIColor.init(hexString: "#333333")
+                line.tag = 200
+                button.titleLabel?.font = buttonFont
                 button.isSelected = true
                 selectBeforeBtn = button
+                scrollview.addSubview(line)
             }
             contentWidth = width + contentWidth
             //判断需要滑动的临界值
@@ -115,7 +114,10 @@ class TitleScrollView: UIView {
     //        drawButtonsState(animated)
     //    }
     
-    private func drawButtonsState(_ animated:Bool = true){
+    private func drawButtonsState(){
+        guard let lineview = scrollview.viewWithTag(200)else {
+            return
+        }
         guard let button = scrollview.viewWithTag(selectIndex+100) as? UIButton else{
             return
         }
@@ -133,14 +135,11 @@ class TitleScrollView: UIView {
             }
         }
         beforeBtn.titleLabel?.font = STELLAR_FONT_BOLD_T16
-        button.titleLabel?.font = STELLAR_FONT_BOLD_T18
+        button.titleLabel?.font = STELLAR_FONT_MEDIUM_T16
         beforeBtn.titleLabel?.sizeToFit()
-        if animated {
-            UIView.animate(withDuration: 0.3) {
-                button.titleLabel?.sizeToFit()
-            }
-        }else{
+        UIView.animate(withDuration: 0.3) {
             button.titleLabel?.sizeToFit()
+            lineview.frame = CGRect.init(x: button.frame.origin.x + self.buttonSpaceWidth/2.0, y: button.frame.maxY + 4, width: button.bounds.size.width - self.buttonSpaceWidth, height: 3)
         }
         self.selectBeforeBtn?.isSelected = false
         button.isSelected = true

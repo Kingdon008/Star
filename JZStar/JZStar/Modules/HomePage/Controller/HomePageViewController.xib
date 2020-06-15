@@ -27,15 +27,61 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2F9-Tg-pcr">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZz-8H-xwC">
-                            <rect key="frame" x="17" y="6" width="46" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="未登录"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZz-8H-xwC">
+                            <rect key="frame" x="20" y="6" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="Guc-Qt-ChQ"/>
+                                <constraint firstAttribute="width" constant="32" id="Mzh-ET-ci8"/>
+                            </constraints>
+                            <state key="normal" title="未登录" image="defaultHeadIcon"/>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uOn-p8-n2e">
+                            <rect key="frame" x="60" y="5" width="105" height="34"/>
+                            <state key="normal">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="1234567890">
+                                        <attributes>
+                                            <color key="NSColor" red="0.023530127479999999" green="0.02352812327" blue="0.023529481139999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" metaFont="system" size="18"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </state>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tf8-CQ-oh3">
+                            <rect key="frame" x="348.5" y="6" width="27" height="20"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日收益" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SU6-5w-EUH">
+                            <rect key="frame" x="346" y="26" width="32" height="10"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="8"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrowIcon" translatesAutoresizingMaskIntoConstraints="NO" id="5mL-de-uVC">
+                            <rect key="frame" x="165" y="13" width="18" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="18" id="MZs-8g-vDU"/>
+                                <constraint firstAttribute="width" constant="18" id="jFG-KQ-b83"/>
+                            </constraints>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstItem="VZz-8H-xwC" firstAttribute="leading" secondItem="2F9-Tg-pcr" secondAttribute="leading" constant="20" id="62R-A2-H5H"/>
+                        <constraint firstAttribute="bottom" secondItem="VZz-8H-xwC" secondAttribute="bottom" constant="6" id="d3q-Ym-nKi"/>
                         <constraint firstAttribute="height" constant="44" id="jl1-Jw-lp7"/>
+                        <constraint firstItem="5mL-de-uVC" firstAttribute="centerY" secondItem="uOn-p8-n2e" secondAttribute="centerY" id="nqt-sc-VOe"/>
+                        <constraint firstItem="SU6-5w-EUH" firstAttribute="top" secondItem="Tf8-CQ-oh3" secondAttribute="bottom" id="nyF-EX-ncT"/>
+                        <constraint firstItem="5mL-de-uVC" firstAttribute="leading" secondItem="uOn-p8-n2e" secondAttribute="trailing" id="qcf-Wf-ORG"/>
+                        <constraint firstItem="uOn-p8-n2e" firstAttribute="centerY" secondItem="VZz-8H-xwC" secondAttribute="centerY" id="qjM-L2-rIf"/>
+                        <constraint firstItem="uOn-p8-n2e" firstAttribute="leading" secondItem="VZz-8H-xwC" secondAttribute="trailing" constant="8" id="sQq-Z9-wFB"/>
+                        <constraint firstAttribute="bottom" secondItem="SU6-5w-EUH" secondAttribute="bottom" constant="8" id="uWI-Dl-BQd"/>
+                        <constraint firstItem="Tf8-CQ-oh3" firstAttribute="centerX" secondItem="SU6-5w-EUH" secondAttribute="centerX" id="uwA-m9-Wow"/>
+                        <constraint firstAttribute="trailing" secondItem="SU6-5w-EUH" secondAttribute="trailing" constant="36" id="wST-Se-MJY"/>
                     </constraints>
                 </view>
             </subviews>
@@ -74,4 +120,8 @@
             <point key="canvasLocation" x="94.20289855072464" y="805.58035714285711"/>
         </view>
     </objects>
+    <resources>
+        <image name="defaultHeadIcon" width="32" height="32"/>
+        <image name="rightArrowIcon" width="18" height="18"/>
+    </resources>
 </document>

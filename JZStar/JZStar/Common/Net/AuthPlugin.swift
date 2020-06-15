@@ -16,9 +16,9 @@ final class AuthPlugin: PluginType {
         }
         switch myTarget {
         default:
-            if !AppManager.sharedManager.user.token.accessToken.isEmpty {
-                request.addValue("Bearer \(AppManager.sharedManager.user.token.accessToken)", forHTTPHeaderField: "Authorization")
-            }
+//            if !AppManager.sharedManager.user.token.accessToken.isEmpty {
+//                request.addValue("Bearer \(AppManager.sharedManager.user.token.accessToken)", forHTTPHeaderField: "Authorization")
+//            }
             break
         }
         return request

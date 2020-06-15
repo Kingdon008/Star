@@ -11,16 +11,25 @@ import UIKit
 class SelectTypeView: UIView {
     private let scrollview = TitleScrollView()
     private var titles = [String]()
-    
+    var selectBlock:((String)->Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = UIColor.white
         self.addSubview(scrollView)
         scrollView.snp.makeConstraints {
-            $0.centerY.equalTo(self)
+            $0.bottom.equalTo(0)
             $0.left.equalTo(0)
             $0.right.equalTo(0)
-            $0.height.equalTo(30)
+            $0.top.equalTo(0)
+        }
+        let line = UIView()
+        line.backgroundColor = UIColor.init(hexString: "#C3CBD3")
+        self.addSubview(line)
+        line.snp.makeConstraints {
+            $0.left.bottom.equalTo(0)
+            $0.right.equalTo(0)
+            $0.height.equalTo(1)
         }
     }
     
@@ -30,7 +39,7 @@ class SelectTypeView: UIView {
     
     func setTitles(_ titles:[String]){
         scrollView.setRoomsAndSelectedIndex(rooms: titles) { (title) in
-            print(title)
+            self.selectBlock?(title)
         }
     }
     

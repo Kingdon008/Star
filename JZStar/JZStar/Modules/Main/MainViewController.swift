@@ -130,8 +130,8 @@ class MainViewController: UIViewController {
         button .setImage(UIImage(named: imageName), for: .normal)
         button .setImage(UIImage(named: imageName + "_highlighted"), for: .selected)
         button.setTitle(title, for: .normal)
-        button.setTitleColor(STELLAR_COLOR_C6, for: .normal)
-        button.setTitleColor(STELLAR_COLOR_C1, for: .selected)
+        button.setTitleColor(UIColor.init(hexString: "#999999"), for: .normal)
+        button.setTitleColor(UIColor.init(hexString: "#000000"), for: .selected)
         button.titleLabel?.font = STELLAR_FONT_T11
         button.addTarget(self, action: #selector(bottomButtonTapped(btn:)), for: .touchUpInside)
         return button
@@ -156,13 +156,13 @@ class MainViewController: UIViewController {
     
     //MARK:lazy
     lazy var homepageBtn:TabbarScaledButton = {
-        let button = specifyButton(title:"主页", imageName: "tabbar_scene")
+        let button = specifyButton(title:"主页", imageName: "tabbar_home")
         button.tag = 1
         return button
     }()
     
     lazy var recommondBtn:TabbarScaledButton = {
-        let button = specifyButton(title: "推荐", imageName: "tabbar_smart")
+        let button = specifyButton(title: "推荐", imageName: "tabbar_recommend")
         button.tag = 2
         return button
     }()
