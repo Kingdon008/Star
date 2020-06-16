@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		31842D7C1F71ACD5DAED93F8 /* Pods_JZStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55197AD4B1F3C2713D78B3FF /* Pods_JZStar.framework */; };
+		AB042C6324991839007F8641 /* DetailPositionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB042C6224991839007F8641 /* DetailPositionVM.swift */; };
+		AB042C6624991974007F8641 /* DetailJobHeadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB042C6424991974007F8641 /* DetailJobHeadCell.swift */; };
+		AB042C6724991974007F8641 /* DetailJobHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB042C6524991974007F8641 /* DetailJobHeadCell.xib */; };
+		AB042C6A24991BF9007F8641 /* DetailJobContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB042C6824991BF9007F8641 /* DetailJobContentCell.swift */; };
+		AB042C6B24991BF9007F8641 /* DetailJobContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB042C6924991BF9007F8641 /* DetailJobContentCell.xib */; };
 		AB0C2D4E2496323800D9E378 /* SpaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C2D4C2496323800D9E378 /* SpaceCell.swift */; };
 		AB0C2D4F2496323800D9E378 /* SpaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0C2D4D2496323800D9E378 /* SpaceCell.xib */; };
 		AB5EA1982487F5FA009758B1 /* SelectDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5EA1962487F5FA009758B1 /* SelectDetailViewCell.swift */; };
@@ -111,6 +116,11 @@
 		408496BDAF80093237DAAE1D /* Pods-JZStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JZStar.release.xcconfig"; path = "Target Support Files/Pods-JZStar/Pods-JZStar.release.xcconfig"; sourceTree = "<group>"; };
 		46FCAE921F5C6F35D28CB48F /* Pods-JZStar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JZStar.debug.xcconfig"; path = "Target Support Files/Pods-JZStar/Pods-JZStar.debug.xcconfig"; sourceTree = "<group>"; };
 		55197AD4B1F3C2713D78B3FF /* Pods_JZStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JZStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB042C6224991839007F8641 /* DetailPositionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPositionVM.swift; sourceTree = "<group>"; };
+		AB042C6424991974007F8641 /* DetailJobHeadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailJobHeadCell.swift; sourceTree = "<group>"; };
+		AB042C6524991974007F8641 /* DetailJobHeadCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailJobHeadCell.xib; sourceTree = "<group>"; };
+		AB042C6824991BF9007F8641 /* DetailJobContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobContentCell.swift; sourceTree = "<group>"; };
+		AB042C6924991BF9007F8641 /* DetailJobContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailJobContentCell.xib; sourceTree = "<group>"; };
 		AB0C2D4C2496323800D9E378 /* SpaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceCell.swift; sourceTree = "<group>"; };
 		AB0C2D4D2496323800D9E378 /* SpaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpaceCell.xib; sourceTree = "<group>"; };
 		AB5EA1962487F5FA009758B1 /* SelectDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDetailViewCell.swift; sourceTree = "<group>"; };
@@ -268,6 +278,10 @@
 		AB9E51D824892CB700BAF5AE /* DetailPosition */ = {
 			isa = PBXGroup;
 			children = (
+				AB042C6424991974007F8641 /* DetailJobHeadCell.swift */,
+				AB042C6524991974007F8641 /* DetailJobHeadCell.xib */,
+				AB042C6824991BF9007F8641 /* DetailJobContentCell.swift */,
+				AB042C6924991BF9007F8641 /* DetailJobContentCell.xib */,
 			);
 			path = DetailPosition;
 			sourceTree = "<group>";
@@ -695,6 +709,7 @@
 			isa = PBXGroup;
 			children = (
 				F6D10C122485F99100AF6401 /* HomePageVM.swift */,
+				AB042C6224991839007F8641 /* DetailPositionVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -826,6 +841,7 @@
 				AB9E51DC24892CED00BAF5AE /* DetailPositionVC.xib in Resources */,
 				F6D10C2B2486257E00AF6401 /* 2.jpg in Resources */,
 				F66CEEBC248DC35100DB68EC /* StellarPhoneTextFieldView.xib in Resources */,
+				AB042C6724991974007F8641 /* DetailJobHeadCell.xib in Resources */,
 				AB5EA1992487F5FA009758B1 /* SelectDetailViewCell.xib in Resources */,
 				F6D10C292486257E00AF6401 /* 6.jpg in Resources */,
 				F6D10C2A2486257E00AF6401 /* 5.jpg in Resources */,
@@ -835,6 +851,7 @@
 				F6D10C262486257E00AF6401 /* 7.jpg in Resources */,
 				F68360CC2484DC7400B4E4FA /* Assets.xcassets in Resources */,
 				F66CEEA9248DC0BF00DB68EC /* LoginVC.xib in Resources */,
+				AB042C6B24991BF9007F8641 /* DetailJobContentCell.xib in Resources */,
 				F65431DE2488B4BC0069A307 /* PersonalDetailCell.xib in Resources */,
 				F6D10C282486257E00AF6401 /* 3.jpg in Resources */,
 				AB0C2D4F2496323800D9E378 /* SpaceCell.xib in Resources */,
@@ -909,6 +926,7 @@
 				F68361A92484EEF800B4E4FA /* Color+Extension.swift in Sources */,
 				F6D10C132485F99100AF6401 /* HomePageVM.swift in Sources */,
 				F68360FF2484E13000B4E4FA /* CachePolicyPlugin.swift in Sources */,
+				AB042C6624991974007F8641 /* DetailJobHeadCell.swift in Sources */,
 				F68361C02484F98A00B4E4FA /* TabbarScaledButton.swift in Sources */,
 				F65431DD2488B4BC0069A307 /* PersonalDetailCell.swift in Sources */,
 				F67E68532485D319009FC081 /* BaseViewController.swift in Sources */,
@@ -947,11 +965,13 @@
 				F68361AB2484EEF800B4E4FA /* UIButton+indicator.swift in Sources */,
 				F683615E2484E15F00B4E4FA /* ValidateService.swift in Sources */,
 				F68361602484E15F00B4E4FA /* PulicConst.swift in Sources */,
+				AB042C6A24991BF9007F8641 /* DetailJobContentCell.swift in Sources */,
 				F68360F62484E11E00B4E4FA /* TableViewDataModel.swift in Sources */,
 				F68361B82484F60300B4E4FA /* RecommendViewController.swift in Sources */,
 				F683615F2484E15F00B4E4FA /* Regex.swift in Sources */,
 				F66CEEAC248DC2AA00DB68EC /* StellarProgressHUD.swift in Sources */,
 				F636BFA32489EAB6007AEB86 /* TitleScrollView.swift in Sources */,
+				AB042C6324991839007F8641 /* DetailPositionVM.swift in Sources */,
 				F68361682484E9C300B4E4FA /* GlobalPackage.swift in Sources */,
 				F66CEEA8248DC0BF00DB68EC /* LoginVC.swift in Sources */,
 				F66CEEB4248DC31000DB68EC /* NavView.swift in Sources */,

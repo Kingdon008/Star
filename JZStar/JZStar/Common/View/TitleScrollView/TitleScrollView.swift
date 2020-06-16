@@ -9,7 +9,7 @@
 import UIKit
 
 class TitleScrollView: UIView {
-    private let buttonSpaceWidth:CGFloat = 15
+    private let buttonSpaceWidth:CGFloat = 36
     private var selectTitleNumBlock:((Int)->Void)? = nil
     private var needJumpBegain:NSInteger = 0
     private var needJumpEnd:NSInteger = 0
@@ -71,7 +71,7 @@ class TitleScrollView: UIView {
             button.setTitleColor(UIColor.init(hexString: "#333333"), for: .selected)
             button.addTarget(self, action: #selector(selectAction(btn:)), for: .touchUpInside)
             scrollview.addSubview(button)
-            button.frame = CGRect.init(x: contentWidth + 14, y: 14, width: width, height: 22)
+            button.frame = CGRect.init(x: contentWidth + 20, y: 14, width: width, height: 22)
             if i==0{
                 let line = UIView.init(frame: CGRect.init(x: button.frame.origin.x + buttonSpaceWidth/2.0, y: button.frame.maxY + 7, width: buttonRect.size.width, height: 3))
                 line.backgroundColor = UIColor.init(hexString: "#333333")

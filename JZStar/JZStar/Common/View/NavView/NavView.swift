@@ -16,14 +16,6 @@ enum NavStyle {
 
 class NavView: UIView {
     let disposeBag = DisposeBag()
-    var myState:NavStyle = .kNavInit{
-        didSet{
-            if oldValue ==  myState{
-                return
-            }
-            setupViews(state:myState)
-        }
-    }
     var backclickBlock:(()->Void)? = nil
     var titleClickBlock:((String)->Void)? = nil
     
@@ -37,7 +29,6 @@ class NavView: UIView {
     }
     
     func loadSubView(){
-        
         addSubview(backButton)
         backButton.snp.makeConstraints { (make) in
             make.left.equalTo(0)
@@ -86,50 +77,22 @@ class NavView: UIView {
             }
         }
     }
-    
-    func setupViews(state:NavStyle){
-        switch state {
-        case .kNavInit:
-            break
-        case .kNavWhite:
-            backButton.setImage(UIImage.init(named: "bar_icon_white"), for: .normal)
-            titleBtn.setTitleColor(STELLAR_COLOR_C3, for: .normal)
-            //titleLabel.textColor = STELLAR_COLOR_C3
-            break
-        case .kNavBlack:
-            backButton.setImage(UIImage.init(named: "bar_icon_back"), for: .normal)
-            titleBtn.setTitleColor(STELLAR_COLOR_C4, for: .normal)
-            //titleLabel.textColor = STELLAR_COLOR_C4
-            break
-        }
-    }
-    
+        
     //MARK:lazy
     lazy var titleBtn:NavViewTitleImageButton = {
         let btn = NavViewTitleImageButton.init()
         btn.adjustsImageWhenHighlighted = false
-        btn.setTitleColor(STELLAR_COLOR_C3, for: .normal)
-        btn.titleLabel?.font = STELLAR_FONT_BOLD_T18
+        btn.setTitleColor(UIColor.init(hexString: "#333333"), for: .normal)
+        btn.titleLabel?.font = STELLAR_FONT_MEDIUM_T18
         return btn
     }()
     
-//    lazy var titleLabel:UILabel = {
-//        let tempView = UILabel.init()
-//        tempView.textColor = STELLAR_COLOR_C3
-//        tempView.font = STELLAR_FONT_MEDIUM_T18
-//        return tempView
-//    }()
-//    
-//    lazy var iamgeView:UIImageView = {
-//        let tempView = UIImageView.init()
-//        return tempView
-//    }()
-    
     lazy var backButton:UIButton = {
         let btn = UIButton()
+        btn.adjustsImageWhenHighlighted = false
         btn.setTitleColor(STELLAR_COLOR_C3, for: .normal)
-        btn.titleLabel!.font = STELLAR_FONT_BOLD_T18
-        btn.setImage(UIImage.init(named: "bar_icon_white"), for: .normal)
+        btn.titleLabel?.font = STELLAR_FONT_BOLD_T18
+        btn.setImage(UIImage.init(named: "back"), for: .normal)
         return btn
     }()
 }

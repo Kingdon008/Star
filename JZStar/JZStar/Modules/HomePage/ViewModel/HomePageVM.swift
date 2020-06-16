@@ -8,7 +8,13 @@
 
 import UIKit
 
+@objc protocol HomePageVMDelegate {
+    func pushViewController(vc: UIViewController)
+}
+
+
 class HomePageVM: NSObject {
+    weak var vmDelegate: HomePageVMDelegate?
     var tableViewDataModel = TableViewDataModel()
     var reloadTypes:(([String])->Void)?
     private var allDataArr = [MerchantModel]()
@@ -18,7 +24,7 @@ class HomePageVM: NSObject {
         didSet{
             for model in allDataArr {
                 if currentName == model.name {
-                    currentData = model.data ?? [DetailMerchantModel]()
+                    currentData = model.data
                     currentID = model.id
                 }
             }
@@ -125,6 +131,10 @@ class HomePageVM: NSObject {
                 cell.setData(data: model)
                 return cell
             }
+            selectDetailCellmodel.selectRow = { tableview, indexPath in
+                let vc = DetailPositionVC()
+                self.vmDelegate?.pushViewController(vc: vc)
+            }
             selectDetailCellmodel.cellClassName = NSStringFromClass(SelectDetailViewCell.self)
             sectionModel.cellModelsArr.append(selectDetailCellmodel)
         })
@@ -164,6 +174,10 @@ class HomePageVM: NSObject {
                 cell.selectionStyle = .none
                 cell.setData(data: model)
                 return cell
+            }
+            selectDetailCellmodel.selectRow = { tableview, indexPath in
+                let vc = DetailPositionVC()
+                self.vmDelegate?.pushViewController(vc: vc)
             }
             selectDetailCellmodel.cellClassName = NSStringFromClass(SelectDetailViewCell.self)
             sectionModel.cellModelsArr.append(selectDetailCellmodel)

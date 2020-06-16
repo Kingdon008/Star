@@ -43,7 +43,7 @@ class HomePageViewController: BaseViewController {
         viewModel.reloadTypes = { titles in
             self.typeView.setTitles(titles)
         }
-        
+        viewModel.vmDelegate = self
         viewModel.setData {
             self.tableview.reloadData()
         }
@@ -119,3 +119,12 @@ extension HomePageViewController{
         }
     }
 }
+
+extension HomePageViewController:HomePageVMDelegate {
+    func pushViewController(vc: UIViewController) {
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+}
+

@@ -9,22 +9,39 @@
 import UIKit
 
 class DetailPositionVC: BaseViewController {
+    @IBOutlet weak var tableView: UITableView!
+    
+    var viewModel = DetailPositionVM()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = UIColor.init(hexString: "#F3F3F3")
+        setupview()
         // Do any additional setup after loading the view.
+        setupData()
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupview(){
+        navView.setTitle(title: "职位详情")
+        navView.backclickBlock = {
+            self.navigationController?.popViewController(animated: true)
+        }
+        view.addSubview(navView)
     }
-    */
+    
+    func setupData(){
+        viewModel.tableViewDataModel.targetTableView(myTableview: tableView)
+        viewModel.setData {
+            self.tableView.reloadData()
+        }
+    }
+    
+    lazy var navView:NavView = {
+        let frame = CGRect.init(x: 0, y: kStatusBarH, width: kScreenWidth, height: kNavigationBarH)
+        let view = NavView(frame: frame)
+//        view.backgroundColor = UIColor.red
+        return view
+    }()
 
 }
+
