@@ -17,8 +17,13 @@ class Network: NSObject{
     typealias Progress = ((Double, Bool) -> Void)
     var isRefreshingToken = false
     var targets = [(NetRequestAPI,Success,Failure)]()
+
     var plugins:[PluginType] = [
-//        NetworkLoggerPlugin(verbose: false),
+        NetworkLoggerPlugin(configuration: .init(formatter: .init(requestData: { data in
+            let body = String.init(data: data, encoding: .utf8) ?? ""
+            return "formatted request body = \(body)"
+        }),
+        logOptions: .verbose)),
 //        NetworkActivityPlugin(networkActivityClosure: { (changeType, targetType) in
 //            switch changeType{
 //            case .began:
@@ -29,7 +34,7 @@ class Network: NSObject{
 //                break
 //            }
 //        }),
-//        AuthPlugin(),
+        AuthPlugin(),
 //        CachePolicyPlugin()
     ]
     

@@ -11,18 +11,18 @@ import UIKit
 class HomePageVM: NSObject {
     var tableViewDataModel = TableViewDataModel()
     var reloadTypes:(([String])->Void)?
-    private var merchantModel:MerchantModel?
-    private var currentData:[DetailMerchantModel]?
+    private var allDataArr = [MerchantModel]()
+    private var currentData = [DetailMerchantModel]()
+    private var currentID:Int?
     var currentName:String?{
         didSet{
-            if let dataArr = merchantModel?.data{
-                for model in dataArr {
-                    if currentName == model.name {
-                        currentData = model.data
-                    }
+            for model in allDataArr {
+                if currentName == model.name {
+                    currentData = model.data ?? [DetailMerchantModel]()
+                    currentID = model.id
                 }
-                addDetailCells()
             }
+            addDetailCells()
         }
     }
     
@@ -32,22 +32,22 @@ class HomePageVM: NSObject {
     
     private func loadNet(){
         Network.request(.homeContent, success: { (json) in
-            self.merchantModel = json.debugDescription.kj.model(MerchantModel.self)
-            self.currentName = self.merchantModel?.data?.first?.name
-            var titles = [String]()
-            if let arr = self.merchantModel?.data{
-                for merchantClassifyModel in arr {
+            if let data = json["data"].arrayObject?.kj.modelArray(MerchantModel.self){
+                self.allDataArr = data
+                self.currentName = self.allDataArr.first?.name
+                var titles = [String]()
+                for merchantClassifyModel in self.allDataArr {
                     if let name =  merchantClassifyModel.name{
                         titles.append(name)
                     }
                 }
+                self.reloadTypes?(titles)
+                let sectionModel = self.getSectionModel()
+                sectionModel.cellModelsArr.removeAll()
+                self.completeResumeView()
+                self.addTypeView()
+                self.addDetailCells()
             }
-            self.reloadTypes?(titles)
-            let sectionModel = self.getSectionModel()
-            sectionModel.cellModelsArr.removeAll()
-            self.completeResumeView()
-            self.addTypeView()
-            self.addDetailCells()
         }) { (error, message) in
             
         }
@@ -109,11 +109,46 @@ class HomePageVM: NSObject {
             }
         }
         var addArr = [DetailMerchantModel]()
-        merchantModel?.data?.forEach({ (merchantClassifyModel) in
+        allDataArr.forEach({ (merchantClassifyModel) in
             if currentName == merchantClassifyModel.name, let needAddArr = merchantClassifyModel.data{
                 addArr += needAddArr
             }
         })
+        addArr.forEach({ (model) in
+            let selectDetailCellmodel = CellModel()
+            selectDetailCellmodel.cellHeight = {table,index in
+                return 124
+            }
+            selectDetailCellmodel.cell = {table,index in
+                let cell = SelectDetailViewCell.initWithXIb() as! SelectDetailViewCell
+                cell.selectionStyle = .none
+                cell.setData(data: model)
+                return cell
+            }
+            selectDetailCellmodel.cellClassName = NSStringFromClass(SelectDetailViewCell.self)
+            sectionModel.cellModelsArr.append(selectDetailCellmodel)
+        })
+        tableViewDataModel.tableView?.reloadData()
+    }
+    
+    
+    func loadMoreData(){
+        guard let id = currentID else {
+            return
+        }
+        Network.request(.homePosition(id: id, limit: currentData.count), success: { (json) in
+            if let addArr = json["data"].arrayObject?.kj.modelArray(DetailMerchantModel.self){
+                self.currentData += addArr
+                self.addMoreDetailCells(addArr: addArr)
+            }
+        }) { (error, message) in
+            
+        }
+    }
+    
+    
+    private func addMoreDetailCells(addArr:[DetailMerchantModel]){
+        let sectionModel = getSectionModel()
         addArr.forEach({ (model) in
             let selectDetailCellmodel = CellModel()
             selectDetailCellmodel.cellHeight = {table,index in

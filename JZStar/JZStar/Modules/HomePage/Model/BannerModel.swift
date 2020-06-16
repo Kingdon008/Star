@@ -8,14 +8,6 @@
 
 import UIKit
 
-class BannersModel: Convertible {
-    var banners:[BannerModel]?
-    
-    required public init() {
-        // Intentionally unimplemented...
-    }
-}
-
 class BannerModel: Convertible {
     var id:Int?
     var img_url:String?

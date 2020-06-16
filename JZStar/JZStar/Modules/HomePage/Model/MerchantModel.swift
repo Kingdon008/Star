@@ -9,16 +9,7 @@
 import UIKit
 
 class MerchantModel: Convertible {
-    var data:[MerchantClassifyModel]?
-    var status:Bool?
-    
-    required public init() {
-        // Intentionally unimplemented...
-    }
-}
-
-class MerchantClassifyModel: Convertible {
-    var name:String?
+   var name:String?
     var id:Int?
     var data:[DetailMerchantModel]?
     
@@ -34,7 +25,16 @@ class DetailMerchantModel: Convertible {
     var salary_describe:String?
     var is_fulltime:Bool?
     var is_parttime:Bool?
-    var tag_name:String?
+    var tag_name:DetailMerchantTagNameModel?
+    
+    required public init() {
+        // Intentionally unimplemented...
+    }
+}
+
+class DetailMerchantTagNameModel: Convertible {
+    var type1:[String]?
+    var type2:[String]?
     
     required public init() {
         // Intentionally unimplemented...

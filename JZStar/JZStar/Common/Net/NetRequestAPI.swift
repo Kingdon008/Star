@@ -7,23 +7,23 @@
 //
 
 public enum NetRequestAPI {
-   
     case homeContent
     case homePosition(id:Int,limit:Int)
+    case homeBanner
 }
 
 extension NetRequestAPI: TargetType {
-    //服务器地址
     public var baseURL: URL {
         return URL(string:"http://106.14.140.138/jianzhi/index.php")!
     }
     
-    //请求方式
     public var method: Moya.Method {
         switch self {
         case .homeContent:
             return .get
         case .homePosition:
+            return .post
+        case .homeBanner:
             return .get
         }
     }
@@ -34,27 +34,24 @@ extension NetRequestAPI: TargetType {
             return "/home/home_content"
         case .homePosition:
             return "/home/home_position"
+        case .homeBanner:
+            return "home/home_banner"
         }
     }
     
     
-    //请求任务事件（这里附带上参数）
     public var task: Task {
         var param: [String: Any] = [:]
-//        switch self {
-//        case .homeContent:
-//            return .get
-//        default :
-//            return .get
-//        }
+        switch self {
+        case .homePosition(let id, let limit):
+             param = ["id":id,"limit":limit]
+        default :
+            break
+        }
         if param.count > 0 {
             return .requestParameters(parameters: param, encoding: JSONEncoding.default)
         }
         return .requestPlain
-    }
-    
-    public var validate: Bool {
-        return false
     }
     
     public var sampleData: Data {
@@ -64,8 +61,6 @@ extension NetRequestAPI: TargetType {
     //请求头设置
     public var headers: [String : String]? {
         var header = [String : String]()
-//        let uuid = UUID().uuidString
-//        header["requestId"] = uuid
         header["Content-type"] = "application/json; charset=utf-8"
         return header
     }

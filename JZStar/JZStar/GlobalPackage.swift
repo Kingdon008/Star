@@ -29,3 +29,4 @@ import Foundation
 @_exported import Moya
 @_exported import FSPagerView
 @_exported import Parchment
+@_exported import Kingfisher

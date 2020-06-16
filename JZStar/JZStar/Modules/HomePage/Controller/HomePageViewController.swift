@@ -9,9 +9,9 @@
 import UIKit
 
 class HomePageViewController: BaseViewController {
-    fileprivate let imageNames = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"]
+//    fileprivate let imageNames = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"]
     var viewModel = HomePageVM()
-    
+    var bannerModels:[BannerModel]?
     @IBOutlet var personalHeadView: UIView!
     @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
@@ -23,8 +23,6 @@ class HomePageViewController: BaseViewController {
     
     func setupView(){
         let headView = UIView(frame: CGRect.init(x: 0, y: 0, width: kScreenWidth, height: 220))
-//        personalHeadView.frame = CGRect(x: 0, y: 0, width: kScreenWidth, height: 82)
-//        headView.addSubview(personalHeadView)
         headView.addSubview(pagerView)
         tableview.tableHeaderView = headView
         tableview.separatorColor = UIColor.init(hexString: "#C3CBD3")
@@ -35,6 +33,12 @@ class HomePageViewController: BaseViewController {
     }
     
     func setupData(){
+        Network.request(.homeBanner, success: { (json) in
+            self.bannerModels = json["data"].arrayObject?.kj.modelArray(BannerModel.self)
+            self.pagerView.reloadData()
+        }) { (error, message) in
+            
+        }
         viewModel.tableViewDataModel.targetTableView(myTableview: tableview)
         viewModel.reloadTypes = { titles in
             self.typeView.setTitles(titles)
@@ -44,7 +48,7 @@ class HomePageViewController: BaseViewController {
             self.tableview.reloadData()
         }
         tableview.mj_footer = MJRefreshBackNormalFooter(refreshingBlock: {
-//            self.viewModel.loadDetailCells()
+            self.viewModel.loadMoreData()
             self.tableview.mj_footer?.endRefreshing()
         })
         tableview.rx.contentOffset.subscribe { [weak self] (contentOffset) in
@@ -68,7 +72,7 @@ class HomePageViewController: BaseViewController {
         view.decelerationDistance = 1
         view.isInfinite = true
         view.alwaysBounceHorizontal = true
-        view.removesInfiniteLoopForSingleItem = true
+//        view.removesInfiniteLoopForSingleItem = true
         view.automaticSlidingInterval = 3
         return view
     }()
@@ -85,12 +89,15 @@ class HomePageViewController: BaseViewController {
 
 extension HomePageViewController:FSPagerViewDataSource,FSPagerViewDelegate{
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        imageNames.count
+        self.bannerModels?.count ?? 0
     }
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
-        cell.imageView?.image = UIImage(named: self.imageNames[index])
+        if let model = self.bannerModels?[index]{
+            let url = URL(string: model.img_url)
+            cell.imageView?.kf.setImage(with: url)
+        }
         cell.imageView?.contentMode = .scaleAspectFill
         cell.imageView?.clipsToBounds = true
         return cell
