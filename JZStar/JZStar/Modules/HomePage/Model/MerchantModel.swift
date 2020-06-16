@@ -11,7 +11,7 @@ import UIKit
 class MerchantModel: Convertible {
    var name:String?
     var id:Int?
-    var data:[DetailMerchantModel]?
+    var data = [DetailMerchantModel]()
     
     required public init() {
         // Intentionally unimplemented...

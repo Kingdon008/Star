@@ -110,8 +110,8 @@ class HomePageVM: NSObject {
         }
         var addArr = [DetailMerchantModel]()
         allDataArr.forEach({ (merchantClassifyModel) in
-            if currentName == merchantClassifyModel.name, let needAddArr = merchantClassifyModel.data{
-                addArr += needAddArr
+            if currentName == merchantClassifyModel.name{
+                addArr += merchantClassifyModel.data
             }
         })
         addArr.forEach({ (model) in
@@ -148,6 +148,11 @@ class HomePageVM: NSObject {
     
     
     private func addMoreDetailCells(addArr:[DetailMerchantModel]){
+        for model in allDataArr{
+            if model.id == self.currentID{
+                model.data += addArr
+            } 
+        }
         let sectionModel = getSectionModel()
         addArr.forEach({ (model) in
             let selectDetailCellmodel = CellModel()
