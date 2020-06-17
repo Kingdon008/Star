@@ -10,7 +10,7 @@ import UIKit
 
 class DetailPositionVC: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
-    
+    var positionId:Int?
     var viewModel = DetailPositionVM()
 
     override func viewDidLoad() {
@@ -31,6 +31,7 @@ class DetailPositionVC: BaseViewController {
     
     func setupData(){
         viewModel.tableViewDataModel.targetTableView(myTableview: tableView)
+        viewModel.positionId = positionId
         viewModel.setData {
             self.tableView.reloadData()
         }

@@ -41,6 +41,7 @@
 		F66CEEB8248DC32C00DB68EC /* StellarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEEB7248DC32C00DB68EC /* StellarButton.swift */; };
 		F66CEEBC248DC35100DB68EC /* StellarPhoneTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66CEEBA248DC35100DB68EC /* StellarPhoneTextFieldView.xib */; };
 		F66CEEBD248DC35100DB68EC /* StellarPhoneTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEEBB248DC35100DB68EC /* StellarPhoneTextFieldView.swift */; };
+		F67D34CC2499C28F00AD89EF /* DetailPositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67D34CB2499C28F00AD89EF /* DetailPositionModel.swift */; };
 		F67E68532485D319009FC081 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E68512485D319009FC081 /* BaseViewController.swift */; };
 		F67E68542485D319009FC081 /* MyRootNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E68522485D319009FC081 /* MyRootNavViewController.swift */; };
 		F68360C32484DC6C00B4E4FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68360C22484DC6C00B4E4FA /* AppDelegate.swift */; };
@@ -149,6 +150,7 @@
 		F66CEEB7248DC32C00DB68EC /* StellarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StellarButton.swift; sourceTree = "<group>"; };
 		F66CEEBA248DC35100DB68EC /* StellarPhoneTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StellarPhoneTextFieldView.xib; sourceTree = "<group>"; };
 		F66CEEBB248DC35100DB68EC /* StellarPhoneTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StellarPhoneTextFieldView.swift; sourceTree = "<group>"; };
+		F67D34CB2499C28F00AD89EF /* DetailPositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPositionModel.swift; sourceTree = "<group>"; };
 		F67E68512485D319009FC081 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F67E68522485D319009FC081 /* MyRootNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRootNavViewController.swift; sourceTree = "<group>"; };
 		F68360BF2484DC6C00B4E4FA /* JZStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JZStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,6 +261,7 @@
 				AB5EA19B2487FA26009758B1 /* MerchantModel.swift */,
 				F636BF9D2489CAAE007AEB86 /* BannerModel.swift */,
 				F636BF9F2489CB52007AEB86 /* BannerDetailModel.swift */,
+				F67D34CB2499C28F00AD89EF /* DetailPositionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -937,6 +940,7 @@
 				F66CEEB5248DC31000DB68EC /* NavViewTitleImageButton.swift in Sources */,
 				F68361462484E15F00B4E4FA /* ToolsFunction.swift in Sources */,
 				F65431E12488B5CF0069A307 /* PersonVM.swift in Sources */,
+				F67D34CC2499C28F00AD89EF /* DetailPositionModel.swift in Sources */,
 				F68361A32484EEF800B4E4FA /* Date+Extension.swift in Sources */,
 				F68361A12484EEF800B4E4FA /* Int+Extension.swift in Sources */,
 				F68361032484E13000B4E4FA /* NetRequestAPI.swift in Sources */,

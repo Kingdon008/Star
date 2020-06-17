@@ -10,6 +10,7 @@ public enum NetRequestAPI {
     case homeContent
     case homePosition(id:Int,limit:Int)
     case homeBanner
+    case positionContent(id:Int)
 }
 
 extension NetRequestAPI: TargetType {
@@ -25,6 +26,8 @@ extension NetRequestAPI: TargetType {
             return .post
         case .homeBanner:
             return .get
+        case .positionContent:
+            return .post
         }
     }
     
@@ -36,6 +39,8 @@ extension NetRequestAPI: TargetType {
             return "/home/home_position"
         case .homeBanner:
             return "home/home_banner"
+        case .positionContent:
+            return "cms/position_content"
         }
     }
     
@@ -45,6 +50,8 @@ extension NetRequestAPI: TargetType {
         switch self {
         case .homePosition(let id, let limit):
              param = ["id":id,"limit":limit]
+        case .positionContent(let id):
+            param = ["id":id]
         default :
             break
         }

@@ -133,6 +133,7 @@ class HomePageVM: NSObject {
             }
             selectDetailCellmodel.selectRow = { tableview, indexPath in
                 let vc = DetailPositionVC()
+                vc.positionId = model.id
                 self.vmDelegate?.pushViewController(vc: vc)
             }
             selectDetailCellmodel.cellClassName = NSStringFromClass(SelectDetailViewCell.self)

@@ -176,6 +176,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="companyIcon" destination="0bB-io-3KP" id="jZP-HC-LoM"/>
+                <outlet property="companyNameLabel" destination="jMZ-vE-Qw4" id="a4N-5g-d1l"/>
+            </connections>
             <point key="canvasLocation" x="155.79710144927537" y="113.50446428571428"/>
         </tableViewCell>
     </objects>

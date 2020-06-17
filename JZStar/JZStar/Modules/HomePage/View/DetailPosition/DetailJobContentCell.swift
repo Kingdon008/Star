@@ -10,6 +10,8 @@ import UIKit
 
 class DetailJobContentCell: UITableViewCell {
 
+    @IBOutlet weak var companyNameLabel: UILabel!
+    @IBOutlet weak var companyIcon: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +21,14 @@ class DetailJobContentCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    static func initWithXIb() -> UITableViewCell{
+        let arrayOfViews = Bundle.main.loadNibNamed("DetailJobContentCell", owner: nil, options: nil)
+        guard let firstView = arrayOfViews?.first as? UITableViewCell else {
+            return UITableViewCell()
+        }
+        return firstView
     }
     
 }
