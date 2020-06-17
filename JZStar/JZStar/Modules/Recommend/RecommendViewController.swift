@@ -10,7 +10,7 @@ import UIKit
 
 class RecommendViewController: BaseViewController {
     var tableview:UITableView?
-    
+    var dataArr:[RecommendProductModel]?
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: false)
@@ -25,12 +25,18 @@ class RecommendViewController: BaseViewController {
         super.viewDidLoad()
         navigationItem.title = "推荐精选"
         tableview = UITableView(frame: CGRect(x: 0, y: kNavigationH, width: kScreenWidth, height: kScreenHeight - 88))
+        tableview?.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: kScreenWidth)
         if let tb = tableview {
             view.addSubview(tb)
             tb.delegate = self
             tb.dataSource = self
         }
-        
+        Network.request(.boutiqueList(limit: 0), success: { (json) in
+            self.dataArr = json["data"].arrayObject?.kj.modelArray(RecommendProductModel.self)
+            self.tableview?.reloadData()
+        }) { (error, message) in
+            
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -50,15 +56,19 @@ class RecommendViewController: BaseViewController {
 
 extension RecommendViewController:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        15
+        return self.dataArr?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        return 146
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = RecommendDetailCell.initWithXIb() as! RecommendDetailCell
+        if let model = self.dataArr?[indexPath.row]{
+            let url = URL(string: model.show_img_url)
+            cell.icon.kf.setImage(with: url)
+        }
         cell.selectionStyle = .none
         return cell
     }

@@ -124,7 +124,5 @@ extension HomePageViewController:HomePageVMDelegate {
     func pushViewController(vc: UIViewController) {
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
 }
 

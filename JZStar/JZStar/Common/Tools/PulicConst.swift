@@ -102,6 +102,7 @@ let STELLAR_FONT_MEDIUM_T14: UIFont = UIFont.systemFont(ofSize: 14, weight: .med
 let STELLAR_FONT_MEDIUM_T13: UIFont = UIFont.systemFont(ofSize: 13, weight: .medium)
 let STELLAR_FONT_MEDIUM_T12: UIFont = UIFont.systemFont(ofSize: 12, weight: .medium)
 let STELLAR_FONT_MEDIUM_T11: UIFont = UIFont.systemFont(ofSize: 11, weight: .medium)
+let STELLAR_FONT_MEDIUM_T8: UIFont = UIFont.systemFont(ofSize: 8, weight: .medium)
 
 // MARK: - Public safeArea
 @available(iOS 11.0, *)

@@ -18,23 +18,45 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbb-o9-sv2">
-                        <rect key="frame" x="139" y="11.5" width="42" height="21"/>
+                        <rect key="frame" x="50" y="11.5" width="215" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lqa-af-aQ7">
+                        <rect key="frame" x="20" y="12" width="22" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="gOz-Qu-Mud"/>
+                            <constraint firstAttribute="width" constant="22" id="oPl-BC-rUk"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow_gray" translatesAutoresizingMaskIntoConstraints="NO" id="zRi-B0-L5A">
+                        <rect key="frame" x="285" y="14" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="LAS-AH-5OB"/>
+                            <constraint firstAttribute="width" constant="16" id="toD-qN-ie1"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="hbb-o9-sv2" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="MCz-Qu-OFe"/>
-                    <constraint firstItem="hbb-o9-sv2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="dzW-Fg-luA"/>
+                    <constraint firstItem="lqa-af-aQ7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="7dL-lS-RZb"/>
+                    <constraint firstItem="zRi-B0-L5A" firstAttribute="leading" secondItem="hbb-o9-sv2" secondAttribute="trailing" constant="20" id="JHc-W8-82b"/>
+                    <constraint firstItem="lqa-af-aQ7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bb4-93-58G"/>
+                    <constraint firstItem="zRi-B0-L5A" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hIx-wu-aVv"/>
+                    <constraint firstAttribute="trailing" secondItem="zRi-B0-L5A" secondAttribute="trailing" constant="19" id="iZm-yM-xLN"/>
+                    <constraint firstItem="hbb-o9-sv2" firstAttribute="leading" secondItem="lqa-af-aQ7" secondAttribute="trailing" constant="8" id="jHr-xk-B2Y"/>
+                    <constraint firstItem="hbb-o9-sv2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yfh-nV-sB8"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="icon" destination="lqa-af-aQ7" id="Wof-mt-Pgx"/>
                 <outlet property="nameLabel" destination="hbb-o9-sv2" id="BQQ-ZG-ifZ"/>
             </connections>
             <point key="canvasLocation" x="139" y="127"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="rightArrow_gray" width="16" height="16"/>
+    </resources>
 </document>

@@ -8,12 +8,22 @@
 
 import UIKit
 
-class PersonalDetailCell: UITableViewCell {
+enum PersonalListType {
+    case myJob
+    case myWelfare
+    case service
+    case comments
+    case aboutUs
+    case loginOut
+}
 
+class PersonalDetailCell: UITableViewCell {
+    var type:PersonalListType?
+    @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
 
     static func initWithXIb() -> UITableViewCell{
@@ -22,6 +32,29 @@ class PersonalDetailCell: UITableViewCell {
             return UITableViewCell()
         }
         return firstView
+    }
+    
+    func setType(type:PersonalListType){
+        self.type = type
+        if type == .myJob {
+            nameLabel.text = "我的职位"
+            icon.image = UIImage.init(named: "personal_aboutus")
+        }else if type == .myWelfare {
+            nameLabel.text = "我的福利"
+            icon.image = UIImage.init(named: "personal_gift")
+        }else if type == .service {
+            nameLabel.text = "我的客服中心"
+            icon.image = UIImage.init(named: "personal_service")
+        }else if type == .comments {
+            nameLabel.text = "意见投诉"
+            icon.image = UIImage.init(named: "personal_comment")
+        }else if type == .aboutUs {
+            nameLabel.text = "关于我们"
+            icon.image = UIImage.init(named: "personal_aboutus")
+        }else if type == .loginOut {
+            nameLabel.text = "退出登录"
+            icon.image = UIImage.init(named: "personal_loginout")
+        }
     }
     
 }

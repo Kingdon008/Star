@@ -100,6 +100,10 @@ class HomePageVM: NSObject {
             cell.selectionStyle = .none
             return cell
         }
+        selectTypeCellmodel.selectRow = { tableview, indexPath in
+            let vc = MyResumeVC()
+            self.vmDelegate?.pushViewController(vc: vc)
+        }
         sectionModel.cellModelsArr.append(selectTypeCellmodel)
     }
     

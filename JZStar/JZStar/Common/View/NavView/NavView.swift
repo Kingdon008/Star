@@ -31,7 +31,7 @@ class NavView: UIView {
     func loadSubView(){
         addSubview(backButton)
         backButton.snp.makeConstraints { (make) in
-            make.left.equalTo(0)
+            make.left.equalTo(20)
             make.width.equalTo(44)
             make.height.equalTo(44)
             make.centerY.equalTo(self.snp.bottom).offset(-21)

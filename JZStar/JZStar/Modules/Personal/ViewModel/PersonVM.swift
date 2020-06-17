@@ -8,7 +8,12 @@
 
 import UIKit
 
+@objc protocol PersonVMDelegate {
+    func pushViewController(vc: UIViewController)
+}
+
 class PersonVM: NSObject {
+    weak var vmDelegate: PersonVMDelegate?
     var tableViewDataModel = TableViewDataModel()
     var setdata:(()->Void)?
     
@@ -31,6 +36,7 @@ class PersonVM: NSObject {
         let sectionModel = getSectionModel()
         sectionModel.cellModelsArr.removeAll()
         addHeadView()
+        improveResumeView()
         addDetailCells()
         callback()
     }
@@ -39,7 +45,7 @@ class PersonVM: NSObject {
         let sectionModel = getSectionModel()
         let cellModel = CellModel()
         cellModel.cellHeight = {table,index in
-            return 230
+            return 154
         }
         cellModel.cell = {table,index in
             let cell = PersonalHeadCell.initWithXIb() as! PersonalHeadCell
@@ -48,20 +54,50 @@ class PersonVM: NSObject {
         }
         sectionModel.cellModelsArr.append(cellModel)
     }
+    
+    private func improveResumeView(){
+        let sectionModel = getSectionModel()
+        let selectTypeCellmodel = CellModel()
+        selectTypeCellmodel.cellHeight = {table,index in
+            return 74
+        }
+        selectTypeCellmodel.cell = {table,index in
+            let cell = ImproveResumeCell.initWithXIb() as! ImproveResumeCell
+            cell.selectionStyle = .none
+            return cell
+        }
+        sectionModel.cellModelsArr.append(selectTypeCellmodel)
+        
+        let spaceCellmodel = CellModel()
+        spaceCellmodel.cellHeight = {table,index in
+            return 20
+        }
+        spaceCellmodel.cell = {table,index in
+            let cell = SpaceCell.initWithXIb() as! SpaceCell
+            cell.selectionStyle = .none
+            cell.backgroundColor = UIColor.init(hexString: "#F3F3F3")
+            return cell
+        }
+        sectionModel.cellModelsArr.append(spaceCellmodel)
+    }
         
     private func addDetailCells(){
-        let titles = ["我的职位","我的福利","客服中心","意见投诉","关于我们"]
-        for title in titles{
+        let types:[PersonalListType] = [.myJob,.myWelfare,.service,.comments,.aboutUs,.loginOut]
+        for type in types{
             let sectionModel = getSectionModel()
             let cellModel = CellModel()
             cellModel.cellHeight = {table,index in
-                return 88
+                return 62
             }
             cellModel.cell = {table,index in
                 let cell = PersonalDetailCell.initWithXIb() as! PersonalDetailCell
-                cell.nameLabel.text = title
+                cell.setType(type: type)
                 cell.selectionStyle = .none
                 return cell
+            }
+            cellModel.selectRow = { tableview, indexPath in
+                let vc = MyJobVC()
+                self.vmDelegate?.pushViewController(vc: vc)
             }
             sectionModel.cellModelsArr.append(cellModel)
         }

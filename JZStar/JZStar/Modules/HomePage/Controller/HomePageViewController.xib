@@ -33,7 +33,7 @@
                                 <constraint firstAttribute="height" constant="32" id="Guc-Qt-ChQ"/>
                                 <constraint firstAttribute="width" constant="32" id="Mzh-ET-ci8"/>
                             </constraints>
-                            <state key="normal" title="未登录" image="defaultHeadIcon"/>
+                            <state key="normal" title="未登录" image="defaultHeadIcon_small"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uOn-p8-n2e">
                             <rect key="frame" x="60" y="5" width="105" height="34"/>
@@ -61,7 +61,7 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrowIcon" translatesAutoresizingMaskIntoConstraints="NO" id="5mL-de-uVC">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightArrow_black" translatesAutoresizingMaskIntoConstraints="NO" id="5mL-de-uVC">
                             <rect key="frame" x="165" y="13" width="18" height="18"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="18" id="MZs-8g-vDU"/>
@@ -121,7 +121,7 @@
         </view>
     </objects>
     <resources>
-        <image name="defaultHeadIcon" width="32" height="32"/>
-        <image name="rightArrowIcon" width="18" height="18"/>
+        <image name="defaultHeadIcon_small" width="32" height="32"/>
+        <image name="rightArrow_black" width="18" height="18"/>
     </resources>
 </document>

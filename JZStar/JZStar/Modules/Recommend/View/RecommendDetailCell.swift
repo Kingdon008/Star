@@ -9,6 +9,9 @@
 import UIKit
 
 class RecommendDetailCell: UITableViewCell {
+    
+    @IBOutlet weak var icon: UIImageView!
+    
     static func initWithXIb() -> UITableViewCell{
         let arrayOfViews = Bundle.main.loadNibNamed("RecommendDetailCell", owner: nil, options: nil)
         guard let firstView = arrayOfViews?.first as? UITableViewCell else {

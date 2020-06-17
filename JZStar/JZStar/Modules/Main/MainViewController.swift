@@ -184,10 +184,9 @@ class MainViewController: UIViewController {
         return nav
     }()
     
-    lazy var personVC:MyRootNavViewController = {
+    lazy var personVC:UIViewController = {
         let vc = PersonalViewController()
-        let nav = MyRootNavViewController(rootViewController: vc)
-        return nav
+        return vc
     }()
     
     lazy var tabbarView:UIView = {

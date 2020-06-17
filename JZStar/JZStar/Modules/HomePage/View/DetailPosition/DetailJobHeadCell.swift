@@ -27,7 +27,7 @@ class DetailJobHeadCell: UITableViewCell {
     }
 
     func setData(data:Any){
-        if let model = data as? DetailMerchantModel{
+        if let model = data as? DetailPositionModel{
             titleLabel.text = model.title
             salaryDescribeLabel.text = model.salary_describe
             tagNameBGView.subviews.forEach({ subView in

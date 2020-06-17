@@ -85,6 +85,9 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ro-Vx-5hi">
@@ -102,6 +105,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="1" green="0.69807094339999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
@@ -132,6 +138,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -165,9 +176,14 @@
                             <constraint firstItem="itk-sc-WfB" firstAttribute="leading" secondItem="jMZ-vE-Qw4" secondAttribute="leading" id="wTo-kc-epG"/>
                             <constraint firstItem="Jpd-iG-Upx" firstAttribute="top" secondItem="itk-sc-WfB" secondAttribute="bottom" constant="17" id="xMw-xR-DHA"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="1" green="0.63921568630000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="6p3-B8-rqK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="IZj-Gi-fPa"/>
                     <constraint firstItem="6p3-B8-rqK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="XG5-pw-1o7"/>
@@ -179,6 +195,9 @@
             <connections>
                 <outlet property="companyIcon" destination="0bB-io-3KP" id="jZP-HC-LoM"/>
                 <outlet property="companyNameLabel" destination="jMZ-vE-Qw4" id="a4N-5g-d1l"/>
+                <outlet property="contentLabel" destination="g6u-6y-Hzy" id="zFt-0D-WdU"/>
+                <outlet property="deliverLabel" destination="eqb-UN-Peo" id="CH5-6Y-E6S"/>
+                <outlet property="qqnumLabel" destination="Jpd-iG-Upx" id="Fq7-am-ojp"/>
             </connections>
             <point key="canvasLocation" x="155.79710144927537" y="113.50446428571428"/>
         </tableViewCell>
