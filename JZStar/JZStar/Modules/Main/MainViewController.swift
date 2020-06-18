@@ -178,10 +178,9 @@ class MainViewController: UIViewController {
         return vc
     }()
     
-    lazy var recommondVC:MyRootNavViewController = {
+    lazy var recommondVC:RecommendViewController = {
         let vc = RecommendViewController()
-        let nav = MyRootNavViewController(rootViewController: vc)
-        return nav
+        return vc
     }()
     
     lazy var personVC:PersonalViewController = {

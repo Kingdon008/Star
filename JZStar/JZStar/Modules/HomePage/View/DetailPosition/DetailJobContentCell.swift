@@ -45,6 +45,7 @@ class DetailJobContentCell: UITableViewCell {
             }
             deliverLabel.text = model.salary_describe
             contentLabel.text = model.content
+            qqnumLabel.text = "QQ:\(model.company_qq)"
         }
     }
     

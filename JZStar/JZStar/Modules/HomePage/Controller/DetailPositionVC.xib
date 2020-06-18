@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailPositionVC" customModule="JZStar" customModuleProvider="target">
             <connections>
+                <outlet property="collectBtn" destination="QBy-p3-hlp" id="MvN-QP-qxL"/>
+                <outlet property="signupBtn" destination="0Rj-HU-my5" id="Dxj-fh-Z6F"/>
                 <outlet property="tableView" destination="Y56-W8-HfQ" id="CLi-7Y-ol5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -33,7 +35,10 @@
                                 <constraint firstAttribute="width" constant="50" id="E7q-FK-pYW"/>
                                 <constraint firstAttribute="height" constant="50" id="vFM-qF-Zsj"/>
                             </constraints>
-                            <state key="normal" image="collect"/>
+                            <state key="normal" image="uncollect"/>
+                            <connections>
+                                <action selector="cooectAction:" destination="-1" eventType="touchUpInside" id="ryJ-xI-1Gk"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rj-HU-my5">
                             <rect key="frame" x="98" y="14" width="292" height="57.5"/>
@@ -49,6 +54,9 @@
                                     <integer key="value" value="6"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="signypAction:" destination="-1" eventType="touchUpInside" id="ufP-1l-6gB"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -95,6 +103,6 @@
         </view>
     </objects>
     <resources>
-        <image name="collect" width="50" height="50"/>
+        <image name="uncollect" width="50" height="50"/>
     </resources>
 </document>

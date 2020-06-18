@@ -14,7 +14,7 @@ class LeftTitleAndArrowCell: UITableViewCell {
     
     
     static func initWithXIb() -> UITableViewCell{
-        let arrayOfViews = Bundle.main.loadNibNamed("leftLabel", owner: nil, options: nil)
+        let arrayOfViews = Bundle.main.loadNibNamed("LeftTitleAndArrowCell", owner: nil, options: nil)
         guard let firstView = arrayOfViews?.first as? UITableViewCell else {
             return UITableViewCell()
         }

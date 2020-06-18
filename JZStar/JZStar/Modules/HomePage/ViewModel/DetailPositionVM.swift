@@ -10,31 +10,22 @@ import UIKit
 
 class DetailPositionVM: NSObject {
     var tableViewDataModel = TableViewDataModel()
-    var positionId:Int?
-    private var positionModel:DetailPositionModel?
+    var positionModel:DetailPositionModel?
     override init() {
         super.init()
     }
     
     func setData(callback:@escaping ()->Void){
-        if let currentPositionId = positionId{
-            Network.request(.positionContent(id: currentPositionId), success: { (json) in
-                self.positionModel =  JSON(json["data"].arrayObject?.first ?? "").description.kj.model(DetailPositionModel.self)
-                self.addHeadView()
-                self.addContentView()
-                callback()
-
-            }) { (error, message) in
-                
-            }
-        }
+        addHeadView()
+        addContentView()
+        callback()
     }
     
     private func addHeadView(){
         let sectionModel = getSectionModel()
         let selectTypeCellmodel = CellModel()
         selectTypeCellmodel.cellHeight = {table,index in
-            return 126
+            return 150
         }
         selectTypeCellmodel.cell = {table,index in
             let cell = DetailJobHeadCell.initWithXIb() as! DetailJobHeadCell

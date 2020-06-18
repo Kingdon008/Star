@@ -15,11 +15,13 @@ class DetailPositionModel: Convertible {
     var company_name:String?
     var salary_describe:String?
     var company_qq:String?
-    var company_score:String?
+    var company_score:CGFloat?
     var content:String?
     var title:String?
     var is_fulltime:Bool?
     var is_parttime:Bool?
+    var is_collect:Bool?
+    var is_signup:Bool?
     
     required public init() {
         // Intentionally unimplemented...

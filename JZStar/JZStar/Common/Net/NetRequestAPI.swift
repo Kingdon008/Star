@@ -14,6 +14,8 @@ public enum NetRequestAPI {
     case boutiqueList(limit:Int)
     case userCenterHome(uid:String)
     case userCenterPosition(uid:String)
+    case usercenterAboutus
+    case usercenterSave_position(uid:String,status_id:Int,position_id:Int)
 }
 
 extension NetRequestAPI: TargetType {
@@ -37,6 +39,10 @@ extension NetRequestAPI: TargetType {
             return .post
         case .userCenterPosition:
             return .post
+        case .usercenterAboutus:
+            return .get
+        case .usercenterSave_position:
+            return .post
         }
     }
     
@@ -53,9 +59,13 @@ extension NetRequestAPI: TargetType {
         case .boutiqueList:
             return "cms/boutique_list"
         case .userCenterHome:
-            return "userCenterHome/ home"
+            return "userCenterHome/home"
         case .userCenterPosition:
             return "usercenter/my_position"
+        case .usercenterAboutus:
+            return "usercenter/about"
+        case .usercenterSave_position:
+            return "usercenter/save_position"
         }
     }
     
@@ -73,6 +83,8 @@ extension NetRequestAPI: TargetType {
             param = ["uid":uid]
         case .userCenterPosition(let uid):
             param = ["uid":uid]
+        case .usercenterSave_position(let uid,let status_id,let position_id):
+            param = ["uid":uid,"status_id":status_id,"position_id":position_id]
         default :
             break
         }
