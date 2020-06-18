@@ -45,8 +45,12 @@ class DetailJobContentCell: UITableViewCell {
             }
             deliverLabel.text = model.salary_describe
             contentLabel.text = model.content
-            qqnumLabel.text = "QQ:\(model.company_qq)"
+            qqnumLabel.text = "QQ:\(model.company_qq ?? "")"
         }
+    }
+    
+    func getContentFrame(text:String){
+        let buttonRect = String.ss.getTextRectSize(text: text,font: UIFont.systemFont(ofSize: 14),size: CGSize.init(width: kScreenWidth - 36 - 36, height: 22.fit))
     }
     
 }
