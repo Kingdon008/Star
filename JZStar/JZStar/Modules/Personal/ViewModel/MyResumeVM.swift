@@ -134,7 +134,7 @@ class MyResumeVM: NSObject {
         let sectionModel = getSectionModel()
         let cellModel = CellModel()
         cellModel.cellHeight = {table,index in
-            return 120
+            return 220
         }
         cellModel.cell = {table,index in
             let cell = MyResumeMoreInputCell.initWithXIb() as! MyResumeMoreInputCell

@@ -14,6 +14,11 @@ class BaseViewController: UIViewController,UIGestureRecognizerDelegate {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
+    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        navigationController?.setNavigationBarHidden(false, animated: false)
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

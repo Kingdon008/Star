@@ -10,7 +10,6 @@ import UIKit
 
 enum PersonalListType {
     case myJob
-    case myWelfare
     case service
     case comments
     case aboutUs
@@ -39,9 +38,6 @@ class PersonalDetailCell: UITableViewCell {
         if type == .myJob {
             nameLabel.text = "我的职位"
             icon.image = UIImage.init(named: "personal_aboutus")
-        }else if type == .myWelfare {
-            nameLabel.text = "我的福利"
-            icon.image = UIImage.init(named: "personal_gift")
         }else if type == .service {
             nameLabel.text = "我的客服中心"
             icon.image = UIImage.init(named: "personal_service")

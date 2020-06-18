@@ -82,7 +82,7 @@ class PersonVM: NSObject {
     }
         
     private func addDetailCells(){
-        let types:[PersonalListType] = [.myJob,.myWelfare,.service,.comments,.aboutUs,.loginOut]
+        let types:[PersonalListType] = [.myJob,.service,.comments,.aboutUs,.loginOut]
         for type in types{
             let sectionModel = getSectionModel()
             let cellModel = CellModel()
@@ -96,8 +96,24 @@ class PersonVM: NSObject {
                 return cell
             }
             cellModel.selectRow = { tableview, indexPath in
-                let vc = MyJobVC()
-                self.vmDelegate?.pushViewController(vc: vc)
+                switch type {
+                case .myJob:
+                    let vc = MyJobVC()
+                    self.vmDelegate?.pushViewController(vc: vc)
+                case .service:
+                    let vc = MyJobVC()
+                    self.vmDelegate?.pushViewController(vc: vc)
+                case .comments:
+                    let vc = OpinionAndComplaintVC()
+                    self.vmDelegate?.pushViewController(vc: vc)
+                case .aboutUs:
+                    let vc = AboutUsVC()
+                    self.vmDelegate?.pushViewController(vc: vc)
+                case .loginOut:
+                    let vc = MyJobVC()
+                    self.vmDelegate?.pushViewController(vc: vc)
+                }
+                
             }
             sectionModel.cellModelsArr.append(cellModel)
         }

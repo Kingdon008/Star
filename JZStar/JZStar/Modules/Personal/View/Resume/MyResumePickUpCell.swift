@@ -23,6 +23,7 @@ class MyResumePickUpCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        contentView.backgroundColor = UIColor.init(hexString: "#FFFFFF")
     }
     
     func setData(type:String,text:String? = nil){

@@ -184,7 +184,7 @@ class MainViewController: UIViewController {
         return nav
     }()
     
-    lazy var personVC:UIViewController = {
+    lazy var personVC:PersonalViewController = {
         let vc = PersonalViewController()
         return vc
     }()

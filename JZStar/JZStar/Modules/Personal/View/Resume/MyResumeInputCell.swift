@@ -31,5 +31,6 @@ class MyResumeInputCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        contentView.backgroundColor = UIColor.init(hexString: "#FFFFFF")
     }
 }

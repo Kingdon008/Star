@@ -23,7 +23,7 @@
                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请在此输入" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c4D-BP-IVz">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c4D-BP-IVz">
                         <rect key="frame" x="20" y="49" width="327" height="180"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="textColor" red="0.76470588240000004" green="0.79607843140000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>

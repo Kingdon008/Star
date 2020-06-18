@@ -29,6 +29,7 @@ class NavView: UIView {
     }
     
     func loadSubView(){
+        backgroundColor = UIColor.white
         addSubview(backButton)
         backButton.snp.makeConstraints { (make) in
             make.left.equalTo(20)

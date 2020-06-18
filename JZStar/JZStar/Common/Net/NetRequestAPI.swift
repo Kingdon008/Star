@@ -12,8 +12,8 @@ public enum NetRequestAPI {
     case homeBanner
     case positionContent(id:Int)
     case boutiqueList(limit:Int)
-    case userCenterHome(uid:Int)
-    case userCenterPosition(uid:Int)
+    case userCenterHome(uid:String)
+    case userCenterPosition(uid:String)
 }
 
 extension NetRequestAPI: TargetType {
