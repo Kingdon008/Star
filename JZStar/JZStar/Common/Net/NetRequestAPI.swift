@@ -16,6 +16,7 @@ public enum NetRequestAPI {
     case userCenterPosition(uid:String)
     case usercenterAboutus
     case usercenterSave_position(uid:String,status_id:Int,position_id:Int)
+    case usercenterMy_resume(uid:String)
 }
 
 extension NetRequestAPI: TargetType {
@@ -43,6 +44,8 @@ extension NetRequestAPI: TargetType {
             return .get
         case .usercenterSave_position:
             return .post
+        case .usercenterMy_resume:
+            return .post
         }
     }
     
@@ -66,6 +69,8 @@ extension NetRequestAPI: TargetType {
             return "usercenter/about"
         case .usercenterSave_position:
             return "usercenter/save_position"
+        case .usercenterMy_resume:
+            return "usercenter/my_resume"
         }
     }
     
@@ -85,6 +90,8 @@ extension NetRequestAPI: TargetType {
             param = ["uid":uid]
         case .usercenterSave_position(let uid,let status_id,let position_id):
             param = ["uid":uid,"status_id":status_id,"position_id":position_id]
+        case .usercenterMy_resume(let uid):
+            param = ["uid":uid]
         default :
             break
         }

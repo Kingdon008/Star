@@ -36,6 +36,11 @@ class MyResumeVC: BaseViewController {
         if let tb = tableView {
             viewModel.tableViewDataModel.targetTableView(myTableview: tb)
         }
+        Network.request(.usercenterMy_resume(uid: "ababababab"), success: { json in
+            
+        }) { (err, mess) in
+            
+        }
         viewModel.setData {
             self.tableView?.reloadData()
         }

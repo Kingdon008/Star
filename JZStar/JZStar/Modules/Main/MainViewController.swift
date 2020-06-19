@@ -15,7 +15,7 @@ enum ViewState {
     case kPersonalVc
 }
 
-class MainViewController: UIViewController {
+class MainViewController: BaseViewController {
     var nextVC = UIViewController()
     var currentVC:UIViewController?
     var myViewState:ViewState = .kVcInit{

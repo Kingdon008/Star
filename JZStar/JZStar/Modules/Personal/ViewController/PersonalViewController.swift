@@ -20,6 +20,7 @@ class PersonalViewController: BaseViewController {
     
     func setupView(){
         tableview = UITableView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight - BOTTOM_TABBAR_HEIGHT - getAllVersionSafeAreaBottomHeight()))
+        tableview?.contentInsetAdjustmentBehavior = .never
         tableview?.backgroundColor = UIColor.init(hexString: "#F3F3F3")
         tableview?.separatorColor = UIColor.init(hexString: "#C3CBD3")
         if let tb = tableview {

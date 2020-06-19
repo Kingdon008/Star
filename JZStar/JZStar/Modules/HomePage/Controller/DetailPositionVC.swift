@@ -64,7 +64,7 @@ class DetailPositionVC: BaseViewController {
 
     @IBAction func signypAction(_ sender: Any) {
         if let position_id = self.positionModel?.id{
-            Network.request(.usercenterSave_position(uid: "ababababab", status_id: 4, position_id: position_id), success: { (json) in
+            Network.request(.usercenterSave_position(uid: "ababababab", status_id: 1, position_id: position_id), success: { (json) in
                 let isSucc = json["data"].boolValue
                 if isSucc{
                     self.viewModel.positionModel?.is_signup = !(self.viewModel.positionModel?.is_signup ?? false)
@@ -83,7 +83,7 @@ class DetailPositionVC: BaseViewController {
     
     @IBAction func cooectAction(_ sender: Any) {
         if let position_id = self.positionModel?.id{
-            Network.request(.usercenterSave_position(uid: "ababababab", status_id: 1, position_id: position_id), success: { (json) in
+            Network.request(.usercenterSave_position(uid: "ababababab", status_id: 4, position_id: position_id), success: { (json) in
                 let isSucc = json["data"].boolValue
                 if isSucc{
                     self.viewModel.positionModel?.is_collect = !(self.viewModel.positionModel?.is_collect ?? false)

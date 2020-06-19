@@ -40,7 +40,7 @@ class DetailPositionVM: NSObject {
         let sectionModel = getSectionModel()
         let selectTypeCellmodel = CellModel()
         selectTypeCellmodel.cellHeight = {table,index in
-            return 389
+            return self.getContentFrameHeight(text: self.positionModel?.content ?? "")
         }
         selectTypeCellmodel.cell = {table,index in
             let cell = DetailJobContentCell.initWithXIb() as! DetailJobContentCell
@@ -60,4 +60,9 @@ class DetailPositionVM: NSObject {
             return sectionModel
         }
     }
+    
+    func getContentFrameHeight(text:String)->CGFloat{
+           let rect = String.ss.getTextRectSize(text: text,font: UIFont.systemFont(ofSize: 14),size: CGSize.init(width: kScreenWidth - 36 - 36, height: 22.fit))
+           return rect.height + 234
+       }
 }

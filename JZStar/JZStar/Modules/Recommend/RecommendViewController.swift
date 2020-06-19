@@ -11,20 +11,11 @@ import UIKit
 class RecommendViewController: BaseViewController {
     var tableview:UITableView?
     var dataArr:[RecommendProductModel]?
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "推荐精选"
-        tableview = UITableView(frame: CGRect(x: 0, y: kNavigationH, width: kScreenWidth, height: kScreenHeight - 88))
+        tableview = UITableView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight - BOTTOM_TABBAR_HEIGHT - getAllVersionSafeAreaBottomHeight()))
         tableview?.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: kScreenWidth)
         if let tb = tableview {
             view.addSubview(tb)

@@ -9,11 +9,11 @@
 import UIKit
 
 class HomePageViewController: BaseViewController {
-//    fileprivate let imageNames = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"]
     var viewModel = HomePageVM()
     var bannerModels:[BannerModel]?
     @IBOutlet var personalHeadView: UIView!
     @IBOutlet weak var tableview: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
