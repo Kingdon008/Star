@@ -16,7 +16,7 @@ class PersonVM: NSObject {
     weak var vmDelegate: PersonVMDelegate?
     var tableViewDataModel = TableViewDataModel()
     var setdata:(()->Void)?
-    
+    var userModel:UserModel?
     override init() {
         super.init()
     }
@@ -50,6 +50,7 @@ class PersonVM: NSObject {
         cellModel.cell = {table,index in
             let cell = PersonalHeadCell.initWithXIb() as! PersonalHeadCell
             cell.selectionStyle = .none
+            cell.setData(data: self.userModel as Any)
             return cell
         }
         sectionModel.cellModelsArr.append(cellModel)
@@ -65,6 +66,10 @@ class PersonVM: NSObject {
             let cell = ImproveResumeCell.initWithXIb() as! ImproveResumeCell
             cell.selectionStyle = .none
             return cell
+        }
+        selectTypeCellmodel.selectRow = { _ ,_ in
+            let vc = MyResumeVC()
+            self.vmDelegate?.pushViewController(vc: vc)
         }
         sectionModel.cellModelsArr.append(selectTypeCellmodel)
         
@@ -101,7 +106,7 @@ class PersonVM: NSObject {
                     let vc = MyJobVC()
                     self.vmDelegate?.pushViewController(vc: vc)
                 case .service:
-                    let vc = MyJobVC()
+                    let vc = MyServiceVC()
                     self.vmDelegate?.pushViewController(vc: vc)
                 case .comments:
                     let vc = OpinionAndComplaintVC()

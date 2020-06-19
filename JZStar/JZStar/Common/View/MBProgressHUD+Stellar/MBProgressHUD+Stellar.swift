@@ -35,24 +35,31 @@ extension MBProgressHUD{
             return
         }
         let hud = MBProgressHUD.showAdded(to: rootvc, animated: true)
-        hud.bezelView.style = .solidColor
-        hud.bezelView.backgroundColor = STELLAR_COLOR_C8.withAlphaComponent(0.94)
-        var tempArr: [UIImage] = []
-        for i in 1..<44{
-            let image = UIImage.init(named: "loading_gif_\(i)")!.ss.reSizeImage(reSize: CGSize.init(width: 43*1.6, height: 28*1.6))
-            tempArr.append(image)
-        }
-        let imageView = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: 142, height: 155))
-        imageView.animationImages = tempArr
-        imageView.animationDuration = 1.0
-        imageView.startAnimating()
-        hud.customView = imageView
-        hud.mode = .customView
-        hud.backgroundView.layer.cornerRadius = 12
-        hud.backgroundView.layer.masksToBounds = true
-        //hud.isSquare = true
-        hud.hide(animated: true, afterDelay: 10.0)
+//        hud.bezelView.style = .solidColor
+//        hud.bezelView.backgroundColor = STELLAR_COLOR_C8.withAlphaComponent(0.94)
+//        var tempArr: [UIImage] = []
+//        for i in 1..<44{
+//            let image = UIImage.init(named: "loading_gif_\(i)")!.ss.reSizeImage(reSize: CGSize.init(width: 43*1.6, height: 28*1.6))
+//            tempArr.append(image)
+//        }
+//        let imageView = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: 142, height: 155))
+//        imageView.animationImages = tempArr
+//        imageView.animationDuration = 1.0
+//        imageView.startAnimating()
+//        hud.customView = imageView
+//        hud.mode = .customView
+//        hud.backgroundView.layer.cornerRadius = 12
+//        hud.backgroundView.layer.masksToBounds = true
+//        //hud.isSquare = true
+//        hud.hide(animated: true, afterDelay: 10.0)
         
+    }
+    
+    class func hiddenStellarHud() {
+        guard let rootvc = AppManager.sharedManager.currVc?.view else {
+            return
+        }
+        MBProgressHUD.hide(for: rootvc, animated: true)
     }
 
 }

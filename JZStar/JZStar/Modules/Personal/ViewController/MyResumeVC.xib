@@ -36,6 +36,9 @@
                                     <integer key="value" value="6"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="submitAction:" destination="-1" eventType="touchUpInside" id="eOa-p4-LNZ"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

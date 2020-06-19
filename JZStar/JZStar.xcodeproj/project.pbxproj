@@ -20,6 +20,11 @@
 		AB5EA19C2487FA26009758B1 /* MerchantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5EA19B2487FA26009758B1 /* MerchantModel.swift */; };
 		AB9E51DB24892CED00BAF5AE /* DetailPositionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E51D924892CED00BAF5AE /* DetailPositionVC.swift */; };
 		AB9E51DC24892CED00BAF5AE /* DetailPositionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB9E51DA24892CED00BAF5AE /* DetailPositionVC.xib */; };
+		ABE3D186249CE6EE00D2B55E /* BHJPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3D185249CE6EE00D2B55E /* BHJPickerView.swift */; };
+		ABE3D189249D059500D2B55E /* MyServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3D187249D059500D2B55E /* MyServiceVC.swift */; };
+		ABE3D18A249D059500D2B55E /* MyServiceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABE3D188249D059500D2B55E /* MyServiceVC.xib */; };
+		ABE3D18C249D068500D2B55E /* ServiceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3D18B249D068500D2B55E /* ServiceVM.swift */; };
+		ABE3D18E249D080700D2B55E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3D18D249D080700D2B55E /* UserModel.swift */; };
 		ABF9B732249A3492007F9B05 /* RecommendProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9B731249A3492007F9B05 /* RecommendProductModel.swift */; };
 		ABF9B735249A41C4007F9B05 /* ImproveResumeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF9B733249A41C4007F9B05 /* ImproveResumeCell.xib */; };
 		ABF9B736249A41C4007F9B05 /* ImproveResume.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9B734249A41C4007F9B05 /* ImproveResume.swift */; };
@@ -154,6 +159,11 @@
 		AB5EA19B2487FA26009758B1 /* MerchantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantModel.swift; sourceTree = "<group>"; };
 		AB9E51D924892CED00BAF5AE /* DetailPositionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPositionVC.swift; sourceTree = "<group>"; };
 		AB9E51DA24892CED00BAF5AE /* DetailPositionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPositionVC.xib; sourceTree = "<group>"; };
+		ABE3D185249CE6EE00D2B55E /* BHJPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BHJPickerView.swift; sourceTree = "<group>"; };
+		ABE3D187249D059500D2B55E /* MyServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServiceVC.swift; sourceTree = "<group>"; };
+		ABE3D188249D059500D2B55E /* MyServiceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyServiceVC.xib; sourceTree = "<group>"; };
+		ABE3D18B249D068500D2B55E /* ServiceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceVM.swift; sourceTree = "<group>"; };
+		ABE3D18D249D080700D2B55E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		ABF9B731249A3492007F9B05 /* RecommendProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendProductModel.swift; sourceTree = "<group>"; };
 		ABF9B733249A41C4007F9B05 /* ImproveResumeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImproveResumeCell.xib; sourceTree = "<group>"; };
 		ABF9B734249A41C4007F9B05 /* ImproveResume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImproveResume.swift; sourceTree = "<group>"; };
@@ -339,6 +349,14 @@
 			path = DetailPosition;
 			sourceTree = "<group>";
 		};
+		ABE3D184249CE6E200D2B55E /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3D185249CE6EE00D2B55E /* BHJPickerView.swift */,
+			);
+			path = PickerView;
+			sourceTree = "<group>";
+		};
 		ABF9B730249A3432007F9B05 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,6 +379,8 @@
 				F6109E26249AFEED00ED66F7 /* AboutUsVC.xib */,
 				F6109E33249B824600ED66F7 /* AboutUsDeatilVC.swift */,
 				F6109E34249B824600ED66F7 /* AboutUsDeatilVC.xib */,
+				ABE3D187249D059500D2B55E /* MyServiceVC.swift */,
+				ABE3D188249D059500D2B55E /* MyServiceVC.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -401,6 +421,7 @@
 				F6109E2F249B736300ED66F7 /* MyJobModel.swift */,
 				F6109E31249B7B9700ED66F7 /* AboutUsModel.swift */,
 				F639AC9E249C6AD600E55E3C /* MyResumeModel.swift */,
+				ABE3D18D249D080700D2B55E /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -442,6 +463,7 @@
 			children = (
 				F65431E02488B5CF0069A307 /* PersonVM.swift */,
 				ABF9B740249A66C3007F9B05 /* MyResumeVM.swift */,
+				ABE3D18B249D068500D2B55E /* ServiceVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -708,6 +730,7 @@
 		F683616E2484EEB900B4E4FA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ABE3D184249CE6E200D2B55E /* PickerView */,
 				AB0C2D4B2496320500D9E378 /* SpaceCell */,
 				F66CEEBE248DC3C000DB68EC /* StellarCommonTextFieldView */,
 				F66CEEB9248DC35100DB68EC /* StellarTextFieldView */,
@@ -968,6 +991,7 @@
 				F6D10C292486257E00AF6401 /* 6.jpg in Resources */,
 				ABF9B746249A6834007F9B05 /* MyResumeInputCell.xib in Resources */,
 				ABF9B73B249A58A3007F9B05 /* MyJobVC.xib in Resources */,
+				ABE3D18A249D059500D2B55E /* MyServiceVC.xib in Resources */,
 				F6D10C2A2486257E00AF6401 /* 5.jpg in Resources */,
 				F65431D5248895530069A307 /* RecommendDetailCell.xib in Resources */,
 				ABF9B74A249A6858007F9B05 /* MyResumePickUpCell.xib in Resources */,
@@ -1070,6 +1094,7 @@
 				F65431E12488B5CF0069A307 /* PersonVM.swift in Sources */,
 				F67D34CC2499C28F00AD89EF /* DetailPositionModel.swift in Sources */,
 				F68361A32484EEF800B4E4FA /* Date+Extension.swift in Sources */,
+				ABE3D18C249D068500D2B55E /* ServiceVM.swift in Sources */,
 				F6109E32249B7B9700ED66F7 /* AboutUsModel.swift in Sources */,
 				F68361A12484EEF800B4E4FA /* Int+Extension.swift in Sources */,
 				F68361032484E13000B4E4FA /* NetRequestAPI.swift in Sources */,
@@ -1096,6 +1121,7 @@
 				F6109E2C249B006100ED66F7 /* LeftTitleAndArrowCell.swift in Sources */,
 				F67E68542485D319009FC081 /* MyRootNavViewController.swift in Sources */,
 				F68361BA2484F61000B4E4FA /* PersonalViewController.swift in Sources */,
+				ABE3D18E249D080700D2B55E /* UserModel.swift in Sources */,
 				F66CEEB8248DC32C00DB68EC /* StellarButton.swift in Sources */,
 				F68361442484E15F00B4E4FA /* AppAssistance.swift in Sources */,
 				AB5EA19C2487FA26009758B1 /* MerchantModel.swift in Sources */,
@@ -1108,6 +1134,7 @@
 				F68360F62484E11E00B4E4FA /* TableViewDataModel.swift in Sources */,
 				F68361B82484F60300B4E4FA /* RecommendViewController.swift in Sources */,
 				F683615F2484E15F00B4E4FA /* Regex.swift in Sources */,
+				ABE3D186249CE6EE00D2B55E /* BHJPickerView.swift in Sources */,
 				ABF9B73E249A6640007F9B05 /* MyResumeVC.swift in Sources */,
 				F66CEEAC248DC2AA00DB68EC /* StellarProgressHUD.swift in Sources */,
 				F636BFA32489EAB6007AEB86 /* TitleScrollView.swift in Sources */,
@@ -1124,6 +1151,7 @@
 				F68361712484EED300B4E4FA /* StellarHintHud.swift in Sources */,
 				F66CEEBD248DC35100DB68EC /* StellarPhoneTextFieldView.swift in Sources */,
 				F6109E35249B824600ED66F7 /* AboutUsDeatilVC.swift in Sources */,
+				ABE3D189249D059500D2B55E /* MyServiceVC.swift in Sources */,
 				F6AF66982487949300CD347E /* SelectTypeView.swift in Sources */,
 				F68361A42484EEF800B4E4FA /* UIView+Extension.swift in Sources */,
 				F683616B2484EB3E00B4E4FA /* InfoModel.swift in Sources */,

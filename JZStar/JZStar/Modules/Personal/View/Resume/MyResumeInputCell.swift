@@ -24,7 +24,8 @@ class MyResumeInputCell: UITableViewCell {
         typeLabel.text = type
         if let showTest = text{
             textfield.text = showTest
-            textfield.isUserInteractionEnabled = false
+//            textfield.isUserInteractionEnabled = false
+            textfield.textColor = UIColor.init(hexString: "#333333")
         }
     }
     
@@ -32,5 +33,6 @@ class MyResumeInputCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         contentView.backgroundColor = UIColor.init(hexString: "#FFFFFF")
+        textfield.placeholder = "请输入"
     }
 }

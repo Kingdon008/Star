@@ -1,17 +1,17 @@
 //
-//  RecommendViewController.swift
+//  MyServiceVC.swift
 //  JZStar
 //
-//  Created by don on 2020/6/1.
+//  Created by herodon on 2020/6/19.
 //  Copyright © 2020 don. All rights reserved.
 //
 
 import UIKit
 
-class PersonalViewController: BaseViewController {
+class MyServiceVC: BaseViewController {
     var tableview:UITableView!
-    var viewModel = PersonVM()
-    var userModel:UserModel?
+    var viewModel = ServiceVM()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -28,22 +28,14 @@ class PersonalViewController: BaseViewController {
     
     func setupData(){
         viewModel.tableViewDataModel.targetTableView(myTableview: tableview)
-        viewModel.vmDelegate = self
-        
-        Network.request(.userCenterHome(uid: "ababababab"), success: { (json) in
-            self.userModel = json["data"].description.kj.model(UserModel.self)
-            self.viewModel.userModel = self.userModel
-            self.viewModel.setData {
-                self.tableview.reloadData()
-            }
+//        viewModel.vmDelegate = self
+        viewModel.setData {
+            tableview.reloadData()
+        }
+        Network.request(.usercenterCustom_service, success: { (json) in
+            print(json)
         }) { (err, mess) in
             
         }
-    }
-}
-
-extension PersonalViewController:PersonVMDelegate {
-    func pushViewController(vc: UIViewController) {
-        navigationController?.pushViewController(vc, animated: true)
     }
 }

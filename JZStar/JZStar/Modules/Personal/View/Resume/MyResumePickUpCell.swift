@@ -24,12 +24,14 @@ class MyResumePickUpCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         contentView.backgroundColor = UIColor.init(hexString: "#FFFFFF")
+        detailShowLabel.text = "请选择"
     }
     
     func setData(type:String,text:String? = nil){
         typeLabel.text = type
         if let showTest = text{
             detailShowLabel.text = showTest
+            detailShowLabel.textColor = UIColor.init(hexString: "#333333")
         }
     }
 }

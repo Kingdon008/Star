@@ -16,26 +16,6 @@ class PersonalHeadCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        earingsBG.layer.borderWidth = 1
-        earingsBG.layer.borderColor = UIColor.init(hexString: "#070707").cgColor
-        
-        earningsLabel.numberOfLines = 2
-        earningsLabel.textAlignment = .center
-        let priceStr = "0元"
-        let priceAttribute = [NSAttributedString.Key.foregroundColor: UIColor.init(hexString: "#FF5858"),NSAttributedString.Key.font:STELLAR_FONT_MEDIUM_T16]
-        
-        let hintStr = "\n今日收益"
-        let hintAttribute = [NSAttributedString.Key.foregroundColor: UIColor.init(hexString: "#070707"),NSAttributedString.Key.font:STELLAR_FONT_MEDIUM_T8]
-    
-        let myAttrString = NSMutableAttributedString(string: priceStr, attributes: priceAttribute)
-        let myHintAttrString = NSAttributedString(string: hintStr, attributes: hintAttribute)
-        myAttrString.append(myHintAttrString)
-        earningsLabel.attributedText = myAttrString
-        earningsLabel.sizeToFit()
-//        earingsBG.mj_w = 96
-        
-        earingsBG.layer.cornerRadius = (earningsLabel.mj_h + 5 + 5)/2.0
     }
 
     static func initWithXIb() -> UITableViewCell{
@@ -44,6 +24,35 @@ class PersonalHeadCell: UITableViewCell {
             return UITableViewCell()
         }
         return firstView
+    }
+    
+    func setData(data:Any){
+        if let model = data as? UserModel{
+            setProfit(price: model.profit ?? "")
+            nameLabel.text = model.name
+        }
+    }
+    
+    private func setProfit(price:String){
+        earingsBG.layer.borderWidth = 1
+        earingsBG.layer.borderColor = UIColor.init(hexString: "#070707").cgColor
+        
+        earningsLabel.numberOfLines = 2
+        earningsLabel.textAlignment = .center
+        let priceStr = "\(price)元"
+        let priceAttribute = [NSAttributedString.Key.foregroundColor: UIColor.init(hexString: "#FF5858"),NSAttributedString.Key.font:STELLAR_FONT_MEDIUM_T16]
+        
+        let hintStr = "\n今日收益"
+        let hintAttribute = [NSAttributedString.Key.foregroundColor: UIColor.init(hexString: "#070707"),NSAttributedString.Key.font:STELLAR_FONT_MEDIUM_T8]
+        
+        let myAttrString = NSMutableAttributedString(string: priceStr, attributes: priceAttribute)
+        let myHintAttrString = NSAttributedString(string: hintStr, attributes: hintAttribute)
+        myAttrString.append(myHintAttrString)
+        earningsLabel.attributedText = myAttrString
+        earningsLabel.sizeToFit()
+        //        earingsBG.mj_w = 96
+        
+        earingsBG.layer.cornerRadius = (earningsLabel.mj_h + 5 + 5)/2.0
     }
     
 }
