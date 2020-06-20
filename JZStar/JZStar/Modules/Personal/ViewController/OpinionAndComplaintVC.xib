@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OpinionAndComplaintVC" customModule="JZStar" customModuleProvider="target">
             <connections>
+                <outlet property="opinionBtn" destination="FDc-FH-LOh" id="vq6-2l-YTR"/>
                 <outlet property="textView" destination="ipR-Ev-k9W" id="ZY7-nC-fib"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -35,6 +36,9 @@
                             <integer key="value" value="8"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="changeAction:" destination="-1" eventType="touchUpInside" id="4Iv-58-8du"/>
+                    </connections>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ipR-Ev-k9W">
                     <rect key="frame" x="20" y="163" width="374" height="564"/>

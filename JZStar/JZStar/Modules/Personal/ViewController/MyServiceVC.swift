@@ -9,8 +9,13 @@
 import UIKit
 
 class MyServiceVC: BaseViewController {
+    
+    @IBOutlet weak var textfieldView: UITextField!
+    @IBOutlet weak var sendView: UIView!
+    
     var tableview:UITableView!
     var viewModel = ServiceVM()
+    var dataArr = [AboutUsModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,23 +24,51 @@ class MyServiceVC: BaseViewController {
     }
     
     func setupView(){
-        tableview = UITableView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight - BOTTOM_TABBAR_HEIGHT - getAllVersionSafeAreaBottomHeight()))
+        navView.setTitle(title: "客服中心")
+        navView.backgroundColor = UIColor.white
+        navView.backclickBlock = {
+            self.navigationController?.popViewController(animated: true)
+        }
+        view.addSubview(navView)
+        
+        tableview = UITableView(frame: CGRect(x: 0, y: navView.frame.maxY, width: kScreenWidth, height: kScreenHeight - BOTTOM_TABBAR_HEIGHT - getAllVersionSafeAreaBottomHeight() - navView.frame.maxY - 110))
         tableview.contentInsetAdjustmentBehavior = .never
         tableview.backgroundColor = UIColor.init(hexString: "#F3F3F3")
         tableview.separatorColor = UIColor.init(hexString: "#C3CBD3")
         view.addSubview(tableview)
+        
+        sendView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.09).cgColor
+        sendView.layer.shadowOffset = CGSize(width: 0, height: -5)
+        sendView.layer.shadowOpacity = 1
+        sendView.layer.shadowRadius = 16
     }
     
     func setupData(){
         viewModel.tableViewDataModel.targetTableView(myTableview: tableview)
 //        viewModel.vmDelegate = self
-        viewModel.setData {
-            tableview.reloadData()
-        }
+        
         Network.request(.usercenterCustom_service, success: { (json) in
-            print(json)
+            self.dataArr = json["data"].arrayObject?.kj.modelArray(AboutUsModel.self) ?? [AboutUsModel]()
+            self.viewModel.dataArr = self.dataArr
+            self.viewModel.setData {
+                self.tableview.reloadData()
+            }
         }) { (err, mess) in
             
         }
+    }
+    
+    lazy var navView:NavView = {
+        let frame = CGRect.init(x: 0, y: kStatusBarH, width: kScreenWidth, height: kNavigationBarH)
+        let view = NavView(frame: frame)
+        return view
+    }()
+    
+    @IBAction func sendAction(_ sender: Any) {
+        dataArr.forEach({
+            if $0.answer == self.textfieldView.text{
+                self.viewModel.adddialogueView(dia: $0)
+            }
+        })
     }
 }

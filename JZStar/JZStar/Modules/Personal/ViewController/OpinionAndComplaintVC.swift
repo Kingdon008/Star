@@ -9,12 +9,14 @@
 import UIKit
 
 class OpinionAndComplaintVC: BaseViewController {
-
+    @IBOutlet weak var opinionBtn: UIButton!
     @IBOutlet weak var textView: UITextView!
+    
+    let menu = MTPopMenu.sharedPopMenu()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupview()
-        // Do any additional setup after loading the view.
     }
 
     func setupview(){
@@ -47,15 +49,16 @@ class OpinionAndComplaintVC: BaseViewController {
         view.sizeToFit()
         return view
     }()
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func changeAction(_ sender: Any) {
+        menu.popMenu(anchorView: opinionBtn, titleArray: ["意见","反馈"])
+        menu.selectTextColor = .black
+        menu.normalTextColor = .black
+        menu.menuBgColor = .lightGray
+        menu.didSelectItem = { (index, model) in
+            self.opinionBtn.setTitle(model.title ?? "", for: .normal)
+        }
     }
-    */
-
+    
 }

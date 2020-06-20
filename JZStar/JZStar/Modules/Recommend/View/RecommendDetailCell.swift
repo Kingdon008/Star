@@ -10,6 +10,8 @@ import UIKit
 
 class RecommendDetailCell: UITableViewCell {
     
+    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var icon: UIImageView!
     
     static func initWithXIb() -> UITableViewCell{
@@ -25,10 +27,13 @@ class RecommendDetailCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func setData(data:Any){
+        if let model = data as? RecommendProductModel{
+            let url = URL(string: model.show_img_url)
+            icon.kf.setImage(with: url)
+            titleLabel.text = model.title
+//            contentLabel.text = model.
+        }
     }
     
 }

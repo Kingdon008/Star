@@ -14,8 +14,15 @@ class RecommendViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "推荐精选"
-        tableview = UITableView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight - BOTTOM_TABBAR_HEIGHT - getAllVersionSafeAreaBottomHeight()))
+        
+        navView.setTitle(title: "精品推荐")
+        navView.backButton.isHidden = true
+        navView.backclickBlock = {
+            self.navigationController?.popViewController(animated: true)
+        }
+        view.addSubview(navView)
+        
+        tableview = UITableView(frame: CGRect(x: 0, y: navView.frame.maxY, width: kScreenWidth, height: kScreenHeight - navView.frame.maxY - BOTTOM_TABBAR_HEIGHT - getAllVersionSafeAreaBottomHeight()))
         tableview?.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: kScreenWidth)
         if let tb = tableview {
             view.addSubview(tb)
@@ -28,20 +35,14 @@ class RecommendViewController: BaseViewController {
         }) { (error, message) in
             
         }
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    lazy var navView:NavView = {
+        let frame = CGRect.init(x: 0, y: 0, width: kScreenWidth, height: kNavigationBarH + kStatusBarH)
+        let view = NavView(frame: frame)
+        return view
+    }()
+    
 }
 
 
@@ -51,14 +52,13 @@ extension RecommendViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 146
+        return 196
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = RecommendDetailCell.initWithXIb() as! RecommendDetailCell
         if let model = self.dataArr?[indexPath.row]{
-            let url = URL(string: model.show_img_url)
-            cell.icon.kf.setImage(with: url)
+            cell.setData(data: model)
         }
         cell.selectionStyle = .none
         return cell

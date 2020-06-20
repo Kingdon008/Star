@@ -15,6 +15,14 @@
 		AB042C6B24991BF9007F8641 /* DetailJobContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB042C6924991BF9007F8641 /* DetailJobContentCell.xib */; };
 		AB0C2D4E2496323800D9E378 /* SpaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C2D4C2496323800D9E378 /* SpaceCell.swift */; };
 		AB0C2D4F2496323800D9E378 /* SpaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0C2D4D2496323800D9E378 /* SpaceCell.xib */; };
+		AB1E3C49249D9C83004089A8 /* LeftDialogueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1E3C47249D9C83004089A8 /* LeftDialogueCell.swift */; };
+		AB1E3C4A249D9C83004089A8 /* LeftDialogueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB1E3C48249D9C83004089A8 /* LeftDialogueCell.xib */; };
+		AB1E3C4D249D9C9D004089A8 /* RightDialogueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1E3C4B249D9C9D004089A8 /* RightDialogueCell.swift */; };
+		AB1E3C4E249D9C9D004089A8 /* RightDialogueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB1E3C4C249D9C9D004089A8 /* RightDialogueCell.xib */; };
+		AB3FE3FB249E30D2001966ED /* ImageCodeVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3FE3FA249E30D2001966ED /* ImageCodeVerification.swift */; };
+		AB3FE401249E3D98001966ED /* MTPopMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3FE3FE249E3D98001966ED /* MTPopMenuTableViewCell.swift */; };
+		AB3FE402249E3D98001966ED /* MTPopMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3FE3FF249E3D98001966ED /* MTPopMenuModel.swift */; };
+		AB3FE403249E3D98001966ED /* MTPopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3FE400249E3D98001966ED /* MTPopMenu.swift */; };
 		AB5EA1982487F5FA009758B1 /* SelectDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5EA1962487F5FA009758B1 /* SelectDetailViewCell.swift */; };
 		AB5EA1992487F5FA009758B1 /* SelectDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5EA1972487F5FA009758B1 /* SelectDetailViewCell.xib */; };
 		AB5EA19C2487FA26009758B1 /* MerchantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5EA19B2487FA26009758B1 /* MerchantModel.swift */; };
@@ -25,9 +33,11 @@
 		ABE3D18A249D059500D2B55E /* MyServiceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABE3D188249D059500D2B55E /* MyServiceVC.xib */; };
 		ABE3D18C249D068500D2B55E /* ServiceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3D18B249D068500D2B55E /* ServiceVM.swift */; };
 		ABE3D18E249D080700D2B55E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3D18D249D080700D2B55E /* UserModel.swift */; };
+		ABE3D192249D8BE700D2B55E /* ServiceHeadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3D190249D8BE700D2B55E /* ServiceHeadCell.swift */; };
+		ABE3D193249D8BE700D2B55E /* ServiceHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABE3D191249D8BE700D2B55E /* ServiceHeadCell.xib */; };
 		ABF9B732249A3492007F9B05 /* RecommendProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9B731249A3492007F9B05 /* RecommendProductModel.swift */; };
 		ABF9B735249A41C4007F9B05 /* ImproveResumeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF9B733249A41C4007F9B05 /* ImproveResumeCell.xib */; };
-		ABF9B736249A41C4007F9B05 /* ImproveResume.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9B734249A41C4007F9B05 /* ImproveResume.swift */; };
+		ABF9B736249A41C4007F9B05 /* ImproveResumeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9B734249A41C4007F9B05 /* ImproveResumeCell.swift */; };
 		ABF9B73A249A58A3007F9B05 /* MyJobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9B738249A58A3007F9B05 /* MyJobVC.swift */; };
 		ABF9B73B249A58A3007F9B05 /* MyJobVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF9B739249A58A3007F9B05 /* MyJobVC.xib */; };
 		ABF9B73E249A6640007F9B05 /* MyResumeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9B73C249A6640007F9B05 /* MyResumeVC.swift */; };
@@ -154,6 +164,14 @@
 		AB042C6924991BF9007F8641 /* DetailJobContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailJobContentCell.xib; sourceTree = "<group>"; };
 		AB0C2D4C2496323800D9E378 /* SpaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceCell.swift; sourceTree = "<group>"; };
 		AB0C2D4D2496323800D9E378 /* SpaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpaceCell.xib; sourceTree = "<group>"; };
+		AB1E3C47249D9C83004089A8 /* LeftDialogueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftDialogueCell.swift; sourceTree = "<group>"; };
+		AB1E3C48249D9C83004089A8 /* LeftDialogueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftDialogueCell.xib; sourceTree = "<group>"; };
+		AB1E3C4B249D9C9D004089A8 /* RightDialogueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightDialogueCell.swift; sourceTree = "<group>"; };
+		AB1E3C4C249D9C9D004089A8 /* RightDialogueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightDialogueCell.xib; sourceTree = "<group>"; };
+		AB3FE3FA249E30D2001966ED /* ImageCodeVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCodeVerification.swift; sourceTree = "<group>"; };
+		AB3FE3FE249E3D98001966ED /* MTPopMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTPopMenuTableViewCell.swift; sourceTree = "<group>"; };
+		AB3FE3FF249E3D98001966ED /* MTPopMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTPopMenuModel.swift; sourceTree = "<group>"; };
+		AB3FE400249E3D98001966ED /* MTPopMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTPopMenu.swift; sourceTree = "<group>"; };
 		AB5EA1962487F5FA009758B1 /* SelectDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDetailViewCell.swift; sourceTree = "<group>"; };
 		AB5EA1972487F5FA009758B1 /* SelectDetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectDetailViewCell.xib; sourceTree = "<group>"; };
 		AB5EA19B2487FA26009758B1 /* MerchantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantModel.swift; sourceTree = "<group>"; };
@@ -164,9 +182,11 @@
 		ABE3D188249D059500D2B55E /* MyServiceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyServiceVC.xib; sourceTree = "<group>"; };
 		ABE3D18B249D068500D2B55E /* ServiceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceVM.swift; sourceTree = "<group>"; };
 		ABE3D18D249D080700D2B55E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		ABE3D190249D8BE700D2B55E /* ServiceHeadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHeadCell.swift; sourceTree = "<group>"; };
+		ABE3D191249D8BE700D2B55E /* ServiceHeadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceHeadCell.xib; sourceTree = "<group>"; };
 		ABF9B731249A3492007F9B05 /* RecommendProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendProductModel.swift; sourceTree = "<group>"; };
 		ABF9B733249A41C4007F9B05 /* ImproveResumeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImproveResumeCell.xib; sourceTree = "<group>"; };
-		ABF9B734249A41C4007F9B05 /* ImproveResume.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImproveResume.swift; sourceTree = "<group>"; };
+		ABF9B734249A41C4007F9B05 /* ImproveResumeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImproveResumeCell.swift; sourceTree = "<group>"; };
 		ABF9B738249A58A3007F9B05 /* MyJobVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyJobVC.swift; sourceTree = "<group>"; };
 		ABF9B739249A58A3007F9B05 /* MyJobVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyJobVC.xib; sourceTree = "<group>"; };
 		ABF9B73C249A6640007F9B05 /* MyResumeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeVC.swift; sourceTree = "<group>"; };
@@ -315,6 +335,32 @@
 			path = SpaceCell;
 			sourceTree = "<group>";
 		};
+		AB3FE3F9249E30AA001966ED /* ImageCodeVerification */ = {
+			isa = PBXGroup;
+			children = (
+				AB3FE3FA249E30D2001966ED /* ImageCodeVerification.swift */,
+			);
+			path = ImageCodeVerification;
+			sourceTree = "<group>";
+		};
+		AB3FE3FC249E3D78001966ED /* RightMenu */ = {
+			isa = PBXGroup;
+			children = (
+				AB3FE3FD249E3D98001966ED /* Menu */,
+			);
+			path = RightMenu;
+			sourceTree = "<group>";
+		};
+		AB3FE3FD249E3D98001966ED /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				AB3FE3FE249E3D98001966ED /* MTPopMenuTableViewCell.swift */,
+				AB3FE3FF249E3D98001966ED /* MTPopMenuModel.swift */,
+				AB3FE400249E3D98001966ED /* MTPopMenu.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		AB5EA19A2487F8FE009758B1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +401,19 @@
 				ABE3D185249CE6EE00D2B55E /* BHJPickerView.swift */,
 			);
 			path = PickerView;
+			sourceTree = "<group>";
+		};
+		ABE3D18F249D8BB100D2B55E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				ABE3D190249D8BE700D2B55E /* ServiceHeadCell.swift */,
+				ABE3D191249D8BE700D2B55E /* ServiceHeadCell.xib */,
+				AB1E3C47249D9C83004089A8 /* LeftDialogueCell.swift */,
+				AB1E3C48249D9C83004089A8 /* LeftDialogueCell.xib */,
+				AB1E3C4B249D9C9D004089A8 /* RightDialogueCell.swift */,
+				AB1E3C4C249D9C9D004089A8 /* RightDialogueCell.xib */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		ABF9B730249A3432007F9B05 /* Model */ = {
@@ -446,9 +505,10 @@
 		F65431D62488B4760069A307 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ABE3D18F249D8BB100D2B55E /* Service */,
 				F6109E29249B002400ED66F7 /* LeftTitleAndArrowCell */,
 				ABF9B742249A67F3007F9B05 /* Resume */,
-				ABF9B734249A41C4007F9B05 /* ImproveResume.swift */,
+				ABF9B734249A41C4007F9B05 /* ImproveResumeCell.swift */,
 				ABF9B733249A41C4007F9B05 /* ImproveResumeCell.xib */,
 				F65431D72488B4980069A307 /* PersonalHeadCell.swift */,
 				F65431D82488B4980069A307 /* PersonalHeadCell.xib */,
@@ -730,6 +790,8 @@
 		F683616E2484EEB900B4E4FA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AB3FE3FC249E3D78001966ED /* RightMenu */,
+				AB3FE3F9249E30AA001966ED /* ImageCodeVerification */,
 				ABE3D184249CE6E200D2B55E /* PickerView */,
 				AB0C2D4B2496320500D9E378 /* SpaceCell */,
 				F66CEEBE248DC3C000DB68EC /* StellarCommonTextFieldView */,
@@ -977,10 +1039,12 @@
 			files = (
 				F6D10C2C2486257E00AF6401 /* 1.jpg in Resources */,
 				F6109E24249AF56900ED66F7 /* OpinionAndComplaintVC.xib in Resources */,
+				AB1E3C4A249D9C83004089A8 /* LeftDialogueCell.xib in Resources */,
 				F65431D02488820D0069A307 /* CompleteResumeCell.xib in Resources */,
 				ABF9B74E249A712D007F9B05 /* MyResumeMoreInputCell.xib in Resources */,
 				F6D10C272486257E00AF6401 /* 4.jpg in Resources */,
 				F68360CF2484DC7400B4E4FA /* LaunchScreen.storyboard in Resources */,
+				ABE3D193249D8BE700D2B55E /* ServiceHeadCell.xib in Resources */,
 				AB9E51DC24892CED00BAF5AE /* DetailPositionVC.xib in Resources */,
 				F6D10C2B2486257E00AF6401 /* 2.jpg in Resources */,
 				F66CEEBC248DC35100DB68EC /* StellarPhoneTextFieldView.xib in Resources */,
@@ -996,6 +1060,7 @@
 				F65431D5248895530069A307 /* RecommendDetailCell.xib in Resources */,
 				ABF9B74A249A6858007F9B05 /* MyResumePickUpCell.xib in Resources */,
 				F6D10C112485F71300AF6401 /* HomePageViewController.xib in Resources */,
+				AB1E3C4E249D9C9D004089A8 /* RightDialogueCell.xib in Resources */,
 				F65431DA2488B4980069A307 /* PersonalHeadCell.xib in Resources */,
 				ABF9B73F249A6640007F9B05 /* MyResumeVC.xib in Resources */,
 				F6D10C262486257E00AF6401 /* 7.jpg in Resources */,
@@ -1099,22 +1164,27 @@
 				F68361A12484EEF800B4E4FA /* Int+Extension.swift in Sources */,
 				F68361032484E13000B4E4FA /* NetRequestAPI.swift in Sources */,
 				F68361A72484EEF800B4E4FA /* String+Extension.swift in Sources */,
+				AB3FE403249E3D98001966ED /* MTPopMenu.swift in Sources */,
 				F683615D2484E15F00B4E4FA /* AppCookie.swift in Sources */,
 				F639AC9F249C6AD600E55E3C /* MyResumeModel.swift in Sources */,
 				AB9E51DB24892CED00BAF5AE /* DetailPositionVC.swift in Sources */,
+				AB3FE402249E3D98001966ED /* MTPopMenuModel.swift in Sources */,
 				F6109E30249B736300ED66F7 /* MyJobModel.swift in Sources */,
 				F683615B2484E15F00B4E4FA /* SSTimeManager.swift in Sources */,
+				ABE3D192249D8BE700D2B55E /* ServiceHeadCell.swift in Sources */,
 				AB5EA1982487F5FA009758B1 /* SelectDetailViewCell.swift in Sources */,
 				F68361A52484EEF800B4E4FA /* NSDictionary+Extension.swift in Sources */,
 				F68361492484E15F00B4E4FA /* AppManager.swift in Sources */,
 				F68361A02484EEF800B4E4FA /* UIImageView+Extension.swift in Sources */,
 				F68361022484E13000B4E4FA /* AuthPlugin.swift in Sources */,
+				AB3FE3FB249E30D2001966ED /* ImageCodeVerification.swift in Sources */,
 				ABF9B741249A66C3007F9B05 /* MyResumeVM.swift in Sources */,
-				ABF9B736249A41C4007F9B05 /* ImproveResume.swift in Sources */,
+				ABF9B736249A41C4007F9B05 /* ImproveResumeCell.swift in Sources */,
 				F68361002484E13000B4E4FA /* Network.swift in Sources */,
 				F636BF9E2489CAAE007AEB86 /* BannerModel.swift in Sources */,
 				F65431D92488B4980069A307 /* PersonalHeadCell.swift in Sources */,
 				F6D10C102485F71300AF6401 /* HomePageViewController.swift in Sources */,
+				AB1E3C4D249D9C9D004089A8 /* RightDialogueCell.swift in Sources */,
 				F68361AE2484EEF800B4E4FA /* CGFloat+Extension.swift in Sources */,
 				ABF9B732249A3492007F9B05 /* RecommendProductModel.swift in Sources */,
 				F68361B12484F07600B4E4FA /* MBProgressHUD+Stellar.swift in Sources */,
@@ -1141,6 +1211,7 @@
 				ABF9B745249A6834007F9B05 /* MyResumeInputCell.swift in Sources */,
 				AB042C6324991839007F8641 /* DetailPositionVM.swift in Sources */,
 				F68361682484E9C300B4E4FA /* GlobalPackage.swift in Sources */,
+				AB3FE401249E3D98001966ED /* MTPopMenuTableViewCell.swift in Sources */,
 				F66CEEA8248DC0BF00DB68EC /* LoginVC.swift in Sources */,
 				ABF9B74D249A712D007F9B05 /* MyResumeMoreInputCell.swift in Sources */,
 				F66CEEB4248DC31000DB68EC /* NavView.swift in Sources */,
@@ -1150,6 +1221,7 @@
 				ABF9B73A249A58A3007F9B05 /* MyJobVC.swift in Sources */,
 				F68361712484EED300B4E4FA /* StellarHintHud.swift in Sources */,
 				F66CEEBD248DC35100DB68EC /* StellarPhoneTextFieldView.swift in Sources */,
+				AB1E3C49249D9C83004089A8 /* LeftDialogueCell.swift in Sources */,
 				F6109E35249B824600ED66F7 /* AboutUsDeatilVC.swift in Sources */,
 				ABE3D189249D059500D2B55E /* MyServiceVC.swift in Sources */,
 				F6AF66982487949300CD347E /* SelectTypeView.swift in Sources */,
