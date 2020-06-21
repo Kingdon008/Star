@@ -10,6 +10,8 @@ import UIKit
 
 class CompleteResumeCell: UITableViewCell {
 
+    @IBOutlet weak var perLabel: UILabel!
+
     static func initWithXIb() -> UITableViewCell{
         let arrayOfViews = Bundle.main.loadNibNamed("CompleteResumeCell", owner: nil, options: nil)
         guard let firstView = arrayOfViews?.first as? UITableViewCell else {
@@ -21,12 +23,8 @@ class CompleteResumeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        perLabel.text = "10%"
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
 }

@@ -9,7 +9,9 @@
 import UIKit
 
 class ServiceHeadCell: UITableViewCell {
+    private let disposeBag: DisposeBag = DisposeBag()
     var dataArr = [AboutUsModel]()
+    var titleClickBlock:((AboutUsModel)->Void)?
     static func initWithXIb() -> UITableViewCell{
         let arrayOfViews = Bundle.main.loadNibNamed("ServiceHeadCell", owner: nil, options: nil)
         guard let firstView = arrayOfViews?.first as? UITableViewCell else {
@@ -51,18 +53,21 @@ class ServiceHeadCell: UITableViewCell {
             }
             var index = 0
             modelArr.forEach({model in
-                self.createAsk(text: model.problem ?? "", index: index)
+                self.createAsk(model: model, index: index)
                 index += 1
             })
             
         }
     }
     
-    private func createAsk(text:String,index:Int){
+    private func createAsk(model:AboutUsModel,index:Int){
         let askBtn = UIButton.init(type: .custom)
-        askBtn.setTitle(text, for: .normal)
+        askBtn.setTitle(model.problem ?? "", for: .normal)
         askBtn.setTitleColor(UIColor.init(hexString: "#333333"), for: .normal)
         askBtn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        askBtn.rx.tap.subscribe(onNext: { [weak self] (_) in
+            self?.titleClickBlock?(model)
+        }).disposed(by: disposeBag)
         bgView.addSubview(askBtn)
         askBtn.snp.makeConstraints { (make) in
             make.top.equalTo(4 + 16 + (20 + 16) * index)

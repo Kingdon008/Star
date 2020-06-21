@@ -65,6 +65,7 @@ class PersonVM: NSObject {
         selectTypeCellmodel.cell = {table,index in
             let cell = ImproveResumeCell.initWithXIb() as! ImproveResumeCell
             cell.selectionStyle = .none
+            cell.perLabel.text = "\(self.userModel?.resume_percent ?? "")%"
             return cell
         }
         selectTypeCellmodel.selectRow = { _ ,_ in

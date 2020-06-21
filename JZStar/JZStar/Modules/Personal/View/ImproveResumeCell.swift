@@ -9,7 +9,8 @@
 import UIKit
 
 class ImproveResumeCell: UITableViewCell {
-
+    @IBOutlet weak var perLabel: UILabel!
+    
     static func initWithXIb() -> UITableViewCell{
         let arrayOfViews = Bundle.main.loadNibNamed("ImproveResumeCell", owner: nil, options: nil)
         guard let firstView = arrayOfViews?.first as? UITableViewCell else {

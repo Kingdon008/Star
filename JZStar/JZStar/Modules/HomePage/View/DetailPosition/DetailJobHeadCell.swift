@@ -52,7 +52,7 @@ class DetailJobHeadCell: UITableViewCell {
                     }
                     let buttonRect = String.ss.getTextRectSize(text: name,font: UIFont.systemFont(ofSize: 10),size: CGSize.init(width: CGFloat.greatestFiniteMagnitude, height: 22.fit))
                     let width = buttonRect.size.width
-                    labelX = labelX + width + 20
+                    labelX = labelX + width + 8
                 })
             }
             
@@ -74,7 +74,7 @@ class DetailJobHeadCell: UITableViewCell {
                     }
                     let buttonRect = String.ss.getTextRectSize(text: name,font: UIFont.systemFont(ofSize: 10),size: CGSize.init(width: CGFloat.greatestFiniteMagnitude, height: 22.fit))
                     let width = buttonRect.size.width
-                    labelX = labelX + width + 20
+                    labelX = labelX + width + 8
                 })
             }
             
@@ -95,7 +95,7 @@ class DetailJobHeadCell: UITableViewCell {
                 }
                 let buttonRect = String.ss.getTextRectSize(text: name,font: UIFont.systemFont(ofSize: 10),size: CGSize.init(width: CGFloat.greatestFiniteMagnitude, height: 22.fit))
                 let width = buttonRect.size.width
-                labelX = labelX + width + 20
+                labelX = labelX + width + 8
             }
             
             if let is_parttime = model.is_parttime,is_parttime{
@@ -115,7 +115,7 @@ class DetailJobHeadCell: UITableViewCell {
                 }
                 let buttonRect = String.ss.getTextRectSize(text: name,font: UIFont.systemFont(ofSize: 10),size: CGSize.init(width: CGFloat.greatestFiniteMagnitude, height: 22.fit))
                 let width = buttonRect.size.width
-                labelX = labelX + width + 20
+                labelX = labelX + width + 8
             }
             
         }

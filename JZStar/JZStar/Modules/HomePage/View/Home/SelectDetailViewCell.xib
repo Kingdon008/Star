@@ -37,30 +37,30 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="达达快递" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYb-0u-vee">
-                        <rect key="frame" x="38" y="50" width="58" height="17"/>
+                        <rect key="frame" x="38" y="51.5" width="58" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJ6-da-bEh">
-                        <rect key="frame" x="0.0" y="67" width="389" height="194"/>
+                        <rect key="frame" x="0.0" y="77" width="389" height="184"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="wJ6-da-bEh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7JV-aR-hu2"/>
-                    <constraint firstItem="mYb-0u-vee" firstAttribute="top" secondItem="kJW-1R-Qvv" secondAttribute="bottom" constant="8" id="8b4-ph-hSC"/>
                     <constraint firstItem="04w-R7-PTL" firstAttribute="leading" secondItem="kJW-1R-Qvv" secondAttribute="trailing" constant="20" id="8jU-oQ-wwC"/>
                     <constraint firstItem="ho8-1V-Tpe" firstAttribute="top" secondItem="kJW-1R-Qvv" secondAttribute="bottom" constant="11" id="Bdz-NQ-hpU"/>
                     <constraint firstItem="ho8-1V-Tpe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="IcQ-Nu-hgV"/>
                     <constraint firstItem="mYb-0u-vee" firstAttribute="leading" secondItem="ho8-1V-Tpe" secondAttribute="trailing" constant="4" id="Qqh-ej-Qcw"/>
                     <constraint firstItem="kJW-1R-Qvv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="SfI-Uf-eRe"/>
                     <constraint firstAttribute="trailing" secondItem="04w-R7-PTL" secondAttribute="trailing" constant="20" id="VFu-5p-AEs"/>
+                    <constraint firstItem="mYb-0u-vee" firstAttribute="centerY" secondItem="ho8-1V-Tpe" secondAttribute="centerY" id="WnO-kb-sc4"/>
                     <constraint firstAttribute="bottom" secondItem="wJ6-da-bEh" secondAttribute="bottom" id="bBK-cF-gPZ"/>
                     <constraint firstAttribute="trailing" secondItem="wJ6-da-bEh" secondAttribute="trailing" id="c5j-lx-Ikw"/>
                     <constraint firstItem="04w-R7-PTL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="d2e-xC-g85"/>
                     <constraint firstItem="kJW-1R-Qvv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="ivb-X2-w3x"/>
-                    <constraint firstItem="wJ6-da-bEh" firstAttribute="top" secondItem="ho8-1V-Tpe" secondAttribute="bottom" id="mh1-ZU-7H7"/>
+                    <constraint firstItem="wJ6-da-bEh" firstAttribute="top" secondItem="ho8-1V-Tpe" secondAttribute="bottom" constant="10" id="mh1-ZU-7H7"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

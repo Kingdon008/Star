@@ -21,7 +21,7 @@
                         <rect key="frame" x="20" y="0.0" width="347" height="389"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDL-59-ued">
-                                <rect key="frame" x="16" y="194" width="3" height="16"/>
+                                <rect key="frame" x="16" y="190" width="3" height="16"/>
                                 <color key="backgroundColor" red="1" green="0.63921568627450975" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="3" id="0it-x8-XrT"/>
@@ -89,9 +89,16 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="copyAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DIi-He-Luw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ro-Vx-5hi">
-                                <rect key="frame" x="151.5" y="119" width="41" height="24"/>
+                                <rect key="frame" x="151.5" y="123" width="52" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="NQs-cQ-HgI"/>
+                                    <constraint firstAttribute="width" constant="52" id="dzb-Ec-Ybc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
                                 <state key="normal" title="直接联系">
                                     <color key="titleColor" red="1" green="0.63921568627450975" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -112,7 +119,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28C-hs-ZOz">
-                                <rect key="frame" x="16" y="168" width="315" height="1"/>
+                                <rect key="frame" x="16" y="164" width="315" height="1"/>
                                 <color key="backgroundColor" red="0.76470588235294112" green="0.79607843137254897" blue="0.82745098039215681" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="oPo-wm-DVg"/>
@@ -127,13 +134,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="工作内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qG-Sx-wrl">
-                                <rect key="frame" x="31" y="190" width="82" height="24"/>
+                                <rect key="frame" x="31" y="186" width="82" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6u-6y-Hzy">
-                                <rect key="frame" x="16" y="234" width="315" height="117"/>
+                                <rect key="frame" x="16" y="230" width="315" height="117"/>
                                 <string key="text">LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -219,7 +226,9 @@
                 <outlet property="allStarIconConstraint" destination="A6o-ON-xQp" id="aFs-S3-rWv"/>
                 <outlet property="companyIcon" destination="0bB-io-3KP" id="jZP-HC-LoM"/>
                 <outlet property="companyNameLabel" destination="jMZ-vE-Qw4" id="a4N-5g-d1l"/>
+                <outlet property="connectBtn" destination="8Ro-Vx-5hi" id="TAJ-AS-39I"/>
                 <outlet property="contentLabel" destination="g6u-6y-Hzy" id="zFt-0D-WdU"/>
+                <outlet property="copyBtn" destination="7Uo-Hk-RIs" id="grn-dY-xw1"/>
                 <outlet property="deliverLabel" destination="eqb-UN-Peo" id="CH5-6Y-E6S"/>
                 <outlet property="qqnumLabel" destination="Jpd-iG-Upx" id="Fq7-am-ojp"/>
             </connections>

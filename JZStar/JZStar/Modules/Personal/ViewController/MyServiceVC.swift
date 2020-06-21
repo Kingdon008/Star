@@ -31,7 +31,7 @@ class MyServiceVC: BaseViewController {
         }
         view.addSubview(navView)
         
-        tableview = UITableView(frame: CGRect(x: 0, y: navView.frame.maxY, width: kScreenWidth, height: kScreenHeight - BOTTOM_TABBAR_HEIGHT - getAllVersionSafeAreaBottomHeight() - navView.frame.maxY - 110))
+        tableview = UITableView(frame: CGRect(x: 0, y: navView.frame.maxY, width: kScreenWidth, height: kScreenHeight - navView.frame.maxY - getAllVersionSafeAreaBottomHeight() - 76))
         tableview.contentInsetAdjustmentBehavior = .never
         tableview.backgroundColor = UIColor.init(hexString: "#F3F3F3")
         tableview.separatorColor = UIColor.init(hexString: "#C3CBD3")
@@ -46,7 +46,6 @@ class MyServiceVC: BaseViewController {
     func setupData(){
         viewModel.tableViewDataModel.targetTableView(myTableview: tableview)
 //        viewModel.vmDelegate = self
-        
         Network.request(.usercenterCustom_service, success: { (json) in
             self.dataArr = json["data"].arrayObject?.kj.modelArray(AboutUsModel.self) ?? [AboutUsModel]()
             self.viewModel.dataArr = self.dataArr
@@ -66,7 +65,7 @@ class MyServiceVC: BaseViewController {
     
     @IBAction func sendAction(_ sender: Any) {
         dataArr.forEach({
-            if $0.answer == self.textfieldView.text{
+            if $0.problem == self.textfieldView.text{
                 self.viewModel.adddialogueView(dia: $0)
             }
         })

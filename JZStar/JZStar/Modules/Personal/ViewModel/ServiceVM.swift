@@ -44,6 +44,9 @@ class ServiceVM: NSObject {
             let cell = ServiceHeadCell.initWithXIb() as! ServiceHeadCell
             cell.selectionStyle = .none
             cell.setData(data: self.dataArr)
+            cell.titleClickBlock = { model in
+                self.adddialogueView(dia:model)
+            }
             return cell
         }
         sectionModel.cellModelsArr.append(cellModel)
@@ -58,31 +61,30 @@ class ServiceVM: NSObject {
     
     func adddialogueView(dia:AboutUsModel){
         let sectionModel = getSectionModel()
-
-        //answer
-        let answercellModel = CellModel()
-        answercellModel.cellHeight = {table,index in
+        //problem
+        let problemcellModel = CellModel()
+        problemcellModel.cellHeight = {table,index in
             return 60
         }
-        answercellModel.cell = {table,index in
+        problemcellModel.cell = {table,index in
             let cell = RightDialogueCell.initWithXIb() as! RightDialogueCell
             cell.selectionStyle = .none
-            cell.setDialogueText(dia.answer ?? "")
+            cell.setDialogueText(dia.problem ?? "")
             return cell
         }
-        sectionModel.cellModelsArr.append(answercellModel)
+        sectionModel.cellModelsArr.append(problemcellModel)
         
-        //ask
+        //answer
         let diaFont = UIFont.systemFont(ofSize: 14)
-        let problemheight = String.ss.getTextRectSize(text: dia.problem ?? "",font: diaFont,size: CGSize.init(width: kScreenWidth - 89 - 40, height: kScreenHeight)).height
+        let answerheight = String.ss.getTextRectSize(text: dia.answer ?? "",font: diaFont,size: CGSize.init(width: kScreenWidth - 89 - 40, height: kScreenHeight)).height
         let askcellModel = CellModel()
         askcellModel.cellHeight = {table,index in
-            return problemheight + 24
+            return answerheight + 24
         }
         askcellModel.cell = {table,index in
             let cell = LeftDialogueCell.initWithXIb() as! LeftDialogueCell
             cell.selectionStyle = .none
-            cell.setDialogueText(dia.problem ?? "")
+            cell.setDialogueText(dia.answer ?? "")
             return cell
         }
         sectionModel.cellModelsArr.append(askcellModel)

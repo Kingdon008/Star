@@ -21,9 +21,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2D-Ie-d82">
-                    <rect key="frame" x="0.0" y="752" width="414" height="110"/>
+                    <rect key="frame" x="0.0" y="786" width="414" height="76"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入您的问题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0lG-Pw-DEk">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入您的问题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0lG-Pw-DEk">
                             <rect key="frame" x="24" y="18" width="309" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="Wyt-Yu-YtU"/>
@@ -46,7 +46,7 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="BgT-62-W0g" secondAttribute="trailing" constant="27" id="0bu-VW-Gbb"/>
                         <constraint firstItem="BgT-62-W0g" firstAttribute="centerY" secondItem="0lG-Pw-DEk" secondAttribute="centerY" id="BVu-sY-w96"/>
-                        <constraint firstAttribute="height" constant="110" id="DR9-Fo-4yt"/>
+                        <constraint firstAttribute="height" constant="76" id="DR9-Fo-4yt"/>
                         <constraint firstItem="0lG-Pw-DEk" firstAttribute="top" secondItem="v2D-Ie-d82" secondAttribute="top" constant="18" id="Org-JS-yQ3"/>
                         <constraint firstItem="BgT-62-W0g" firstAttribute="leading" secondItem="0lG-Pw-DEk" secondAttribute="trailing" constant="22" id="ebt-Wa-Zif"/>
                         <constraint firstItem="0lG-Pw-DEk" firstAttribute="leading" secondItem="v2D-Ie-d82" secondAttribute="leading" constant="24" id="qZ1-GI-jPp"/>
