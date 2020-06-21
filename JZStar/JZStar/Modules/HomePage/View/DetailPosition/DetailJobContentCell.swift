@@ -49,7 +49,7 @@ class DetailJobContentCell: UITableViewCell {
             companyNameLabel.text = model.company_name ?? ""
             if let companyImageUrl = model.company_icon{
                 let url = URL(string: companyImageUrl)
-                companyIcon.kf.setImage(with: url)
+                companyIcon.kf.setImage(with: url, placeholder: UIImage.init(named: "companyIcon_gray"))
             }
             deliverLabel.text = model.salary_describe
             contentLabel.text = model.content
