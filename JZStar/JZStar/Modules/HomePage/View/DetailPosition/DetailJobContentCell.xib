@@ -144,14 +144,34 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AkE-uJ-G9h">
+                                <rect key="frame" x="125.5" y="92.5" width="68" height="12"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allstar" translatesAutoresizingMaskIntoConstraints="NO" id="YWA-7e-Cxq">
+                                        <rect key="frame" x="0.0" y="0.0" width="68" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="KQ8-YA-AR0"/>
+                                            <constraint firstAttribute="width" constant="68" id="qPf-KZ-TVl"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="A6o-ON-xQp"/>
+                                    <constraint firstAttribute="height" constant="12" id="PMB-np-lpD"/>
+                                    <constraint firstItem="YWA-7e-Cxq" firstAttribute="leading" secondItem="AkE-uJ-G9h" secondAttribute="leading" id="w6k-PK-QbP"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="8Ro-Vx-5hi" firstAttribute="leading" secondItem="7Uo-Hk-RIs" secondAttribute="trailing" constant="8" id="3lg-VM-ydA"/>
+                            <constraint firstItem="YWA-7e-Cxq" firstAttribute="centerY" secondItem="itk-sc-WfB" secondAttribute="centerY" id="4bi-fX-FEg"/>
                             <constraint firstItem="g6u-6y-Hzy" firstAttribute="leading" secondItem="6p3-B8-rqK" secondAttribute="leading" constant="16" id="557-Jv-7t7"/>
                             <constraint firstItem="jMZ-vE-Qw4" firstAttribute="top" secondItem="0bB-io-3KP" secondAttribute="top" id="9es-gT-TNp"/>
                             <constraint firstItem="0bB-io-3KP" firstAttribute="leading" secondItem="keg-zU-u2Y" secondAttribute="leading" id="AKx-Se-t7y"/>
                             <constraint firstItem="yDL-59-ued" firstAttribute="top" secondItem="28C-hs-ZOz" secondAttribute="bottom" constant="25" id="EYw-Ms-hQP"/>
+                            <constraint firstItem="AkE-uJ-G9h" firstAttribute="leading" secondItem="itk-sc-WfB" secondAttribute="trailing" constant="8" id="FBg-SM-0mX"/>
                             <constraint firstItem="28C-hs-ZOz" firstAttribute="leading" secondItem="6p3-B8-rqK" secondAttribute="leading" constant="16" id="GYo-2p-Aoq"/>
                             <constraint firstItem="dTd-TC-ens" firstAttribute="leading" secondItem="keg-zU-u2Y" secondAttribute="trailing" constant="12" id="LEM-Ai-nTS"/>
                             <constraint firstAttribute="trailing" secondItem="g6u-6y-Hzy" secondAttribute="trailing" constant="16" id="Lau-uN-Y6P"/>
@@ -162,6 +182,7 @@
                             <constraint firstItem="28C-hs-ZOz" firstAttribute="top" secondItem="8Ro-Vx-5hi" secondAttribute="bottom" constant="25" id="SCd-ed-gQv"/>
                             <constraint firstAttribute="trailing" secondItem="28C-hs-ZOz" secondAttribute="trailing" constant="16" id="URZ-vw-hd9"/>
                             <constraint firstItem="keg-zU-u2Y" firstAttribute="top" secondItem="6p3-B8-rqK" secondAttribute="top" constant="26" id="VXs-4a-zeh"/>
+                            <constraint firstItem="AkE-uJ-G9h" firstAttribute="centerY" secondItem="itk-sc-WfB" secondAttribute="centerY" id="WGf-2Z-AlL"/>
                             <constraint firstItem="7Uo-Hk-RIs" firstAttribute="leading" secondItem="Jpd-iG-Upx" secondAttribute="trailing" constant="8" id="bD1-d6-AVM"/>
                             <constraint firstItem="keg-zU-u2Y" firstAttribute="leading" secondItem="6p3-B8-rqK" secondAttribute="leading" constant="16" id="eqx-Iu-X07"/>
                             <constraint firstItem="6qG-Sx-wrl" firstAttribute="leading" secondItem="yDL-59-ued" secondAttribute="trailing" constant="12" id="gYV-X6-A2Y"/>
@@ -193,6 +214,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="allStarIcon" destination="YWA-7e-Cxq" id="9i9-1X-l2A"/>
+                <outlet property="allStarIconBg" destination="AkE-uJ-G9h" id="CTj-8E-6WF"/>
+                <outlet property="allStarIconConstraint" destination="A6o-ON-xQp" id="aFs-S3-rWv"/>
                 <outlet property="companyIcon" destination="0bB-io-3KP" id="jZP-HC-LoM"/>
                 <outlet property="companyNameLabel" destination="jMZ-vE-Qw4" id="a4N-5g-d1l"/>
                 <outlet property="contentLabel" destination="g6u-6y-Hzy" id="zFt-0D-WdU"/>
@@ -203,6 +227,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="allstar" width="68" height="12"/>
         <image name="companyIcon_gray" width="40" height="40"/>
     </resources>
 </document>

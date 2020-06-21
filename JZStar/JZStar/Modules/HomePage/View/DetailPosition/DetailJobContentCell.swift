@@ -9,13 +9,15 @@
 import UIKit
 
 class DetailJobContentCell: UITableViewCell {
-
+    @IBOutlet weak var allStarIcon: UIImageView!
     @IBOutlet weak var companyNameLabel: UILabel!
     @IBOutlet weak var companyIcon: UIImageView!
     @IBOutlet weak var qqnumLabel: UILabel!
     @IBOutlet weak var deliverLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var allStarIconConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var allStarIconBg: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,6 +48,8 @@ class DetailJobContentCell: UITableViewCell {
             deliverLabel.text = model.salary_describe
             contentLabel.text = model.content
             qqnumLabel.text = "QQ:\(model.company_qq ?? "")"
+            allStarIconConstraint.constant = (model.company_score ?? 0) / 5.0 * 68
+            allStarIconBg.layer.masksToBounds = true
         }
     }
     

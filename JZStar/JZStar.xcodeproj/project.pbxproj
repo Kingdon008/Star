@@ -1392,16 +1392,18 @@
 			baseConfigurationReference = 46FCAE921F5C6F35D28CB48F /* Pods-JZStar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YDJE97CX57;
+				CODE_SIGN_IDENTITY = "Apple Development: xiuqin ju (5AGA436QAT)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = U48YN8Y2WZ;
 				INFOPLIST_FILE = JZStar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sansi.StellarHome.beta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.jzdr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = jianzhi;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1412,16 +1414,18 @@
 			baseConfigurationReference = 408496BDAF80093237DAAE1D /* Pods-JZStar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YDJE97CX57;
+				CODE_SIGN_IDENTITY = "Apple Distribution: xiuqin ju (U48YN8Y2WZ)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = U48YN8Y2WZ;
 				INFOPLIST_FILE = JZStar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sansi.StellarHome.beta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.jzdr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = jianzhi_dis;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
