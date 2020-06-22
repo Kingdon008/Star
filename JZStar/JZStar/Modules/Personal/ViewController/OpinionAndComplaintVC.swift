@@ -52,7 +52,7 @@ class OpinionAndComplaintVC: BaseViewController {
     
     
     @IBAction func changeAction(_ sender: Any) {
-        menu.popMenu(anchorView: opinionBtn, titleArray: ["意见","反馈"])
+        menu.popMenu(anchorView: opinionBtn, titleArray: ["意见","投诉"])
         menu.selectTextColor = .black
         menu.normalTextColor = .black
         menu.menuBgColor = .lightGray
@@ -61,4 +61,25 @@ class OpinionAndComplaintVC: BaseViewController {
         }
     }
     
+    @IBAction func submitClick(_ sender: Any) {
+        var type:Int?
+        if self.opinionBtn.titleLabel?.text == "意见" {
+            type = 1
+        }else if self.opinionBtn.titleLabel?.text == "投诉" {
+            type = 2
+        }
+        guard let ideaType = type else {
+            return
+        }
+        Network.request(.usercenterIdea(type: ideaType, content: textView.text,uid:"ababababab"), success: { (json) in
+            let status = json["status"].intValue
+            if status == 1{
+                print("成功")
+            }else{
+                print("失败")
+            }
+        }) { (error, mess) in
+            
+        }
+    }
 }

@@ -19,6 +19,7 @@ public enum NetRequestAPI {
     case usercenterMy_resume(uid:String)
     case usercenterEdit_myresume(model:ResumeModel)
     case usercenterCustom_service
+    case usercenterIdea(type:Int,content:String,uid:String)
 }
 
 extension NetRequestAPI: TargetType {
@@ -52,6 +53,8 @@ extension NetRequestAPI: TargetType {
             return .post
         case .usercenterCustom_service:
             return .get
+        case .usercenterIdea:
+            return .post
         }
     }
     
@@ -81,6 +84,8 @@ extension NetRequestAPI: TargetType {
             return "usercenter/edit_myresume"
         case .usercenterCustom_service:
             return "usercenter/custom_service"
+        case .usercenterIdea:
+            return "usercenter/idea_complaint"
         }
     }
     
@@ -104,6 +109,8 @@ extension NetRequestAPI: TargetType {
             param = ["uid":uid]
         case .usercenterEdit_myresume(let model):
             param = model.kj.JSONObject()
+        case .usercenterIdea(let type, let content,let uid):
+            param = ["type":type,"content":content,"uid":uid]
         default :
             break
         }
