@@ -29,7 +29,6 @@ class PersonalViewController: BaseViewController {
     func setupData(){
         viewModel.tableViewDataModel.targetTableView(myTableview: tableview)
         viewModel.vmDelegate = self
-        
         Network.request(.userCenterHome(uid: "ababababab"), success: { (json) in
             self.userModel = json["data"].description.kj.model(UserModel.self)
             self.viewModel.userModel = self.userModel

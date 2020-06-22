@@ -22,6 +22,7 @@ class DetailPositionModel: Convertible {
     var is_parttime:Bool?
     var is_collect:Bool?
     var is_signup:Bool?
+    var resume_delivery_num:String?
     
     required public init() {
         // Intentionally unimplemented...
