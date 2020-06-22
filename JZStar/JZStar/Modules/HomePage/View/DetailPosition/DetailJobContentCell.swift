@@ -51,7 +51,7 @@ class DetailJobContentCell: UITableViewCell {
                 let url = URL(string: companyImageUrl)
                 companyIcon.kf.setImage(with: url, placeholder: UIImage.init(named: "companyIcon_gray"))
             }
-            deliverLabel.text = model.resume_delivery_num
+            deliverLabel.text = "\(model.resume_delivery_num ?? "")份投递"
             contentLabel.text = model.content
             qqnumLabel.text = "QQ:\(model.company_qq ?? "")"
             allStarIconConstraint.constant = (model.company_score ?? 0) / 5.0 * 68

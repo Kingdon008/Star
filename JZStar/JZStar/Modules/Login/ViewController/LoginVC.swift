@@ -26,17 +26,17 @@ class LoginVC: BaseViewController {
     }
    
     private func refreshCode() {
-        if codeView != nil {
-            codeView?.removeFromSuperview()
-        }
-        let result = ImageCodeVerification.create(CGRect(x: 0, y: 0, width: 111, height: 46))
-        codeView = result.obj
-        codeView?.addTarget(self, action: #selector(refreshClickAction), for: .touchUpInside)
-        codeString = result.code
-        guard codeView != nil && codeString?.count ?? 0 > 0 else {
-            return
-        }
-        identifyingCodeBg.addSubview(codeView!)
+//        if codeView != nil {
+//            codeView?.removeFromSuperview()
+//        }
+//        let result = ImageCodeVerification.create(CGRect(x: 0, y: 0, width: 111, height: 46))
+//        codeView = result.obj
+//        codeView?.addTarget(self, action: #selector(refreshClickAction), for: .touchUpInside)
+//        codeString = result.code
+//        guard codeView != nil && codeString?.count ?? 0 > 0 else {
+//            return
+//        }
+//        identifyingCodeBg.addSubview(codeView!)
     }
     
     @objc func refreshClickAction(){

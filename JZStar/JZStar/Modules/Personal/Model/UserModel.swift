@@ -20,7 +20,7 @@ class UserModel: Convertible {
     var profit:String?
     var resume_percent:String?
     var headimgurl:String?
-    var phone:Int?
+    var phone:String?
     
     required public init() {
         // Intentionally unimplemented...

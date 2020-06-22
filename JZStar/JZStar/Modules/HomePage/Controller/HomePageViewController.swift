@@ -11,8 +11,14 @@ import UIKit
 class HomePageViewController: BaseViewController {
     var viewModel = HomePageVM()
     var bannerModels:[BannerModel]?
-    @IBOutlet var personalHeadView: UIView!
     @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var headIcon: UIButton!
+    @IBOutlet weak var profitLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +39,20 @@ class HomePageViewController: BaseViewController {
     }
     
     func setupData(){
+        Network.request(.userCenterHome(uid: "ababababab"), success: { (json) in
+            let model = json["data"].description.kj.model(UserModel.self)
+            let url = URL(string: model?.headimgurl)
+            self.headIcon.imageView?.kf.setImage(with: url, placeholder: UIImage.init(named: "defaultHeadIcon_big"))
+            self.phoneLabel.text = model?.phone
+            self.profitLabel.text = "\(model?.profit ?? "")元"
+        }) { (err, mess) in
+
+        }
         Network.request(.homeBanner, success: { (json) in
             self.bannerModels = json["data"].arrayObject?.kj.modelArray(BannerModel.self)
             self.pagerView.reloadData()
         }) { (error, message) in
-            
+
         }
         viewModel.tableViewDataModel.targetTableView(myTableview: tableview)
         viewModel.reloadTypes = { titles in
@@ -105,7 +120,12 @@ extension HomePageViewController:FSPagerViewDataSource,FSPagerViewDelegate{
     
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
         pagerView.deselectItem(at: index, animated: true)
-//        self.viewModel.loadDetailCells()
+        guard let model = self.bannerModels?[index] else {
+            return
+        }
+        if let url = model.source_url {
+            jumpTo(url: url)
+        }
     }
 }
 

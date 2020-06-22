@@ -58,10 +58,23 @@ extension RecommendViewController:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = RecommendDetailCell.initWithXIb() as! RecommendDetailCell
         if let model = self.dataArr?[indexPath.row]{
-            cell.setData(data: model)
+            cell.setData(data: model, contentLine: 2)
         }
         cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let model = self.dataArr?[indexPath.row] else {
+            return
+        }
+        if let url = model.show_img_url {
+            jumpTo(url: url)
+        }else{
+            let vc = RecommendDeatailVC()
+            vc.productModel = model
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     

@@ -19,6 +19,8 @@
 		AB1E3C4A249D9C83004089A8 /* LeftDialogueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB1E3C48249D9C83004089A8 /* LeftDialogueCell.xib */; };
 		AB1E3C4D249D9C9D004089A8 /* RightDialogueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1E3C4B249D9C9D004089A8 /* RightDialogueCell.swift */; };
 		AB1E3C4E249D9C9D004089A8 /* RightDialogueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB1E3C4C249D9C9D004089A8 /* RightDialogueCell.xib */; };
+		AB28C68624A0E5CF00391A5A /* RecommendDeatailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB28C68424A0E5CF00391A5A /* RecommendDeatailVC.swift */; };
+		AB28C68724A0E5CF00391A5A /* RecommendDeatailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB28C68524A0E5CF00391A5A /* RecommendDeatailVC.xib */; };
 		AB3FE3FB249E30D2001966ED /* ImageCodeVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3FE3FA249E30D2001966ED /* ImageCodeVerification.swift */; };
 		AB3FE401249E3D98001966ED /* MTPopMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3FE3FE249E3D98001966ED /* MTPopMenuTableViewCell.swift */; };
 		AB3FE402249E3D98001966ED /* MTPopMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3FE3FF249E3D98001966ED /* MTPopMenuModel.swift */; };
@@ -168,6 +170,8 @@
 		AB1E3C48249D9C83004089A8 /* LeftDialogueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftDialogueCell.xib; sourceTree = "<group>"; };
 		AB1E3C4B249D9C9D004089A8 /* RightDialogueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightDialogueCell.swift; sourceTree = "<group>"; };
 		AB1E3C4C249D9C9D004089A8 /* RightDialogueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightDialogueCell.xib; sourceTree = "<group>"; };
+		AB28C68424A0E5CF00391A5A /* RecommendDeatailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendDeatailVC.swift; sourceTree = "<group>"; };
+		AB28C68524A0E5CF00391A5A /* RecommendDeatailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendDeatailVC.xib; sourceTree = "<group>"; };
 		AB3FE3FA249E30D2001966ED /* ImageCodeVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCodeVerification.swift; sourceTree = "<group>"; };
 		AB3FE3FE249E3D98001966ED /* MTPopMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTPopMenuTableViewCell.swift; sourceTree = "<group>"; };
 		AB3FE3FF249E3D98001966ED /* MTPopMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTPopMenuModel.swift; sourceTree = "<group>"; };
@@ -857,6 +861,8 @@
 				ABF9B730249A3432007F9B05 /* Model */,
 				F65431D1248895350069A307 /* View */,
 				F68361B72484F60300B4E4FA /* RecommendViewController.swift */,
+				AB28C68424A0E5CF00391A5A /* RecommendDeatailVC.swift */,
+				AB28C68524A0E5CF00391A5A /* RecommendDeatailVC.xib */,
 			);
 			path = Recommend;
 			sourceTree = "<group>";
@@ -1043,6 +1049,7 @@
 				F65431D02488820D0069A307 /* CompleteResumeCell.xib in Resources */,
 				ABF9B74E249A712D007F9B05 /* MyResumeMoreInputCell.xib in Resources */,
 				F6D10C272486257E00AF6401 /* 4.jpg in Resources */,
+				AB28C68724A0E5CF00391A5A /* RecommendDeatailVC.xib in Resources */,
 				F68360CF2484DC7400B4E4FA /* LaunchScreen.storyboard in Resources */,
 				ABE3D193249D8BE700D2B55E /* ServiceHeadCell.xib in Resources */,
 				AB9E51DC24892CED00BAF5AE /* DetailPositionVC.xib in Resources */,
@@ -1196,6 +1203,7 @@
 				F68361442484E15F00B4E4FA /* AppAssistance.swift in Sources */,
 				AB5EA19C2487FA26009758B1 /* MerchantModel.swift in Sources */,
 				F683615C2484E15F00B4E4FA /* SSTimeTask.swift in Sources */,
+				AB28C68624A0E5CF00391A5A /* RecommendDeatailVC.swift in Sources */,
 				F636BFA02489CB52007AEB86 /* BannerDetailModel.swift in Sources */,
 				F68361AB2484EEF800B4E4FA /* UIButton+indicator.swift in Sources */,
 				F683615E2484E15F00B4E4FA /* ValidateService.swift in Sources */,

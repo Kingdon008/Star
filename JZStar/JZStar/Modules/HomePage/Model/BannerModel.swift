@@ -11,6 +11,8 @@ import UIKit
 class BannerModel: Convertible {
     var id:Int?
     var img_url:String?
+    var source_url:String?
+    var content_id:String?
     
     required public init() {
         // Intentionally unimplemented...

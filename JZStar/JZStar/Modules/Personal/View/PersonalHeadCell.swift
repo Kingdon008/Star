@@ -30,6 +30,8 @@ class PersonalHeadCell: UITableViewCell {
         if let model = data as? UserModel{
             setProfit(price: model.profit ?? "")
             nameLabel.text = model.name
+            let url = URL(string: model.headimgurl)
+            icon.imageView?.kf.setImage(with: url, placeholder: UIImage.init(named: "defaultHeadIcon_big"))
         }
     }
     

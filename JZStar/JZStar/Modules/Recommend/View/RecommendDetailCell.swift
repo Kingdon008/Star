@@ -27,12 +27,13 @@ class RecommendDetailCell: UITableViewCell {
         // Initialization code
     }
 
-    func setData(data:Any){
+    func setData(data:Any,contentLine:Int){
         if let model = data as? RecommendProductModel{
             let url = URL(string: model.show_img_url)
             icon.kf.setImage(with: url)
             titleLabel.text = model.title
-//            contentLabel.text = model.
+            contentLabel.text = model.content
+            contentLabel.numberOfLines = contentLine
         }
     }
     
