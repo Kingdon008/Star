@@ -46,6 +46,10 @@ class LoginVC: BaseViewController {
     }
     
     @IBAction func loginAction(_ sender: Any) {
+        guard let phone = phoneTextfield.text else {
+            TOAST(message: "手机号码为空")
+            return
+        }
         if graphCodeTextfield.text !=  codeString{
             TOAST(message: "验证码错误")
             return

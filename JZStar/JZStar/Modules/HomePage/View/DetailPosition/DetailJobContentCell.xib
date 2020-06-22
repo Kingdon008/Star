@@ -112,7 +112,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6u-6y-Hzy">
-                                <rect key="frame" x="16" y="230" width="315" height="117"/>
+                                <rect key="frame" x="16" y="230" width="307" height="117"/>
                                 <string key="text">LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -153,7 +153,7 @@
                             <constraint firstItem="AkE-uJ-G9h" firstAttribute="leading" secondItem="itk-sc-WfB" secondAttribute="trailing" constant="8" id="FBg-SM-0mX"/>
                             <constraint firstItem="28C-hs-ZOz" firstAttribute="leading" secondItem="6p3-B8-rqK" secondAttribute="leading" constant="16" id="GYo-2p-Aoq"/>
                             <constraint firstItem="dTd-TC-ens" firstAttribute="leading" secondItem="keg-zU-u2Y" secondAttribute="trailing" constant="12" id="LEM-Ai-nTS"/>
-                            <constraint firstAttribute="trailing" secondItem="g6u-6y-Hzy" secondAttribute="trailing" constant="16" id="Lau-uN-Y6P"/>
+                            <constraint firstAttribute="trailing" secondItem="g6u-6y-Hzy" secondAttribute="trailing" constant="24" id="Lau-uN-Y6P"/>
                             <constraint firstItem="g6u-6y-Hzy" firstAttribute="top" secondItem="6qG-Sx-wrl" secondAttribute="bottom" constant="20" id="M1c-nA-IvX"/>
                             <constraint firstItem="0bB-io-3KP" firstAttribute="top" secondItem="dTd-TC-ens" secondAttribute="bottom" constant="20" id="NMZ-pJ-2et"/>
                             <constraint firstAttribute="trailing" secondItem="eqb-UN-Peo" secondAttribute="trailing" constant="16" id="QNq-BJ-5DB"/>

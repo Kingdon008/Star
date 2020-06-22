@@ -62,7 +62,7 @@ class DetailPositionVM: NSObject {
     }
     
     func getContentFrameHeight(text:String)->CGFloat{
-           let rect = String.ss.getTextRectSize(text: text,font: UIFont.systemFont(ofSize: 14),size: CGSize.init(width: kScreenWidth - 36 - 36, height: 22.fit))
-           return rect.height + 234
-       }
+        let rect = String.ss.getTextRectSize(text: text,font: UIFont.systemFont(ofSize: 14),size: CGSize.init(width: kScreenWidth - 36 - 44, height: CGFloat(MAXFLOAT)))
+        return rect.height + 245
+    }
 }
