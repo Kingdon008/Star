@@ -76,6 +76,9 @@ class MyResumeVC: BaseViewController {
         if model.is_attestation ?? false {
             return
         }
+        model.name = viewModel.myResumeName
+        model.age = viewModel.myResumeAge
+        model.personal_description = viewModel.myResumeIntroduction
         MBProgressHUD.showStellarHud()
         Network.request(.usercenterEdit_myresume(model: model), success: { (json) in
             MBProgressHUD.hiddenStellarHud()

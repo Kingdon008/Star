@@ -24,7 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hjV-Uu-IHT">
-                        <rect key="frame" x="20" y="46" width="43" height="18.5"/>
+                        <rect key="frame" x="20" y="46" width="290" height="18.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
@@ -41,6 +41,7 @@
                     <constraint firstItem="hjV-Uu-IHT" firstAttribute="top" secondItem="Ith-cX-4E0" secondAttribute="bottom" constant="8" id="6GW-6R-Gns"/>
                     <constraint firstAttribute="trailing" secondItem="0IV-h8-dOZ" secondAttribute="trailing" constant="20" id="9wY-3N-WXO"/>
                     <constraint firstAttribute="bottom" secondItem="0IV-h8-dOZ" secondAttribute="bottom" id="Hda-mX-j1q"/>
+                    <constraint firstAttribute="trailing" secondItem="hjV-Uu-IHT" secondAttribute="trailing" constant="20" id="d7F-6K-3LG"/>
                     <constraint firstItem="Ith-cX-4E0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="d90-93-Plp"/>
                     <constraint firstItem="hjV-Uu-IHT" firstAttribute="left" secondItem="H2p-sc-9uM" secondAttribute="left" constant="20" id="hzX-jh-orK"/>
                     <constraint firstItem="Ith-cX-4E0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="21" id="ivE-wR-Vqw"/>

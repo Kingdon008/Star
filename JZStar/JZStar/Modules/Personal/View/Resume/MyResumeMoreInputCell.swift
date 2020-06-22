@@ -36,7 +36,8 @@ class MyResumeMoreInputCell: UITableViewCell {
         typeLabel.text = type
         if let showTest = text{
             textView.text = showTest
-            textView.isUserInteractionEnabled = false
+//            textView.isUserInteractionEnabled = false
+            textView.textColor = UIColor.init(hexString: "#333333")
         }
     }
     

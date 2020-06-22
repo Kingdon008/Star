@@ -26,7 +26,26 @@ class MyResumeVM: NSObject {
     var setdata:(()->Void)?
     var myResumeModel:MyResumeModel?
     private var pickerView:BHJPickerView!
+    var myResumeName:String?{
+        get{
+            self.myNameInputCell?.textfield.text
+        }
+    }
+    var myResumeAge:String?{
+        get{
+            self.myAgeInputCell?.textfield.text
+        }
+    }
+    var myResumeIntroduction:String?{
+        get{
+            self.myIntroduceInputCell?.textView.text
+        }
+    }
     private var myPickViewSeleType:ResumePickViewSeleType?
+    private var myNameInputCell:MyResumeInputCell?
+    private var myAgeInputCell:MyResumeInputCell?
+    private var myIntroduceInputCell:MyResumeMoreInputCell?
+    
     override init() {
         super.init()
         self.pickerView = BHJPickerView.init(self)
@@ -63,6 +82,7 @@ class MyResumeVM: NSObject {
         }
         cellModel.cell = {table,index in
             let cell = MyResumeInputCell.initWithXIb() as! MyResumeInputCell
+            self.myNameInputCell = cell
             cell.selectionStyle = .none
             let name = self.myResumeModel?.resume?.name
             cell.setData(type: "姓名", text: name)
@@ -106,8 +126,10 @@ class MyResumeVM: NSObject {
         }
         cellModel.cell = {table,index in
             let cell = MyResumeInputCell.initWithXIb() as! MyResumeInputCell
+            self.myAgeInputCell = cell
             cell.selectionStyle = .none
             let age = self.myResumeModel?.resume?.age
+            cell.textfield.keyboardType = .numberPad
             cell.setData(type: "年龄", text: age)
             return cell
         }
@@ -197,6 +219,7 @@ class MyResumeVM: NSObject {
         }
         cellModel.cell = {table,index in
             let cell = MyResumeMoreInputCell.initWithXIb() as! MyResumeMoreInputCell
+            self.myIntroduceInputCell = cell
             cell.selectionStyle = .none
             let interest_profession = self.myResumeModel?.resume?.personal_description
             cell.setData(type: "个人介绍", text: interest_profession)
