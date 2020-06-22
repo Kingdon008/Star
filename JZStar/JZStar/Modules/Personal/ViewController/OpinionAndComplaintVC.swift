@@ -74,12 +74,12 @@ class OpinionAndComplaintVC: BaseViewController {
         Network.request(.usercenterIdea(type: ideaType, content: textView.text,uid:"ababababab"), success: { (json) in
             let status = json["status"].intValue
             if status == 1{
-                print("成功")
+               TOAST(message: "提交成功")
             }else{
-                print("失败")
+                TOAST(message: "提交失败")
             }
         }) { (error, mess) in
-            
+            TOAST(message: "提交失败")
         }
     }
 }

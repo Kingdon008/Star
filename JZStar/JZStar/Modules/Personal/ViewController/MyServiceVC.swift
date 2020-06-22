@@ -64,10 +64,15 @@ class MyServiceVC: BaseViewController {
     }()
     
     @IBAction func sendAction(_ sender: Any) {
+        var isSend = false
         dataArr.forEach({
             if $0.problem == self.textfieldView.text{
                 self.viewModel.adddialogueView(dia: $0)
+                isSend = true
             }
         })
+        if !isSend{
+            TOAST(message: "没有找到您查找的答案")
+        }
     }
 }

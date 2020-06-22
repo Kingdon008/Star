@@ -70,12 +70,14 @@ class DetailPositionVC: BaseViewController {
                     self.viewModel.positionModel?.is_signup = !(self.viewModel.positionModel?.is_signup ?? false)
                     if self.viewModel.positionModel?.is_signup ?? false{
                         self.signupBtn.setTitle("已报名", for: .normal)
+                        TOAST(message: "已报名")
                     }else{
                         self.signupBtn.setTitle("立即报名", for: .normal)
+                        TOAST(message: "已取消报名")
                     }
                 }
             }) { (error, mess) in
-                
+                TOAST(message: "网络错误")
             }
         }
     }
@@ -89,12 +91,14 @@ class DetailPositionVC: BaseViewController {
                     self.viewModel.positionModel?.is_collect = !(self.viewModel.positionModel?.is_collect ?? false)
                     if self.viewModel.positionModel?.is_collect ?? false{
                         self.collectBtn.setImage(UIImage.init(named: "collect"), for: .normal)
+                        TOAST(message: "收藏成功")
                     }else{
                         self.collectBtn.setImage(UIImage.init(named: "uncollect"), for: .normal)
+                        TOAST(message: "取消收藏")
                     }
                 }
             }) { (error, mess) in
-                
+                TOAST(message: "网络错误")
             }
         }
     }
