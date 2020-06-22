@@ -20,6 +20,7 @@ public enum NetRequestAPI {
     case usercenterEdit_myresume(model:ResumeModel)
     case usercenterCustom_service
     case usercenterIdea(type:Int,content:String,uid:String)
+    case usercenterVerify_code(phone:String)
 }
 
 extension NetRequestAPI: TargetType {
@@ -55,6 +56,8 @@ extension NetRequestAPI: TargetType {
             return .get
         case .usercenterIdea:
             return .post
+        case .usercenterVerify_code:
+            return .post
         }
     }
     
@@ -86,6 +89,8 @@ extension NetRequestAPI: TargetType {
             return "usercenter/custom_service"
         case .usercenterIdea:
             return "usercenter/idea_complaint"
+        case .usercenterVerify_code:
+            return "/usercenter/verify_code"
         }
     }
     
@@ -111,6 +116,8 @@ extension NetRequestAPI: TargetType {
             param = model.kj.JSONObject()
         case .usercenterIdea(let type, let content,let uid):
             param = ["type":type,"content":content,"uid":uid]
+        case .usercenterVerify_code(let phone):
+            param = ["phone":phone]
         default :
             break
         }

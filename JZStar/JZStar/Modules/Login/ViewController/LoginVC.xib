@@ -10,7 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="JZStar" customModuleProvider="target">
             <connections>
+                <outlet property="graphCodeTextfield" destination="BeY-Qb-Des" id="JoK-Ij-kUs"/>
                 <outlet property="identifyingCodeBg" destination="uDH-uu-DBt" id="3X9-XV-NqH"/>
+                <outlet property="phoneTextfield" destination="bfo-GI-Z9a" id="w2Z-wG-Z5o"/>
+                <outlet property="phonecodeTextfield" destination="var-25-ImC" id="afH-RJ-Ncy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -54,7 +57,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqi-T5-Kio">
                     <rect key="frame" x="16" y="362" width="382" height="54"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phoneicon" translatesAutoresizingMaskIntoConstraints="NO" id="zkS-CZ-xfz">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zkS-CZ-xfz">
                             <rect key="frame" x="18" y="17" width="20" height="20"/>
                         </imageView>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入图形验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BeY-Qb-Des">
@@ -89,7 +92,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dev-wh-kts">
                     <rect key="frame" x="16" y="428" width="382" height="54"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phoneicon" translatesAutoresizingMaskIntoConstraints="NO" id="FXK-0X-S7k">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lockIcon" translatesAutoresizingMaskIntoConstraints="NO" id="FXK-0X-S7k">
                             <rect key="frame" x="18" y="17" width="20" height="20"/>
                         </imageView>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="var-25-ImC">
@@ -106,6 +109,9 @@
                             <state key="normal" title="获取验证码">
                                 <color key="titleColor" red="0.027450980392156862" green="0.027450980392156862" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="getCodeAction:" destination="-1" eventType="touchUpInside" id="vdX-Mx-X8T"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -163,6 +169,7 @@
         </view>
     </objects>
     <resources>
+        <image name="lockIcon" width="20" height="20"/>
         <image name="logo" width="135" height="148"/>
         <image name="phoneicon" width="20" height="20"/>
     </resources>

@@ -116,8 +116,9 @@ class PersonVM: NSObject {
                     let vc = AboutUsVC()
                     self.vmDelegate?.pushViewController(vc: vc)
                 case .loginOut:
-                    let vc = MyJobVC()
-                    self.vmDelegate?.pushViewController(vc: vc)
+//                    let vc = MyJobVC()
+//                    self.vmDelegate?.pushViewController(vc: vc)
+                    break
                 }
                 
             }
