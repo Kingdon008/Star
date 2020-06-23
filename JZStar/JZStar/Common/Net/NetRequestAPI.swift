@@ -21,6 +21,7 @@ public enum NetRequestAPI {
     case usercenterCustom_service
     case usercenterIdea(type:Int,content:String,uid:String)
     case usercenterVerify_code(phone:String)
+    case usercenterRegister(phone:String,verify_code:String)
 }
 
 extension NetRequestAPI: TargetType {
@@ -58,6 +59,8 @@ extension NetRequestAPI: TargetType {
             return .post
         case .usercenterVerify_code:
             return .post
+        case .usercenterRegister:
+            return .post
         }
     }
     
@@ -91,6 +94,8 @@ extension NetRequestAPI: TargetType {
             return "usercenter/idea_complaint"
         case .usercenterVerify_code:
             return "/usercenter/verify_code"
+        case .usercenterRegister:
+            return "/usercenter/register"
         }
     }
     
@@ -118,6 +123,8 @@ extension NetRequestAPI: TargetType {
             param = ["type":type,"content":content,"uid":uid]
         case .usercenterVerify_code(let phone):
             param = ["phone":phone]
+        case .usercenterRegister(let phone,let verify_code):
+            param = ["phone":phone,"verify_code":verify_code]
         default :
             break
         }
