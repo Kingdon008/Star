@@ -68,13 +68,13 @@ extension RecommendViewController:UITableViewDelegate,UITableViewDataSource {
         guard let model = self.dataArr?[indexPath.row] else {
             return
         }
-        if let url = model.show_img_url {
-            jumpTo(url: url)
-        }else{
-            let vc = RecommendDeatailVC()
-            vc.productModel = model
-            navigationController?.pushViewController(vc, animated: true)
-        }
+//        if let url = model.show_img_url {
+//            jumpTo(url: url)
+//        }else{
+//            let vc = RecommendDeatailVC()
+//            vc.productModel = model
+//            navigationController?.pushViewController(vc, animated: true)
+//        }
     }
     
     

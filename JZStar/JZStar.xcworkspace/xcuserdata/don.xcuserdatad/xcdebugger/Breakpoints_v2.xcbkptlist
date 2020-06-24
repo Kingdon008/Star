@@ -20,5 +20,1074 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "10370491-D445-4743-8EC2-8152F8F269F1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JZStar/Common/Category/UIDevice+Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "modelName"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "15960">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "16200">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "16428">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "16656">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "16884">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "17112">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "17340">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "17492">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "17644">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "17872">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "18100">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "18328">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "18556">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "18784">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "19012">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "19240">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "19468">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "19696">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "19924">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "20152">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "20380">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "20608">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "20836">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "21064">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "21292">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "21520">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "21672">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "21900">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "22052">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "22280">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "22432">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "22660">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "22888">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "23116">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "23268">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "23420">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "23572">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "23800">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "23952">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "24104">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "24332">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "24484">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "24636">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "24864">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "25016">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "25168">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "25396">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "25548">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "25700">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "25928">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "26080">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "26232">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "26460">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "26612">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "26764">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "26992">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "27144">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "27372">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "27524">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "27752">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "27904">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "28132">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "28284">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "28512">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "28740">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "28892">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "29120">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "29348">
+               </Location>
+               <Location
+                  uuid = "10370491-D445-4743-8EC2-8152F8F269F1 - c0c7728c160285bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in JZStar):__C.UIDevice.modelName.getter : Swift.String"
+                  moduleName = "JZStar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/don/Star/JZStar/JZStar/Common/Category/UIDevice+Extension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "29500">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13731997-5463-4246-B243-7182CDC5C8E4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JZStar/Common/Category/UIDevice+Extension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "modelName"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
