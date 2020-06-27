@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppUser: NSObject {
+class AppUser: Convertible {
     @objc var uid:String?{
         didSet{
             mDic.updateValue(uid ?? "", forKey: keyAppUser + #keyPath(AppUser.uid))
@@ -143,5 +143,9 @@ class AppUser: NSObject {
             userDefaults.synchronize()
             isDirty = false
         }
+    }
+    
+    required public init() {
+        // Intentionally unimplemented...
     }
 }

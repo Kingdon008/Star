@@ -16,7 +16,7 @@ class PersonVM: NSObject {
     weak var vmDelegate: PersonVMDelegate?
     var tableViewDataModel = TableViewDataModel()
     var setdata:(()->Void)?
-    var userModel:UserModel?
+    var userModel:AppUser?
     override init() {
         super.init()
     }

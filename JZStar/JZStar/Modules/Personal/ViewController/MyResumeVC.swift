@@ -39,7 +39,7 @@ class MyResumeVC: BaseViewController {
             viewModel.tableViewDataModel.targetTableView(myTableview: tb)
             viewModel.vmDelegate = self
         }
-        Network.request(.usercenterMy_resume(uid: "ababababab"), success: { json in
+        Network.request(.usercenterMy_resume(uid: (AppManager.sharedManager.user.uid ?? "")), success: { json in
             self.myResumeModel = json["data"].description.kj.model(MyResumeModel.self)
             self.viewModel.myResumeModel = self.myResumeModel
             if self.myResumeModel?.resume?.is_attestation ?? false{

@@ -47,7 +47,7 @@ class MyJobVC: BaseViewController {
     }
     
     func setupdata(){
-        Network.request(.userCenterPosition(uid: "ababababab"), success: { (json) in
+        Network.request(.userCenterPosition(uid: (AppManager.sharedManager.user.uid ?? "")), success: { (json) in
             self.jobData = json["data"].arrayObject?.kj.modelArray(MyJobModel.self)
             self.jobData?.forEach({ model in
                 self.titles.append(model.name ?? "")

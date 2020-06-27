@@ -27,7 +27,7 @@ class PersonalHeadCell: UITableViewCell {
     }
     
     func setData(data:Any){
-        if let model = data as? UserModel{
+        if let model = data as? AppUser{
             setProfit(price: model.profit ?? "")
             nameLabel.text = model.name
             let url = URL(string: model.headimgurl)

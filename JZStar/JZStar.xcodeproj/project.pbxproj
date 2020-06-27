@@ -34,7 +34,6 @@
 		ABE3D189249D059500D2B55E /* MyServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3D187249D059500D2B55E /* MyServiceVC.swift */; };
 		ABE3D18A249D059500D2B55E /* MyServiceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABE3D188249D059500D2B55E /* MyServiceVC.xib */; };
 		ABE3D18C249D068500D2B55E /* ServiceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3D18B249D068500D2B55E /* ServiceVM.swift */; };
-		ABE3D18E249D080700D2B55E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3D18D249D080700D2B55E /* UserModel.swift */; };
 		ABE3D192249D8BE700D2B55E /* ServiceHeadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3D190249D8BE700D2B55E /* ServiceHeadCell.swift */; };
 		ABE3D193249D8BE700D2B55E /* ServiceHeadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABE3D191249D8BE700D2B55E /* ServiceHeadCell.xib */; };
 		ABF9B732249A3492007F9B05 /* RecommendProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9B731249A3492007F9B05 /* RecommendProductModel.swift */; };
@@ -183,7 +182,6 @@
 		ABE3D187249D059500D2B55E /* MyServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServiceVC.swift; sourceTree = "<group>"; };
 		ABE3D188249D059500D2B55E /* MyServiceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyServiceVC.xib; sourceTree = "<group>"; };
 		ABE3D18B249D068500D2B55E /* ServiceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceVM.swift; sourceTree = "<group>"; };
-		ABE3D18D249D080700D2B55E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		ABE3D190249D8BE700D2B55E /* ServiceHeadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHeadCell.swift; sourceTree = "<group>"; };
 		ABE3D191249D8BE700D2B55E /* ServiceHeadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceHeadCell.xib; sourceTree = "<group>"; };
 		ABF9B731249A3492007F9B05 /* RecommendProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendProductModel.swift; sourceTree = "<group>"; };
@@ -480,7 +478,6 @@
 				F6109E2F249B736300ED66F7 /* MyJobModel.swift */,
 				F6109E31249B7B9700ED66F7 /* AboutUsModel.swift */,
 				F639AC9E249C6AD600E55E3C /* MyResumeModel.swift */,
-				ABE3D18D249D080700D2B55E /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1183,7 +1180,6 @@
 				F6109E2C249B006100ED66F7 /* LeftTitleAndArrowCell.swift in Sources */,
 				F67E68542485D319009FC081 /* MyRootNavViewController.swift in Sources */,
 				F68361BA2484F61000B4E4FA /* PersonalViewController.swift in Sources */,
-				ABE3D18E249D080700D2B55E /* UserModel.swift in Sources */,
 				F66CEEB8248DC32C00DB68EC /* StellarButton.swift in Sources */,
 				F68361442484E15F00B4E4FA /* AppAssistance.swift in Sources */,
 				AB5EA19C2487FA26009758B1 /* MerchantModel.swift in Sources */,

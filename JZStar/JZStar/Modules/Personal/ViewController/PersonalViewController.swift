@@ -11,7 +11,7 @@ import UIKit
 class PersonalViewController: BaseViewController {
     var tableview:UITableView!
     var viewModel = PersonVM()
-    var userModel:UserModel?
+    var userModel:AppUser?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -29,8 +29,8 @@ class PersonalViewController: BaseViewController {
     func setupData(){
         viewModel.tableViewDataModel.targetTableView(myTableview: tableview)
         viewModel.vmDelegate = self
-        Network.request(.userCenterHome(uid: "ababababab"), success: { (json) in
-            self.userModel = json["data"].description.kj.model(UserModel.self)
+        Network.request(.userCenterHome(uid: (AppManager.sharedManager.user.uid ?? "")), success: { (json) in
+            self.userModel = json["data"].description.kj.model(AppUser.self)
             self.viewModel.userModel = self.userModel
             self.viewModel.setData {
                 self.tableview.reloadData()
