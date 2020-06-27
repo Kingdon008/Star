@@ -9,9 +9,10 @@
 import UIKit
 
 class MyResumeInputCell: UITableViewCell {
+    let disposeBag = DisposeBag()
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var textfield: UITextField!
-    
+    var textClickBlock:((String)->Void)?
     static func initWithXIb() -> UITableViewCell{
         let arrayOfViews = Bundle.main.loadNibNamed("MyResumeInputCell", owner: nil, options: nil)
         guard let firstView = arrayOfViews?.first as? UITableViewCell else {
@@ -34,5 +35,10 @@ class MyResumeInputCell: UITableViewCell {
         // Initialization code
         contentView.backgroundColor = UIColor.init(hexString: "#FFFFFF")
         textfield.placeholder = "请输入"
+        textfield.rx.text.subscribe { (text) in
+            if let textValue = text.element as? String{
+                self.textClickBlock?(textValue)
+            }
+        }.disposed(by: disposeBag)
     }
 }

@@ -25,7 +25,7 @@ class AppManager: NSObject {
             }
         }
     }
-    
+    var mainVc = MainViewController()
     var currVc:UIViewController?
     
     func startWithAppDelegate(appDelegate:AppDelegate){
@@ -94,8 +94,7 @@ class AppManager: NSObject {
            
     
     private func configureMain(){
-        let vc = MainViewController()
-        let nav = MyRootNavViewController(rootViewController: vc)
+        let nav = MyRootNavViewController(rootViewController: mainVc)
         switchToVC(vc: nav)
 //        nextStep()
     }

@@ -23,7 +23,7 @@ class DetailJobHeadCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        separatorInset = UIEdgeInsets.init(top: 0, left: 20, bottom: 0, right: 20)
+        separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: kScreenWidth)
     }
 
     func setData(data:Any){

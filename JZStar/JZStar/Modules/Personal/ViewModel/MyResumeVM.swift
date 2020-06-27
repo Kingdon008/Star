@@ -86,6 +86,9 @@ class MyResumeVM: NSObject {
             cell.selectionStyle = .none
             let name = self.myResumeModel?.resume?.name
             cell.setData(type: "姓名", text: name)
+            cell.textClickBlock = { text in
+                self.myResumeModel?.resume?.name = text
+            }
             return cell
         }
         sectionModel.cellModelsArr.append(cellModel)
@@ -131,6 +134,9 @@ class MyResumeVM: NSObject {
             let age = self.myResumeModel?.resume?.age
             cell.textfield.keyboardType = .numberPad
             cell.setData(type: "年龄", text: age)
+            cell.textClickBlock = { text in
+                self.myResumeModel?.resume?.age = text
+            }
             return cell
         }
         sectionModel.cellModelsArr.append(cellModel)

@@ -99,7 +99,12 @@ class HomePageViewController: BaseViewController {
 //        view.backgroundColor = UIColor.red
         return view
     }()
-
+    
+    @IBAction func headBtnClick(_ sender: Any) {
+        AppManager.sharedManager.mainVc.myViewState = ViewState.kPersonalVc
+    }
+    
+    
 }
 
 extension HomePageViewController:FSPagerViewDataSource,FSPagerViewDelegate{
@@ -127,6 +132,8 @@ extension HomePageViewController:FSPagerViewDataSource,FSPagerViewDelegate{
             jumpTo(url: url)
         }
     }
+    
+    
 }
 
 extension HomePageViewController{
