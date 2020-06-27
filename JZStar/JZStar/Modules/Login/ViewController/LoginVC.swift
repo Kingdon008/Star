@@ -47,36 +47,52 @@ class LoginVC: BaseViewController {
     
     @IBAction func loginAction(_ sender: Any) {
         guard let phone = phoneTextfield.text else {
+            return
+        }
+        if phone.isEmpty {
             TOAST(message: "手机号码为空")
             return
         }
         guard let phoneCode = phonecodeTextfield.text else {
+            return
+        }
+        if phoneCode.isEmpty {
             TOAST(message: "手机验证码为空")
             return
         }
-//        if graphCodeTextfield.text !=  codeString{
-//            TOAST(message: "验证码错误")
-//            return
-//        }
-//        Network.request(.usercenterRegister(phone: phone, verify_code: phoneCode), success: { (json) in
-//
-//        }) { (error, mess) in
-//
-//        }
-        AppManager.sharedManager.nextStep()
+        if graphCodeTextfield.text !=  codeString{
+            TOAST(message: "验证码错误")
+            return
+        }
+        Network.request(.usercenterRegister(phone: phone, verify_code: phoneCode), success: { (json) in
+            if let status = json["status"].int,status == 1 {
+                if let uid = json["data"]["uid"].string {
+                    TOAST(message: "登录成功")
+                    AppManager.sharedManager.user.uid = uid
+                    AppManager.sharedManager.user.phone = json["data"]["phone"].string
+                    AppManager.sharedManager.nextStep()
+                }
+            }else{
+                TOAST(message: "登录失败")
+            }
+
+        }) { (error, mess) in
+            TOAST(message: "登录失败")
+        }
+        
     }
     
     private func refreshCode() {
-//        if codeView != nil {
-//            codeView?.removeFromSuperview()
-//        }
-//        let result = ImageCodeVerification.create(CGRect(x: 0, y: 0, width: 111, height: 46))
-//        codeView = result.obj
-//        codeView?.addTarget(self, action: #selector(refreshClickAction), for: .touchUpInside)
-//        codeString = result.code
-//        guard codeView != nil && codeString?.count ?? 0 > 0 else {
-//            return
-//        }
-//        identifyingCodeBg.addSubview(codeView!)
+        if codeView != nil {
+            codeView?.removeFromSuperview()
+        }
+        let result = ImageCodeVerification.create(CGRect(x: 0, y: 0, width: 111, height: 46))
+        codeView = result.obj
+        codeView?.addTarget(self, action: #selector(refreshClickAction), for: .touchUpInside)
+        codeString = result.code
+        guard codeView != nil && codeString?.count ?? 0 > 0 else {
+            return
+        }
+        identifyingCodeBg.addSubview(codeView!)
     }
 }

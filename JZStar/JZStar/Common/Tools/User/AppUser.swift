@@ -9,85 +9,95 @@
 import UIKit
 
 class AppUser: NSObject {
-    var headImage:UIImage?
-    var userInfo:InfoModel = InfoModel(){
+    @objc var uid:String?{
         didSet{
-            if !userInfo.userid.isEmpty {
-                mDic.updateValue(userInfo.userid, forKey: keyAppUser + #keyPath(InfoModel.userid))
-            }
-            if !userInfo.cellphone.isEmpty {
-                mDic.updateValue(userInfo.cellphone, forKey: keyAppUser + #keyPath(InfoModel.cellphone))
-            }
-            if !userInfo.nickname.isEmpty {
-                mDic.updateValue(userInfo.nickname, forKey: keyAppUser + #keyPath(InfoModel.nickname))
-            }
-            if !userInfo.avatar.isEmpty {
-                mDic.updateValue(userInfo.avatar, forKey: keyAppUser + #keyPath(InfoModel.avatar))
-            }
-            if !userInfo.email.isEmpty {
-               mDic.updateValue(userInfo.email, forKey: keyAppUser + #keyPath(InfoModel.email))
-            }
-            mDic.updateValue(String.init(describing: userInfo.subscribe), forKey: keyAppUser + #keyPath(InfoModel.subscribe))
+            mDic.updateValue(uid ?? "", forKey: keyAppUser + #keyPath(AppUser.uid))
             isDirty = true
         }
     }
+    @objc var name:String?{
+        didSet{
+            mDic.updateValue(name ?? "", forKey: keyAppUser + #keyPath(AppUser.name))
+            isDirty = true
+        }
+    }
+    @objc var sex:String?{
+        didSet{
+            mDic.updateValue(sex ?? "", forKey: keyAppUser + #keyPath(AppUser.sex))
+            isDirty = true
+        }
+    }
+    @objc var age:String?{
+        didSet{
+            mDic.updateValue(age ?? "", forKey: keyAppUser + #keyPath(AppUser.age))
+            isDirty = true
+        }
+    }
+    @objc var education:String?{
+        didSet{
+            mDic.updateValue(education ?? "", forKey: keyAppUser + #keyPath(AppUser.education))
+            isDirty = true
+        }
+    }
+    @objc var major:String?{
+        didSet{
+            mDic.updateValue(major ?? "", forKey: keyAppUser + #keyPath(AppUser.major))
+            isDirty = true
+        }
+    }
+    @objc var interest_profession:String?{
+        didSet{
+            mDic.updateValue(interest_profession ?? "", forKey: keyAppUser + #keyPath(AppUser.interest_profession))
+            isDirty = true
+        }
+    }
+    @objc var personal_description:String?{
+        didSet{
+            mDic.updateValue(personal_description ?? "", forKey: keyAppUser + #keyPath(AppUser.personal_description))
+            isDirty = true
+        }
+    }
+    @objc var profit:String?{
+        didSet{
+            mDic.updateValue(profit ?? "", forKey: keyAppUser + #keyPath(AppUser.profit))
+            isDirty = true
+        }
+    }
+    @objc var resume_percent:String?{
+        didSet{
+            mDic.updateValue(resume_percent ?? "", forKey: keyAppUser + #keyPath(AppUser.resume_percent))
+            isDirty = true
+        }
+    }
+    @objc var headimgurl:String?{
+        didSet{
+            mDic.updateValue(headimgurl ?? "", forKey: keyAppUser + #keyPath(AppUser.headimgurl))
+            isDirty = true
+        }
+    }
+    @objc var phone:String?{
+        didSet{
+            mDic.updateValue(phone ?? "", forKey: keyAppUser + #keyPath(AppUser.phone))
+            isDirty = true
+        }
+    }
+    
     @objc var hasLogined:Bool = false{
         didSet{
             mDic.updateValue(hasLogined, forKey: keyAppUser + #keyPath(hasLogined))
             isDirty = true
         }
     }
-    var token:TokenModel = TokenModel(){
-        didSet{
-            if !token.accessToken.isEmpty {
-                mDic.updateValue(token.accessToken, forKey: keyAppUser + #keyPath(TokenModel.accessToken))
-                isDirty = true
-            }
-            if !token.refreshToken.isEmpty {
-                mDic.updateValue(token.refreshToken, forKey: keyAppUser + #keyPath(TokenModel.refreshToken))
-                isDirty = true
-            }
-            if !token.id.isEmpty {
-                mDic.updateValue(token.id, forKey: keyAppUser + #keyPath(TokenModel.id))
-                isDirty = true
-            }
-        }
-    }
-     @objc var accessTokenExpire:String = ""{
-        didSet{
-            mDic.updateValue(accessTokenExpire, forKey: keyAppUser + #keyPath(accessTokenExpire))
-            isDirty = true
-        }
-    }
-     @objc var refreshTokenExpire:String = ""{
-        didSet{
-            mDic.updateValue(refreshTokenExpire, forKey: keyAppUser + #keyPath(refreshTokenExpire))
-            isDirty = true
-        }
-    }
-    @objc var accessTokenSaveTime:String = ""{
-        didSet{
-            mDic.updateValue(accessTokenSaveTime, forKey: keyAppUser + #keyPath(accessTokenSaveTime))
-            isDirty = true
-        }
-    }
-    @objc var refreshTokenSaveTime:String = ""{
-        didSet{
-            mDic.updateValue(refreshTokenSaveTime, forKey: keyAppUser + #keyPath(refreshTokenSaveTime))
-            isDirty = true
-        }
-    }
+    
     var isDirty:Bool = false
     var mDic:[String:Any] = [:]
     
     ///加载相关信息
     func loadUserWithIdentifer(identifier:String){
         if identifier.isEmpty {
-            userInfo = InfoModel()
-            headImage = nil
             return
         }
-        if userInfo.userid == identifier{
+        if uid == identifier{
             return
         }
         guard let dic = userDefaults.value(forKey:keyAppUser + identifier) as? [String:Any] else {
@@ -95,38 +105,31 @@ class AppUser: NSObject {
         }
         if dic.count > 0 {
             mDic = dic
-            userInfo.userid = mDic[keyAppUser + #keyPath(InfoModel.userid)] as? String ?? ""
-            userInfo.cellphone = mDic[keyAppUser + #keyPath(InfoModel.cellphone)] as? String ?? ""
-            userInfo.nickname = mDic[keyAppUser + #keyPath(InfoModel.nickname)] as? String ?? ""
-            userInfo.avatar = mDic[keyAppUser + #keyPath(InfoModel.avatar)] as? String ?? ""
-            if let mDicHasLogined = mDic[keyAppUser + #keyPath(hasLogined)] as? Bool{
-                hasLogined = mDicHasLogined
-            }else{
-                hasLogined = false
-            }
-            if let mDicSubscribe = mDic[keyAppUser + #keyPath(InfoModel.subscribe)] as? Bool {
-                userInfo.subscribe = mDicSubscribe
-            }else{
-                userInfo.subscribe = false
-            }
-            token.id = mDic[keyAppUser + #keyPath(TokenModel.id)] as? String ?? ""
-            token.accessToken = mDic[keyAppUser + #keyPath(TokenModel.accessToken)] as? String ?? ""
-            token.refreshToken = mDic[keyAppUser + #keyPath(TokenModel.refreshToken)] as? String ?? ""
-            accessTokenExpire = mDic[keyAppUser + #keyPath(accessTokenExpire)] as? String ?? ""
-            refreshTokenExpire = mDic[keyAppUser + #keyPath(refreshTokenExpire)] as? String ?? ""
-            accessTokenSaveTime = mDic[keyAppUser + #keyPath(accessTokenSaveTime)] as? String ?? ""
-            refreshTokenSaveTime = mDic[keyAppUser + #keyPath(refreshTokenSaveTime)] as? String ?? ""
+            uid = mDic[keyAppUser + #keyPath(AppUser.uid)] as? String ?? ""
+            name = mDic[keyAppUser + #keyPath(AppUser.name)] as? String ?? ""
+            
+            sex = mDic[keyAppUser + #keyPath(AppUser.sex)] as? String ?? ""
+            age = mDic[keyAppUser + #keyPath(AppUser.age)] as? String ?? ""
+            education = mDic[keyAppUser + #keyPath(AppUser.education)] as? String ?? ""
+            major = mDic[keyAppUser + #keyPath(AppUser.major)] as? String ?? ""
+            interest_profession = mDic[keyAppUser + #keyPath(AppUser.interest_profession)] as? String ?? ""
+            personal_description = mDic[keyAppUser + #keyPath(AppUser.personal_description)] as? String ?? ""
+            profit = mDic[keyAppUser + #keyPath(AppUser.profit)] as? String ?? ""
+            resume_percent = mDic[keyAppUser + #keyPath(AppUser.resume_percent)] as? String ?? ""
+            headimgurl = mDic[keyAppUser + #keyPath(AppUser.headimgurl)] as? String ?? ""
+            phone = mDic[keyAppUser + #keyPath(AppUser.phone)] as? String ?? ""
+            hasLogined = mDic[keyAppUser + #keyPath(AppUser.hasLogined)] as? Bool ?? false
+            
         }
     }
     
     func savePhoto(data: Data) {
-        userDefaults.setValue(data, forKey: keyAppUser + AppManager.sharedManager.user.userInfo.userid + "headImage")
+        userDefaults.setValue(data, forKey: keyAppUser + (AppManager.sharedManager.user.uid ?? "") + "headImage")
     }
-    
+
     func getPhoto() ->UIImage? {
-        if let data = userDefaults.value(forKey: keyAppUser + AppManager.sharedManager.user.userInfo.userid + "headImage") as? Data {
+        if let data = userDefaults.value(forKey: keyAppUser + (AppManager.sharedManager.user.uid ?? "") + "headImage") as? Data {
             if let image = UIImage.init(data: data) {
-                headImage = image
                 return image
             }
         }
@@ -136,7 +139,7 @@ class AppUser: NSObject {
     ///保存信息，支持多账户登录
     func save(){
         if isDirty{
-            userDefaults.setValue(mDic, forKey: keyAppUser + AppManager.sharedManager.user.userInfo.userid)
+            userDefaults.setValue(mDic, forKey: keyAppUser + (AppManager.sharedManager.user.uid ?? ""))
             userDefaults.synchronize()
             isDirty = false
         }

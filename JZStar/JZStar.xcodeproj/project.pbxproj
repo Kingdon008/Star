@@ -107,8 +107,6 @@
 		F683615F2484E15F00B4E4FA /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68361342484E15F00B4E4FA /* Regex.swift */; };
 		F68361602484E15F00B4E4FA /* PulicConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68361352484E15F00B4E4FA /* PulicConst.swift */; };
 		F68361682484E9C300B4E4FA /* GlobalPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68361672484E9C300B4E4FA /* GlobalPackage.swift */; };
-		F683616B2484EB3E00B4E4FA /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F683616A2484EB3E00B4E4FA /* InfoModel.swift */; };
-		F683616D2484EB5C00B4E4FA /* TokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F683616C2484EB5C00B4E4FA /* TokenModel.swift */; };
 		F68361712484EED300B4E4FA /* StellarHintHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68361702484EED300B4E4FA /* StellarHintHud.swift */; };
 		F68361A02484EEF800B4E4FA /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68361732484EEF800B4E4FA /* UIImageView+Extension.swift */; };
 		F68361A12484EEF800B4E4FA /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68361752484EEF800B4E4FA /* Int+Extension.swift */; };
@@ -264,8 +262,6 @@
 		F68361342484E15F00B4E4FA /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		F68361352484E15F00B4E4FA /* PulicConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PulicConst.swift; sourceTree = "<group>"; };
 		F68361672484E9C300B4E4FA /* GlobalPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalPackage.swift; sourceTree = "<group>"; };
-		F683616A2484EB3E00B4E4FA /* InfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
-		F683616C2484EB5C00B4E4FA /* TokenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenModel.swift; sourceTree = "<group>"; };
 		F68361702484EED300B4E4FA /* StellarHintHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StellarHintHud.swift; sourceTree = "<group>"; };
 		F68361732484EEF800B4E4FA /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		F68361752484EEF800B4E4FA /* Int+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
@@ -669,7 +665,6 @@
 			children = (
 				F68361722484EEF800B4E4FA /* Category */,
 				F683616E2484EEB900B4E4FA /* View */,
-				F68361692484EB3400B4E4FA /* Model */,
 				F68361042484E15E00B4E4FA /* Tools */,
 				F68360F72484E13000B4E4FA /* Net */,
 				F68360F42484E11E00B4E4FA /* TableViewDataModel */,
@@ -780,15 +775,6 @@
 				F68361342484E15F00B4E4FA /* Regex.swift */,
 			);
 			path = ValidateService;
-			sourceTree = "<group>";
-		};
-		F68361692484EB3400B4E4FA /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F683616A2484EB3E00B4E4FA /* InfoModel.swift */,
-				F683616C2484EB5C00B4E4FA /* TokenModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		F683616E2484EEB900B4E4FA /* View */ = {
@@ -1146,7 +1132,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F65431D4248895530069A307 /* RecommendDetailCell.swift in Sources */,
-				F683616D2484EB5C00B4E4FA /* TokenModel.swift in Sources */,
 				F68361A92484EEF800B4E4FA /* Color+Extension.swift in Sources */,
 				F6D10C132485F99100AF6401 /* HomePageVM.swift in Sources */,
 				F68360FF2484E13000B4E4FA /* CachePolicyPlugin.swift in Sources */,
@@ -1234,7 +1219,6 @@
 				ABE3D189249D059500D2B55E /* MyServiceVC.swift in Sources */,
 				F6AF66982487949300CD347E /* SelectTypeView.swift in Sources */,
 				F68361A42484EEF800B4E4FA /* UIView+Extension.swift in Sources */,
-				F683616B2484EB3E00B4E4FA /* InfoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
