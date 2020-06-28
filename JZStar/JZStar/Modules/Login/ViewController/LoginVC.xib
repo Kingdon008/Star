@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="JZStar" customModuleProvider="target">
             <connections>
+                <outlet property="getPhoneCodeBtn" destination="hhX-Vj-Ghe" id="51b-Vn-5RW"/>
                 <outlet property="graphCodeTextfield" destination="BeY-Qb-Des" id="JoK-Ij-kUs"/>
                 <outlet property="identifyingCodeBg" destination="uDH-uu-DBt" id="3X9-XV-NqH"/>
                 <outlet property="phoneTextfield" destination="bfo-GI-Z9a" id="w2Z-wG-Z5o"/>
@@ -103,9 +104,8 @@
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhX-Vj-Ghe">
-                            <rect key="frame" x="268" y="11" width="82" height="32"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhX-Vj-Ghe">
+                            <rect key="frame" x="258" y="10" width="92" height="34"/>
                             <state key="normal" title="获取验证码">
                                 <color key="titleColor" red="0.027450980392156862" green="0.027450980392156862" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
                             </state>

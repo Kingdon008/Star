@@ -9,12 +9,14 @@
 import UIKit
 
 class LoginVC: BaseViewController {
+    private var timer: SSTimeTask!
     var codeView:UIControl?
     @IBOutlet weak var phoneTextfield: UITextField!
     @IBOutlet weak var phonecodeTextfield: UITextField!
     @IBOutlet weak var graphCodeTextfield: UITextField!
     var codeString:String?
     @IBOutlet weak var identifyingCodeBg: UIView!
+    @IBOutlet weak var getPhoneCodeBtn: UIButton!
     
     override func viewDidLoad() {
         setupViews()
@@ -37,6 +39,16 @@ class LoginVC: BaseViewController {
         if graphCodeTextfield.text !=  codeString{
             TOAST(message: "验证码错误")
             return
+        }
+        timer = SSTimeManager.shared.addTaskWith(timeInterval: 1, isRepeat: true) { [weak self] (task) in
+            if task.repeatCount < 60 {
+                self?.getPhoneCodeBtn.setTitle("\(task.repeatCount)秒后重试", for: .normal)
+                self?.getPhoneCodeBtn.isEnabled = false
+            }else{
+                task.isStop = true
+                self?.getPhoneCodeBtn.setTitle("获取验证码", for: .normal)
+                self?.getPhoneCodeBtn.isEnabled = true
+            }
         }
         Network.request(.usercenterVerify_code(phone: phone), success: { (json) in
             self.phonecodeTextfield.becomeFirstResponder()
@@ -61,7 +73,7 @@ class LoginVC: BaseViewController {
             return
         }
         if graphCodeTextfield.text !=  codeString{
-            TOAST(message: "验证码错误")
+            TOAST(message: "图形验证码错误")
             return
         }
         Network.request(.usercenterRegister(phone: phone, verify_code: phoneCode), success: { (json) in
