@@ -1,2 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-JZStar/Pods-JZStar-resources.sh
-${PODS_CONFIGURATION_BUILD_DIR}/mob_sharesdk/ShareSDK.bundle
+${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle

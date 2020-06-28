@@ -2,7 +2,7 @@
 //  StellarButton.swift
 //  StellarHomeIOS
 //
-//  Created by 刘燃 on 2019/5/23.
+//  Created by don on 2019/5/23.
 //  Copyright © 2019 don. All rights reserved.
 //
 

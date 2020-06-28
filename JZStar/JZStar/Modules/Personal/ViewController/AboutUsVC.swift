@@ -97,8 +97,23 @@ extension AboutUsVC:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = AboutUsDeatilVC()
-        vc.model = dataArr?[indexPath.row]
-        navigationController?.pushViewController(vc, animated: true)
+        if let model = dataArr?[indexPath.row]{
+            if model.problem == "分享平台" {
+                let messageObject = UMSocialMessageObject()
+                messageObject.text = model.answer ?? ""
+//                messageObject.title = "标题"
+                UMSocialManager.default().share(to: .wechatSession, messageObject: messageObject, currentViewController: self) { (data, error) in
+                    guard error != nil else{
+                        TOAST(message: "分享失败")
+                        return
+                    }
+                    TOAST(message: "分享成功")
+                }
+            }else{
+                let vc = AboutUsDeatilVC()
+                vc.model = dataArr?[indexPath.row]
+                navigationController?.pushViewController(vc, animated: true)
+            }
+        }
     }
 }

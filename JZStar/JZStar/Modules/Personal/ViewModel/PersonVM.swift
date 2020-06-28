@@ -116,9 +116,12 @@ class PersonVM: NSObject {
                     let vc = AboutUsVC()
                     self.vmDelegate?.pushViewController(vc: vc)
                 case .loginOut:
-                    AppManager.sharedManager.nextStep()
+                    let alert = StellarMineAlertView.init(message:"确定退出登录", leftTitle: "取消", rightTile: "确定", showExitButton: false)
+                    alert.show()
+                    alert.rightClickBlock = {
+                        AppManager.sharedManager.nextStep()
+                    }
                 }
-                
             }
             sectionModel.cellModelsArr.append(cellModel)
         }

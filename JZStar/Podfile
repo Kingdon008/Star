@@ -26,5 +26,5 @@ pod 'KakaJSON', '~> 1.1.2'
 pod 'Moya', '~> 14.0.0'
 pod 'FSPagerView','0.8.3'
 pod 'Parchment', '2.4.0'
-
-
+pod 'UMCCommon'
+pod 'UMCShare/Social/ReducedWeChat'

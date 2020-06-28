@@ -31,6 +31,8 @@ class PersonalViewController: BaseViewController {
         viewModel.vmDelegate = self
         Network.request(.userCenterHome(uid: (AppManager.sharedManager.user.uid ?? "")), success: { (json) in
             self.userModel = json["data"].description.kj.model(AppUser.self)
+            AppManager.sharedManager.user.kj_m.convert(from: json["data"].description)
+            AppManager.sharedManager.user.save()
             self.viewModel.userModel = self.userModel
             self.viewModel.setData {
                 self.tableview.reloadData()

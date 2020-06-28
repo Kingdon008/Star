@@ -39,14 +39,6 @@ class AppManager: NSObject {
         currentStep = AppMangerStep(rawValue: currentStep!.rawValue + 1)!
     }
     
-    ///退出登录
-    func loginOutAction(){
-        cookie.clear()
-        user.hasLogined = false
-        user.save()
-        currentStep = .kAppStepLogout
-    }
-    
     func enterBackgroundState(){
         
     }
@@ -87,16 +79,19 @@ class AppManager: NSObject {
     }
     
     private func configureLogin(){
-        let vc = LoginVC()
-        let nav = MyRootNavViewController(rootViewController: vc)
-        switchToVC(vc: nav)
+        if user.hasLogined {
+            nextStep()
+        }else{
+            let vc = LoginVC()
+            let nav = MyRootNavViewController(rootViewController: vc)
+            switchToVC(vc: nav)
+        }
     }
            
     
     private func configureMain(){
         let nav = MyRootNavViewController(rootViewController: mainVc)
         switchToVC(vc: nav)
-//        nextStep()
     }
     
     private func switchToVC(vc:UIViewController){
@@ -121,7 +116,10 @@ class AppManager: NSObject {
     private func doSomethingBeforeSwitch(){
         //会添加一下配置的信息在部分节点上
         if currentStep == .kAppStepLogin {
-            //保存信息
+            if let cookieUID = user.uid {
+                cookie.userIdentifier = cookieUID
+            }
+            user.hasLogined = true
             user.save()
             cookie.save()
         }else if currentStep == .kAppStepMain {

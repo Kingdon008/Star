@@ -41,6 +41,8 @@ class HomePageViewController: BaseViewController {
     func setupData(){
         Network.request(.userCenterHome(uid: (AppManager.sharedManager.user.uid ?? "")), success: { (json) in
             let model = json["data"].description.kj.model(AppUser.self)
+            AppManager.sharedManager.user.kj_m.convert(from: json["data"].description)
+            AppManager.sharedManager.user.save()
             let url = URL(string: model?.headimgurl)
             self.headIcon.imageView?.kf.setImage(with: url, placeholder: UIImage.init(named: "defaultHeadIcon_big"))
             self.phoneLabel.text = model?.phone

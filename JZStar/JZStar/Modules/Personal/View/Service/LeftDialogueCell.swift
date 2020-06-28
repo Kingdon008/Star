@@ -36,11 +36,14 @@ class LeftDialogueCell: UITableViewCell {
             width = 246
             height = dialogueTextRect.height
         }
-        
+        let defaultServiceIcon = UIImageView()
+        defaultServiceIcon.frame = CGRect.init(x: 20, y: 0, width: 32, height: 32)
+        defaultServiceIcon.image = UIImage.init(named: "default_service")
+        contentView.addSubview(defaultServiceIcon)
         let dialogueBg = UIView()
         let dialogueBgWidth = width + 40
         let dialogueBgHeight = height + 16
-        dialogueBg.frame = CGRect.init(x: 20, y: 0, width: dialogueBgWidth, height: dialogueBgHeight)
+        dialogueBg.frame = CGRect.init(x: 60, y: 0, width: dialogueBgWidth, height: dialogueBgHeight)
         dialogueBg.backgroundColor = UIColor.red
         dialogueBg.backgroundColor = UIColor.init(hexString: "#FFFFFF")
         contentView.addSubview(dialogueBg)

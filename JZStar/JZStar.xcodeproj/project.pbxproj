@@ -64,6 +64,7 @@
 		F636BFA02489CB52007AEB86 /* BannerDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F636BF9F2489CB52007AEB86 /* BannerDetailModel.swift */; };
 		F636BFA32489EAB6007AEB86 /* TitleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F636BFA22489EAB6007AEB86 /* TitleScrollView.swift */; };
 		F639AC9F249C6AD600E55E3C /* MyResumeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F639AC9E249C6AD600E55E3C /* MyResumeModel.swift */; };
+		F6523AD024A8229C001E9A3A /* StellarMineAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6523ACF24A8229C001E9A3A /* StellarMineAlertView.swift */; };
 		F65431CF2488820D0069A307 /* CompleteResumeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65431CD2488820D0069A307 /* CompleteResumeCell.swift */; };
 		F65431D02488820D0069A307 /* CompleteResumeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F65431CE2488820D0069A307 /* CompleteResumeCell.xib */; };
 		F65431D4248895530069A307 /* RecommendDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65431D2248895530069A307 /* RecommendDetailCell.swift */; };
@@ -212,6 +213,8 @@
 		F636BF9F2489CB52007AEB86 /* BannerDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerDetailModel.swift; sourceTree = "<group>"; };
 		F636BFA22489EAB6007AEB86 /* TitleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleScrollView.swift; sourceTree = "<group>"; };
 		F639AC9E249C6AD600E55E3C /* MyResumeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResumeModel.swift; sourceTree = "<group>"; };
+		F6523ACF24A8229C001E9A3A /* StellarMineAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StellarMineAlertView.swift; sourceTree = "<group>"; };
+		F6523AD124A83A8E001E9A3A /* OC-bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OC-bridging-header.h"; sourceTree = "<group>"; };
 		F65431CD2488820D0069A307 /* CompleteResumeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteResumeCell.swift; sourceTree = "<group>"; };
 		F65431CE2488820D0069A307 /* CompleteResumeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompleteResumeCell.xib; sourceTree = "<group>"; };
 		F65431D2248895530069A307 /* RecommendDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendDetailCell.swift; sourceTree = "<group>"; };
@@ -490,6 +493,14 @@
 			path = TitleScrollView;
 			sourceTree = "<group>";
 		};
+		F6523ACE24A8229C001E9A3A /* StellarMineAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				F6523ACF24A8229C001E9A3A /* StellarMineAlertView.swift */,
+			);
+			path = StellarMineAlertView;
+			sourceTree = "<group>";
+		};
 		F65431D1248895350069A307 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -632,6 +643,7 @@
 				F68360F32484DC8200B4E4FA /* Modules */,
 				F68360C22484DC6C00B4E4FA /* AppDelegate.swift */,
 				F68361672484E9C300B4E4FA /* GlobalPackage.swift */,
+				F6523AD124A83A8E001E9A3A /* OC-bridging-header.h */,
 				F68360CB2484DC7400B4E4FA /* Assets.xcassets */,
 				F68360CD2484DC7400B4E4FA /* LaunchScreen.storyboard */,
 				F68360D02484DC7400B4E4FA /* Info.plist */,
@@ -777,6 +789,7 @@
 		F683616E2484EEB900B4E4FA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F6523ACE24A8229C001E9A3A /* StellarMineAlertView */,
 				AB3FE3FC249E3D78001966ED /* RightMenu */,
 				AB3FE3F9249E30AA001966ED /* ImageCodeVerification */,
 				ABE3D184249CE6E200D2B55E /* PickerView */,
@@ -1184,6 +1197,7 @@
 				F68361442484E15F00B4E4FA /* AppAssistance.swift in Sources */,
 				AB5EA19C2487FA26009758B1 /* MerchantModel.swift in Sources */,
 				F683615C2484E15F00B4E4FA /* SSTimeTask.swift in Sources */,
+				F6523AD024A8229C001E9A3A /* StellarMineAlertView.swift in Sources */,
 				AB28C68624A0E5CF00391A5A /* RecommendDeatailVC.swift in Sources */,
 				F636BFA02489CB52007AEB86 /* BannerDetailModel.swift in Sources */,
 				F68361AB2484EEF800B4E4FA /* UIButton+indicator.swift in Sources */,
@@ -1394,6 +1408,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.jzdr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = jianzhi;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/JZStar/OC-bridging-header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1418,6 +1433,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.jzdr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = jianzhi_dis;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/JZStar/OC-bridging-header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

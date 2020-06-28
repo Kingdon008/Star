@@ -29,8 +29,14 @@ class RightDialogueCell: UITableViewCell {
         let font = UIFont.systemFont(ofSize: 14)
         let width = String.ss.getTextRectSize(text: dialogue,font: font,size: CGSize.init(width: 246, height: kScreenHeight)).width
         
+        let defaultServiceIcon = UIImageView()
+        defaultServiceIcon.frame = CGRect.init(x: kScreenWidth - 20 - 32, y: 0, width: 32, height: 32)
+        let url = URL(string: AppManager.sharedManager.user.headimgurl)
+        defaultServiceIcon.kf.setImage(with: url, placeholder: UIImage.init(named: "defaultHeadIcon_big"))
+        contentView.addSubview(defaultServiceIcon)
+        
         let dialogueBg = UIView()
-        dialogueBg.frame = CGRect.init(x: kScreenWidth - 13 - width, y: 0, width: width, height: 36)
+        dialogueBg.frame = CGRect.init(x: kScreenWidth - 64 - width, y: 0, width: width, height: 36)
         dialogueBg.backgroundColor = UIColor.red
         dialogueBg.backgroundColor = UIColor.init(hexString: "#FFA300")
         contentView.addSubview(dialogueBg)

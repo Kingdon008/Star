@@ -42,7 +42,6 @@ class ServiceHeadCell: UITableViewCell {
     
     func setData(data:Any){
         if let modelArr = data as? [AboutUsModel]{
-            
             let topIcon = UIImageView.init()
             bgView.addSubview(topIcon)
             topIcon.image = UIImage.init(named: "service_guess")

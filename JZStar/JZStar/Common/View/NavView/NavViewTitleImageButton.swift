@@ -2,7 +2,7 @@
 //  NavViewTitleImageButton.swift
 //  StellarHomeIOS
 //
-//  Created by 刘燃 on 2019/11/6.
+//  Created by don on 2019/11/6.
 //  Copyright © 2019 don. All rights reserved.
 //
 

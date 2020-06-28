@@ -42,11 +42,13 @@ class LoginVC: BaseViewController {
         }
         timer = SSTimeManager.shared.addTaskWith(timeInterval: 1, isRepeat: true) { [weak self] (task) in
             if task.repeatCount < 60 {
-                self?.getPhoneCodeBtn.setTitle("\(task.repeatCount)秒后重试", for: .normal)
+                self?.getPhoneCodeBtn.setTitle("\(60 - task.repeatCount)秒后重试", for: .normal)
+                self?.getPhoneCodeBtn.sizeToFit()
                 self?.getPhoneCodeBtn.isEnabled = false
             }else{
                 task.isStop = true
                 self?.getPhoneCodeBtn.setTitle("获取验证码", for: .normal)
+                self?.getPhoneCodeBtn.sizeToFit()
                 self?.getPhoneCodeBtn.isEnabled = true
             }
         }

@@ -37,6 +37,12 @@ PODS:
   - SwiftRichString (3.5.1)
   - SwiftyJSON (4.3.0)
   - TZImagePickerController (3.3.2)
+  - UMCCommon (7.1.0)
+  - UMCShare/Core (6.9.9):
+    - UMCCommon
+  - UMCShare/Social/ReducedWeChat (6.9.9):
+    - UMCCommon
+    - UMCShare/Core
 
 DEPENDENCIES:
   - Alamofire (= 5.2.0)
@@ -61,6 +67,8 @@ DEPENDENCIES:
   - SwiftRichString (~> 3.5.1)
   - SwiftyJSON (~> 4.0)
   - TZImagePickerController (= 3.3.2)
+  - UMCCommon
+  - UMCShare/Social/ReducedWeChat
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -89,6 +97,8 @@ SPEC REPOS:
     - SwiftRichString
     - SwiftyJSON
     - TZImagePickerController
+    - UMCCommon
+    - UMCShare
 
 SPEC CHECKSUMS:
   Alamofire: c1ca147559e730bfb2182c8c7aafbdd90a867987
@@ -116,7 +126,9 @@ SPEC CHECKSUMS:
   SwiftRichString: e7da1b0b1d931d7e1cee5f217972309c36867e03
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   TZImagePickerController: 36ca728ec681228918aa82e993aaab1962281b72
+  UMCCommon: 4e80f93492d300245683236668763dc5d0b04dbd
+  UMCShare: 52d9ee35f61c51eda3089a7961e1d04ce57b9d6a
 
-PODFILE CHECKSUM: 1a1ec2e059b8e7f1642f59bc05a0c8fcc3f33548
+PODFILE CHECKSUM: eae411377c4b558a1a78681e57ca0d065095c242
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.8.4

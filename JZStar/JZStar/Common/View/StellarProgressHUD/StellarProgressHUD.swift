@@ -2,7 +2,7 @@
 //  StellarProgressHUD.swift
 //  StellarHomeIOS
 //
-//  Created by 刘燃 on 2019/7/9.
+//  Created by don on 2019/7/9.
 //  Copyright © 2019 don. All rights reserved.
 //
 
