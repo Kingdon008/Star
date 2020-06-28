@@ -11,7 +11,7 @@ import UIKit
 public class MyResumeModel: Convertible {
     var interest_profession = [SequenceModel]()
     var education = [SequenceModel]()
-    var resume:ResumeModel?
+    var resume = ResumeModel()
     
     required public init() {
         // Intentionally unimplemented...

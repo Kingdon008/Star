@@ -148,4 +148,5 @@ class AppUser: Convertible {
     required public init() {
         // Intentionally unimplemented...
     }
+    
 }

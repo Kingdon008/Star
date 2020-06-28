@@ -42,7 +42,7 @@ class MyResumeVC: BaseViewController {
         Network.request(.usercenterMy_resume(uid: (AppManager.sharedManager.user.uid ?? "")), success: { json in
             self.myResumeModel = json["data"].description.kj.model(MyResumeModel.self)
             self.viewModel.myResumeModel = self.myResumeModel
-            if self.myResumeModel?.resume?.is_attestation ?? false{
+            if self.myResumeModel?.resume.is_attestation ?? false{
                 self.authenticationBtn.setImage(UIImage.init(named: "authenticationResume"), for: .normal)
             }else{
                 self.authenticationBtn.setImage(UIImage.init(named: "unAuthenticationResume"), for: .normal)
@@ -71,18 +71,24 @@ class MyResumeVC: BaseViewController {
     
     @IBAction func submitAction(_ sender: Any) {
         guard let model = myResumeModel?.resume else {
+            TOAST(message: "提交失败")
             return
         }
-        if model.is_attestation ?? false {
-            return
-        }
+//        if model.is_attestation ?? false {
+//            return
+//        }
+        model.uid = AppManager.sharedManager.user.uid ?? ""
         model.name = viewModel.myResumeName
         model.age = viewModel.myResumeAge
         model.personal_description = viewModel.myResumeIntroduction
         MBProgressHUD.showStellarHud()
         Network.request(.usercenterEdit_myresume(model: model), success: { (json) in
             MBProgressHUD.hiddenStellarHud()
-            TOAST(message: "提交成功")
+            if let status = json["status"].int,status == 1 {
+                TOAST(message: "提交成功")
+            }else{
+                TOAST(message: "提交失败")
+            }
         }) { (err, mess) in
             MBProgressHUD.hiddenStellarHud()
             TOAST(message: "提交失败")

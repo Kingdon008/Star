@@ -84,11 +84,15 @@ class MyResumeVM: NSObject {
             let cell = MyResumeInputCell.initWithXIb() as! MyResumeInputCell
             self.myNameInputCell = cell
             cell.selectionStyle = .none
-            let name = self.myResumeModel?.resume?.name
+            let name = self.myResumeModel?.resume.name
             cell.setData(type: "姓名", text: name)
-            cell.textClickBlock = { text in
-                self.myResumeModel?.resume?.name = text
-            }
+//            cell.textClickBlock = { text in
+//                self.myResumeModel?.resume.name = text
+//                guard let model = self.myResumeModel?.resume else {
+//                    return
+//                }
+//                self.vmDelegate?.modificationInfo(param: model.kj.JSONObject())
+//            }
             return cell
         }
         sectionModel.cellModelsArr.append(cellModel)
@@ -103,7 +107,7 @@ class MyResumeVM: NSObject {
         cellModel.cell = {table,index in
             let cell = MyResumePickUpCell.initWithXIb() as! MyResumePickUpCell
             cell.selectionStyle = .none
-            let sex = self.myResumeModel?.resume?.sex
+            let sex = self.myResumeModel?.resume.sex
             var sexStr:String?
             if sex == 1 {
                 sexStr = "男"
@@ -131,12 +135,16 @@ class MyResumeVM: NSObject {
             let cell = MyResumeInputCell.initWithXIb() as! MyResumeInputCell
             self.myAgeInputCell = cell
             cell.selectionStyle = .none
-            let age = self.myResumeModel?.resume?.age
+            let age = self.myResumeModel?.resume.age
             cell.textfield.keyboardType = .numberPad
             cell.setData(type: "年龄", text: age)
-            cell.textClickBlock = { text in
-                self.myResumeModel?.resume?.age = text
-            }
+//            cell.textClickBlock = { text in
+//                self.myResumeModel?.resume.age = text
+//                guard let model = self.myResumeModel?.resume else {
+//                    return
+//                }
+//                self.vmDelegate?.modificationInfo(param: model.kj.JSONObject())
+//            }
             return cell
         }
         sectionModel.cellModelsArr.append(cellModel)
@@ -151,7 +159,7 @@ class MyResumeVM: NSObject {
         cellModel.cell = {table,index in
             let cell = MyResumePickUpCell.initWithXIb() as! MyResumePickUpCell
             cell.selectionStyle = .none
-            let education = self.myResumeModel?.resume?.education
+            let education = self.myResumeModel?.resume.education
             cell.setData(type: "学历", text: education)
             return cell
         }
@@ -176,7 +184,7 @@ class MyResumeVM: NSObject {
         cellModel.cell = {table,index in
             let cell = MyResumePickUpCell.initWithXIb() as! MyResumePickUpCell
             cell.selectionStyle = .none
-            let education = self.myResumeModel?.resume?.major
+            let education = self.myResumeModel?.resume.major
             cell.setData(type: "专业", text: education)
             return cell
         }
@@ -201,7 +209,7 @@ class MyResumeVM: NSObject {
         cellModel.cell = {table,index in
             let cell = MyResumePickUpCell.initWithXIb() as! MyResumePickUpCell
             cell.selectionStyle = .none
-            let interest_profession = self.myResumeModel?.resume?.interest_profession
+            let interest_profession = self.myResumeModel?.resume.interest_profession
             cell.setData(type: "意向专业", text: interest_profession)
             return cell
         }
@@ -227,7 +235,7 @@ class MyResumeVM: NSObject {
             let cell = MyResumeMoreInputCell.initWithXIb() as! MyResumeMoreInputCell
             self.myIntroduceInputCell = cell
             cell.selectionStyle = .none
-            let interest_profession = self.myResumeModel?.resume?.personal_description
+            let interest_profession = self.myResumeModel?.resume.personal_description
             cell.setData(type: "个人介绍", text: interest_profession)
             return cell
         }
@@ -239,16 +247,16 @@ extension MyResumeVM:PickerDelegate{
     func selectedGender(_ pickerView: BHJPickerView, _ seleStr: String) {
         if self.myPickViewSeleType == .pickViewSex {
             if seleStr == "男" {
-                self.myResumeModel?.resume?.sex = 1
+                self.myResumeModel?.resume.sex = 1
             }else if seleStr == "女" {
-                self.myResumeModel?.resume?.sex = 2
+                self.myResumeModel?.resume.sex = 2
             }
         }else if self.myPickViewSeleType == .education {
-            self.myResumeModel?.resume?.education = seleStr
+            self.myResumeModel?.resume.education = seleStr
         }else if self.myPickViewSeleType == ResumePickViewSeleType.major {
-            self.myResumeModel?.resume?.major = seleStr
+            self.myResumeModel?.resume.major = seleStr
         }else if self.myPickViewSeleType == ResumePickViewSeleType.intentionMajor {
-            self.myResumeModel?.resume?.interest_profession = seleStr
+            self.myResumeModel?.resume.interest_profession = seleStr
         }
         guard let model = self.myResumeModel?.resume else {
             return
