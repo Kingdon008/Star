@@ -125,6 +125,9 @@ extension NetRequestAPI: TargetType {
             param = ["phone":phone]
         case .usercenterRegister(let phone,let verify_code):
             param = ["phone":phone,"verify_code":verify_code]
+            let sysVersion = UIDevice.currentDevice.systemVersion //获取系统版本 例如：9.2
+            let deviceUUID = UIDevice.currentDevice.identifierForVendor?.UUIDString //获取设备唯一标
+            param
         default :
             break
         }
