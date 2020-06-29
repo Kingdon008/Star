@@ -6,6 +6,8 @@
 //  Copyright © 2020 don. All rights reserved.
 //
 
+import AdSupport
+
 public enum NetRequestAPI {
     case homeContent
     case homePosition(id:Int,limit:Int)
@@ -125,9 +127,14 @@ extension NetRequestAPI: TargetType {
             param = ["phone":phone]
         case .usercenterRegister(let phone,let verify_code):
             param = ["phone":phone,"verify_code":verify_code]
-            let sysVersion = UIDevice.currentDevice.systemVersion //获取系统版本 例如：9.2
-            let deviceUUID = UIDevice.currentDevice.identifierForVendor?.UUIDString //获取设备唯一标
-            param
+            let sysVersion = UIDevice.current.systemVersion //获取系统版本 例如：9.2
+            param["sysVersion"] = sysVersion
+            let deviceUUID = UIDevice.current.identifierForVendor?.uuidString
+            param["deviceUUID"] = deviceUUID
+            if ASIdentifierManager.shared().isAdvertisingTrackingEnabled {
+                let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+                param["idfa"] = idfa
+            }
         default :
             break
         }

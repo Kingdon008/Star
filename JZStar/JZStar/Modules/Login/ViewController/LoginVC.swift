@@ -87,7 +87,11 @@ class LoginVC: BaseViewController {
                     AppManager.sharedManager.nextStep()
                 }
             }else{
-                TOAST(message: "登录失败")
+                if let msg = json["data"]["msg"].string {
+                    TOAST(message: "\(msg)")
+                }else{
+                    TOAST(message: "登录失败")
+                }
             }
 
         }) { (error, mess) in
