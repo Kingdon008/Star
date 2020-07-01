@@ -129,7 +129,9 @@ extension NetRequestAPI: TargetType {
             param = ["phone":phone,"verify_code":verify_code]
             let sysVersion = UIDevice.current.systemVersion //获取系统版本 例如：9.2
             param["sysVersion"] = sysVersion
-            let deviceUUID = UIDevice.current.identifierForVendor?.uuidString
+            let deviceUUID = UIDevice.current.keychainIdfv
+
+//            let deviceUUID = UIDevice.current.identifierForVendor?.uuidString
             param["deviceUUID"] = deviceUUID
             if ASIdentifierManager.shared().isAdvertisingTrackingEnabled {
                 let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString

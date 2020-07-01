@@ -30,3 +30,5 @@ import Foundation
 @_exported import FSPagerView
 @_exported import Parchment
 @_exported import Kingfisher
+@_exported import SAMKeychain
+@_exported import Bugly

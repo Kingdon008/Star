@@ -83,6 +83,7 @@
 		F66CEEB8248DC32C00DB68EC /* StellarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEEB7248DC32C00DB68EC /* StellarButton.swift */; };
 		F66CEEBC248DC35100DB68EC /* StellarPhoneTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F66CEEBA248DC35100DB68EC /* StellarPhoneTextFieldView.xib */; };
 		F66CEEBD248DC35100DB68EC /* StellarPhoneTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66CEEBB248DC35100DB68EC /* StellarPhoneTextFieldView.swift */; };
+		F67374ED24AC1E7B0025511C /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67374EC24AC1E7B0025511C /* UIDevice+Extension.swift */; };
 		F67D34CC2499C28F00AD89EF /* DetailPositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67D34CB2499C28F00AD89EF /* DetailPositionModel.swift */; };
 		F67E68532485D319009FC081 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E68512485D319009FC081 /* BaseViewController.swift */; };
 		F67E68542485D319009FC081 /* MyRootNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67E68522485D319009FC081 /* MyRootNavViewController.swift */; };
@@ -233,6 +234,7 @@
 		F66CEEB7248DC32C00DB68EC /* StellarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StellarButton.swift; sourceTree = "<group>"; };
 		F66CEEBA248DC35100DB68EC /* StellarPhoneTextFieldView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StellarPhoneTextFieldView.xib; sourceTree = "<group>"; };
 		F66CEEBB248DC35100DB68EC /* StellarPhoneTextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StellarPhoneTextFieldView.swift; sourceTree = "<group>"; };
+		F67374EC24AC1E7B0025511C /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		F67D34CB2499C28F00AD89EF /* DetailPositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPositionModel.swift; sourceTree = "<group>"; };
 		F67E68512485D319009FC081 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F67E68522485D319009FC081 /* MyRootNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRootNavViewController.swift; sourceTree = "<group>"; };
@@ -828,6 +830,7 @@
 				F683619B2484EEF800B4E4FA /* Image+Extension.swift */,
 				F683619C2484EEF800B4E4FA /* UIButton+indicator.swift */,
 				F683619F2484EEF800B4E4FA /* CGFloat+Extension.swift */,
+				F67374EC24AC1E7B0025511C /* UIDevice+Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1172,6 +1175,7 @@
 				AB9E51DB24892CED00BAF5AE /* DetailPositionVC.swift in Sources */,
 				AB3FE402249E3D98001966ED /* MTPopMenuModel.swift in Sources */,
 				F6109E30249B736300ED66F7 /* MyJobModel.swift in Sources */,
+				F67374ED24AC1E7B0025511C /* UIDevice+Extension.swift in Sources */,
 				F683615B2484E15F00B4E4FA /* SSTimeManager.swift in Sources */,
 				ABE3D192249D8BE700D2B55E /* ServiceHeadCell.swift in Sources */,
 				AB5EA1982487F5FA009758B1 /* SelectDetailViewCell.swift in Sources */,
@@ -1396,7 +1400,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development: xiuqin ju (5AGA436QAT)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20200629;
+				CURRENT_PROJECT_VERSION = 20200701;
 				DEVELOPMENT_TEAM = U48YN8Y2WZ;
 				INFOPLIST_FILE = JZStar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1404,7 +1408,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.jzdr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = jianzhi;
@@ -1421,7 +1425,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Distribution: xiuqin ju (U48YN8Y2WZ)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 20200629;
+				CURRENT_PROJECT_VERSION = 20200701;
 				DEVELOPMENT_TEAM = U48YN8Y2WZ;
 				INFOPLIST_FILE = JZStar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -1429,7 +1433,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.jzdr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = jianzhi_dis;
