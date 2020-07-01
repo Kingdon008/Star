@@ -99,5 +99,11 @@ extension MyJobVC:UITableViewDelegate,UITableViewDataSource {
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentModel = currentArr[indexPath.row]
+        let vc = DetailPositionVC()
+        vc.positionId = currentModel.id
+        navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
