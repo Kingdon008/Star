@@ -24,18 +24,8 @@ class Network: NSObject{
             return "formatted request body = \(body)"
         }),
         logOptions: .verbose)),
-//        NetworkActivityPlugin(networkActivityClosure: { (changeType, targetType) in
-//            switch changeType{
-//            case .began:
-//                //                StellarProgressHUD.showHUD()
-//                break
-//            case.ended:
-//                //                StellarProgressHUD.dissmissHUD()
-//                break
-//            }
-//        }),
-        AuthPlugin(),
-//        CachePolicyPlugin()
+//        AuthPlugin(),
+        CachePolicyPlugin()
     ]
     
     let stubClosure: (_ type: NetRequestAPI) -> Moya.StubBehavior  = { type1 in
@@ -46,7 +36,7 @@ class Network: NSObject{
                         viewController: UIViewController? = nil,
                         success: @escaping Success,
                         failure: @escaping Failure){
-        var plugins = Network.sharedManager.plugins
+        let plugins = Network.sharedManager.plugins
         let requestClosure = { (endpoint: Endpoint, done: MoyaProvider.RequestResultClosure) in
             do {
                 var request = try endpoint.urlRequest()
@@ -75,11 +65,4 @@ class Network: NSObject{
             }
         }
     }
-}
-
-//定义一个结构体，存储认证相关信息
-struct IdentityAndTrust {
-    var identityRef:SecIdentity
-    var trust:SecTrust
-    var certArray:AnyObject
 }

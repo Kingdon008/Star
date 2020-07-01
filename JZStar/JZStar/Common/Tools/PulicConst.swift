@@ -121,11 +121,6 @@ struct Output {
     var textFieldValidateResult: Observable<ValidateResult>!
 }
 
-// MARK: - Notification
-extension Notification.Name {
-    static let Scenes_SetDeviceStatusComplete = Notification.Name(rawValue:"Scenes_SetDeviceStatusComplete")
-}
-
 // MARK: - 协议
 /// 扩展属性
 struct SS<Base> {
