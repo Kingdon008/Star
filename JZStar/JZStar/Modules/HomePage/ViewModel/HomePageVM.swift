@@ -10,6 +10,7 @@ import UIKit
 
 @objc protocol HomePageVMDelegate {
     func pushViewController(vc: UIViewController)
+    func reloadJobTitleView(_ titles:[String])
 }
 
 
@@ -17,7 +18,6 @@ class HomePageVM: NSObject {
     let disposeBag = DisposeBag()
     weak var vmDelegate: HomePageVMDelegate?
     var tableViewDataModel = TableViewDataModel()
-    var reloadTypes:(([String])->Void)?
     var myResumePer:(String)?{
         didSet{
             tableViewDataModel.tableView?.reloadData()
@@ -61,7 +61,7 @@ class HomePageVM: NSObject {
                             titles.append(name)
                         }
                     }
-                    self.reloadTypes?(titles)
+                    self.vmDelegate?.reloadJobTitleView(titles)
                     let sectionModel = self.getSectionModel()
                     sectionModel.cellModelsArr.removeAll()
                     self.completeResumeView()
