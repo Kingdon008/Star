@@ -49,12 +49,13 @@ class PersonalViewController: BaseViewController {
                 AppManager.sharedManager.user.kj_m.convert(from: jsonStr)
                 AppManager.sharedManager.user.save()
                 self.viewModel.userModel = self.userModel
-                self.viewModel.setData {
-                    self.tableview.reloadData()
-                }
+                self.viewModel.tableViewDataModel.tableView?.reloadData()
             }
         }) { (err, mess) in
             
+        }
+        viewModel.setData {
+            self.tableview.reloadData()
         }
     }
 }
