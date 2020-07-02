@@ -10,6 +10,7 @@ import UIKit
 
 class SelectTypeView: UIView {
     private let scrollview = TitleScrollView()
+    private let line = UIView()
     private var titles = [String]()
     var selectBlock:((String)->Void)?
     
@@ -23,8 +24,8 @@ class SelectTypeView: UIView {
             $0.right.equalTo(0)
             $0.top.equalTo(0)
         }
-        let line = UIView()
         line.backgroundColor = UIColor.init(hexString: "#C3CBD3")
+        line.isHidden = true
         self.addSubview(line)
         line.snp.makeConstraints {
             $0.left.bottom.equalTo(0)
@@ -38,6 +39,7 @@ class SelectTypeView: UIView {
     }
     
     func setTitles(_ titles:[String]){
+        line.isHidden = (titles.count > 0 )
         scrollView.setRoomsAndSelectedIndex(rooms: titles) { (title) in
             self.selectBlock?(title)
         }

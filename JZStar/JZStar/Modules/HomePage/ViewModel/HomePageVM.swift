@@ -51,21 +51,23 @@ class HomePageVM: NSObject {
     
     private func loadNet(){
         Network.request(.homeContent, success: { (json) in
-            if let data = json["data"].arrayObject?.kj.modelArray(MerchantModel.self){
-                self.allDataArr = data
-                self.currentName = self.allDataArr.first?.name
-                var titles = [String]()
-                for merchantClassifyModel in self.allDataArr {
-                    if let name =  merchantClassifyModel.name{
-                        titles.append(name)
+            if let status = json["status"].int,status == 1 {
+                if let data = json["data"].arrayObject?.kj.modelArray(MerchantModel.self){
+                    self.allDataArr = data
+                    self.currentName = self.allDataArr.first?.name
+                    var titles = [String]()
+                    for merchantClassifyModel in self.allDataArr {
+                        if let name =  merchantClassifyModel.name{
+                            titles.append(name)
+                        }
                     }
+                    self.reloadTypes?(titles)
+                    let sectionModel = self.getSectionModel()
+                    sectionModel.cellModelsArr.removeAll()
+                    self.completeResumeView()
+                    self.addTypeView()
+                    self.addDetailCells()
                 }
-                self.reloadTypes?(titles)
-                let sectionModel = self.getSectionModel()
-                sectionModel.cellModelsArr.removeAll()
-                self.completeResumeView()
-                self.addTypeView()
-                self.addDetailCells()
             }
         }) { (error, message) in
             

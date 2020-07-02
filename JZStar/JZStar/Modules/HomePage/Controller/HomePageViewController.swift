@@ -40,16 +40,18 @@ class HomePageViewController: BaseViewController {
     
     func setupData(){
         Network.request(.userCenterHome(uid: (AppManager.sharedManager.user.uid ?? "")), success: { (json) in
-            let model = json["data"].description.kj.model(AppUser.self)
-            let jsonstr = json["data"].description
-            print("\(jsonstr)")
-            AppManager.sharedManager.user.kj_m.convert(from: jsonstr)
-            AppManager.sharedManager.user.save()
-            let url = URL(string: model?.headimgurl)
-            self.headIcon.imageView?.kf.setImage(with: url, placeholder: UIImage.init(named: "defaultHeadIcon_big"))
-            self.phoneLabel.text = model?.phone
-            self.profitLabel.text = "\(model?.profit ?? "")元"
-            self.viewModel.myResumePer = model?.resume_percent
+            if let status = json["status"].int,status == 1 {
+                let model = json["data"].description.kj.model(AppUser.self)
+                let jsonstr = json["data"].description
+                print("\(jsonstr)")
+                AppManager.sharedManager.user.kj_m.convert(from: jsonstr)
+                AppManager.sharedManager.user.save()
+                let url = URL(string: model?.headimgurl)
+                self.headIcon.imageView?.kf.setImage(with: url, placeholder: UIImage.init(named: "defaultHeadIcon_big"))
+                self.phoneLabel.text = model?.phone
+                self.profitLabel.text = "\(model?.profit ?? "")元"
+                self.viewModel.myResumePer = model?.resume_percent
+            }
         }) { (err, mess) in
 
         }

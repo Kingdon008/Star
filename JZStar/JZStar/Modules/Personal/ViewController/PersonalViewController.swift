@@ -40,13 +40,15 @@ class PersonalViewController: BaseViewController {
         }).disposed(by: disposeBag)
         
         Network.request(.userCenterHome(uid: (AppManager.sharedManager.user.uid ?? "")), success: { (json) in
-            self.userModel = json["data"].description.kj.model(AppUser.self)
-            let jsonStr = json["data"].description
-            AppManager.sharedManager.user.kj_m.convert(from: jsonStr)
-            AppManager.sharedManager.user.save()
-            self.viewModel.userModel = self.userModel
-            self.viewModel.setData {
-                self.tableview.reloadData()
+            if let status = json["status"].int,status == 1 {
+                self.userModel = json["data"].description.kj.model(AppUser.self)
+                let jsonStr = json["data"].description
+                AppManager.sharedManager.user.kj_m.convert(from: jsonStr)
+                AppManager.sharedManager.user.save()
+                self.viewModel.userModel = self.userModel
+                self.viewModel.setData {
+                    self.tableview.reloadData()
+                }
             }
         }) { (err, mess) in
             
