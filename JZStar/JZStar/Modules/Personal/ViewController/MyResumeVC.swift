@@ -86,6 +86,11 @@ class MyResumeVC: BaseViewController {
             MBProgressHUD.hiddenStellarHud()
             if let status = json["status"].int,status == 1 {
                 TOAST(message: "提交成功")
+                if let resume_percent = json["data"]["resume_percent"].int{
+                    NotificationCenter.default.post(name: .MyResumeCompletePer, object: nil, userInfo: ["MyResumeCompletePer" : "\(resume_percent)"])
+                    self.navigationController?.popViewController(animated: true)
+                }
+                
             }else{
                 TOAST(message: "提交失败")
             }

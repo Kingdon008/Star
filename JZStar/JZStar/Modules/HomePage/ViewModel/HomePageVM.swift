@@ -14,9 +14,15 @@ import UIKit
 
 
 class HomePageVM: NSObject {
+    let disposeBag = DisposeBag()
     weak var vmDelegate: HomePageVMDelegate?
     var tableViewDataModel = TableViewDataModel()
     var reloadTypes:(([String])->Void)?
+    var myResumePer:(String)?{
+        didSet{
+            tableViewDataModel.tableView?.reloadData()
+        }
+    }
     private var allDataArr = [MerchantModel]()
     private var currentData = [DetailMerchantModel]()
     private var currentID:Int?
@@ -34,6 +40,13 @@ class HomePageVM: NSObject {
     
     override init() {
         super.init()
+        NotificationCenter.default.rx.notification (.MyResumeCompletePer)
+        .subscribe(onNext: { [weak self] (nitify) in
+            let info = nitify.userInfo
+            if let per = info?["MyResumeCompletePer"] as? String{
+                self?.myResumePer = per
+            }
+        }).disposed(by: disposeBag)
     }
     
     private func loadNet(){
@@ -98,6 +111,7 @@ class HomePageVM: NSObject {
         selectTypeCellmodel.cell = {table,index in
             let cell = CompleteResumeCell.initWithXIb() as! CompleteResumeCell
             cell.selectionStyle = .none
+            cell.setPer(per: self.myResumePer ?? "")
             return cell
         }
         selectTypeCellmodel.selectRow = { tableview, indexPath in

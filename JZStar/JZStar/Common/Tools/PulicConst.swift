@@ -174,3 +174,9 @@ extension SizeFitProtocol {
     }
 }
 
+// MARK: - Notification
+extension Notification.Name {
+    // 调整颜色、亮度选择设备完成时通知（场景，智能，面板详情）
+    static let MyResumeCompletePer = Notification.Name(rawValue:"MyResumeCompletePer")
+}
+

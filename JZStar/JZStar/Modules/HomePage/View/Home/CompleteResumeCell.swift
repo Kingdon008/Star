@@ -9,7 +9,7 @@
 import UIKit
 
 class CompleteResumeCell: UITableViewCell {
-
+    
     @IBOutlet weak var perLabel: UILabel!
 
     static func initWithXIb() -> UITableViewCell{
@@ -23,7 +23,10 @@ class CompleteResumeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        perLabel.text = "10%"
+    }
+    
+    func setPer(per:String){
+        perLabel.text = "\(per)%"
     }
 
     

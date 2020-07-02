@@ -29,9 +29,20 @@ class PersonalViewController: BaseViewController {
     func setupData(){
         viewModel.tableViewDataModel.targetTableView(myTableview: tableview)
         viewModel.vmDelegate = self
+        NotificationCenter.default.rx.notification (.MyResumeCompletePer)
+        .subscribe(onNext: { [weak self] (nitify) in
+            let info = nitify.userInfo
+            if let per = info?["MyResumeCompletePer"] as? String{
+                self?.userModel?.resume_percent = per
+                self?.viewModel.userModel?.resume_percent = per
+                self?.viewModel.tableViewDataModel.tableView?.reloadData()
+            }
+        }).disposed(by: disposeBag)
+        
         Network.request(.userCenterHome(uid: (AppManager.sharedManager.user.uid ?? "")), success: { (json) in
             self.userModel = json["data"].description.kj.model(AppUser.self)
-            AppManager.sharedManager.user.kj_m.convert(from: json["data"].description)
+            let jsonStr = json["data"].description
+            AppManager.sharedManager.user.kj_m.convert(from: jsonStr)
             AppManager.sharedManager.user.save()
             self.viewModel.userModel = self.userModel
             self.viewModel.setData {
