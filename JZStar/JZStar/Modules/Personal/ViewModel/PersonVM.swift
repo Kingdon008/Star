@@ -15,7 +15,7 @@ import UIKit
 class PersonVM: NSObject {
     weak var vmDelegate: PersonVMDelegate?
     var tableViewDataModel = TableViewDataModel()
-    var setdata:(()->Void)?
+//    var setdata:(()->Void)?
     var userModel:AppUser?
     override init() {
         super.init()
@@ -39,6 +39,10 @@ class PersonVM: NSObject {
         improveResumeView()
         addDetailCells()
         callback()
+    }
+    
+    func vmReload(){
+        tableViewDataModel.tableView?.reloadData()
     }
     
     private func addHeadView(){
@@ -65,7 +69,9 @@ class PersonVM: NSObject {
         selectTypeCellmodel.cell = {table,index in
             let cell = ImproveResumeCell.initWithXIb() as! ImproveResumeCell
             cell.selectionStyle = .none
-            cell.perLabel.text = "\(self.userModel?.resume_percent ?? "")%"
+            if let per = self.userModel?.resume_percent {
+                cell.perLabel.text = "\(per)%"
+            }
             return cell
         }
         selectTypeCellmodel.selectRow = { _ ,_ in

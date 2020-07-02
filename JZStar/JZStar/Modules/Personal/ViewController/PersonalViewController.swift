@@ -11,7 +11,11 @@ import UIKit
 class PersonalViewController: BaseViewController {
     var tableview:UITableView!
     var viewModel = PersonVM()
-    var userModel:AppUser?
+    var userModel:AppUser?{
+        didSet{
+            self.viewModel.userModel = userModel
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -33,9 +37,8 @@ class PersonalViewController: BaseViewController {
         .subscribe(onNext: { [weak self] (nitify) in
             let info = nitify.userInfo
             if let per = info?["MyResumeCompletePer"] as? String{
-                self?.userModel?.resume_percent = per
                 self?.viewModel.userModel?.resume_percent = per
-                self?.viewModel.tableViewDataModel.tableView?.reloadData()
+                self?.viewModel.vmReload()
             }
         }).disposed(by: disposeBag)
         
