@@ -9,7 +9,8 @@
 import UIKit
 
 @objc protocol MyResumeVMDelegate {
-   func modificationInfo(param:[String: Any] )
+    func modificationInfo(param:[String: Any] )
+    func endEditState()
 }
 
 enum ResumePickViewSeleType {
@@ -86,13 +87,13 @@ class MyResumeVM: NSObject {
             cell.selectionStyle = .none
             let name = self.myResumeModel?.resume.name
             cell.setData(type: "姓名", text: name)
-//            cell.textClickBlock = { text in
-//                self.myResumeModel?.resume.name = text
-//                guard let model = self.myResumeModel?.resume else {
-//                    return
-//                }
-//                self.vmDelegate?.modificationInfo(param: model.kj.JSONObject())
-//            }
+            cell.textClickBlock = { text in
+                self.myResumeModel?.resume.name = text
+                guard let model = self.myResumeModel?.resume else {
+                    return
+                }
+                self.vmDelegate?.modificationInfo(param: model.kj.JSONObject())
+            }
             return cell
         }
         sectionModel.cellModelsArr.append(cellModel)
@@ -118,6 +119,7 @@ class MyResumeVM: NSObject {
             return cell
         }
         cellModel.selectRow = { tableview,indexPath in
+            self.vmDelegate?.endEditState()
             self.myPickViewSeleType = .pickViewSex
             self.pickerView.setData(arr: ["男","女"])
             self.pickerView.pickerViewShow()
@@ -138,13 +140,13 @@ class MyResumeVM: NSObject {
             let age = self.myResumeModel?.resume.age
             cell.textfield.keyboardType = .numberPad
             cell.setData(type: "年龄", text: age)
-//            cell.textClickBlock = { text in
-//                self.myResumeModel?.resume.age = text
-//                guard let model = self.myResumeModel?.resume else {
-//                    return
-//                }
-//                self.vmDelegate?.modificationInfo(param: model.kj.JSONObject())
-//            }
+            cell.textClickBlock = { text in
+                self.myResumeModel?.resume.age = text
+                guard let model = self.myResumeModel?.resume else {
+                    return
+                }
+                self.vmDelegate?.modificationInfo(param: model.kj.JSONObject())
+            }
             return cell
         }
         sectionModel.cellModelsArr.append(cellModel)
@@ -164,6 +166,7 @@ class MyResumeVM: NSObject {
             return cell
         }
         cellModel.selectRow = { tableview,indexPath in
+            self.vmDelegate?.endEditState()
             if let arr = self.myResumeModel?.education.map({ model -> String in
                 (model.name ?? "")
             }){
@@ -189,6 +192,7 @@ class MyResumeVM: NSObject {
             return cell
         }
         cellModel.selectRow = { tableview,indexPath in
+            self.vmDelegate?.endEditState()
             if let arr = self.myResumeModel?.interest_profession.map({ model -> String in
                 (model.name ?? "")
             }){
@@ -207,6 +211,7 @@ class MyResumeVM: NSObject {
             return 87
         }
         cellModel.cell = {table,index in
+            self.vmDelegate?.endEditState()
             let cell = MyResumePickUpCell.initWithXIb() as! MyResumePickUpCell
             cell.selectionStyle = .none
             let interest_profession = self.myResumeModel?.resume.interest_profession

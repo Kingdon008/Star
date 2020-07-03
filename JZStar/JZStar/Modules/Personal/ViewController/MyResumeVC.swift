@@ -105,6 +105,10 @@ class MyResumeVC: BaseViewController {
 }
 
 extension MyResumeVC:MyResumeVMDelegate{
+    func endEditState() {
+        view.endEditing(true)
+    }
+    
     func modificationInfo(param: [String : Any]) {
         let model = param.kj.model(ResumeModel.self)
         self.myResumeModel?.resume = model
