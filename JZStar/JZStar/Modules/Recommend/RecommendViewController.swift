@@ -9,7 +9,7 @@
 import UIKit
 
 class RecommendViewController: BaseViewController {
-    var tableview:UITableView?
+    var tableview:UITableView!
     var dataArr:[RecommendProductModel]?
     
     override func viewDidLoad() {
@@ -23,21 +23,32 @@ class RecommendViewController: BaseViewController {
         view.addSubview(navView)
         
         tableview = UITableView(frame: CGRect(x: 0, y: navView.frame.maxY, width: kScreenWidth, height: kScreenHeight - navView.frame.maxY - BOTTOM_TABBAR_HEIGHT - getAllVersionSafeAreaBottomHeight()))
-        tableview?.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: kScreenWidth)
-        if let tb = tableview {
-            view.addSubview(tb)
-            tb.delegate = self
-            tb.dataSource = self
-        }
+        tableview.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: kScreenWidth)
+        view.addSubview(tableview)
+        tableview.delegate = self
+        tableview.dataSource = self
+        tableview.mj_header = MJRefreshNormalHeader.init(refreshingBlock: {
+            Network.request(.boutiqueList(limit: 0), success: { (json) in
+                self.tableview.mj_header?.endRefreshing()
+                if let status = json["status"].int,status == 1 {
+                    self.dataArr = json["data"].arrayObject?.kj.modelArray(RecommendProductModel.self)
+                    self.tableview.reloadData()
+                }
+
+            }) { (error, message) in
+                self.tableview.mj_header?.endRefreshing()
+            }
+        })
         Network.request(.boutiqueList(limit: 0), success: { (json) in
             if let status = json["status"].int,status == 1 {
                 self.dataArr = json["data"].arrayObject?.kj.modelArray(RecommendProductModel.self)
-                self.tableview?.reloadData()
+                self.tableview.reloadData()
             }
-            
+
         }) { (error, message) in
-            
+
         }
+        
     }
     
     lazy var navView:NavView = {
@@ -71,7 +82,7 @@ extension RecommendViewController:UITableViewDelegate,UITableViewDataSource {
         guard let model = self.dataArr?[indexPath.row] else {
             return
         }
-        if let url = model.show_img_url {
+        if let url = model.source_url {
             jumpTo(url: url)
         }else{
             let vc = RecommendDeatailVC()

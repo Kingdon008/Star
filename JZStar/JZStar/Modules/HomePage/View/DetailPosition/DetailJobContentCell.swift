@@ -52,7 +52,25 @@ class DetailJobContentCell: UITableViewCell {
                 companyIcon.kf.setImage(with: url, placeholder: UIImage.init(named: "companyIcon_gray"))
             }
             deliverLabel.text = "\(model.resume_delivery_num ?? "")份投递"
-            contentLabel.text = model.content
+//            contentLabel.text = model.content
+            let html = model.content ?? ""
+            do {
+                if let tempData = html.data(using: String.Encoding.unicode, allowLossyConversion: true) {
+                    let attStr = try NSAttributedString.init(data: tempData, options: [NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html,], documentAttributes: nil)
+                    let tempStr = attStr.string
+                    if let data = tempStr.data(using: String.Encoding.unicode, allowLossyConversion: true) {
+                        let attStr = try NSAttributedString.init(data: data, options: [NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html,], documentAttributes: nil)
+                        print("\(attStr.string)")
+                        contentLabel.attributedText = attStr
+                    }
+                }
+            } catch {
+                contentLabel.text = html
+            }
+            
+            
+            
+
             qqnumLabel.text = "QQ:\(model.company_qq ?? "")"
             allStarIconConstraint.constant = (model.company_score ?? 0) / 5.0 * 68
             allStarIconBg.layer.masksToBounds = true
