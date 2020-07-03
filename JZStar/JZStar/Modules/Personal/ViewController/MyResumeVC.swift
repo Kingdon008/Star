@@ -40,16 +40,19 @@ class MyResumeVC: BaseViewController {
             viewModel.vmDelegate = self
         }
         Network.request(.usercenterMy_resume(uid: (AppManager.sharedManager.user.uid ?? "")), success: { json in
-            self.myResumeModel = json["data"].description.kj.model(MyResumeModel.self)
-            self.viewModel.myResumeModel = self.myResumeModel
-            if self.myResumeModel?.resume.is_attestation ?? false{
-                self.authenticationBtn.setImage(UIImage.init(named: "authenticationResume"), for: .normal)
-            }else{
-                self.authenticationBtn.setImage(UIImage.init(named: "unAuthenticationResume"), for: .normal)
+            if let status = json["status"].int,status == 1 {
+                self.myResumeModel = json["data"].description.kj.model(MyResumeModel.self)
+                self.viewModel.myResumeModel = self.myResumeModel
+                if self.myResumeModel?.resume.is_attestation ?? false{
+                    self.authenticationBtn.setImage(UIImage.init(named: "authenticationResume"), for: .normal)
+                }else{
+                    self.authenticationBtn.setImage(UIImage.init(named: "unAuthenticationResume"), for: .normal)
+                }
+                self.viewModel.setData {
+                    self.tableView?.reloadData()
+                }
             }
-            self.viewModel.setData {
-                self.tableView?.reloadData()
-            }
+            
         }) { (err, mess) in
             
         }

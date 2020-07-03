@@ -38,17 +38,20 @@ class DetailPositionVC: BaseViewController {
             return
         }
         Network.request(.positionContent(id: currentPositionId), success: { (json) in
-            self.positionModel = json["data"].description.kj.model(DetailPositionModel.self)
-            self.viewModel.positionModel = self.positionModel
-            self.viewModel.setData {
-                self.tableView.reloadData()
+            if let status = json["status"].int,status == 1 {
+                self.positionModel = json["data"].description.kj.model(DetailPositionModel.self)
+                self.viewModel.positionModel = self.positionModel
+                self.viewModel.setData {
+                    self.tableView.reloadData()
+                }
+                if self.viewModel.positionModel?.is_collect ?? false{
+                    self.collectBtn.setImage(UIImage.init(named: "collect"), for: .normal)
+                }
+                if self.viewModel.positionModel?.is_signup ?? false{
+                    self.signupBtn.setTitle("已报名", for: .normal)
+                }
             }
-            if self.viewModel.positionModel?.is_collect ?? false{
-                self.collectBtn.setImage(UIImage.init(named: "collect"), for: .normal)
-            }
-            if self.viewModel.positionModel?.is_signup ?? false{
-                self.signupBtn.setTitle("已报名", for: .normal)
-            }
+            
         }) { (error, message) in
             
         }

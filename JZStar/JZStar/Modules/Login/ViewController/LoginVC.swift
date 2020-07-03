@@ -40,19 +40,24 @@ class LoginVC: BaseViewController {
             TOAST(message: "验证码错误")
             return
         }
-        timer = SSTimeManager.shared.addTaskWith(timeInterval: 1, isRepeat: true) { [weak self] (task) in
-            if task.repeatCount < 60 {
-                self?.getPhoneCodeBtn.setTitle("\(60 - task.repeatCount)秒后重试", for: .normal)
-                self?.getPhoneCodeBtn.sizeToFit()
-                self?.getPhoneCodeBtn.isEnabled = false
-            }else{
-                task.isStop = true
-                self?.getPhoneCodeBtn.setTitle("获取验证码", for: .normal)
-                self?.getPhoneCodeBtn.sizeToFit()
-                self?.getPhoneCodeBtn.isEnabled = true
-            }
-        }
+        
         Network.request(.usercenterVerify_code(phone: phone), success: { (json) in
+            if let status = json["status"].int,status == 1 {
+                self.timer = SSTimeManager.shared.addTaskWith(timeInterval: 1, isRepeat: true) { [weak self] (task) in
+                    if task.repeatCount < 60 {
+                        self?.getPhoneCodeBtn.setTitle("\(60 - task.repeatCount)秒后重试", for: .normal)
+                        self?.getPhoneCodeBtn.sizeToFit()
+                        self?.getPhoneCodeBtn.isEnabled = false
+                    }else{
+                        task.isStop = true
+                        self?.getPhoneCodeBtn.setTitle("获取验证码", for: .normal)
+                        self?.getPhoneCodeBtn.sizeToFit()
+                        self?.getPhoneCodeBtn.isEnabled = true
+                    }
+                }
+            }else{
+                TOAST(message: "发送验证码失败")
+            }
             self.phonecodeTextfield.becomeFirstResponder()
         }) { (err, message) in
             TOAST(message: "发送验证码失败")

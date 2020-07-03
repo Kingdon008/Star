@@ -47,11 +47,14 @@ class MyServiceVC: BaseViewController {
         viewModel.tableViewDataModel.targetTableView(myTableview: tableview)
 //        viewModel.vmDelegate = self
         Network.request(.usercenterCustom_service, success: { (json) in
-            self.dataArr = json["data"].arrayObject?.kj.modelArray(AboutUsModel.self) ?? [AboutUsModel]()
-            self.viewModel.dataArr = self.dataArr
-            self.viewModel.setData {
-                self.tableview.reloadData()
+            if let status = json["status"].int,status == 1 {
+                self.dataArr = json["data"].arrayObject?.kj.modelArray(AboutUsModel.self) ?? [AboutUsModel]()
+                self.viewModel.dataArr = self.dataArr
+                self.viewModel.setData {
+                    self.tableview.reloadData()
+                }
             }
+            
         }) { (err, mess) in
             
         }

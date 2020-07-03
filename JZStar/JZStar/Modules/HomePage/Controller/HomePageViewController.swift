@@ -56,8 +56,11 @@ class HomePageViewController: BaseViewController {
 
         }
         Network.request(.homeBanner, success: { (json) in
-            self.bannerModels = json["data"].arrayObject?.kj.modelArray(BannerModel.self)
-            self.pagerView.reloadData()
+            if let status = json["status"].int,status == 1 {
+                self.bannerModels = json["data"].arrayObject?.kj.modelArray(BannerModel.self)
+                self.pagerView.reloadData()
+            }
+            
         }) { (error, message) in
 
         }

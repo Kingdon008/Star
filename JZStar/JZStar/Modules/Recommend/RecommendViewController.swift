@@ -30,8 +30,11 @@ class RecommendViewController: BaseViewController {
             tb.dataSource = self
         }
         Network.request(.boutiqueList(limit: 0), success: { (json) in
-            self.dataArr = json["data"].arrayObject?.kj.modelArray(RecommendProductModel.self)
-            self.tableview?.reloadData()
+            if let status = json["status"].int,status == 1 {
+                self.dataArr = json["data"].arrayObject?.kj.modelArray(RecommendProductModel.self)
+                self.tableview?.reloadData()
+            }
+            
         }) { (error, message) in
             
         }
