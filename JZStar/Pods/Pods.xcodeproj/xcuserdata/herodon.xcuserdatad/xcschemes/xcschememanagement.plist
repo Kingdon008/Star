@@ -14,7 +14,7 @@
 		<key>Bugly.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>28</integer>
+			<integer>31</integer>
 		</dict>
 		<key>CountryPickerView-CountryPickerView.xcscheme</key>
 		<dict>
@@ -159,7 +159,7 @@
 		<key>SAMKeychain.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>31</integer>
+			<integer>29</integer>
 		</dict>
 		<key>SnapKit.xcscheme</key>
 		<dict>
@@ -192,12 +192,12 @@
 		<key>UMCCommon.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>30</integer>
+			<integer>28</integer>
 		</dict>
 		<key>UMCShare.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>29</integer>
+			<integer>30</integer>
 		</dict>
 		<key>libPhoneNumber-iOS.xcscheme</key>
 		<dict>

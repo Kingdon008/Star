@@ -9,7 +9,8 @@
 import UIKit
 
 class MyResumeMoreInputCell: UITableViewCell {
-
+    let disposeBag = DisposeBag()
+    var textClickBlock:((String)->Void)?
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     
@@ -30,6 +31,11 @@ class MyResumeMoreInputCell: UITableViewCell {
         textView.layer.borderWidth = 1
         textView.layer.borderColor = UIColor.init(hexString: "#C3CBD3").cgColor
         textView.layer.cornerRadius = 8
+        textView.rx.text.subscribe { (text) in
+            if let textValue = text.element as? String{
+                self.textClickBlock?(textValue)
+            }
+        }.disposed(by: disposeBag)
     }
 
     func setData(type:String,text:String? = nil){

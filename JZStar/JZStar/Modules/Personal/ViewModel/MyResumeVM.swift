@@ -242,6 +242,13 @@ class MyResumeVM: NSObject {
             cell.selectionStyle = .none
             let interest_profession = self.myResumeModel?.resume.personal_description
             cell.setData(type: "个人介绍", text: interest_profession)
+            cell.textClickBlock = { text in
+                self.myResumeModel?.resume.personal_description = text
+                guard let model = self.myResumeModel?.resume else {
+                    return
+                }
+                self.vmDelegate?.modificationInfo(param: model.kj.JSONObject())
+            }
             return cell
         }
         sectionModel.cellModelsArr.append(cellModel)
@@ -258,10 +265,20 @@ extension MyResumeVM:PickerDelegate{
             }
         }else if self.myPickViewSeleType == .education {
             self.myResumeModel?.resume.education = seleStr
+            self.myResumeModel?.education.forEach({
+                if $0.name == seleStr{
+                    self.myResumeModel?.resume.education_id = $0.id
+                }
+            })
         }else if self.myPickViewSeleType == ResumePickViewSeleType.major {
             self.myResumeModel?.resume.major = seleStr
         }else if self.myPickViewSeleType == ResumePickViewSeleType.intentionMajor {
             self.myResumeModel?.resume.interest_profession = seleStr
+            self.myResumeModel?.interest_profession.forEach({
+                if $0.name == seleStr{
+                    self.myResumeModel?.resume.interest_profession_id = $0.id
+                }
+            })
         }
         guard let model = self.myResumeModel?.resume else {
             return
