@@ -122,7 +122,11 @@ class MyResumeVM: NSObject {
             self.vmDelegate?.endEditState()
             self.myPickViewSeleType = .pickViewSex
             self.pickerView.setData(arr: ["男","女"])
-            self.pickerView.pickerViewShow()
+            var currentIndex = 0
+            if self.myResumeModel?.resume.sex == 2{
+                currentIndex = 1
+            }
+            self.pickerView.pickerViewShow(currentIndex)
         }
         sectionModel.cellModelsArr.append(cellModel)
     }
@@ -172,7 +176,8 @@ class MyResumeVM: NSObject {
             }){
                 self.myPickViewSeleType = .education
                 self.pickerView.setData(arr: arr)
-                self.pickerView.pickerViewShow()
+                let currentIndex = self.myResumeModel?.education.firstIndex(where: {$0.name == self.myResumeModel?.resume.education})
+                self.pickerView.pickerViewShow(currentIndex ?? 0)
             }
         }
         sectionModel.cellModelsArr.append(cellModel)
@@ -198,7 +203,8 @@ class MyResumeVM: NSObject {
             }){
                 self.myPickViewSeleType = .major
                 self.pickerView.setData(arr: arr)
-                self.pickerView.pickerViewShow()
+                let currentIndex = self.myResumeModel?.interest_profession.firstIndex(where: {$0.name == self.myResumeModel?.resume.major})
+                self.pickerView.pickerViewShow(currentIndex ?? 0)
             }
         }
         sectionModel.cellModelsArr.append(cellModel)
@@ -224,7 +230,8 @@ class MyResumeVM: NSObject {
             }){
                 self.myPickViewSeleType = .intentionMajor
                 self.pickerView.setData(arr: arr)
-                self.pickerView.pickerViewShow()
+                let currentIndex = self.myResumeModel?.interest_profession.firstIndex(where: {$0.name == self.myResumeModel?.resume.interest_profession})
+                self.pickerView.pickerViewShow(currentIndex ?? 0)
             }
         }
         sectionModel.cellModelsArr.append(cellModel)

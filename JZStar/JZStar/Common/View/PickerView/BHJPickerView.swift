@@ -63,7 +63,7 @@ class BHJPickerView: UIView , UIPickerViewDelegate, UIPickerViewDataSource{
         genderPicker.backgroundColor = UIColor.init(red: 230/255.0, green: 230/255.0, blue: 230/255.0, alpha: 1)
         self.addSubview(genderPicker)
         dataArray = ["男","女"]
-        self.pickerView(genderPicker, didSelectRow: 0, inComponent: 0)
+        selectedRowPickerView(0)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -88,8 +88,8 @@ class BHJPickerView: UIView , UIPickerViewDelegate, UIPickerViewDataSource{
     }
     
     /// 展示pickerView
-    public func pickerViewShow() {
-        self.pickerView(genderPicker, didSelectRow: 0, inComponent: 0)
+    public func pickerViewShow(_ row:Int = 0) {
+        selectedRowPickerView(row)
         let keyWindow = UIApplication.shared.keyWindow
         keyWindow?.addSubview(self.backgroundButton)
         keyWindow?.addSubview(self)
@@ -144,13 +144,18 @@ class BHJPickerView: UIView , UIPickerViewDelegate, UIPickerViewDataSource{
         return title
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedGender = dataArray[row]
+    }
+    
     /// 选择列、行
     ///
     /// - Parameters:
     ///   - pickerView: pickerV/   - row: 行
     ///   - component: 列
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedGender = dataArray[row]
+    func selectedRowPickerView(_ row: Int) {
+        genderPicker.selectRow(row, inComponent: 0, animated: true)
+        genderPicker.reloadAllComponents()
     }
 }
 
