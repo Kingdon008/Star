@@ -74,6 +74,7 @@ class OpinionAndComplaintVC: BaseViewController {
         Network.request(.usercenterIdea(type: ideaType, content: textView.text,uid:(AppManager.sharedManager.user.uid ?? "")), success: { (json) in
             let status = json["status"].intValue
             if status == 1{
+                self.textView.text = ""
                TOAST(message: "提交成功")
             }else{
                 TOAST(message: "提交失败")

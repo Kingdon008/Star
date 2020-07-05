@@ -26,23 +26,24 @@ class LeftDialogueCell: UITableViewCell {
 
     func setDialogueText(_ text:String){
         let font = UIFont.systemFont(ofSize: 14)
-        let dialogueTextRect = String.ss.getTextRectSize(text: text,font: font,size: CGSize.init(width: 246, height: kScreenHeight))
-        var width:CGFloat = 0
-        var height:CGFloat = 0
-        if dialogueTextRect.width <  246{
-            width = dialogueTextRect.width
-            height = 20
+        let maxWidth = kScreenWidth - 90 - 60 - 40
+        let dialogueTextRect = String.ss.getTextRectSize(text: text,font: font,size: CGSize.init(width: maxWidth, height: kScreenHeight))
+        var dialogueWidth:CGFloat = 0
+        var dialogueHeight:CGFloat = 0
+        if dialogueTextRect.width <  maxWidth{
+            dialogueWidth = dialogueTextRect.width
+            dialogueHeight = dialogueTextRect.height
         }else{
-            width = 246
-            height = dialogueTextRect.height
+            dialogueWidth = maxWidth
+            dialogueHeight = dialogueTextRect.height
         }
         let defaultServiceIcon = UIImageView()
         defaultServiceIcon.frame = CGRect.init(x: 20, y: 0, width: 32, height: 32)
         defaultServiceIcon.image = UIImage.init(named: "default_service")
         contentView.addSubview(defaultServiceIcon)
         let dialogueBg = UIView()
-        let dialogueBgWidth = width + 40
-        let dialogueBgHeight = height + 16
+        let dialogueBgWidth = dialogueWidth + 40
+        let dialogueBgHeight = dialogueHeight + 16
         dialogueBg.frame = CGRect.init(x: 60, y: 0, width: dialogueBgWidth, height: dialogueBgHeight)
         dialogueBg.backgroundColor = UIColor.red
         dialogueBg.backgroundColor = UIColor.init(hexString: "#FFFFFF")
@@ -53,13 +54,14 @@ class LeftDialogueCell: UITableViewCell {
         let dialogueLabel = UILabel.init()
         dialogueLabel.text = text
         dialogueLabel.textColor = UIColor.init(hexString: "#333333")
+        dialogueLabel.numberOfLines = 0
         dialogueLabel.font = font
         dialogueBg.addSubview(dialogueLabel)
         dialogueLabel.snp.makeConstraints { (make) in
             make.top.equalTo(8)
             make.left.equalTo(20)
-            make.width.equalTo(width+4)
-            make.height.equalTo(height)
+            make.width.equalTo(dialogueWidth + 2)
+            make.height.equalTo(dialogueHeight)
         }
     }
     

@@ -60,11 +60,14 @@ class ServiceVM: NSObject {
     }
     
     func adddialogueView(dia:AboutUsModel){
+        let diaFont = UIFont.systemFont(ofSize: 14)
+
         let sectionModel = getSectionModel()
         //problem
+        let problemheight = String.ss.getTextRectSize(text: dia.problem ?? "",font: diaFont,size: CGSize.init(width: kScreenWidth - 90 - 60 - 40, height: kScreenHeight)).height
         let problemcellModel = CellModel()
         problemcellModel.cellHeight = {table,index in
-            return 60
+            return problemheight + 16 + 16
         }
         problemcellModel.cell = {table,index in
             let cell = RightDialogueCell.initWithXIb() as! RightDialogueCell
@@ -75,11 +78,10 @@ class ServiceVM: NSObject {
         sectionModel.cellModelsArr.append(problemcellModel)
         
         //answer
-        let diaFont = UIFont.systemFont(ofSize: 14)
-        let answerheight = String.ss.getTextRectSize(text: dia.answer ?? "",font: diaFont,size: CGSize.init(width: kScreenWidth - 89 - 40, height: kScreenHeight)).height
+        let answerheight = String.ss.getTextRectSize(text: dia.answer ?? "",font: diaFont,size: CGSize.init(width: kScreenWidth - 90 - 60 - 40, height: kScreenHeight)).height
         let askcellModel = CellModel()
         askcellModel.cellHeight = {table,index in
-            return answerheight + 24
+            return answerheight + 16 + 16
         }
         askcellModel.cell = {table,index in
             let cell = LeftDialogueCell.initWithXIb() as! LeftDialogueCell
@@ -90,6 +92,8 @@ class ServiceVM: NSObject {
         sectionModel.cellModelsArr.append(askcellModel)
         
         tableViewDataModel.tableView?.reloadData()
+        let lastIndex = IndexPath.init(row: sectionModel.cellModelsArr.count - 1, section: 0)
+        tableViewDataModel.tableView?.scrollToRow(at: lastIndex, at: .bottom, animated: true)
     }
     
 }

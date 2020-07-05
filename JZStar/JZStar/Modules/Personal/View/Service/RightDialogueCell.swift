@@ -27,7 +27,17 @@ class RightDialogueCell: UITableViewCell {
     func setDialogueText(_ text:String){
         let dialogue = "  \(text)  "
         let font = UIFont.systemFont(ofSize: 14)
-        let width = String.ss.getTextRectSize(text: dialogue,font: font,size: CGSize.init(width: 246, height: kScreenHeight)).width
+        let maxWidth = kScreenWidth - 90 - 60 - 40
+        let dialogueTextRect = String.ss.getTextRectSize(text: dialogue,font: font,size: CGSize.init(width: maxWidth, height: kScreenHeight))
+        var dialogueWidth:CGFloat = 0
+        var dialogueHeight:CGFloat = 0
+        if dialogueTextRect.width <  maxWidth{
+            dialogueWidth = dialogueTextRect.width
+            dialogueHeight = dialogueTextRect.height
+        }else{
+            dialogueWidth = maxWidth
+            dialogueHeight = dialogueTextRect.height
+        }
         
         let defaultServiceIcon = UIImageView()
         defaultServiceIcon.frame = CGRect.init(x: kScreenWidth - 20 - 32, y: 0, width: 32, height: 32)
@@ -35,21 +45,26 @@ class RightDialogueCell: UITableViewCell {
         defaultServiceIcon.kf.setImage(with: url, placeholder: UIImage.init(named: "defaultHeadIcon_big"))
         contentView.addSubview(defaultServiceIcon)
         
+        let dialogueBgWidth = dialogueWidth + 40
+        let dialogueBgHeight = dialogueHeight + 16
         let dialogueBg = UIView()
-        dialogueBg.frame = CGRect.init(x: kScreenWidth - 64 - width, y: 0, width: width, height: 36)
+        dialogueBg.frame = CGRect.init(x: kScreenWidth - 64 - dialogueBgWidth, y: 0, width: dialogueBgWidth, height: dialogueBgHeight)
         dialogueBg.backgroundColor = UIColor.red
         dialogueBg.backgroundColor = UIColor.init(hexString: "#FFA300")
         contentView.addSubview(dialogueBg)
-        addCorner(conrners: [.topLeft,.bottomRight,.bottomLeft], radius: 20, bgView: dialogueBg,bounds:CGRect.init(x: 0, y: 0, width: width, height: 36))
+        addCorner(conrners: [.topLeft,.bottomRight,.bottomLeft], radius: 20, bgView: dialogueBg,bounds:CGRect.init(x: 0, y: 0, width: dialogueBgWidth, height: dialogueBgHeight))
         
         let dialogueLabel = UILabel.init()
         dialogueLabel.text = dialogue
         dialogueLabel.textColor = UIColor.init(hexString: "#333333")
         dialogueLabel.font = font
-        dialogueLabel.numberOfLines = 1
+        dialogueLabel.numberOfLines = 0
         dialogueBg.addSubview(dialogueLabel)
         dialogueLabel.snp.makeConstraints { (make) in
-            make.center.equalTo(dialogueBg.snp.center)
+            make.top.equalTo(8)
+            make.left.equalTo(20)
+            make.width.equalTo(dialogueWidth + 2)
+            make.height.equalTo(dialogueHeight)
         }
     }
     
