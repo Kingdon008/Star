@@ -35,11 +35,11 @@ class AboutUsVC: BaseViewController {
             view.addSubview(tb)
             tb.delegate = self
             tb.dataSource = self
-            view.addSubview(versionLabel)
-            versionLabel.snp.makeConstraints { (make) in
-                make.top.equalTo(tb.snp.bottom)
-                make.centerX.equalTo(tb.snp.centerX)
-            }
+//            view.addSubview(versionLabel)
+//            versionLabel.snp.makeConstraints { (make) in
+//                make.top.equalTo(tb.snp.bottom)
+//                make.centerX.equalTo(tb.snp.centerX)
+//            }
         }
     }
     
@@ -47,11 +47,11 @@ class AboutUsVC: BaseViewController {
         Network.request(.usercenterAboutus, success: { (json) in
             if let arr = json["data"].arrayObject?.kj.modelArray(AboutUsModel.self){
                 self.dataArr = arr
-                for model in arr{
-                    if model.problem == "当前版本"{
-                        self.versionLabel.text = "当前版本V\(model.answer ?? "")"
-                    }
-                }
+//                for model in arr{
+//                    if model.problem == "当前版本"{
+//                        self.versionLabel.text = "当前版本V\(model.answer ?? "")"
+//                    }
+//                }
                 self.dataArr = arr.filter({
                     $0.problem != "当前版本"
                 })
@@ -70,10 +70,10 @@ class AboutUsVC: BaseViewController {
         return view
     }()
     
-    lazy var versionLabel:UILabel = {
-        let view = UILabel()
-        return view
-    }()
+//    lazy var versionLabel:UILabel = {
+//        let view = UILabel()
+//        return view
+//    }()
     
 }
 
@@ -90,7 +90,7 @@ extension AboutUsVC:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = LeftTitleAndArrowCell.initWithXIb() as! LeftTitleAndArrowCell
         if let model = self.dataArr?[indexPath.row]{
-            cell.leftLabel.text = model.problem
+            cell.leftLabel.attributedText = model.problem?.ss.transformStringToAttributedString()
         }
         cell.selectionStyle = .none
         return cell

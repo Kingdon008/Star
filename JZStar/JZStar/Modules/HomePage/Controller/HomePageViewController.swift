@@ -108,9 +108,8 @@ class HomePageViewController: BaseViewController {
     }()
     
     @IBAction func headBtnClick(_ sender: Any) {
-        AppManager.sharedManager.mainVc.myViewState = ViewState.kPersonalVc
+        AppManager.sharedManager.setMainViewState(state: ViewState.kPersonalVc)
     }
-    
     
 }
 

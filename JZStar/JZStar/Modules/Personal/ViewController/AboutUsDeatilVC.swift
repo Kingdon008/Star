@@ -27,7 +27,7 @@ class AboutUsDeatilVC: BaseViewController {
         }
         view.addSubview(navView)
         
-        textview.text = model?.answer ?? ""
+        textview.attributedText = (model?.answer ?? "").ss.transformStringToAttributedString()
         textview.isUserInteractionEnabled = false
         textview.layer.borderWidth = 1
         textview.layer.borderColor = UIColor.init(hexString: "#C3CBD3").cgColor

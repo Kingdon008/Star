@@ -24,6 +24,7 @@ class RecommendViewController: BaseViewController {
         
         tableview = UITableView(frame: CGRect(x: 0, y: navView.frame.maxY, width: kScreenWidth, height: kScreenHeight - navView.frame.maxY - BOTTOM_TABBAR_HEIGHT - getAllVersionSafeAreaBottomHeight()))
         tableview.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: kScreenWidth)
+        tableview.backgroundColor = UIColor.init(hexString: "#F3F3F3")
         view.addSubview(tableview)
         tableview.delegate = self
         tableview.dataSource = self
@@ -66,13 +67,18 @@ extension RecommendViewController:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 196
+        if let model = self.dataArr?[indexPath.row]{
+            let str = model.content ?? ""
+            let rect = String.ss.getTextRectSize(text: str,font: UIFont.systemFont(ofSize: 12),size: CGSize.init(width: kScreenWidth - 32 - 32, height: CGFloat(MAXFLOAT)))
+            return 20 + 126 + 8 + 17 + 2 + rect.height + 12
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = RecommendDetailCell.initWithXIb() as! RecommendDetailCell
         if let model = self.dataArr?[indexPath.row]{
-            cell.setData(data: model, contentLine: 2)
+            cell.setData(data: model, contentLine: 0)
         }
         cell.selectionStyle = .none
         return cell

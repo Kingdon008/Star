@@ -46,32 +46,14 @@ class DetailJobContentCell: UITableViewCell {
     func setData(data:Any){
            if let model = data as? DetailPositionModel{
             self.detailPositionModel = model
-            companyNameLabel.text = model.company_name ?? ""
+            companyNameLabel.attributedText = (model.company_name ?? "").ss.transformStringToAttributedString()
             if let companyImageUrl = model.company_icon{
                 let url = URL(string: companyImageUrl)
                 companyIcon.kf.setImage(with: url, placeholder: UIImage.init(named: "companyIcon_gray"))
             }
-            deliverLabel.text = "\(model.resume_delivery_num ?? "")份投递"
-//            contentLabel.text = model.content
-            let html = model.content ?? ""
-            do {
-                if let tempData = html.data(using: String.Encoding.unicode, allowLossyConversion: true) {
-                    let attStr = try NSAttributedString.init(data: tempData, options: [NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html,], documentAttributes: nil)
-                    let tempStr = attStr.string
-                    if let data = tempStr.data(using: String.Encoding.unicode, allowLossyConversion: true) {
-                        let attStr = try NSAttributedString.init(data: data, options: [NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html,], documentAttributes: nil)
-                        print("\(attStr.string)")
-                        contentLabel.attributedText = attStr
-                    }
-                }
-            } catch {
-                contentLabel.text = html
-            }
-            
-            
-            
-
-            qqnumLabel.text = "QQ:\(model.company_qq ?? "")"
+            deliverLabel.attributedText = "\(model.resume_delivery_num ?? "")份投递".ss.transformStringToAttributedString()
+            contentLabel.attributedText = (model.content ?? "").ss.transformStringToAttributedString()
+            qqnumLabel.attributedText = "QQ:\(model.company_qq ?? "")".ss.transformStringToAttributedString()
             allStarIconConstraint.constant = (model.company_score ?? 0) / 5.0 * 68
             allStarIconBg.layer.masksToBounds = true
         }

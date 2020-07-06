@@ -158,6 +158,34 @@ extension SS where Base == String {
         }
         return "\(sum)"
     }
+    
+    func transformStringToAttributedString() -> NSAttributedString{
+        let html = base as String
+//        do {
+//            if let tempData = html.data(using: String.Encoding.unicode, allowLossyConversion: true) {
+//                let attStr = try NSAttributedString.init(data: tempData, options: [NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html,], documentAttributes: nil)
+//                let tempStr = attStr.string
+//                if let data = tempStr.data(using: String.Encoding.unicode, allowLossyConversion: true) {
+//                    let attStr = try NSAttributedString.init(data: data, options: [NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html,], documentAttributes: nil)
+//                    return attStr
+//                }
+//            }
+//        } catch {
+//            return NSAttributedString()
+//        }
+        do {
+            if let tempData = html.data(using: String.Encoding.unicode, allowLossyConversion: true) {
+                let attStr = try NSAttributedString.init(data: tempData, options: [NSAttributedString.DocumentReadingOptionKey.documentType : NSAttributedString.DocumentType.html,], documentAttributes: nil)
+                return attStr
+            }
+        } catch {
+            return NSAttributedString()
+        }
+        
+        return NSAttributedString()
+    }
+    
+    
 }
 
 

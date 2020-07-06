@@ -17,6 +17,7 @@ enum AppMangerStep:Int{
 }
 
 class AppManager: NSObject {
+    private var mainVc:MainViewController?
     static let sharedManager = AppManager.init()
     var currentStep:AppMangerStep?{
         didSet{
@@ -25,7 +26,7 @@ class AppManager: NSObject {
             }
         }
     }
-    var mainVc = MainViewController()
+    
     var currVc:UIViewController?
     
     func startWithAppDelegate(appDelegate:AppDelegate){
@@ -87,11 +88,19 @@ class AppManager: NSObject {
             switchToVC(vc: nav)
         }
     }
-           
+    
+    func setMainViewState(state:ViewState){
+        
+    }
     
     private func configureMain(){
-        let nav = MyRootNavViewController(rootViewController: mainVc)
-        switchToVC(vc: nav)
+        self.mainVc = MainViewController()
+        if let main = self.mainVc{
+            let nav = MyRootNavViewController(rootViewController: main)
+            switchToVC(vc: nav)
+        }else{
+            nextStep()
+        }
     }
     
     private func switchToVC(vc:UIViewController){

@@ -25,16 +25,21 @@ class RecommendDetailCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
 
     func setData(data:Any,contentLine:Int){
         if let model = data as? RecommendProductModel{
             let url = URL(string: model.show_img_url)
             icon.kf.setImage(with: url)
-            titleLabel.text = model.title
-            contentLabel.text = model.content
+            titleLabel.attributedText = model.title?.ss.transformStringToAttributedString()
+            contentLabel.attributedText = model.content?.ss.transformStringToAttributedString()
             contentLabel.numberOfLines = contentLine
         }
+    }
+    
+    func getMaxY()->CGFloat{
+        return contentLabel.frame.maxY + 12
     }
     
 }
