@@ -37,7 +37,7 @@ class PersonalDetailCell: UITableViewCell {
         self.type = type
         if type == .myJob {
             nameLabel.text = "我的职位"
-            icon.image = UIImage.init(named: "personal_aboutus")
+            icon.image = UIImage.init(named: "personal_job")
         }else if type == .service {
             nameLabel.text = "我的客服中心"
             icon.image = UIImage.init(named: "personal_service")
