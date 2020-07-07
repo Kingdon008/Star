@@ -90,7 +90,7 @@ class AppManager: NSObject {
     }
     
     func setMainViewState(state:ViewState){
-        
+        mainVc?.myViewState = state
     }
     
     private func configureMain(){
