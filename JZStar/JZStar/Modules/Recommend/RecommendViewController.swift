@@ -70,6 +70,9 @@ extension RecommendViewController:UITableViewDelegate,UITableViewDataSource {
         if let model = self.dataArr?[indexPath.row]{
             let str = model.content ?? ""
             let rect = String.ss.getTextRectSize(text: str,font: UIFont.systemFont(ofSize: 12),size: CGSize.init(width: kScreenWidth - 32 - 32, height: CGFloat(MAXFLOAT)))
+            if rect.height >= 28 {
+                return 20 + 126 + 8 + 17 + 2 + 28 + 12
+            }
             return 20 + 126 + 8 + 17 + 2 + rect.height + 12
         }
         return 0
@@ -78,7 +81,7 @@ extension RecommendViewController:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = RecommendDetailCell.initWithXIb() as! RecommendDetailCell
         if let model = self.dataArr?[indexPath.row]{
-            cell.setData(data: model, contentLine: 0)
+            cell.setData(data: model, contentLine: 2)
         }
         cell.selectionStyle = .none
         return cell

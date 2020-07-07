@@ -43,10 +43,14 @@ class MyResumeVC: BaseViewController {
             if let status = json["status"].int,status == 1 {
                 self.myResumeModel = json["data"].description.kj.model(MyResumeModel.self)
                 self.viewModel.myResumeModel = self.myResumeModel
-                if self.myResumeModel?.resume.is_attestation ?? false{
+                if self.myResumeModel?.resume.is_attestation == 1{
                     self.authenticationBtn.setImage(UIImage.init(named: "authenticationResume"), for: .normal)
-                }else{
+                }else if self.myResumeModel?.resume.is_attestation == 0{
                     self.authenticationBtn.setImage(UIImage.init(named: "unAuthenticationResume"), for: .normal)
+                }else if self.myResumeModel?.resume.is_attestation == 3{
+                    self.authenticationBtn.setImage(UIImage.init(named: "checking"), for: .normal)
+                }else if self.myResumeModel?.resume.is_attestation == 2{
+                    self.authenticationBtn.setImage(UIImage.init(named: "nopass"), for: .normal)
                 }
                 self.viewModel.setData {
                     self.tableView?.reloadData()

@@ -35,6 +35,7 @@ class RecommendDetailCell: UITableViewCell {
             titleLabel.attributedText = model.title?.ss.transformStringToAttributedString()
             contentLabel.attributedText = model.content?.ss.transformStringToAttributedString()
             contentLabel.numberOfLines = contentLine
+            contentLabel.lineBreakMode = .byTruncatingTail
         }
     }
     

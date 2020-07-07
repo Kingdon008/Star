@@ -90,6 +90,7 @@ class BHJPickerView: UIView , UIPickerViewDelegate, UIPickerViewDataSource{
     /// 展示pickerView
     public func pickerViewShow(_ row:Int = 0) {
         selectedRowPickerView(row)
+        selectedGender = dataArray[row]
         let keyWindow = UIApplication.shared.keyWindow
         keyWindow?.addSubview(self.backgroundButton)
         keyWindow?.addSubview(self)

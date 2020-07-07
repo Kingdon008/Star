@@ -37,7 +37,7 @@ class DetailPositionVC: BaseViewController {
         guard let currentPositionId = self.positionId  else {
             return
         }
-        Network.request(.positionContent(id: currentPositionId), success: { (json) in
+        Network.request(.positionContent(uid:AppManager.sharedManager.user.uid ?? "" ,id: currentPositionId), success: { (json) in
             if let status = json["status"].int,status == 1 {
                 self.positionModel = json["data"].description.kj.model(DetailPositionModel.self)
                 self.viewModel.positionModel = self.positionModel

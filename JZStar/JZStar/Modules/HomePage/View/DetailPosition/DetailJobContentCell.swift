@@ -62,6 +62,13 @@ class DetailJobContentCell: UITableViewCell {
     @IBAction func copyAction(_ sender: Any) {
         let pas = UIPasteboard.general
         pas.string = self.detailPositionModel?.company_qq ?? ""
+        TOAST(message: "已复制qq号")
     }
     
+    @IBAction func connectAction(_ sender: Any) {
+        if let qqstr = detailPositionModel?.company_qq{
+            jumpTo(url: "mqq://im/chat?chat_type=wpa&uin=\(qqstr)&version=1&src_type=web")
+        }
+        
+    }
 }

@@ -29,9 +29,9 @@ class AboutUsDeatilVC: BaseViewController {
         
         textview.attributedText = (model?.answer ?? "").ss.transformStringToAttributedString()
         textview.isUserInteractionEnabled = false
-        textview.layer.borderWidth = 1
-        textview.layer.borderColor = UIColor.init(hexString: "#C3CBD3").cgColor
-        textview.layer.cornerRadius = 8
+//        textview.layer.borderWidth = 1
+//        textview.layer.borderColor = UIColor.init(hexString: "#C3CBD3").cgColor
+//        textview.layer.cornerRadius = 8
     }
     
     func setupData(){

@@ -12,7 +12,7 @@ public enum NetRequestAPI {
     case homeContent
     case homePosition(id:Int,limit:Int)
     case homeBanner
-    case positionContent(id:Int)
+    case positionContent(uid:String,id:Int)
     case boutiqueList(limit:Int)
     case userCenterHome(uid:String)
     case userCenterPosition(uid:String)
@@ -107,8 +107,8 @@ extension NetRequestAPI: TargetType {
         switch self {
         case .homePosition(let id, let limit):
             param = ["id":id,"limit":limit]
-        case .positionContent(let id):
-            param = ["id":id]
+        case .positionContent(let uid,let id):
+            param = ["id":id,"uid":uid]
         case .boutiqueList(let limit):
             param = ["limit":limit]
         case .userCenterHome(let uid):

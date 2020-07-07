@@ -27,10 +27,10 @@ class AboutUsVC: BaseViewController {
         }
         view.addSubview(navView)
         
-        tableview = UITableView(frame: CGRect(x: 0, y: navView.frame.maxY + 12, width: kScreenWidth, height: 252))
+        tableview = UITableView(frame: CGRect(x: 0, y: navView.frame.maxY + 12, width: kScreenWidth, height: kScreenHeight - (navView.frame.maxY + 12)))
         tableview?.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: kScreenWidth)
         tableview?.separatorColor = UIColor.init(hexString: "#C3CBD3")
-        tableview?.separatorInset = UIEdgeInsets.init(top: 0, left: 20, bottom: 0, right: 20)
+//        tableview?.separatorInset = UIEdgeInsets.init(top: 0, left: 20, bottom: 0, right: 20)
         if let tb = tableview {
             view.addSubview(tb)
             tb.delegate = self
@@ -52,9 +52,9 @@ class AboutUsVC: BaseViewController {
 //                        self.versionLabel.text = "当前版本V\(model.answer ?? "")"
 //                    }
 //                }
-                self.dataArr = arr.filter({
-                    $0.problem != "当前版本"
-                })
+//                self.dataArr = arr.filter({
+//                    $0.problem != "当前版本"
+//                })
                 self.tableview?.reloadData()
             }
             
@@ -93,6 +93,7 @@ extension AboutUsVC:UITableViewDelegate,UITableViewDataSource {
             cell.leftLabel.attributedText = model.problem?.ss.transformStringToAttributedString()
         }
         cell.selectionStyle = .none
+        cell.separatorInset = UIEdgeInsets.init(top: 0, left: 20, bottom: 0, right: 20)
         return cell
     }
     

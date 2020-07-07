@@ -58,6 +58,7 @@ class NavView: UIView {
     }
     
     func setTitle(title:String,imageName:String = ""){
+//        titleBtn.setAttributedTitle(imageName.ss.transformStringToAttributedString(), for: .normal)
         titleBtn.setTitle(title, for: .normal)
         let MAX_TEXT_WIDTH = kScreenWidth - 110.fit
         if imageName != "" {

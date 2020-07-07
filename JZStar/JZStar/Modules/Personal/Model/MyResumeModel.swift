@@ -38,7 +38,7 @@ public class ResumeModel: Convertible {
     var interest_profession_id:Int?
     var interest_profession:String?
     var personal_description:String?
-    var is_attestation:Bool?
+    var is_attestation:Int?
     
     required public init() {
         // Intentionally unimplemented...

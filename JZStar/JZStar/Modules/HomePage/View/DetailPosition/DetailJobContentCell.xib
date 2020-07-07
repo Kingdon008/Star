@@ -89,6 +89,9 @@
                                 <state key="normal" title="直接联系">
                                     <color key="titleColor" red="1" green="0.63921568627450975" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="connectAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eTJ-CF-mMU"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28C-hs-ZOz">
                                 <rect key="frame" x="16" y="164" width="315" height="1"/>
