@@ -68,16 +68,21 @@ class DetailPositionVC: BaseViewController {
     @IBAction func signypAction(_ sender: Any) {
         if let position_id = self.positionModel?.id{
             Network.request(.usercenterSave_position(uid: (AppManager.sharedManager.user.uid ?? ""), status_id: 1, position_id: position_id), success: { (json) in
-                let isSucc = json["data"].boolValue
-                if isSucc{
-                    self.viewModel.positionModel?.is_signup = !(self.viewModel.positionModel?.is_signup ?? false)
-                    if self.viewModel.positionModel?.is_signup ?? false{
-                        self.signupBtn.setTitle("已报名", for: .normal)
-                        TOAST(message: "已报名")
+                if let status = json["status"].int,let msg = json["msg"].string {
+                    if status == 1 {
+                        self.viewModel.positionModel?.is_signup = !(self.viewModel.positionModel?.is_signup ?? false)
+                        if self.viewModel.positionModel?.is_signup ?? false{
+                            self.signupBtn.setTitle("已报名", for: .normal)
+                            TOAST(message: "已报名")
+                        }else{
+                            self.signupBtn.setTitle("立即报名", for: .normal)
+                            TOAST(message: "已取消报名")
+                        }
                     }else{
-                        self.signupBtn.setTitle("立即报名", for: .normal)
-                        TOAST(message: "已取消报名")
+                        TOAST(message: "\(msg)")
                     }
+                }else{
+                    TOAST(message: "网络错误")
                 }
             }) { (error, mess) in
                 TOAST(message: "网络错误")
@@ -89,17 +94,25 @@ class DetailPositionVC: BaseViewController {
     @IBAction func cooectAction(_ sender: Any) {
         if let position_id = self.positionModel?.id{
             Network.request(.usercenterSave_position(uid: (AppManager.sharedManager.user.uid ?? ""), status_id: 4, position_id: position_id), success: { (json) in
-                let isSucc = json["data"].boolValue
-                if isSucc{
-                    self.viewModel.positionModel?.is_collect = !(self.viewModel.positionModel?.is_collect ?? false)
-                    if self.viewModel.positionModel?.is_collect ?? false{
-                        self.collectBtn.setImage(UIImage.init(named: "collect"), for: .normal)
-                        TOAST(message: "收藏成功")
+                
+                if let status = json["status"].int{
+                    if status == 1 {
+                        self.viewModel.positionModel?.is_collect = !(self.viewModel.positionModel?.is_collect ?? false)
+                        if self.viewModel.positionModel?.is_collect ?? false{
+                            self.collectBtn.setImage(UIImage.init(named: "collect"), for: .normal)
+                            TOAST(message: "收藏成功")
+                        }else{
+                            self.collectBtn.setImage(UIImage.init(named: "uncollect"), for: .normal)
+                            TOAST(message: "取消收藏")
+                        }
                     }else{
-                        self.collectBtn.setImage(UIImage.init(named: "uncollect"), for: .normal)
-                        TOAST(message: "取消收藏")
+                        let msg = json["msg"].string ?? ""
+                        TOAST(message: "\(msg)")
                     }
+                }else{
+                    TOAST(message: "网络错误")
                 }
+                
             }) { (error, mess) in
                 TOAST(message: "网络错误")
             }
