@@ -18,6 +18,7 @@ enum ResumePickViewSeleType {
     case education
     case major
     case intentionMajor
+    case interestOnline
     case introduce
 }
 
@@ -71,6 +72,7 @@ class MyResumeVM: NSObject {
         addSchoolView()
         addMajorView()
         addIntentionMajorView()
+        addInterestOnlineView()
         addPersonalIntroduceView()
         callback()
     }
@@ -237,6 +239,30 @@ class MyResumeVM: NSObject {
         sectionModel.cellModelsArr.append(cellModel)
     }
     
+    private func addInterestOnlineView(){
+        let sectionModel = getSectionModel()
+        let cellModel = CellModel()
+        cellModel.cellHeight = {table,index in
+            return 87
+        }
+        cellModel.cell = {table,index in
+            self.vmDelegate?.endEditState()
+            let cell = MyResumePickUpCell.initWithXIb() as! MyResumePickUpCell
+            cell.selectionStyle = .none
+            let interest_workplace = (self.myResumeModel?.resume.interest_online ?? false) ? self.myResumeModel?.resume.interest_work_place : ""
+            cell.setData(type: "是否感兴趣线上", text: interest_workplace)
+            return cell
+        }
+        cellModel.selectRow = { tableview,indexPath in
+            let arr = ["线上/在家","线下/外派"]
+            self.myPickViewSeleType = .interestOnline
+            self.pickerView.setData(arr: arr)
+            let currentIndex = (self.myResumeModel?.resume.interest_online ?? false) ? 0 : 1
+            self.pickerView.pickerViewShow(currentIndex)
+        }
+        sectionModel.cellModelsArr.append(cellModel)
+    }
+    
     private func addPersonalIntroduceView(){
         let sectionModel = getSectionModel()
         let cellModel = CellModel()
@@ -286,6 +312,15 @@ extension MyResumeVM:PickerDelegate{
                     self.myResumeModel?.resume.interest_profession_id = $0.id
                 }
             })
+        }else if self.myPickViewSeleType == ResumePickViewSeleType.interestOnline {
+            if seleStr == "线上/在家" {
+                self.myResumeModel?.resume.interest_online = true
+                self.myResumeModel?.resume.interest_work_place = ""
+            }else{
+                self.myResumeModel?.resume.interest_online = false
+                
+            }
+            
         }
         guard let model = self.myResumeModel?.resume else {
             return

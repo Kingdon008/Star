@@ -85,7 +85,7 @@ class NavView: UIView {
         let btn = NavViewTitleImageButton.init()
         btn.adjustsImageWhenHighlighted = false
         btn.setTitleColor(UIColor.init(hexString: "#333333"), for: .normal)
-        btn.titleLabel?.font = STELLAR_FONT_MEDIUM_T18
+        btn.titleLabel?.font = STELLAR_FONT_BOLD_T20
         return btn
     }()
     
