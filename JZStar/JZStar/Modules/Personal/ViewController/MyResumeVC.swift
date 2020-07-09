@@ -118,5 +118,7 @@ extension MyResumeVC:MyResumeVMDelegate{
         self.myResumeModel?.resume = model
     }
     
-    
+    func pushViewController(vc: UIViewController) {
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }

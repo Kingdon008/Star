@@ -12,18 +12,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class JFCSConfiguration;
 @class JFCSBaseInfoModel;
+
 @protocol JFCSTableViewControllerDelegate;
 
 @interface JFCSTableViewController : UIViewController
+@property (nonatomic, strong) JFCSConfiguration *config;
+@property (nonatomic, weak) id<JFCSTableViewControllerDelegate> delegate;
 
 - (instancetype)initWithConfiguration:(JFCSConfiguration *)config delegate:(id<JFCSTableViewControllerDelegate>)delegate;
+
+- (void)initWithConfigurationelegate;
 
 @end
 
 @protocol JFCSTableViewControllerDelegate<NSObject>
 
 - (void)viewController:(JFCSTableViewController *)viewController didSelectCity:(JFCSBaseInfoModel *)model;
-
+- (void)viewControllermodel;
 @end
 
 NS_ASSUME_NONNULL_END

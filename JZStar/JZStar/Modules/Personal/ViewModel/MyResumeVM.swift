@@ -11,6 +11,7 @@ import UIKit
 @objc protocol MyResumeVMDelegate {
     func modificationInfo(param:[String: Any] )
     func endEditState()
+    func pushViewController(vc: UIViewController)
 }
 
 enum ResumePickViewSeleType {
@@ -318,7 +319,10 @@ extension MyResumeVM:PickerDelegate{
                 self.myResumeModel?.resume.interest_work_place = ""
             }else{
                 self.myResumeModel?.resume.interest_online = false
-                
+                let vc = JFCSTableViewController.init()
+//                vc.initWithConfigurationelegate()
+                vc.delegate = self
+                self.vmDelegate?.pushViewController(vc: vc)
             }
             
         }
@@ -329,4 +333,18 @@ extension MyResumeVM:PickerDelegate{
         tableViewDataModel.tableView?.reloadData()
         
     }
+    
+    
+    
+}
+
+extension MyResumeVM:JFCSTableViewControllerDelegate{
+    func viewControllermodel() {
+        
+    }
+//    - (void)viewController:(JFCSTableViewController *)viewController didSelectCity:(JFCSBaseInfoModel *)model;
+    func viewController(_ viewController:JFCSTableViewController,didSelectCity model:JFCSBaseInfoModel){
+        print(model)
+    }
+    
 }

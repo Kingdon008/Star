@@ -45,6 +45,7 @@ PODS:
   - UMCShare/Social/ReducedWeChat (6.9.9):
     - UMCCommon
     - UMCShare/Core
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - Alamofire (= 5.2.0)
@@ -73,6 +74,7 @@ DEPENDENCIES:
   - TZImagePickerController (= 3.3.2)
   - UMCCommon
   - UMCShare/Social/ReducedWeChat
+  - YYModel
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -105,6 +107,7 @@ SPEC REPOS:
     - TZImagePickerController
     - UMCCommon
     - UMCShare
+    - YYModel
 
 SPEC CHECKSUMS:
   Alamofire: c1ca147559e730bfb2182c8c7aafbdd90a867987
@@ -136,7 +139,8 @@ SPEC CHECKSUMS:
   TZImagePickerController: 36ca728ec681228918aa82e993aaab1962281b72
   UMCCommon: 4e80f93492d300245683236668763dc5d0b04dbd
   UMCShare: 52d9ee35f61c51eda3089a7961e1d04ce57b9d6a
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 44152b7bdba653d80ff5d825e3717aee89efdc9d
+PODFILE CHECKSUM: f5908b1bada12de485f3baf858b84e5512f2348b
 
 COCOAPODS: 1.8.4

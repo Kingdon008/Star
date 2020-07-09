@@ -9,3 +9,5 @@
 #import <UMCommon/UMCommon.h>
 #import <UMShare/UMSocialManager.h>
 #import <UMShare/UMShare.h>
+#import "JFCSTableViewController.h"
+#import "JFCSBaseInfoModel.h"

@@ -43,8 +43,6 @@
 @property (nonatomic, strong) JFCSTableViewHeaderView *headerView;
 
 @property (nonatomic, strong) JFCSDataOpreation *dataOpreation;
-@property (nonatomic, strong) JFCSConfiguration *config;
-@property (nonatomic, weak) id<JFCSTableViewControllerDelegate> delegate;
 @property (nonatomic, strong) JFCSBaseInfoModel *currentCityModel;
 
 @end
