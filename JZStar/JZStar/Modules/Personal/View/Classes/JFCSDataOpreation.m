@@ -102,7 +102,10 @@
 - (JFCSArea *)getAreaWithCode:(NSInteger)code {
     __block JFCSArea *model = [[JFCSArea alloc] init];
     [_data.areas enumerateObjectsUsingBlock:^(JFCSArea * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSLog(@"%ld",(long)code);
+        NSLog(@"----%ld",(long)obj.code);
         if (obj.code == code) {
+            NSLog(@"有");
             model = obj;
             *stop = YES;
         }

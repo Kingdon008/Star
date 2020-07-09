@@ -16,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *pinyin;
 @property (nonatomic, copy) NSString *firstLetter;
-
 /**
  重复的城市名称，用此区别
  */

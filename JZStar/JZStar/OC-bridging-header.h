@@ -11,3 +11,8 @@
 #import <UMShare/UMShare.h>
 #import "JFCSTableViewController.h"
 #import "JFCSBaseInfoModel.h"
+#import "JFCSAreaModel.h"
+#import "JFCSProvinceModel.h"
+#import "JFCSCityModel.h"
+#import "JFCSDataOpreation.h"
+#import "JFCSConfiguration.h"

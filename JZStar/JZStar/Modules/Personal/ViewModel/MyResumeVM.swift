@@ -44,12 +44,16 @@ class MyResumeVM: NSObject {
             self.myIntroduceInputCell?.textView.text
         }
     }
+    let dataOpreation:JFCSDataOpreation!
+    let config:JFCSConfiguration!
     private var myPickViewSeleType:ResumePickViewSeleType?
     private var myNameInputCell:MyResumeInputCell?
     private var myAgeInputCell:MyResumeInputCell?
     private var myIntroduceInputCell:MyResumeMoreInputCell?
     
     override init() {
+        self.config = JFCSConfiguration()
+        self.dataOpreation = JFCSDataOpreation(configuration: config)
         super.init()
         self.pickerView = BHJPickerView.init(self)
     }
@@ -250,7 +254,7 @@ class MyResumeVM: NSObject {
             self.vmDelegate?.endEditState()
             let cell = MyResumePickUpCell.initWithXIb() as! MyResumePickUpCell
             cell.selectionStyle = .none
-            let interest_workplace = (self.myResumeModel?.resume.interest_online ?? false) ? self.myResumeModel?.resume.interest_work_place : ""
+            let interest_workplace = (self.myResumeModel?.resume.interest_online ?? false) ? "" : self.myResumeModel?.resume.interest_work_place
             cell.setData(type: "是否感兴趣线上", text: interest_workplace)
             return cell
         }
@@ -319,9 +323,7 @@ extension MyResumeVM:PickerDelegate{
                 self.myResumeModel?.resume.interest_work_place = ""
             }else{
                 self.myResumeModel?.resume.interest_online = false
-                let vc = JFCSTableViewController.init()
-//                vc.initWithConfigurationelegate()
-                vc.delegate = self
+                let vc = JFCSTableViewController(configuration: self.config, delegate: self)
                 self.vmDelegate?.pushViewController(vc: vc)
             }
             
@@ -339,12 +341,47 @@ extension MyResumeVM:PickerDelegate{
 }
 
 extension MyResumeVM:JFCSTableViewControllerDelegate{
-    func viewControllermodel() {
-        
-    }
-//    - (void)viewController:(JFCSTableViewController *)viewController didSelectCity:(JFCSBaseInfoModel *)model;
     func viewController(_ viewController:JFCSTableViewController,didSelectCity model:JFCSBaseInfoModel){
-        print(model)
+        var interest_work_place = ""
+        
+        if let areaModel = model as? JFCSArea{
+            let cityname = dataOpreation.getCityWithCode(areaModel.cityCode).name
+            let provincname = dataOpreation.getProvinceWithCode(areaModel.provinceCode).name
+            interest_work_place += (provincname + "_" + cityname + "_" + areaModel.name )
+            self.myResumeModel?.resume.interest_work_place = interest_work_place
+            guard let resumeModel = self.myResumeModel?.resume else {
+                return
+            }
+            vmDelegate?.modificationInfo(param: resumeModel.kj.JSONObject())
+            tableViewDataModel.tableView?.reloadData()
+            return
+        }
+        
+        if let cityModel = model as? JFCSCity{
+            let provincname = dataOpreation.getProvinceWithCode(cityModel.provinceCode).name
+            interest_work_place += (provincname + "_" + cityModel.name)
+            self.myResumeModel?.resume.interest_work_place = interest_work_place
+            guard let resumeModel = self.myResumeModel?.resume else {
+                return
+            }
+            vmDelegate?.modificationInfo(param: resumeModel.kj.JSONObject())
+            tableViewDataModel.tableView?.reloadData()
+            return
+        }
+        
+        if let provinceModel = model as? JFCSProvince{
+            let provincname = provinceModel.name
+            interest_work_place += provincname
+            self.myResumeModel?.resume.interest_work_place = interest_work_place
+            guard let resumeModel = self.myResumeModel?.resume else {
+                return
+            }
+            vmDelegate?.modificationInfo(param: resumeModel.kj.JSONObject())
+            tableViewDataModel.tableView?.reloadData()
+            return
+        }
+//        interest_work_place += (provincname + cityname + model.name)
+        
     }
     
 }

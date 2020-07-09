@@ -28,7 +28,6 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol JFCSTableViewControllerDelegate<NSObject>
 
 - (void)viewController:(JFCSTableViewController *)viewController didSelectCity:(JFCSBaseInfoModel *)model;
-- (void)viewControllermodel;
 @end
 
 NS_ASSUME_NONNULL_END

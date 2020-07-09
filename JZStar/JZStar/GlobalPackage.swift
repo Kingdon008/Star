@@ -32,3 +32,4 @@ import Foundation
 @_exported import Kingfisher
 @_exported import SAMKeychain
 @_exported import Bugly
+@_exported import YYModel
