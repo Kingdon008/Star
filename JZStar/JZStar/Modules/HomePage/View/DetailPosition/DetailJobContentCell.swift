@@ -14,7 +14,6 @@ class DetailJobContentCell: UITableViewCell {
     @IBOutlet weak var companyIcon: UIImageView!
     @IBOutlet weak var qqnumLabel: UILabel!
     @IBOutlet weak var deliverLabel: UILabel!
-    @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var allStarIconConstraint: NSLayoutConstraint!
     @IBOutlet weak var connectBtn: UIButton!
     @IBOutlet weak var copyBtn: UIButton!
@@ -52,7 +51,6 @@ class DetailJobContentCell: UITableViewCell {
                 companyIcon.kf.setImage(with: url, placeholder: UIImage.init(named: "companyIcon_gray"))
             }
             deliverLabel.attributedText = "\(model.resume_delivery_num ?? "0")份投递".ss.transformStringToAttributedString()
-            contentLabel.attributedText = (model.content ?? "").ss.transformStringToAttributedString()
             qqnumLabel.attributedText = "QQ:\(model.company_qq ?? "")".ss.transformStringToAttributedString()
             allStarIconConstraint.constant = (model.company_score ?? 0) / 5.0 * 68
             allStarIconBg.layer.masksToBounds = true

@@ -40,15 +40,45 @@ class DetailPositionVM: NSObject {
         let sectionModel = getSectionModel()
         let selectTypeCellmodel = CellModel()
         selectTypeCellmodel.cellHeight = {table,index in
-            return self.getContentFrameHeight(text: self.positionModel?.content ?? "")
+            return 156
         }
         selectTypeCellmodel.cell = {table,index in
             let cell = DetailJobContentCell.initWithXIb() as! DetailJobContentCell
             cell.setData(data: self.positionModel as Any)
             cell.selectionStyle = .none
+            cell.separatorInset = UIEdgeInsets.init(top: 0, left: 36, bottom: 0, right: 36)
             return cell
         }
         sectionModel.cellModelsArr.append(selectTypeCellmodel)
+        
+        if let workContent = self.positionModel?.content{
+            let workContentCellmodel = CellModel()
+            workContentCellmodel.cellHeight = {table,index in
+                return self.getContentFrameHeight(text: workContent)
+            }
+            workContentCellmodel.cell = {table,index in
+                let cell = DetailTitleContentCell.initWithXIb() as! DetailTitleContentCell
+                cell.setData(title: "工作内容", text: workContent)
+                cell.selectionStyle = .none
+                return cell
+            }
+            sectionModel.cellModelsArr.append(workContentCellmodel)
+        }
+        
+//        if let workContent = self.positionModel?.{
+//            let workContentCellmodel = CellModel()
+//            workContentCellmodel.cellHeight = {table,index in
+//                return self.getContentFrameHeight(text: workContent)
+//            }
+//            workContentCellmodel.cell = {table,index in
+//                let cell = DetailTitleContentCell.initWithXIb() as! DetailTitleContentCell
+//                cell.setData(title: "工作地址", text: workContent)
+//                cell.selectionStyle = .none
+//                return cell
+//            }
+//            sectionModel.cellModelsArr.append(workContentCellmodel)
+//        }
+        
     }
     
     private func getSectionModel() -> TableViewSectionModel{
@@ -63,6 +93,6 @@ class DetailPositionVM: NSObject {
     
     func getContentFrameHeight(text:String)->CGFloat{
         let rect = String.ss.getTextRectSize(text: text,font: UIFont.systemFont(ofSize: 14),size: CGSize.init(width: kScreenWidth - 36 - 44, height: CGFloat(MAXFLOAT)))
-        return rect.height + 245
+        return rect.height + 40 + 24
     }
 }

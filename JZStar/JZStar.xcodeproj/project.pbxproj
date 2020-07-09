@@ -28,6 +28,8 @@
 		AB5EA1982487F5FA009758B1 /* SelectDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5EA1962487F5FA009758B1 /* SelectDetailViewCell.swift */; };
 		AB5EA1992487F5FA009758B1 /* SelectDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5EA1972487F5FA009758B1 /* SelectDetailViewCell.xib */; };
 		AB5EA19C2487FA26009758B1 /* MerchantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5EA19B2487FA26009758B1 /* MerchantModel.swift */; };
+		AB805D8724B757C7009396D0 /* DetailTitleContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB805D8524B757C7009396D0 /* DetailTitleContentCell.swift */; };
+		AB805D8824B757C7009396D0 /* DetailTitleContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB805D8624B757C7009396D0 /* DetailTitleContentCell.xib */; };
 		AB9E51DB24892CED00BAF5AE /* DetailPositionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9E51D924892CED00BAF5AE /* DetailPositionVC.swift */; };
 		AB9E51DC24892CED00BAF5AE /* DetailPositionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB9E51DA24892CED00BAF5AE /* DetailPositionVC.xib */; };
 		ABE3D186249CE6EE00D2B55E /* BHJPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE3D185249CE6EE00D2B55E /* BHJPickerView.swift */; };
@@ -182,6 +184,8 @@
 		AB5EA1962487F5FA009758B1 /* SelectDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDetailViewCell.swift; sourceTree = "<group>"; };
 		AB5EA1972487F5FA009758B1 /* SelectDetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectDetailViewCell.xib; sourceTree = "<group>"; };
 		AB5EA19B2487FA26009758B1 /* MerchantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantModel.swift; sourceTree = "<group>"; };
+		AB805D8524B757C7009396D0 /* DetailTitleContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTitleContentCell.swift; sourceTree = "<group>"; };
+		AB805D8624B757C7009396D0 /* DetailTitleContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTitleContentCell.xib; sourceTree = "<group>"; };
 		AB9E51D924892CED00BAF5AE /* DetailPositionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPositionVC.swift; sourceTree = "<group>"; };
 		AB9E51DA24892CED00BAF5AE /* DetailPositionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailPositionVC.xib; sourceTree = "<group>"; };
 		ABE3D185249CE6EE00D2B55E /* BHJPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BHJPickerView.swift; sourceTree = "<group>"; };
@@ -416,6 +420,8 @@
 				AB042C6524991974007F8641 /* DetailJobHeadCell.xib */,
 				AB042C6824991BF9007F8641 /* DetailJobContentCell.swift */,
 				AB042C6924991BF9007F8641 /* DetailJobContentCell.xib */,
+				AB805D8524B757C7009396D0 /* DetailTitleContentCell.swift */,
+				AB805D8624B757C7009396D0 /* DetailTitleContentCell.xib */,
 			);
 			path = DetailPosition;
 			sourceTree = "<group>";
@@ -1117,6 +1123,7 @@
 				F68360CC2484DC7400B4E4FA /* Assets.xcassets in Resources */,
 				F66CEEA9248DC0BF00DB68EC /* LoginVC.xib in Resources */,
 				F6F4970F24B5E2350035A61B /* JFCitySelector.bundle in Resources */,
+				AB805D8824B757C7009396D0 /* DetailTitleContentCell.xib in Resources */,
 				AB042C6B24991BF9007F8641 /* DetailJobContentCell.xib in Resources */,
 				F65431DE2488B4BC0069A307 /* PersonalDetailCell.xib in Resources */,
 				F6109E36249B824600ED66F7 /* AboutUsDeatilVC.xib in Resources */,
@@ -1274,6 +1281,7 @@
 				ABF9B74D249A712D007F9B05 /* MyResumeMoreInputCell.swift in Sources */,
 				F66CEEB4248DC31000DB68EC /* NavView.swift in Sources */,
 				F66CEEAF248DC2EF00DB68EC /* AccountOrPasswordView.swift in Sources */,
+				AB805D8724B757C7009396D0 /* DetailTitleContentCell.swift in Sources */,
 				F68361AA2484EEF800B4E4FA /* Image+Extension.swift in Sources */,
 				F65431CF2488820D0069A307 /* CompleteResumeCell.swift in Sources */,
 				ABF9B73A249A58A3007F9B05 /* MyJobVC.swift in Sources */,
