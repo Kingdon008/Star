@@ -29,7 +29,7 @@ class MyResumePickUpCell: UITableViewCell {
     
     func setData(type:String,text:String? = nil){
         typeLabel.text = type
-        if let showTest = text{
+        if let showTest = text,!showTest.isEmpty{
             detailShowLabel.text = showTest
             detailShowLabel.textColor = UIColor.init(hexString: "#333333")
         }
