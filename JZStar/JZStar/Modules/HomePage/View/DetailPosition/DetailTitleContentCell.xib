@@ -26,8 +26,6 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="3" id="Nxl-Ob-P9P"/>
                                     <constraint firstAttribute="height" constant="16" id="aWp-d8-Gjb"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="3" id="cGA-dj-hAc"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="r7F-BO-Yxr"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ec9-QV-fhP">

@@ -255,7 +255,7 @@ class MyResumeVM: NSObject {
             let cell = MyResumePickUpCell.initWithXIb() as! MyResumePickUpCell
             cell.selectionStyle = .none
             let interest_workplace = (self.myResumeModel?.resume.interest_online ?? false) ? "" : self.myResumeModel?.resume.interest_work_place
-            cell.setData(type: "是否感兴趣线上", text: interest_workplace)
+            cell.setData(type: "意向工作地点", text: interest_workplace)
             return cell
         }
         cellModel.selectRow = { tableview,indexPath in
@@ -347,7 +347,7 @@ extension MyResumeVM:JFCSTableViewControllerDelegate{
         if let areaModel = model as? JFCSArea{
             let cityname = dataOpreation.getCityWithCode(areaModel.cityCode).name
             let provincname = dataOpreation.getProvinceWithCode(areaModel.provinceCode).name
-            interest_work_place += (provincname + "_" + cityname + "_" + areaModel.name )
+            interest_work_place += (provincname + "/" + cityname + "/" + areaModel.name )
             self.myResumeModel?.resume.interest_work_place = interest_work_place
             guard let resumeModel = self.myResumeModel?.resume else {
                 return
@@ -359,7 +359,7 @@ extension MyResumeVM:JFCSTableViewControllerDelegate{
         
         if let cityModel = model as? JFCSCity{
             let provincname = dataOpreation.getProvinceWithCode(cityModel.provinceCode).name
-            interest_work_place += (provincname + "_" + cityModel.name)
+            interest_work_place += (provincname + "/" + cityModel.name)
             self.myResumeModel?.resume.interest_work_place = interest_work_place
             guard let resumeModel = self.myResumeModel?.resume else {
                 return

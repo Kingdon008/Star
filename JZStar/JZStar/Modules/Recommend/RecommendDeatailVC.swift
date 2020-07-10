@@ -11,7 +11,7 @@ import UIKit
 class RecommendDeatailVC: BaseViewController {
     var tableview:UITableView!
     var productModel:RecommendProductModel?
-    
+    var contentHeight:CGFloat = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         setupview()
@@ -21,7 +21,7 @@ class RecommendDeatailVC: BaseViewController {
     
     func setupview(){
         navView.setTitle(title: productModel?.title ?? "")
-        navView.backgroundColor = UIColor.init(hexString: "#F3F3F3")
+        navView.backgroundColor = UIColor.white
         navView.backclickBlock = {
             self.navigationController?.popViewController(animated: true)
         }
@@ -36,7 +36,11 @@ class RecommendDeatailVC: BaseViewController {
     }
     
     func setupData(){
-        
+        self.contentHeight = getViewHeight()
+        if contentHeight < kScreenHeight - navView.frame.maxY - (safeAreaBottomHeight ?? 0) {
+            tableview.isScrollEnabled = false
+            self.contentHeight = kScreenHeight - navView.frame.maxY - (safeAreaBottomHeight ?? 0)
+        }
     }
     
     
@@ -55,7 +59,7 @@ extension RecommendDeatailVC:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return getViewHeight()
+        return self.contentHeight
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

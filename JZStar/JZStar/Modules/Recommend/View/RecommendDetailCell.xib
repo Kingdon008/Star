@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jW0-ll-8AR">
-                        <rect key="frame" x="20" y="20" width="391" height="200"/>
+                        <rect key="frame" x="20" y="0.0" width="391" height="220"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jKZ-Dh-HWK">
                                 <rect key="frame" x="0.0" y="0.0" width="391" height="126"/>
@@ -65,7 +65,7 @@
                 <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="jW0-ll-8AR" secondAttribute="trailing" constant="20" id="OWY-Kg-deM"/>
-                    <constraint firstItem="jW0-ll-8AR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="UhB-6P-qPG"/>
+                    <constraint firstItem="jW0-ll-8AR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="UhB-6P-qPG"/>
                     <constraint firstItem="jW0-ll-8AR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="p89-6I-IM2"/>
                     <constraint firstAttribute="bottom" secondItem="jW0-ll-8AR" secondAttribute="bottom" id="uUH-mB-dVb"/>
                 </constraints>

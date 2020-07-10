@@ -115,8 +115,7 @@ class HomePageViewController: BaseViewController {
 
 extension HomePageViewController:FSPagerViewDataSource,FSPagerViewDelegate{
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-//        self.bannerModels?.count ?? 0
-        0
+        self.bannerModels?.count ?? 0
     }
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {

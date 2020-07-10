@@ -58,7 +58,7 @@ class SelectDetailViewCell: UITableViewCell {
                 })
             }
             
-            if let tags2 = model.tag_name?.type1,tags2.count > 0{
+            if let tags2 = model.tag_name?.type2,tags2.count > 0{
                 tags2.forEach({ tagName in
                     let name = " \(tagName) "
                     let color = UIColor.init(hexString: "#5EADEF")
