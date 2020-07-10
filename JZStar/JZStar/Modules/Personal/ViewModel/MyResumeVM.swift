@@ -254,7 +254,7 @@ class MyResumeVM: NSObject {
             self.vmDelegate?.endEditState()
             let cell = MyResumePickUpCell.initWithXIb() as! MyResumePickUpCell
             cell.selectionStyle = .none
-            let interest_workplace = (self.myResumeModel?.resume.interest_online ?? false) ? "" : self.myResumeModel?.resume.interest_work_place
+            let interest_workplace = (self.myResumeModel?.resume.interest_online ?? false) ? "线上/在家" : self.myResumeModel?.resume.interest_work_place
             cell.setData(type: "意向工作地点", text: interest_workplace)
             return cell
         }
