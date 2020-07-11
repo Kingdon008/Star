@@ -21,13 +21,13 @@ class MyResumeInputCell: UITableViewCell {
         return firstView
     }
     
-    func setData(type:String,text:String? = nil){
+    func setData(type:String,text:String? = nil,isUserInteractionEnabled:Bool){
         typeLabel.text = type
         if let showTest = text,!showTest.isEmpty,showTest != "0"{
             textfield.text = showTest
-//            textfield.isUserInteractionEnabled = false
             textfield.textColor = UIColor.init(hexString: "#333333")
         }
+//        textfield.isUserInteractionEnabled = isUserInteractionEnabled
     }
     
     override func awakeFromNib() {

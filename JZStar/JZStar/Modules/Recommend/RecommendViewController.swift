@@ -22,7 +22,7 @@ class RecommendViewController: BaseViewController {
         }
         view.addSubview(navView)
         
-        tableview = UITableView(frame: CGRect(x: 0, y: navView.frame.maxY + 20, width: kScreenWidth, height: kScreenHeight - navView.frame.maxY - BOTTOM_TABBAR_HEIGHT - getAllVersionSafeAreaBottomHeight() - 20))
+        tableview = UITableView(frame: CGRect(x: 0, y: navView.frame.maxY, width: kScreenWidth, height: kScreenHeight - navView.frame.maxY - BOTTOM_TABBAR_HEIGHT - getAllVersionSafeAreaBottomHeight()))
         tableview.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: kScreenWidth)
         tableview.backgroundColor = UIColor.init(hexString: "#F3F3F3")
         view.addSubview(tableview)

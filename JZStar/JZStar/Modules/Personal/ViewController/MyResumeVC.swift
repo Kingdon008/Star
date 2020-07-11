@@ -77,13 +77,28 @@ class MyResumeVC: BaseViewController {
     
     
     @IBAction func submitAction(_ sender: Any) {
+//        let is_attestation = (self.myResumeModel?.resume.is_attestation == 1)
+//        if is_attestation {
+//
+//        }
+        let alertController = UIAlertController(title: "提交简历", message: "您修改了简历，提交后需要再次审核，请确认", preferredStyle: UIAlertController.Style.alert)
+        let cancelAction = UIAlertAction(title: "取消", style: UIAlertAction.Style.cancel, handler: nil)
+        let okAction = UIAlertAction(title: "确定", style: UIAlertAction.Style.destructive, handler: { _ in
+            self.commitmyresume()
+        })
+        alertController.addAction(cancelAction)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func commitmyresume(){
         guard let model = myResumeModel?.resume else {
             TOAST(message: "提交失败")
             return
         }
-//        if model.is_attestation ?? false {
-//            return
-//        }
+        //        if model.is_attestation ?? false {
+        //            return
+        //        }
         model.uid = AppManager.sharedManager.user.uid ?? ""
         model.name = viewModel.myResumeName
         model.age = viewModel.myResumeAge

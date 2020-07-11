@@ -27,7 +27,7 @@ class RecommendDeatailVC: BaseViewController {
         }
         view.addSubview(navView)
         let tbHeight = kScreenHeight - navView.frame.maxY - getAllVersionSafeAreaBottomHeight()
-        tableview = UITableView(frame: CGRect(x: 0, y: navView.frame.maxY + 12, width: kScreenWidth, height: tbHeight))
+        tableview = UITableView(frame: CGRect(x: 0, y: navView.frame.maxY, width: kScreenWidth, height: tbHeight))
         tableview.backgroundColor = UIColor.init(hexString: "#F3F3F3")
         tableview.separatorInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: kScreenWidth)
         view.addSubview(tableview)

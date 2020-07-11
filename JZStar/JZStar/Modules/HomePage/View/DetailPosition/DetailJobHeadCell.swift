@@ -28,8 +28,8 @@ class DetailJobHeadCell: UITableViewCell {
 
     func setData(data:Any){
         if let model = data as? DetailPositionModel{
-            titleLabel.attributedText = model.title?.ss.transformStringToAttributedString()
-            salaryDescribeLabel.attributedText = model.salary_describe?.ss.transformStringToAttributedString()
+            titleLabel.text = model.title
+            salaryDescribeLabel.text = model.salary_describe
             tagNameBGView.subviews.forEach({ subView in
                 subView.removeFromSuperview()
             })

@@ -38,13 +38,13 @@ class MyResumeMoreInputCell: UITableViewCell {
         }.disposed(by: disposeBag)
     }
 
-    func setData(type:String,text:String? = nil){
+    func setData(type:String,text:String? = nil,isUserInteractionEnabled:Bool){
         typeLabel.text = type
         if let showTest = text{
             textView.text = showTest
-//            textView.isUserInteractionEnabled = false
             textView.textColor = UIColor.init(hexString: "#333333")
         }
+//        textView.isUserInteractionEnabled = isUserInteractionEnabled
     }
     
     lazy var placeHolderLabel:UILabel = {

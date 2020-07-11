@@ -93,7 +93,8 @@ class MyResumeVM: NSObject {
             self.myNameInputCell = cell
             cell.selectionStyle = .none
             let name = self.myResumeModel?.resume.name
-            cell.setData(type: "姓名", text: name)
+            let isUserInteractionEnabled = (self.myResumeModel?.resume.is_attestation != 1)
+            cell.setData(type: "姓名", text: name,isUserInteractionEnabled:isUserInteractionEnabled)
             cell.textClickBlock = { text in
                 self.myResumeModel?.resume.name = text
                 guard let model = self.myResumeModel?.resume else {
@@ -126,6 +127,10 @@ class MyResumeVM: NSObject {
             return cell
         }
         cellModel.selectRow = { tableview,indexPath in
+//            let isUserInteractionEnabled = (self.myResumeModel?.resume.is_attestation != 1)
+//            if !isUserInteractionEnabled {
+//                return
+//            }
             self.vmDelegate?.endEditState()
             self.myPickViewSeleType = .pickViewSex
             self.pickerView.setData(arr: ["男","女"])
@@ -150,7 +155,8 @@ class MyResumeVM: NSObject {
             cell.selectionStyle = .none
             let age = self.myResumeModel?.resume.age
             cell.textfield.keyboardType = .numberPad
-            cell.setData(type: "年龄", text: age)
+            let isUserInteractionEnabled = (self.myResumeModel?.resume.is_attestation != 1)
+            cell.setData(type: "年龄", text: age,isUserInteractionEnabled: isUserInteractionEnabled)
             cell.textClickBlock = { text in
                 self.myResumeModel?.resume.age = text
                 guard let model = self.myResumeModel?.resume else {
@@ -177,6 +183,10 @@ class MyResumeVM: NSObject {
             return cell
         }
         cellModel.selectRow = { tableview,indexPath in
+//            let isUserInteractionEnabled = (self.myResumeModel?.resume.is_attestation != 1)
+//            if !isUserInteractionEnabled {
+//                return
+//            }
             self.vmDelegate?.endEditState()
             if let arr = self.myResumeModel?.education.map({ model -> String in
                 (model.name ?? "")
@@ -204,6 +214,10 @@ class MyResumeVM: NSObject {
             return cell
         }
         cellModel.selectRow = { tableview,indexPath in
+//            let isUserInteractionEnabled = (self.myResumeModel?.resume.is_attestation != 1)
+//            if !isUserInteractionEnabled {
+//                return
+//            }
             self.vmDelegate?.endEditState()
             if let arr = self.myResumeModel?.interest_profession.map({ model -> String in
                 (model.name ?? "")
@@ -232,6 +246,10 @@ class MyResumeVM: NSObject {
             return cell
         }
         cellModel.selectRow = { tableview,indexPath in
+//            let isUserInteractionEnabled = (self.myResumeModel?.resume.is_attestation != 1)
+//            if !isUserInteractionEnabled {
+//                return
+//            }
             if let arr = self.myResumeModel?.interest_profession.map({ model -> String in
                 (model.name ?? "")
             }){
@@ -259,6 +277,10 @@ class MyResumeVM: NSObject {
             return cell
         }
         cellModel.selectRow = { tableview,indexPath in
+//            let isUserInteractionEnabled = (self.myResumeModel?.resume.is_attestation != 1)
+//            if !isUserInteractionEnabled {
+//                return
+//            }
             let arr = ["线上/在家","线下/外派"]
             self.myPickViewSeleType = .interestOnline
             self.pickerView.setData(arr: arr)
@@ -279,7 +301,9 @@ class MyResumeVM: NSObject {
             self.myIntroduceInputCell = cell
             cell.selectionStyle = .none
             let interest_profession = self.myResumeModel?.resume.personal_description
-            cell.setData(type: "个人介绍", text: interest_profession)
+            let isUserInteractionEnabled = (self.myResumeModel?.resume.is_attestation != 1)
+            cell.setData(type: "个人介绍", text: interest_profession,isUserInteractionEnabled: isUserInteractionEnabled
+            )
             cell.textClickBlock = { text in
                 self.myResumeModel?.resume.personal_description = text
                 guard let model = self.myResumeModel?.resume else {
