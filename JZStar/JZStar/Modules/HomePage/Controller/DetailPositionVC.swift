@@ -68,21 +68,21 @@ class DetailPositionVC: BaseViewController {
     @IBAction func signypAction(_ sender: Any) {
         if let position_id = self.positionModel?.id{
             Network.request(.usercenterSave_position(uid: (AppManager.sharedManager.user.uid ?? ""), status_id: 1, position_id: position_id), success: { (json) in
-                if let status = json["status"].int,let msg = json["msg"].string {
-                    if status == 1 {
-                        self.viewModel.positionModel?.is_signup = !(self.viewModel.positionModel?.is_signup ?? false)
-                        if self.viewModel.positionModel?.is_signup ?? false{
-                            self.signupBtn.setTitle("已报名", for: .normal)
-                            TOAST(message: "已报名")
-                        }else{
-                            self.signupBtn.setTitle("立即报名", for: .normal)
-                            TOAST(message: "已取消报名")
-                        }
+                if let status = json["status"].int,status == 1 {
+                    self.viewModel.positionModel?.is_signup = !(self.viewModel.positionModel?.is_signup ?? false)
+                    if self.viewModel.positionModel?.is_signup ?? false{
+                        self.signupBtn.setTitle("已报名", for: .normal)
+                        TOAST(message: "已报名")
                     }else{
-                        TOAST(message: "\(msg)")
+                        self.signupBtn.setTitle("立即报名", for: .normal)
+                        TOAST(message: "已取消报名")
                     }
                 }else{
-                    TOAST(message: "网络错误")
+                    if let msg = json["msg"].string{
+                        TOAST(message: "\(msg)")
+                    }else{
+                        TOAST(message: "网络错误")
+                    }
                 }
             }) { (error, mess) in
                 TOAST(message: "网络错误")
@@ -106,8 +106,11 @@ class DetailPositionVC: BaseViewController {
                             TOAST(message: "取消收藏")
                         }
                     }else{
-                        let msg = json["msg"].string ?? ""
-                        TOAST(message: "\(msg)")
+                        if let msg = json["msg"].string{
+                            TOAST(message: "\(msg)")
+                        }else{
+                            TOAST(message: "网络错误")
+                        }
                     }
                 }else{
                     TOAST(message: "网络错误")
