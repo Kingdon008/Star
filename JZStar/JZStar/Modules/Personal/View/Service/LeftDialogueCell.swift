@@ -61,7 +61,7 @@ class LeftDialogueCell: UITableViewCell {
             make.top.equalTo(8)
             make.left.equalTo(20)
             make.width.equalTo(dialogueWidth + 2)
-            make.height.equalTo(dialogueHeight)
+            make.height.equalTo(dialogueHeight + 2)
         }
     }
     
