@@ -26,8 +26,8 @@
             filePath = "JZStar/Modules/HomePage/Controller/DetailPositionVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "cooectAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,8 +42,8 @@
             filePath = "JZStar/Modules/HomePage/Controller/DetailPositionVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "cooectAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -77,6 +77,22 @@
             startingLineNumber = "109"
             endingLineNumber = "109"
             landmarkName = "cooectAction(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "806A3C0D-A7B8-4B21-95C0-7435DEB94BAA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JZStar/Modules/HomePage/Controller/DetailPositionVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "signypAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
