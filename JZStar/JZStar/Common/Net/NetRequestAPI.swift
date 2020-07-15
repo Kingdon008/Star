@@ -28,7 +28,8 @@ public enum NetRequestAPI {
 
 extension NetRequestAPI: TargetType {
     public var baseURL: URL {
-        return URL(string:"http://106.14.140.138/jianzhi/index.php")!
+//        return URL(string:"http://106.14.140.138/jianzhi/index.php")!
+        return URL(string:"http://47.100.43.187/jianzhi/index.php")!       
     }
     
     public var method: Moya.Method {
