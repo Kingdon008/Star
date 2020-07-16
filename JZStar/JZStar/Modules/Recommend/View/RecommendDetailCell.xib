@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNj-Sw-Aae">
-                                <rect key="frame" x="12" y="153" width="367" height="14.5"/>
+                                <rect key="frame" x="12" y="156" width="367" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ZNj-Sw-Aae" firstAttribute="top" secondItem="Nb3-g4-3kW" secondAttribute="bottom" constant="2" id="57n-o5-WHr"/>
+                            <constraint firstItem="ZNj-Sw-Aae" firstAttribute="top" secondItem="Nb3-g4-3kW" secondAttribute="bottom" constant="5" id="57n-o5-WHr"/>
                             <constraint firstItem="Nb3-g4-3kW" firstAttribute="leading" secondItem="jW0-ll-8AR" secondAttribute="leading" constant="12" id="6QX-7J-f46"/>
                             <constraint firstItem="ZNj-Sw-Aae" firstAttribute="leading" secondItem="jW0-ll-8AR" secondAttribute="leading" constant="12" id="9gW-Yq-R2T"/>
                             <constraint firstAttribute="trailing" secondItem="jKZ-Dh-HWK" secondAttribute="trailing" id="BhB-Zj-5uh"/>
@@ -75,6 +75,7 @@
                 <outlet property="contentLabel" destination="ZNj-Sw-Aae" id="xHL-Or-91k"/>
                 <outlet property="icon" destination="jKZ-Dh-HWK" id="6e3-b2-UkU"/>
                 <outlet property="titleLabel" destination="Nb3-g4-3kW" id="8t9-mF-feb"/>
+                <outlet property="titleTopConstraint" destination="QfI-Uv-u2z" id="pDd-2B-xTZ"/>
             </connections>
             <point key="canvasLocation" x="218.11594202898553" y="160.71428571428569"/>
         </tableViewCell>

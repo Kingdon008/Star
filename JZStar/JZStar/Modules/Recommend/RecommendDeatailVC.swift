@@ -20,7 +20,7 @@ class RecommendDeatailVC: BaseViewController {
     
     
     func setupview(){
-        navView.setTitle(title: productModel?.title ?? "")
+        navView.setTitle(title: "内容详情")
         navView.backgroundColor = UIColor.white
         navView.backclickBlock = {
             self.navigationController?.popViewController(animated: true)
@@ -65,15 +65,21 @@ extension RecommendDeatailVC:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = RecommendDetailCell.initWithXIb() as! RecommendDetailCell
         if let model = self.productModel{
-            cell.setData(data: model, contentLine: 0)
+            cell.setData(data: model, contentLine: 0,isShowDscp: false)
         }
         cell.selectionStyle = .none
         return cell
     }
     
     func getViewHeight() -> CGFloat{
-        let content = productModel?.content ?? ""
-        let rect = String.ss.getTextRectSize(text: content,font: UIFont.systemFont(ofSize: 12),size: CGSize.init(width: kScreenWidth - 32 - 32, height: 1000))
-        return 20 + 126 + 25 + rect.height + 12
+        let content = self.productModel?.content ?? ""
+        print("------\(content)")
+        let attrStr = try! NSMutableAttributedString(
+            data: (content.data(using: .unicode, allowLossyConversion: true)!),
+            options:[.documentType: NSAttributedString.DocumentType.html,
+                     .characterEncoding: String.Encoding.utf8.rawValue],
+            documentAttributes: nil)
+        let contentHegiht = attrStr.boundingRect(with: CGSize(width:  kScreenWidth - 32 - 32, height: CGFloat(MAXFLOAT)), options: [.usesLineFragmentOrigin,.usesFontLeading], context: nil).height
+        return 20 + 126 + 25 + contentHegiht + 12
     }
 }

@@ -68,12 +68,18 @@ extension RecommendViewController:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if let model = self.dataArr?[indexPath.row]{
-            let str = model.content ?? ""
-            let rect = String.ss.getTextRectSize(text: str,font: UIFont.systemFont(ofSize: 12),size: CGSize.init(width: kScreenWidth - 32 - 32, height: CGFloat(MAXFLOAT)))
-            if rect.height >= 28 {
-                return 20 + 126 + 8 + 17 + 2 + 28 + 12
+            let str = model.dscp ?? ""
+            let contentHegiht = String.ss.getTextRectSize(text: str,font: UIFont.systemFont(ofSize: 12),size: CGSize.init(width: kScreenWidth - 32 - 32, height: CGFloat(MAXFLOAT))).height
+//            let attrStr = try! NSMutableAttributedString(
+//                data: (str.data(using: .unicode, allowLossyConversion: true)!),
+//                options:[.documentType: NSAttributedString.DocumentType.html,
+//                         .characterEncoding: String.Encoding.utf8.rawValue],
+//                documentAttributes: nil)
+//            let contentHegiht = attrStr.boundingRect(with: CGSize(width:  kScreenWidth - 32 - 32, height: CGFloat(MAXFLOAT)), options: [.usesLineFragmentOrigin,.usesFontLeading], context: nil).height
+            if contentHegiht >= 28 {
+                return 20 + 126 + 8 + 17 + 5 + 28 + 12
             }
-            return 20 + 126 + 8 + 17 + 2 + rect.height + 12
+            return 20 + 126 + 8 + 17 + 5 + contentHegiht + 12
         }
         return 0
     }
@@ -81,7 +87,7 @@ extension RecommendViewController:UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = RecommendDetailCell.initWithXIb() as! RecommendDetailCell
         if let model = self.dataArr?[indexPath.row]{
-            cell.setData(data: model, contentLine: 2)
+            cell.setData(data: model, contentLine: 2,isShowDscp: true)
         }
         cell.selectionStyle = .none
         return cell

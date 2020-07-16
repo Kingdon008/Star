@@ -124,7 +124,7 @@ extension HomePageViewController:FSPagerViewDataSource,FSPagerViewDelegate{
             let url = URL(string: model.img_url)
             cell.imageView?.kf.setImage(with: url)
         }
-        cell.imageView?.contentMode = .scaleAspectFill
+        cell.imageView?.contentMode = .scaleToFill
         cell.imageView?.clipsToBounds = true
         return cell
     }

@@ -14,6 +14,7 @@ class RecommendProductModel: Convertible {
     var show_img_url:String?
     var content:String?
     var source_url:String?
+    var dscp:String?
     
     required public init() {
         // Intentionally unimplemented...

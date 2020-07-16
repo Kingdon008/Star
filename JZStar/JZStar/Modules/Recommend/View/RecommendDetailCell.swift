@@ -10,6 +10,7 @@ import UIKit
 
 class RecommendDetailCell: UITableViewCell {
     
+    @IBOutlet weak var titleTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var icon: UIImageView!
@@ -28,12 +29,25 @@ class RecommendDetailCell: UITableViewCell {
         
     }
 
-    func setData(data:Any,contentLine:Int){
+    func setData(data:Any,contentLine:Int,isShowDscp:Bool){
         if let model = data as? RecommendProductModel{
             let url = URL(string: model.show_img_url)
             icon.kf.setImage(with: url)
-            titleLabel.attributedText = model.title?.ss.transformStringToAttributedString()
-            contentLabel.attributedText = model.content?.ss.transformStringToAttributedString()
+            titleLabel.text = model.title
+            if isShowDscp {
+                contentLabel.text = model.dscp
+                titleLabel.text = model.title
+            }else{
+                let str = model.title ?? ""
+                let attributedString = NSMutableAttributedString(string:str)
+                attributedString.addAttributes([NSAttributedString.Key.foregroundColor:UIColor.init(hexString: "#333333"),NSAttributedString.Key.font: STELLAR_FONT_MEDIUM_T14], range: NSRange.init(location: 0, length: str.count))
+
+                
+                titleLabel.attributedText = attributedString
+                titleTopConstraint.constant = 18
+                titleLabel.textAlignment = .center
+                contentLabel.attributedText = model.content?.ss.transformStringToAttributedString()
+            }
             contentLabel.numberOfLines = contentLine
             contentLabel.lineBreakMode = .byTruncatingTail
         }
