@@ -51,6 +51,23 @@ class RecommendDetailCell: UITableViewCell {
             contentLabel.numberOfLines = contentLine
             contentLabel.lineBreakMode = .byTruncatingTail
         }
+        if let detailModel = data as? BannerDetailModel{
+            let url = URL(string: detailModel.show_img_url)
+            icon.kf.setImage(with: url)
+            titleLabel.text = detailModel.title
+            let str = detailModel.title ?? ""
+            let attributedString = NSMutableAttributedString(string:str)
+            attributedString.addAttributes([NSAttributedString.Key.foregroundColor:UIColor.init(hexString: "#333333"),NSAttributedString.Key.font: STELLAR_FONT_MEDIUM_T14], range: NSRange.init(location: 0, length: str.count))
+
+            
+            titleLabel.attributedText = attributedString
+            titleTopConstraint.constant = 18
+            titleLabel.textAlignment = .center
+            contentLabel.attributedText = detailModel.content?.ss.transformStringToAttributedString()
+            contentLabel.numberOfLines = contentLine
+            contentLabel.lineBreakMode = .byTruncatingTail
+        }
+        
     }
     
     func getMaxY()->CGFloat{

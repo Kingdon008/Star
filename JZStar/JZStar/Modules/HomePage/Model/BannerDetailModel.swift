@@ -13,7 +13,7 @@ class BannerDetailModel: Convertible {
     var title:String?
     var content:String?
     var updatedAt:Bool?
-    
+    var show_img_url:String?
     required public init() {
         // Intentionally unimplemented...
     }

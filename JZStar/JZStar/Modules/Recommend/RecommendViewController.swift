@@ -101,7 +101,7 @@ extension RecommendViewController:UITableViewDelegate,UITableViewDataSource {
             jumpTo(url: url)
         }else{
             let vc = RecommendDeatailVC()
-            vc.productModel = model
+            vc.productID = model.id
             navigationController?.pushViewController(vc, animated: true)
         }
     }

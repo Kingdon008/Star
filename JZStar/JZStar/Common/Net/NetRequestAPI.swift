@@ -24,6 +24,7 @@ public enum NetRequestAPI {
     case usercenterIdea(type:Int,content:String,uid:String)
     case usercenterVerify_code(phone:String)
     case usercenterRegister(phone:String,verify_code:String)
+    case cms_cms_content(id:Int)
 }
 
 extension NetRequestAPI: TargetType {
@@ -64,6 +65,8 @@ extension NetRequestAPI: TargetType {
             return .post
         case .usercenterRegister:
             return .post
+        case .cms_cms_content:
+            return .post
         }
     }
     
@@ -99,6 +102,8 @@ extension NetRequestAPI: TargetType {
             return "/usercenter/verify_code"
         case .usercenterRegister:
             return "/usercenter/register"
+        case .cms_cms_content:
+            return "cms/cms_content"
         }
     }
     
@@ -138,6 +143,8 @@ extension NetRequestAPI: TargetType {
                 let idfa = ASIdentifierManager.shared().advertisingIdentifier.uuidString
                 param["idfa"] = idfa
             }
+        case .cms_cms_content(let id):
+            param = ["id":id]
         default :
             break
         }

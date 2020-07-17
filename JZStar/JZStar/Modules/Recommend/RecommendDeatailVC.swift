@@ -10,7 +10,8 @@ import UIKit
 
 class RecommendDeatailVC: BaseViewController {
     var tableview:UITableView!
-    var productModel:RecommendProductModel?
+    var productID:Int?
+    private var productModel:BannerDetailModel?
     var contentHeight:CGFloat = 0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,15 @@ class RecommendDeatailVC: BaseViewController {
         view.addSubview(tableview)
         tableview.delegate = self
         tableview.dataSource = self
+        Network.request(.cms_cms_content(id: productID ?? -1), success: { (jsonDic) in
+            if let status = jsonDic["status"].int,status == 1 {
+                self.productModel = jsonDic["data"].dictionaryObject?.kj.model(BannerDetailModel.self)
+                self.tableview.reloadData()
+            }
+            
+        }) { (err, msg) in
+            
+        }
     }
     
     func setupData(){
