@@ -37,6 +37,11 @@ class RecommendDeatailVC: BaseViewController {
         Network.request(.cms_cms_content(id: productID ?? -1), success: { (jsonDic) in
             if let status = jsonDic["status"].int,status == 1 {
                 self.productModel = jsonDic["data"].dictionaryObject?.kj.model(BannerDetailModel.self)
+                self.contentHeight = self.getViewHeight()
+                if self.contentHeight < kScreenHeight - self.navView.frame.maxY - (safeAreaBottomHeight ?? 0) {
+                    self.tableview.isScrollEnabled = false
+                    self.contentHeight = kScreenHeight - self.navView.frame.maxY - (safeAreaBottomHeight ?? 0)
+                }
                 self.tableview.reloadData()
             }
             
@@ -46,11 +51,7 @@ class RecommendDeatailVC: BaseViewController {
     }
     
     func setupData(){
-        self.contentHeight = getViewHeight()
-        if contentHeight < kScreenHeight - navView.frame.maxY - (safeAreaBottomHeight ?? 0) {
-            tableview.isScrollEnabled = false
-            self.contentHeight = kScreenHeight - navView.frame.maxY - (safeAreaBottomHeight ?? 0)
-        }
+        
     }
     
     
