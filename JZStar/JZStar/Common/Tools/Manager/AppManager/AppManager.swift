@@ -80,7 +80,8 @@ class AppManager: NSObject {
     }
     
     private func configureLogin(){
-        if user.hasLogined {
+        print(user.uid)
+        if user.uid != nil {
             nextStep()
         }else{
             let vc = LoginVC()
@@ -133,8 +134,8 @@ class AppManager: NSObject {
             cookie.save()
         }else if currentStep == .kAppStepMain {
             cookie.clear()
-            user.hasLogined = false
-            user.save()
+            user.clear()
+            user = AppUser()
         }
     }
     

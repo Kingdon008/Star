@@ -10,6 +10,9 @@ import UIKit
 
 class LoginVC: BaseViewController {
     private var timer: SSTimeTask!
+    @IBOutlet weak var backBtn: UIButton!
+    
+    var isPresentVC = false
     var codeView:UIControl?
     @IBOutlet weak var phoneTextfield: UITextField!
     @IBOutlet weak var phonecodeTextfield: UITextField!
@@ -24,7 +27,7 @@ class LoginVC: BaseViewController {
     }
     
     func setupViews(){
-        
+        backBtn.isHidden = !isPresentVC
     }
    
     @objc func refreshClickAction(){
@@ -56,7 +59,11 @@ class LoginVC: BaseViewController {
                     }
                 }
             }else{
-                TOAST(message: "发送验证码失败")
+                if let msg = json["msg"].string{
+                    TOAST(message: msg)
+                }else{
+                    TOAST(message: "发送验证码失败")
+                }
             }
             self.phonecodeTextfield.becomeFirstResponder()
         }) { (err, message) in
@@ -89,7 +96,19 @@ class LoginVC: BaseViewController {
                     TOAST(message: "登录成功")
                     AppManager.sharedManager.user.uid = uid
                     AppManager.sharedManager.user.phone = json["data"]["phone"].string
-                    AppManager.sharedManager.nextStep()
+                    AppManager.sharedManager.user.save()
+                    if let cookieUID = AppManager.sharedManager.user.uid {
+                        AppManager.sharedManager.cookie.userIdentifier = cookieUID
+                        AppManager.sharedManager.cookie.save()
+                    }
+                    
+                    if self.isPresentVC {
+                        self.dismiss(animated: true, completion: {
+                            NotificationCenter.default.post(name: .LOGINSUCCESS, object: nil, userInfo: nil)
+                        })
+                    }else{
+                        AppManager.sharedManager.nextStep()
+                    }
                 }
             }else{
                 if let msg = json["msg"].string {
@@ -117,5 +136,19 @@ class LoginVC: BaseViewController {
             return
         }
         identifyingCodeBg.addSubview(codeView!)
+    }
+    
+    
+    @IBAction func touristLoginAction(_ sender: Any) {
+        if isPresentVC {
+            self.dismiss(animated: true, completion: nil)
+        }else{
+            AppManager.sharedManager.nextStep()
+        }
+    }
+    
+    
+    @IBAction func backAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }

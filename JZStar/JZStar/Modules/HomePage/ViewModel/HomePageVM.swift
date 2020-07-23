@@ -10,6 +10,7 @@ import UIKit
 
 @objc protocol HomePageVMDelegate {
     func pushViewController(vc: UIViewController)
+    func presentViewController(vc: UIViewController)
     func reloadJobTitleView(_ titles:[String])
 }
 
@@ -117,6 +118,12 @@ class HomePageVM: NSObject {
             return cell
         }
         selectTypeCellmodel.selectRow = { tableview, indexPath in
+            if AppManager.sharedManager.user.uid == nil {
+                let vc = LoginVC()
+                vc.isPresentVC = true
+                self.vmDelegate?.presentViewController(vc: vc)
+                return
+            }
             let vc = MyResumeVC()
             self.vmDelegate?.pushViewController(vc: vc)
         }
@@ -152,6 +159,12 @@ class HomePageVM: NSObject {
                 return cell
             }
             selectDetailCellmodel.selectRow = { tableview, indexPath in
+                if AppManager.sharedManager.user.uid == nil {
+                    let vc = LoginVC()
+                    vc.isPresentVC = true
+                    self.vmDelegate?.presentViewController(vc: vc)
+                    return
+                }
                 let vc = DetailPositionVC()
                 vc.positionId = model.id
                 self.vmDelegate?.pushViewController(vc: vc)
@@ -197,6 +210,12 @@ class HomePageVM: NSObject {
                 return cell
             }
             selectDetailCellmodel.selectRow = { tableview, indexPath in
+                if AppManager.sharedManager.user.uid == nil {
+                    let vc = LoginVC()
+                    vc.isPresentVC = true
+                    self.vmDelegate?.presentViewController(vc: vc)
+                    return
+                }
                 let vc = DetailPositionVC()
                 vc.positionId = model.id
                 self.vmDelegate?.pushViewController(vc: vc)

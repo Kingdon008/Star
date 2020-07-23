@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="JZStar" customModuleProvider="target">
             <connections>
+                <outlet property="backBtn" destination="n3U-YG-V9T" id="OVU-zF-7xH"/>
                 <outlet property="getPhoneCodeBtn" destination="hhX-Vj-Ghe" id="51b-Vn-5RW"/>
                 <outlet property="graphCodeTextfield" destination="BeY-Qb-Des" id="JoK-Ij-kUs"/>
                 <outlet property="identifyingCodeBg" destination="uDH-uu-DBt" id="3X9-XV-NqH"/>
@@ -145,14 +146,34 @@
                         <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="EJA-tc-hXb"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEm-9y-S3j">
+                    <rect key="frame" x="325" y="585" width="62" height="30"/>
+                    <state key="normal" title="游客登录">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="touristLoginAction:" destination="-1" eventType="touchUpInside" id="xaM-ZL-orH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3U-YG-V9T">
+                    <rect key="frame" x="10" y="54" width="32" height="32"/>
+                    <state key="normal" image="back"/>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="Jjy-Sd-ORg"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hqi-T5-Kio" secondAttribute="trailing" constant="16" id="0CZ-8U-ikt"/>
                 <constraint firstItem="tUx-Q7-oBt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="9qm-pU-D9F"/>
                 <constraint firstItem="hqi-T5-Kio" firstAttribute="top" secondItem="PaQ-kh-n5G" secondAttribute="bottom" constant="12" id="DwV-H7-gxr"/>
+                <constraint firstItem="n3U-YG-V9T" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="EqK-I8-SPk"/>
+                <constraint firstItem="n3U-YG-V9T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="GjQ-OE-axb"/>
                 <constraint firstItem="E35-BV-Al3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="IRV-i8-vwa"/>
                 <constraint firstItem="hqi-T5-Kio" firstAttribute="width" secondItem="PaQ-kh-n5G" secondAttribute="width" id="Iy0-YU-yuJ"/>
+                <constraint firstItem="sEm-9y-S3j" firstAttribute="top" secondItem="E35-BV-Al3" secondAttribute="bottom" constant="25" id="J1c-Gt-6cl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sEm-9y-S3j" secondAttribute="trailing" constant="27" id="Kos-eG-BTq"/>
                 <constraint firstItem="Dev-wh-kts" firstAttribute="width" secondItem="hqi-T5-Kio" secondAttribute="width" id="TFa-by-Rrp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PaQ-kh-n5G" secondAttribute="trailing" constant="16" id="VCb-VJ-twC"/>
                 <constraint firstItem="Dev-wh-kts" firstAttribute="top" secondItem="hqi-T5-Kio" secondAttribute="bottom" constant="12" id="W6G-ok-0Xp"/>
@@ -169,6 +190,7 @@
         </view>
     </objects>
     <resources>
+        <image name="back" width="32" height="32"/>
         <image name="lockIcon" width="20" height="20"/>
         <image name="logo" width="135" height="148"/>
         <image name="phoneicon" width="20" height="20"/>

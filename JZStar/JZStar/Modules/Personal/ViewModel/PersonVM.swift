@@ -10,6 +10,7 @@ import UIKit
 
 @objc protocol PersonVMDelegate {
     func pushViewController(vc: UIViewController)
+    func presentViewController(vc: UIViewController)
 }
 
 class PersonVM: NSObject {
@@ -74,6 +75,12 @@ class PersonVM: NSObject {
             return cell
         }
         selectTypeCellmodel.selectRow = { _ ,_ in
+            if AppManager.sharedManager.user.uid == nil {
+                let vc = LoginVC()
+                vc.isPresentVC = true
+                self.vmDelegate?.presentViewController(vc: vc)
+                return
+            }
             let vc = MyResumeVC()
             self.vmDelegate?.pushViewController(vc: vc)
         }
@@ -107,6 +114,12 @@ class PersonVM: NSObject {
                 return cell
             }
             cellModel.selectRow = { tableview, indexPath in
+                if AppManager.sharedManager.user.uid == nil {
+                    let vc = LoginVC()
+                    vc.isPresentVC = true
+                    self.vmDelegate?.presentViewController(vc: vc)
+                    return
+                }
                 switch type {
                 case .myJob:
                     let vc = MyJobVC()

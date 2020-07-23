@@ -26,7 +26,9 @@ class CompleteResumeCell: UITableViewCell {
     }
     
     func setPer(per:String){
-        perLabel.text = "\(per)%"
+        if !per.isEmpty {
+            perLabel.text = "\(per)%"
+        }
     }
 
     

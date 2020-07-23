@@ -19,6 +19,10 @@ class PersonalViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        loadPersonalInfo()
+    }
+    
+    func loadPersonalInfo(){
         Network.request(.userCenterHome(uid: (AppManager.sharedManager.user.uid ?? "")), success: { (json) in
             if let status = json["status"].int,status == 1 {
                 self.userModel = json["data"].description.kj.model(AppUser.self)
@@ -48,6 +52,12 @@ class PersonalViewController: BaseViewController {
     }
     
     func setupData(){
+        
+        NotificationCenter.default.rx.notification (.LOGINSUCCESS)
+        .subscribe(onNext: { [weak self] (nitify) in
+            self?.loadPersonalInfo()
+        }).disposed(by: disposeBag)
+        
         viewModel.tableViewDataModel.targetTableView(myTableview: tableview)
         viewModel.vmDelegate = self
         NotificationCenter.default.rx.notification (.MyResumeCompletePer)
@@ -67,5 +77,9 @@ class PersonalViewController: BaseViewController {
 extension PersonalViewController:PersonVMDelegate {
     func pushViewController(vc: UIViewController) {
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func presentViewController(vc: UIViewController){
+        present(vc, animated: true, completion: nil)
     }
 }

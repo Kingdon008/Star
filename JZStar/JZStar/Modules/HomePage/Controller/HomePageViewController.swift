@@ -18,6 +18,10 @@ class HomePageViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        loadCenterHome()
+    }
+    
+    func loadCenterHome(){
         Network.request(.userCenterHome(uid: (AppManager.sharedManager.user.uid ?? "")), success: { (json) in
             if let status = json["status"].int,status == 1 {
                 let model = json["data"].description.kj.model(AppUser.self)
@@ -55,6 +59,12 @@ class HomePageViewController: BaseViewController {
     }
     
     func setupData(){
+        
+        NotificationCenter.default.rx.notification (.LOGINSUCCESS)
+        .subscribe(onNext: { [weak self] (nitify) in
+            self?.loadCenterHome()
+        }).disposed(by: disposeBag)
+        
         Network.request(.homeBanner, success: { (json) in
             if let status = json["status"].int,status == 1 {
                 self.bannerModels = json["data"].arrayObject?.kj.modelArray(BannerModel.self)
@@ -108,6 +118,12 @@ class HomePageViewController: BaseViewController {
     }()
     
     @IBAction func headBtnClick(_ sender: Any) {
+        if AppManager.sharedManager.user.uid == nil {
+            let vc = LoginVC()
+            vc.isPresentVC = true
+            present(vc, animated: true, completion: nil)
+            return
+        }
         AppManager.sharedManager.setMainViewState(state: ViewState.kPersonalVc)
     }
     
@@ -131,6 +147,12 @@ extension HomePageViewController:FSPagerViewDataSource,FSPagerViewDelegate{
     
     func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
         pagerView.deselectItem(at: index, animated: true)
+        if AppManager.sharedManager.user.uid == nil {
+            let vc = LoginVC()
+            vc.isPresentVC = true
+            present(vc, animated: true, completion: nil)
+            return
+        }
         guard let model = self.bannerModels?[index] else {
             return
         }
@@ -160,6 +182,10 @@ extension HomePageViewController:HomePageVMDelegate {
     
     func pushViewController(vc: UIViewController) {
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func presentViewController(vc: UIViewController) {
+        present(vc, animated: true, completion: nil)
     }
 }
 

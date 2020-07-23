@@ -139,10 +139,23 @@ class AppUser: Convertible {
     ///保存信息，支持多账户登录
     func save(){
         if isDirty{
-            userDefaults.setValue(mDic, forKey: keyAppUser + (AppManager.sharedManager.user.uid ?? ""))
-            userDefaults.synchronize()
-            isDirty = false
+            if let uid = AppManager.sharedManager.user.uid{
+                let key = keyAppUser + uid
+                userDefaults.setValue(mDic, forKey: key)
+                userDefaults.synchronize()
+                isDirty = false
+            }
         }
+    }
+    
+    func clear(){
+        if let uid = AppManager.sharedManager.user.uid{
+            let key = keyAppUser + uid
+            userDefaults.removeObject(forKey: key)
+            userDefaults.synchronize()
+            
+        }
+       
     }
     
     required public init() {

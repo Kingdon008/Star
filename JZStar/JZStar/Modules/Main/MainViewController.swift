@@ -24,6 +24,14 @@ class MainViewController: BaseViewController {
             {
                 return
             }
+            if myViewState == .kRecommendVc || myViewState == .kPersonalVc {
+                if AppManager.sharedManager.user.uid == nil {
+                    let vc = LoginVC()
+                    vc.isPresentVC = true
+                    self.present(vc, animated: true, completion: nil)
+                    return
+                }
+            }
             setupController(state: myViewState)
             setupBottomButton(state: myViewState)
         }
